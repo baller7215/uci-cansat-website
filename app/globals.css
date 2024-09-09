@@ -5,6 +5,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-rhino: #2B3153;
+  --color-easternBlue: #2582B9;
+  --color-shakespeare: #3CA3CC;
+  --color-whiteIce: #DDF6F9;
+  --color-orange: #FC5130;
+  --color-black: #050401;
+  --color-lightBlack: #303036;
+  --color-white: #FFFAFF;
+  --color-gray: #BFC0C0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,4 +98,51 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+
+/* NAVBAR */
+.navbar-logo {
+  @apply flex flex-row text-center gap-4
+}
+
+.navTitle {
+  @apply my-auto text-[40px] font-bold;
+  color: --color-gray;
+}
+
+.navbar-nav {
+  @apply my-auto justify-center
+}
+
+.navbar-nav-elements {
+  @apply w-full h-full my-auto flex-row flex gap-8
+}
+
+.navbar-nav-element {
+  @apply my-auto text-[20px];
+  color: --color-gray;
+
+}
+
+.navLink-bold {
+  @apply font-bold;
+}
+
+.navLink {
+  @apply font-normal;
+}
+
+.navbar-join-button {
+  @apply my-auto text-[20px] font-bold px-10;
+  background-color: var(--color-gray);
+  color: var(--color-lightBlack);
+  border-width: 0;
+}
+
+.navbar-join-button-hover {
+  background-color: transparent;
+  border-color: var(--color-gray);
+  color: var(--color-gray);
 }

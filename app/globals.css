@@ -148,6 +148,22 @@ body {
 }
 
 
+/* HOME PAGE */
+.home-sectionBackground {
+  /* background-image: url('../public/assets/images/starfield.png'); */
+  @apply bg-[url('../public/assets/images/starfield.png')] bg-cover bg-center
+}
+
+.home-left {
+  @apply my-auto justify-end flex flex-col
+}
+
+.home-right {
+  @apply justify-center my-auto flex flex-col h-full
+}
+
+
+/* REUSABLE ELEMENTS */
 /* COVER PAGE */
 .coverPage {
   /* background-image: url('../public/assets/images/home-cover.jpg'); */
@@ -172,7 +188,7 @@ body {
 
 .cover-title {
   /* color: var(--color-whiteIce); */
-  @apply font-bold text-[96px] tracking-[1px] my-3 mb-8 capitalize indent-0 underline-offset-auto underline decoration-[var(--color-shakespeare)] text-[var(--color-whiteIce)]
+  @apply font-bold text-[4rem] md:text-[5rem] lg:text-[6rem] tracking-[1px] my-3 mb-8 capitalize indent-0 underline-offset-auto underline decoration-[var(--color-shakespeare)] text-[var(--color-whiteIce)]
 }
 
 .cover-subtitle {
@@ -181,5 +197,5 @@ body {
 
 .cover-joinButton {
   /* background-color: var(--color-rhino); */
-  @apply bg-[var(--color-rhino)] text-[var(--color-white)] px-20 font-bold text-[18px] mt-16
+  @apply bg-[var(--color-orange)] text-[var(--color-white)] px-20 font-bold text-[18px] mt-16
 }

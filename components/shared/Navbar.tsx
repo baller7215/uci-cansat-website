@@ -12,7 +12,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     return (
-        <div className="flex size-full flex-row justify-between gap-4 p-8">
+        <div className="flex h-[160px] w-full flex-row justify-between gap-4 p-8">
             <Link href='/' className='navbar-logo'>
                 <Image src='/assets/icons/logo.png' alt='logo' width={100} height={100} />
                 <p className="navTitle">UC Irvine</p>

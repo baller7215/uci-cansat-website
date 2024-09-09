@@ -113,11 +113,11 @@ body {
 }
 
 .navbar-nav {
-  @apply my-auto justify-center
+  @apply my-auto justify-center mx-auto
 }
 
 .navbar-nav-elements {
-  @apply w-full h-full my-auto flex-row flex gap-8
+  @apply w-full my-auto flex-row flex gap-8
 }
 
 .navbar-nav-element {
@@ -145,4 +145,41 @@ body {
   background-color: transparent;
   border-color: var(--color-gray);
   color: var(--color-gray);
+}
+
+
+/* COVER PAGE */
+.coverPage {
+  /* background-image: url('../public/assets/images/home-cover.jpg'); */
+  /* bg-[url('/img/hero-pattern.svg')] */
+  /* bg-[url('../public/assets/images/home-cover.jpg')] */
+  @apply  bg-cover bg-center
+
+}
+
+.gradient {
+  @apply flex flex-col h-full w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
+}
+
+.cover-textContainer {
+  @apply mx-auto my-auto w-2/3 lg:w-1/2 h-fit text-center
+}
+
+.cover-branding {
+  /* color: var(--color-orange); */
+  @apply font-medium text-[18px] leading-8 tracking-[5px] indent-0 text-[var(--color-orange)]
+}
+
+.cover-title {
+  /* color: var(--color-whiteIce); */
+  @apply font-bold text-[96px] tracking-[1px] my-3 mb-8 capitalize indent-0 underline-offset-auto underline decoration-[var(--color-shakespeare)] text-[var(--color-whiteIce)]
+}
+
+.cover-subtitle {
+  @apply font-normal text-[20px] leading-[25.2px] tracking-[2px] capitalize text-[var(--color-gray)]
+}
+
+.cover-joinButton {
+  /* background-color: var(--color-rhino); */
+  @apply bg-[var(--color-rhino)] text-[var(--color-white)] px-20 font-bold text-[18px] mt-16
 }

@@ -211,7 +211,7 @@ html {
 }
 
 .cover-textContainer {
-  @apply mx-auto my-auto w-2/3 lg:w-1/2 h-fit text-center
+  @apply flex flex-col justify-between mx-auto my-auto w-2/3 lg:w-1/2 h-full text-center py-20
 }
 
 .cover-branding {

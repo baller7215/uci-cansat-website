@@ -77,7 +77,7 @@ export default function Home() {
 
       </main>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

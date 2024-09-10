@@ -150,6 +150,66 @@ export const subteams = [
     },
 ]
 
+export const competitionHistory = [
+    {
+        placing: '4th',
+        year: '2023 - 2024'
+    },
+    {
+        placing: '14th',
+        year: '2022 - 2023'
+    },
+    {
+        placing: '29th',
+        year: '2021 - 2022'
+    },
+    {
+        placing: '7th',
+        year: '2020 - 2021'
+    },
+    {
+        placing: '23rd',
+        year: '2019 - 2020'
+    },
+    {
+        placing: '45th',
+        year: '2018 - 2019'
+    }
+]
+
+export const competitionTimeline = [
+    { 
+        date: "OCT. 20", 
+        title: "PLANNING", 
+        description: "Trade studies, design drafts, year schedule"
+    },
+    { 
+        date: "AUG. 29", 
+        title: "PROTOTYPE", 
+        description: "Manufacture first prototype, personal tests" 
+    },
+    { 
+        date: "FEB. 02", 
+        title: "PDR", 
+        description: "Preliminary Design Review"
+    },
+    { 
+        date: "APR. 05", 
+        title: "CDR", 
+        description: "Critical Design Review"
+    },
+    { 
+        date: "MAY. 24", 
+        title: "TEST", 
+        description: "Competition Environmental Tests"
+    },
+    { 
+        date: "JUN. 15", 
+        title: "LAUNCH", 
+        description: "Launch Day"
+     },
+  ];
+
 
 
 // our team

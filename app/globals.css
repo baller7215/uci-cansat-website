@@ -236,8 +236,20 @@ html {
 
 
 /* left right split containers */
+.section-container {
+  @apply relative bg-custom-white border border-custom-black
+}
+
+.text-container {
+  @apply flex flex-row h-screen w-full p-40 justify-between gap-10
+}
+
+.graphic-container {
+  @apply my-auto flex flex-row h-full
+}
+
 .leftText {
-  @apply flex flex-col justify-center
+  @apply flex flex-col justify-center h-full
 }
 
 .rightImage {
@@ -246,7 +258,7 @@ html {
 
 /* table container */
 .mainContent-container {
-  @apply bg-custom-gray/[0.8] h-full px-10 flex flex-col justify-center gap-5 
+  @apply bg-custom-gray/[0.8] h-full p-10 flex flex-col justify-between
 }
 
 .title-container {
@@ -257,9 +269,67 @@ html {
   @apply h-[100px] w-[100px] bg-[var(--color-orange)] rounded-full
 }
 
+/* timeline */
+.timeline-container {
+  @apply flex flex-col justify-center h-full my-auto justify-items-end gap-5
+}
+
+.timeline-event {
+  @apply flex flex-row gap-5 w-full
+}
+
+.timeline-date {
+  @apply my-auto ml-auto
+}
+
+.marker-line-wrapper {
+  @apply relative flex items-center;
+  width: 100px; /* Width to match the marker size */
+  height: 100%; /* Full height to align the line properly */
+}
+
+.timeline-marker {
+  /* @apply z-10 relative */
+  z-index: 1;
+  position: relative;
+}
+
+/* .timeline-marker:after {
+  @apply bg-inherit w-[3px] -translate-x-1/2 -translate-y-1/2 z-[-1]
+} */
+
+.timeline-line {
+  position: absolute;
+  top: 100%; /* Position line below the marker */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px; /* Thickness of the line */
+  height: calc(100% + 20px); /* Adjust height to fit between markers */
+  background-color: var(--color-black); /* Same color as marker */
+  z-index: 1; /* Ensure line goes behind the marker */
+}
+
+.timeline-arrow {
+  position: absolute;
+  top: calc(200% + 20px); /* Position arrow below the marker */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--color-black); /* Arrow color, same as line and marker */
+  z-index: 1;
+}
+
+.timeline-content {
+  @apply flex flex-col justify-center w-1/2 
+}
+
 /* text */
+/* text-[64px] */
 .header {
-  @apply text-[var(--color-orange)] font-bold text-[64px] mb-5
+  @apply text-[var(--color-orange)] font-bold text-[64px] mb-5 m-0 p-0 whitespace-nowrap
 }
 
 .description {

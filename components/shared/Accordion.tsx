@@ -27,7 +27,7 @@ const CustomAccordion = ({ accordionItems }: CustomAccordionProps) => {
       <Accordion type="single" collapsible className='mt-16'>
         {accordionItems.map((item) => {
           return (
-            <AccordionItem value={`item-${item.id}`} className='bg-custom-lightBlack text-custom-white px-3'>
+            <AccordionItem key={item.id} value={`item-${item.id}`} className='bg-custom-lightBlack text-custom-white px-3'>
               <AccordionTrigger className='font-medium text-4xl tracking-wider'>{item.title}</AccordionTrigger>
               <AccordionContent className='font-normal text-xl'>
                 {item.content}

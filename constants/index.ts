@@ -128,3 +128,56 @@ export const socials = [
         icon: '/assets/icons/instagram.svg'
     }
 ]
+
+
+
+// about us
+export const subteams = [
+    {
+        id: 1,
+        title: 'Mechanical',
+        content: "The mechanical challenges faced by the UCI CanSat team involve ensuring the satellite's structural integrity, optimizing its weight, and developing deployable systems that can withstand the launch's harsh conditions. Furthermore, considerations like thermal management and aerodynamic stability are also pivotal. Through these challenges, students get a firsthand experience of mechanical design, prototyping, and testing."
+    },
+    {
+        id: 2,
+        title: 'Electrical',
+        content: "Electrical components form the nervous system of the satellite. The UCl CanSat team members work on designing and implementing power systems, sensors, and communication modules. They learn the importance of energy efficiency, reliability, and redundancy. This facet of the competition gives students the experience to work on circuit design, soldering, and debugging complex electrical systems."
+    },
+    {
+        id: 3,
+        title: 'Software',
+        content: "The UCl CanSat team emphasizes robust embedded systems programming for satellite autonomy. From gathering data from sensors, ensuring effective communication, to executing deployment sequences, the software aspect is integral to the satellite's success. Additionally, they develop intuitive dashboards, facilitating real-time data visualization and seamless interaction with the satellite's systems."
+    },
+]
+
+
+
+// our team
+// management
+export const management = [
+    {
+        name: 'Professor Rangel',
+        role: 'Primary Faculty Advisor',
+        profileImg: '',
+    },
+    {
+        name: 'Professor Hassaan',
+        role: 'Faculty Co-Advisor',
+        profileImg: '',
+    },
+    {
+        name: 'Kaylee Kim',
+        role: 'Team Lead',
+        profileImg: '',
+    },
+    {
+        name: 'Khushu Gupta',
+        role: 'Electrical and Controls Team Lead',
+        profileImg: '',
+    },
+    {
+        name: 'Sarah',
+        role: 'Mechanical Lead',
+        profileImg: '',
+    },
+]

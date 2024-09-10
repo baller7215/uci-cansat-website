@@ -232,3 +232,48 @@ html {
   /* background-color: var(--color-rhino); */
   @apply bg-[var(--color-orange)] text-[var(--color-white)] px-20 font-bold text-[18px] mt-16
 }
+
+
+
+/* left right split containers */
+.leftText {
+  @apply flex flex-col justify-center
+}
+
+.rightImage {
+  @apply justify-center my-auto flex flex-col h-full
+}
+
+/* table container */
+.mainContent-container {
+  @apply bg-custom-gray/[0.8] h-full px-10 flex flex-col justify-center gap-5 
+}
+
+.title-container {
+  @apply bg-custom-lightBlack/[0.8] h-full w-20 flex items-center justify-center 
+}
+
+.image-container {
+  @apply h-[100px] w-[100px] bg-[var(--color-orange)] rounded-full
+}
+
+/* text */
+.header {
+  @apply text-[var(--color-orange)] font-bold text-[64px] mb-5
+}
+
+.description {
+  @apply font-normal text-2xl leading-10 tracking-wide
+}
+
+.emphasis {
+  @apply italic tracking-widest text-[var(--color-orange)]
+}
+
+.tableTitle {
+  @apply text-[var(--color-rhino)] font-medium text-3xl
+}
+
+.tableSubtitle {
+  @apply text-[var(--color-lightBlack)] font-bold text-base tracking-wider
+}

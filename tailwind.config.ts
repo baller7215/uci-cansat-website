@@ -49,12 +49,43 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+  			'custom-rhino': '#2B3153',
+  			'custom-gray': '#BFC0C0',
+  			'custom-easternBlue': '#2582B9',
+  			'custom-shakespeare': '#3CA3CC',
+  			'custom-whiteIce': '#DDF6F9',
+  			'custom-orange': '#FC5130',
+  			'custom-black': '#050401',
+  			'custom-lightBlack': '#303036',
+  			'custom-white': '#FFFAFF'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },

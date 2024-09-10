@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
+import Footer from "@/components/shared/Footer";
 
 export default function Home() {
   return (
@@ -75,6 +76,8 @@ export default function Home() {
         </section>
 
       </main>
+
+      <Footer></Footer>
     </>
   );
 }

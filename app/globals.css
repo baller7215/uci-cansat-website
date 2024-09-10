@@ -102,6 +102,10 @@ body {
 
 
 
+html {
+  scroll-behavior: smooth
+}
+
 /* NAVBAR */
 .navbar-logo {
   @apply flex flex-row text-center gap-4
@@ -123,7 +127,10 @@ body {
 .navbar-nav-element {
   @apply my-auto text-[20px];
   color: --color-gray;
+}
 
+.navbar-nav-element:hover {
+  @apply text-[var(--color-orange)] underline underline-offset-2 transition duration-700 ease-in-out
 }
 
 .navLink-bold {
@@ -147,6 +154,32 @@ body {
   color: var(--color-gray);
 }
 
+/* FOOTER */
+.socials-elements {
+  @apply flex flex-row gap-5
+}
+
+.socials-element {
+  @apply stroke-white;
+}
+
+.footer-mainPages {
+  @apply font-normal text-[14px] text-[var(--color-rhino)] my-5
+}
+
+.footer-subPages {
+  @apply font-normal text-[16px] text-[var(--color-rhino)] my-3
+}
+
+.footer-subPages:hover {
+  @apply text-[var(--color-orange)] underline underline-offset-2 transition duration-700 ease-in-out
+}
+
+.footer-pageContainer {
+  @apply h-auto w-40 text-left
+}
+
+
 
 /* HOME PAGE */
 .home-sectionBackground {
@@ -169,7 +202,7 @@ body {
   /* background-image: url('../public/assets/images/home-cover.jpg'); */
   /* bg-[url('/img/hero-pattern.svg')] */
   /* bg-[url('../public/assets/images/home-cover.jpg')] */
-  @apply  bg-cover bg-center
+  @apply bg-cover bg-center
 
 }
 

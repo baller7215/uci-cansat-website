@@ -1,3 +1,5 @@
+// navigation and routing
+
 export const navLinks = [
     // {
     //   label: "UC URVINE",
@@ -97,5 +99,32 @@ export const updateLinks = [
     {
         label: 'News Archive',
         route: '/updates/news-archive',
+    }
+];
+
+export const contactLinks = [
+    {
+        label: 'Contact Us',
+        route: '/contact/',
+    },
+    {
+        label: 'Join Us',
+        route: '/join/',
+    }
+]
+
+
+
+// socials
+export const socials = [
+    {
+        label: 'LinkedIn',
+        link: 'https://www.linkedin.com/company/uci-cansat/',
+        icon: '/assets/icons/linkedin.svg'
+    },
+    {
+        label: 'Instagram',
+        link: 'https://www.instagram.com/cansatuci/',
+        icon: '/assets/icons/instagram.svg'
     }
 ]

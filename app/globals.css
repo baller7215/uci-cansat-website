@@ -183,7 +183,6 @@ html {
 
 /* HOME PAGE */
 .home-sectionBackground {
-  /* background-image: url('../public/assets/images/starfield.png'); */
   @apply bg-[url('../public/assets/images/starfield.png')] bg-cover bg-center
 }
 
@@ -293,10 +292,6 @@ html {
   z-index: 1;
   position: relative;
 }
-
-/* .timeline-marker:after {
-  @apply bg-inherit w-[3px] -translate-x-1/2 -translate-y-1/2 z-[-1]
-} */
 
 .timeline-line {
   position: absolute;

@@ -38,7 +38,6 @@ const About = async () => {
             <div className="justify-end my-auto w-1/2 flex flex-row h-full">
               {/* management profiles */}
               <div className="mainContent-container rounded-s-md">
-                {/* <ul> */}
                   {management.map((profile) => {
                     return (
                       <li key={profile.name} className="flex flex-row gap-5">
@@ -50,7 +49,6 @@ const About = async () => {
                       </li>
                     )
                   })}
-                {/* </ul> */}
               </div>
               {/* title */}
               <div className="title-container rounded-e-md">
@@ -99,7 +97,7 @@ const About = async () => {
           <div className="text-container">
 
             {/* left */}
-            <div className="justify-start w-1/4 graphic-container">
+            <div className="justify-start w-1/3 graphic-container">
               {/* title */}
               <div className="title-container rounded-s-md m-0">
                 <h2 className="header rotate-[270deg] origin-center">Competition History</h2>
@@ -107,12 +105,9 @@ const About = async () => {
 
               {/* competition standing history */}
               <div className="mainContent-container rounded-e-md">
-                {/* <ul> */}
                   {competitionHistory.map((year) => {
                     return (
                       <li key={year.year} className="flex flex-row">
-                        {/* TODO: REPLACE EMPTY DIV WITH PROFILE IMAGE */}
-                        {/* <div className="image-container"></div> */}
                         <div className="my-auto flex flex-col gap-2 items-center text-center">
                           <h3 className="tableTitle">{year.placing} in the World</h3>
                           <h4 className="tableSubtitle uppercase">{year.year}</h4>
@@ -120,7 +115,6 @@ const About = async () => {
                       </li>
                     )
                   })}
-                {/* </ul> */}
               </div>
               
             </div>
@@ -156,18 +150,15 @@ const About = async () => {
                     <div className="timeline-marker image-container"></div>
                     {/* Add the line that will pass through */}
                     {index === competitionTimeline.length - 1 ? (
+                      // arrow for last timeline marker
                       <>
                         <div className="timeline-line"></div>
                         <div className="timeline-arrow"></div>
                       </>
                       
                     ) : (
-                      
-                      <div className="timeline-line"></div> // Line for other markers
+                      <div className="timeline-line"></div> 
                     )}
-
-                    {/* <div className="timeline-line"></div> */}
-                    {/* {index !== competitionTimeline.length - 1 && <div className="timeline-line"></div>} */}
                   </div>
 
                   <div className='timeline-content'>
@@ -178,9 +169,6 @@ const About = async () => {
               ))}
             </div>  
           </div>
-
-          
-
         </section>
 
       </main>

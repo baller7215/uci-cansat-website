@@ -1,41 +1,36 @@
 // navigation and routing
 
 export const navLinks = [
-    // {
-    //   label: "UC URVINE",
-    //   route: "/",
-    //   icon: "/assets/icons/logo.png",
-    // },
     {
-      label: "About",
-      route: "/about",
+        label: "About",
+        route: "/about",
     //   icon: "/assets/icons/image.svg",
     },
     {
-      label: "Projects",
-      route: "/projects",
+        label: 'Team',
+        route: '/team',
+    },
+    {
+        label: "Projects",
+        route: "/projects",
     //   icon: "/assets/icons/stars.svg",
     },
     {
-      label: "Sponsors",
-      route: "/sponsors",
+        label: "Sponsors",
+        route: "/sponsors",
     //   icon: "/assets/icons/scan.svg",
     },
     {
-      label: "Updates",
-      route: "/updates",
+        label: "Updates",
+        route: "/updates",
     //   icon: "/assets/icons/filter.svg",
     },
     {
-      label: "Contact",
-      route: "/contact",
+        label: "Contact",
+        route: "/contact",
     //   icon: "/assets/icons/camera.svg",
     },
-    // {
-    //   label: "Join Now",
-    //   route: "/join",
-    // //   icon: "/assets/icons/profile.svg",
-    // },
+
 ];
   
 export const aboutLinks = [
@@ -44,12 +39,55 @@ export const aboutLinks = [
         route: "/about",
         //   icon: "/assets/icons/logo.png",
     },
+    
+];
+
+export const teamLinks = [
     {
         label: "The Team",
-        route: "/about/team",
-        //   icon: "/assets/icons/image.svg",
+        route: "/team",
     },
-];
+    {
+        label: "2024 - 2025",
+        route: "/team/2024-2025",
+        image: '',
+    },
+    {
+        label: "2023 - 2024",
+        route: "/team/2023-2024",
+        image: '/assets/images/team/2023-2024/team.png',
+    },
+    {
+        label: "2022 - 2023",
+        route: "/team/2022-2023",
+        image: '',
+    },
+    {
+        label: "2021 - 2022",
+        route: "/team/2021-2022",
+        image: '',
+    },
+    {
+        label: "2020 - 2021",
+        route: "/team/2020-2021",
+        image: '',
+    },
+    {
+        label: "2019 - 2020",
+        route: "/team/2019-2020",
+        image: '',
+    },
+    {
+        label: "2018 - 2019",
+        route: "/team/2018-2019",
+        image: '',
+    },
+    {
+        label: "2017 - 2018",
+        route: "/team/2017-2018",
+        image: '',
+    },
+]
   
 export const projectsLinks = [
     {

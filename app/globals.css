@@ -121,7 +121,7 @@ html {
 }
 
 .navbar-nav-elements {
-  @apply w-full my-auto flex-row flex gap-8
+  @apply w-full my-auto flex-row flex gap-10
 }
 
 .navbar-nav-element {
@@ -176,7 +176,7 @@ html {
 }
 
 .footer-pageContainer {
-  @apply h-auto w-40 text-left
+  @apply h-auto w-32 text-left
 }
 
 
@@ -236,7 +236,7 @@ html {
 
 /* left right split containers */
 .section-container {
-  @apply relative bg-custom-white border border-custom-black
+  @apply relative bg-custom-white border border-x-0 border-custom-black
 }
 
 .text-container {

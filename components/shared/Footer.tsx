@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { socials, aboutLinks, projectsLinks, sponsorsLinks, updateLinks, contactLinks } from '@/constants'; 
+import { socials, aboutLinks, projectsLinks, sponsorsLinks, updateLinks, contactLinks, teamLinks } from '@/constants'; 
 import Link from 'next/link';
 
 const Footer = () => {
@@ -41,6 +41,20 @@ const Footer = () => {
                 <h4 className='footer-mainPages'>About</h4>
                 <ul>
                     {aboutLinks.map(link => (
+                    <li key={link.route} className='footer-subPages'>
+                        <Link href={link.route}>
+                            {link.label}
+                        </Link>
+                    </li>
+                    ))}
+                </ul>
+            </div>
+
+            {/* Team Section */}
+            <div className='footer-pageContainer'>
+                <h4 className='footer-mainPages'>Team</h4>
+                <ul>
+                    {teamLinks.slice(0, 6).map(link => (
                     <li key={link.route} className='footer-subPages'>
                         <Link href={link.route}>
                             {link.label}

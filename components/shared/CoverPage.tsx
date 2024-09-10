@@ -28,24 +28,21 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
                     <h1 className="cover-title">{title}</h1>
 
                     {subtitle && 
-                        <>
-                            <p className="cover-subtitle">{subtitle}</p>
+                        <p className="cover-subtitle">{subtitle}</p>
+                    }
 
-                            <Button asChild className='cover-joinButton'>
-                                <Link href="/join">Join Now</Link>
-                            </Button>
-                        </>
-                        
-                    }     
+                    {page==='home' &&
+                        <Button asChild className='cover-joinButton'>
+                            <Link href="/join">Join Now</Link>
+                        </Button>
+                    }
                 </div>
                 
 
                 <br></br>
 
                 <Button variant="ghost" className='mt-40 self-center' size="icon">
-                    {/* <Link href='#overview'>
-                        <ChevronDown className="h-4 w-4" />
-                    </Link> */}
+
                     <a href="#overview" className="scroll-smooth">
                         <ChevronDown className="h-7 w-7" />
                     </a>

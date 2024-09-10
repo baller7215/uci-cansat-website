@@ -93,7 +93,7 @@ const About = async () => {
         </section>
 
         {/* history */}
-        <section className="relative bg-custom-white border border-custom-black">
+        <section className="section-container">
           <div className="text-container">
 
             {/* left */}

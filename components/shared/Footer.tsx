@@ -54,7 +54,7 @@ const Footer = () => {
             <div className='footer-pageContainer'>
                 <h4 className='footer-mainPages'>Team</h4>
                 <ul>
-                    {teamLinks.slice(0, 6).map(link => (
+                    {teamLinks.map(link => (
                     <li key={link.route} className='footer-subPages'>
                         <Link href={link.route}>
                             {link.label}

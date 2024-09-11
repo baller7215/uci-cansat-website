@@ -321,10 +321,37 @@ html {
   @apply flex flex-col justify-center w-1/2 
 }
 
+/* collection */
+.collection-container {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 w-full;
+}
+
+.card-item {
+  @apply flex flex-col items-center justify-center;
+}
+
+.card-content {
+  @apply w-full flex flex-col items-center gap-2;
+}
+
+.card-placeholder {
+  @apply w-[450px] h-[350px] bg-custom-orange rounded-md shadow-2xl;
+}
+
+.card-label {
+  @apply text-center text-[22px] font-medium mt-1 text-custom-rhino;
+}
+
+.card-image {
+  @apply rounded-md shadow-2xl;
+}
+
+
+
 /* text */
 /* text-[64px] */
 .header {
-  @apply text-[var(--color-orange)] font-bold text-[64px] mb-5 m-0 p-0 whitespace-nowrap
+  @apply text-[var(--color-orange)] font-bold text-[64px] mb-5 m-0 p-0
 }
 
 .description {

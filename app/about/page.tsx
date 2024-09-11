@@ -52,7 +52,7 @@ const About = async () => {
               </div>
               {/* title */}
               <div className="title-container rounded-e-md">
-                <h2 className="header rotate-90 origin-center">Management</h2>
+                <h2 className="header rotate-90 origin-center whitespace-nowrap">Management</h2>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ const About = async () => {
               <p className="description text-custom-rhino">The UCI CanSat team is a prominent representation of the University of California, Irvine&apos;s commitment to pushing the boundaries of student-led engineering projects. Comprised of a dedicated and dynamic group of students, the team participates in the CanSat competition to hone their engineering skills. The competition not only offers an avenue to apply theoretical knowledge but also propels UCI&apos;s engineering students into real-world scenarios that mimic the challenges faced by professionals in the industry.</p>
             
               <Button variant='link' className='mx-0 px-0 my-3 flex-none inline-block w-fit'>
-                <Link href='https://www.cansatcompetition.com/' className="font-bold text-[32px] leading-9 text-[var(--color-rhino)] flex flex-row items-center gap-2">
+                <Link href='https://www.cansatcompetition.com/' target="_blank" className="font-bold text-[32px] leading-9 text-[var(--color-rhino)] flex flex-row items-center gap-2">
                   Learn More About the Competition
                   <Button variant="ghost" size="icon" className="bg-[var(--color-orange)] rounded-full">
                       <ArrowUpRightIcon className="h-6 w-6" />
@@ -100,7 +100,7 @@ const About = async () => {
             <div className="justify-start w-1/3 graphic-container">
               {/* title */}
               <div className="title-container rounded-s-md m-0">
-                <h2 className="header rotate-[270deg] origin-center">Competition History</h2>
+                <h2 className="header rotate-[270deg] origin-center whitespace-nowrap">Competition History</h2>
               </div>
 
               {/* competition standing history */}

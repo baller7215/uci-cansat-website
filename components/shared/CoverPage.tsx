@@ -5,13 +5,6 @@ import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 
 
-type CoverPageProps = {
-    page: string;
-    title: string;
-    subtitle?: string;
-    background: string;
-}
-
 const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
   return (
     // from-white from-0% to-black to-100%

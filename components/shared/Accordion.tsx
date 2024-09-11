@@ -10,16 +10,6 @@ import {
 } from "@/components/ui/accordion"
 
 
-type AccordionItem = {
-  id: number;
-  title: string;
-  content: string;
-}
-
-type CustomAccordionProps = {
-  accordionItems: AccordionItem[];
-}
-
 
 const CustomAccordion = ({ accordionItems }: CustomAccordionProps) => {
   return (

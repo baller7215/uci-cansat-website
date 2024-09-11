@@ -2,16 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-type Card = {
-    // id: number,
-    label: string;
-    route: string;
-    image?: string;
-}
-
-type CollectionProps = {
-    cards: Card[];
-}
 
 const Collection = ({ cards }: CollectionProps) => {
   return (
@@ -24,11 +14,11 @@ const Collection = ({ cards }: CollectionProps) => {
                         <div className="card-content">
                             {card.image ? (
                                 <Image
-                                src={card.image}
-                                alt={`${card.label} team image`}
-                                width={450}
-                                height={300}
-                                className="card-image"
+                                    src={card.image}
+                                    alt={`${card.label} team image`}
+                                    width={450}
+                                    height={300}
+                                    className="card-image"
                                 />
                             ) : (
                                 <div className="card-placeholder bg-custom-orange"></div>

@@ -28,3 +28,29 @@ declare type CoverPageProps = {
     subtitle?: string;
     background: string;
 }
+
+// profiles grid page props
+// declare type Advisor = {
+//     name: string;
+//     role: string;
+//     profileImg?: string;
+// }
+
+declare type Member = {
+    name: string;
+    role: string;
+    profileImg?: string;
+    github?: string;
+    linkedin?: string;
+    major?: string;
+    gradYear?: string;
+    description?: string;
+}
+
+declare type ProfilesGridProps = {
+    members: Member[];
+}
+
+declare type ProfileCardProps = {
+    member: Member;
+}

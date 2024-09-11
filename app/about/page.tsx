@@ -9,7 +9,7 @@ import Footer from "@/components/shared/Footer";
 import { competitionHistory, competitionTimeline, management, subteams } from "@/constants";
 import CustomAccordion from "@/components/shared/Accordion";
 
-const About = async () => {
+const About = () => {
   return (
     <>
       <main>

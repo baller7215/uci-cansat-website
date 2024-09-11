@@ -101,6 +101,10 @@ body {
 }
 
 
+body, html {
+  @apply m-0 p-0 h-full
+}
+
 
 html {
   scroll-behavior: smooth
@@ -346,6 +350,61 @@ html {
   @apply rounded-md shadow-2xl;
 }
 
+
+/* team page */
+.team-background {
+  @apply !bg-transparent bg-fixed bg-cover bg-center min-h-screen my-auto;
+  background-image: url('../public/assets/images/background.jpg');
+}
+
+.team-title {
+  @apply text-custom-whiteIce font-bold text-5xl w-full mx-auto text-center
+}
+
+/* divide-x-2 divide-custom-white  */
+.profiles-grid {
+  @apply w-full h-auto bg-custom-white/55 rounded-lg grid grid-cols-1 md:grid-cols-3 
+}
+
+.profile-cell {
+  @apply rounded-xl border-2 border-custom-white flex flex-col m-12 justify-center transform transition-transform duration-300 hover:scale-105
+}
+
+.profile-cell:hover {
+  @apply cursor-pointer
+}
+
+.profile-mainContents {
+  @apply p-10 justify-center items-center text-center flex flex-col h-full my-auto
+}
+
+.profile-image {
+  @apply rounded-full bg-custom-orange w-[130px] h-[130px]
+}
+
+.profile-name {
+  @apply font-medium text-2xl text-custom-rhino
+}
+
+.profile-role {
+  @apply font-bold text-sm tracking-wider text-custom-rhino/40 uppercase
+}
+
+.profile-description {
+  @apply font-normal text-base tracking-wider text-custom-rhino/40 my-2
+}
+
+.socials-grid {
+  @apply flex flex-row justify-center items-center w-full p-5 border-t-2 border-custom-white h-20
+}
+
+.socials-cell {
+  @apply w-full flex justify-center
+}
+
+.socials-icon {
+  @apply w-8 h-full text-custom-rhino/40 transform transition-transform duration-300 hover:scale-125 hover:text-custom-orange/40
+}
 
 
 /* text */

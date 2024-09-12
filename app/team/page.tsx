@@ -80,7 +80,7 @@ const Team = () => {
                         </div>
                         ) : (
                         // Render only the first 4 or all teams based on state
-                            <Collection cards={showAll ? teamLinks.slice(0) : teamLinks.slice(1, 5)} />
+                            <Collection cards={showAll ? teamLinks.slice(1) : teamLinks.slice(1, 5)} />
                         )}
                     </div>
                 </section>

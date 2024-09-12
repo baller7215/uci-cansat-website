@@ -29,6 +29,15 @@ declare type CoverPageProps = {
     background: string;
 }
 
+// image text layout props
+declare type ImageTextLayoutProps = {
+    title: string;
+    description: string;
+    image: string;
+    link?: string;
+}
+
+
 // profiles grid page props
 // declare type Advisor = {
 //     name: string;

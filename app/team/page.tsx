@@ -9,6 +9,14 @@ import Collection from "@/components/shared/Collection";
 import { teamLinks } from "@/constants";
 import React, { useState } from 'react';
 import { Skeleton } from "@/components/ui/skeleton";
+import ImageTextLayout from "@/components/shared/ImageTextLayout";
+
+const overview = {
+    title: "Meet the UCI CanSat Team",
+    description: "We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system. Every year the mission changes so this year&apos;s objective is to build a probe that can be deployed at an altitude of around 700m, transmit telemetry in real-time, and use a parachute and aerobraking heat shield to land safely at an upright orientation which is signaled by a victory flag. Interested students are advised to read the official mission guide for 2024 - 2025 ",
+    image: "/assets/images/team/team.png",
+    link: "https://www.cansatcompetition.com/"
+}
 
 
 const Team = () => {
@@ -33,29 +41,7 @@ const Team = () => {
                 <CoverPage page="team" title="The Team" background="./assets/images/starfield.png" />
 
                 {/* overview */}
-                <section className="section-container !bg-custom-black" id='overview'>
-                    <div className="text-container">
-                        {/* left */}
-                        <div className="w-3/5 h-full">
-                            <Image
-                                src='/assets/images/team/team.png'
-                                alt='2024 2025 UCI Cansat Team'
-                                width={1000}
-                                height={800}
-                                className="rounded-2xl"
-                            />
-                        </div>
-                        {/* right */}
-                        <div className="leftText w-2/5">
-                            <h2 className="header leading-[60px]">Meet the UCI CanSat Team</h2>
-                            <p className="description text-custom-white">We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system. Every year the mission changes so this year&apos;s objective is to build a probe that can be deployed at an altitude of around 700m, transmit telemetry in real-time, and use a parachute and aerobraking heat shield to land safely at an upright orientation which is signaled by a victory flag. Interested students are advised to read the official mission guide for 2024 - 2025&nbsp;
-                                <Button variant="link" className="!description !text-custom-orange !p-0 !text-2xl">
-                                    <Link href='https://www.cansatcompetition.com/' target="_blank">here</Link>
-                                </Button>
-                            .</p>
-                        </div>
-                    </div>
-                </section>
+                <ImageTextLayout title={overview.title} description={overview.description} image={overview.image} link={overview.link} />
 
                 {/* see our teams */}
                 <section className="section-container !h-auto">

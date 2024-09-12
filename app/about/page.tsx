@@ -67,7 +67,7 @@ const About = () => {
               <p className="description text-custom-rhino">The UCI CanSat team is a prominent representation of the University of California, Irvine&apos;s commitment to pushing the boundaries of student-led engineering projects. Comprised of a dedicated and dynamic group of students, the team participates in the CanSat competition to hone their engineering skills. The competition not only offers an avenue to apply theoretical knowledge but also propels UCI&apos;s engineering students into real-world scenarios that mimic the challenges faced by professionals in the industry.</p>
             
               <Button variant='link' className='mx-0 px-0 my-3 flex-none inline-block w-fit'>
-                <Link href='https://www.cansatcompetition.com/' target="_blank" className="font-bold text-[32px] leading-9 text-[var(--color-rhino)] flex flex-row items-center gap-2">
+                <Link href='https://www.cansatcompetition.com/' target="_blank" className="subHeader flex flex-row items-center gap-2">
                   Learn More About the Competition
                   <Button variant="ghost" size="icon" className="bg-[var(--color-orange)] rounded-full">
                       <ArrowUpRightIcon className="h-6 w-6" />
@@ -108,7 +108,7 @@ const About = () => {
                   {competitionHistory.map((year) => {
                     return (
                       <li key={year.year} className="flex flex-row">
-                        <div className="my-auto flex flex-col gap-2 items-center text-center">
+                        <div className="graphic-cell">
                           <h3 className="tableTitle">{year.placing} in the World</h3>
                           <h4 className="tableSubtitle uppercase">{year.year}</h4>
                         </div>

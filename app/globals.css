@@ -251,6 +251,10 @@ html {
   @apply my-auto flex flex-row h-full
 }
 
+.graphic-cell {
+  @apply my-auto flex flex-col gap-2 items-center text-center
+}
+
 .leftText {
   @apply flex flex-col justify-center h-full
 }
@@ -435,6 +439,10 @@ html {
 /* text-[64px] */
 .header {
   @apply text-[var(--color-orange)] font-bold text-[64px] mb-5 m-0 p-0
+}
+
+.subHeader {
+  @apply font-bold text-[32px] leading-9 text-[var(--color-rhino)]
 }
 
 .description {

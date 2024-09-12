@@ -1,9 +1,6 @@
 'use client'
 
 import CoverPage from "@/components/shared/CoverPage";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/shared/Footer";
 import React from 'react';
 import { useParams } from 'next/navigation'; // New hook for App Router

@@ -350,6 +350,10 @@ html {
   @apply text-center text-[22px] font-medium mt-1 text-custom-rhino;
 }
 
+.card-label-dark {
+  @apply text-custom-white
+}
+
 .card-image {
   @apply rounded-md shadow-2xl;
 }

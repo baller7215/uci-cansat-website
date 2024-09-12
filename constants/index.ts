@@ -518,6 +518,54 @@ export const project2023_2024 = {
 
 
 
+// sponsors
+export const sponsors = [
+    {
+        label: "Blue Origin",
+        route: "https://www.blueorigin.com/",
+        image: "/assets/images/sponsors/blueOrigin.png",
+    },
+    {
+        label: "Nxbeam",
+        route: "https://www.nxbeam.com/",
+        image: "/assets/images/sponsors/nxbeam.png",
+    },
+    {
+        label: "",
+        route: "",
+        image: ""
+    },
+    {
+        label: "",
+        route: "",
+        image: ""
+    }
+]
+
+export const whySponsorUs = {
+    description: "By becoming a sponsor, you will be contributing to the next generation of engineers by granting them the opportunity to attain valuable, hands-on experience and expand their critical thinking skills. As a sponsor, you will connect with the motivated and talented students on our team and increase your company’s visibility at UC Irvine.",
+    reasons: [
+        {
+            title: "be part of an emerging story",
+            description: "UCI CanSat is a young and vibrant team. As an emerging group in the CanSat competition landscape, your sponsorship provides a unique opportunity to be part of an inspiring underdog story.",
+        },
+        {
+            title: "local and educational impact",
+            description: "While we may not have a broad global reach, our impact is deeply felt within the UCI community and its surrounding areas. Your sponsorship not only elevates our project but also contributes to local educational enrichment and workforce development.",
+        },
+        {
+            title: "invest in future innovators",
+            description: "Our small team size ensures that every member is highly engaged and plays a critical role in the project. By sponsoring us, you're investing in dedicated individuals who are the future of aerospace engineering and related fields.",
+        },
+        {
+            title: "exclusive sponsor benefits",
+            description: "We provide other unique perks, such as placing your company's logo on our CanSat and including your branding in any publications or presentations.",
+        }
+    ]
+}
+
+
+
 
 // connect year with corresponding object
 export const yearTeamProject = {

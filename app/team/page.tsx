@@ -2,8 +2,6 @@
 
 import CoverPage from "@/components/shared/CoverPage";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/shared/Footer";
 import Collection from "@/components/shared/Collection";
 import { teamLinks } from "@/constants";
@@ -66,7 +64,7 @@ const Team = () => {
                         </div>
                         ) : (
                         // Render only the first 4 or all teams based on state
-                            <Collection cards={showAll ? teamLinks.slice(1) : teamLinks.slice(1, 5)} />
+                            <Collection cards={showAll ? teamLinks.slice(1) : teamLinks.slice(1, 5)} dark={false} />
                         )}
                     </div>
                 </section>

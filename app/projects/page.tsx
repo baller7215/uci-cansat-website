@@ -54,7 +54,7 @@ const Projects = () => {
                         </div>
                         ) : (
                         // Render only the first 4 or all teams based on state
-                            <Collection cards={showAll ? projectsLinks.slice(1) : projectsLinks.slice(1, 5)} />
+                            <Collection cards={showAll ? projectsLinks.slice(1) : projectsLinks.slice(1, 5)} dark={false} />
                         )}
                     </div>
                 </section>

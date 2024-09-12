@@ -19,6 +19,7 @@ declare type Card = {
 
 declare type CollectionProps = {
     cards: Card[];
+    dark: boolean;
 }
 
 // cover page props

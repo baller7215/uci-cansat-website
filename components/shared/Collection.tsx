@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 
-const Collection = ({ cards }: CollectionProps) => {
+const Collection = ({ cards, dark }: CollectionProps) => {
   return (
     <>
 
@@ -23,7 +23,7 @@ const Collection = ({ cards }: CollectionProps) => {
                             ) : (
                                 <div className="card-placeholder bg-custom-orange"></div>
                             )}
-                            <h3 className="card-label">{card.label}</h3>
+                            <h3 className={`card-label ${dark ? 'card-label-dark' : ''}`}>{card.label}</h3>
                         </div>
                     </Link>
                 </div>

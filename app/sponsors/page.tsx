@@ -4,11 +4,15 @@ import CoverPage from "@/components/shared/CoverPage";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/shared/Footer";
 import Collection from "@/components/shared/Collection";
-import { sponsors, whySponsorUs } from "@/constants";
+import { sponsors, whySponsorUs, sponsorshipTiers } from "@/constants";
 import React, { useState } from 'react';
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
-import ImageTextLayout from "@/components/shared/ImageTextLayout";
+import Link from "next/link";
+// import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaXmark, FaCode, FaHeart } from "react-icons/fa6";
+import { VscRocket } from "react-icons/vsc";
+
 
 const Sponsors = () => {
     const [showAll, setShowAll] = useState(false); // tracks state to show all teams or not
@@ -61,7 +65,7 @@ const Sponsors = () => {
                 </section>
 
                 {/* why sponsor us */}
-                <section className="section-container">
+                <section className="section-container" id="#whySponsorUs">
                     <div className="text-container !flex-col !justify-center">
                         {/* top */}
                         <div className="flex flex-row justify-between">
@@ -94,6 +98,86 @@ const Sponsors = () => {
                                 )
                             })}
                         </div>
+                    </div>
+                </section>
+
+                {/* sponsorship tiers */}
+                <section className="section-container" id="sponsorshipTiers">
+                    <div className="text-container !flex-col !gap-0 !py-20">
+                        <h2 className="header text-center !mb-0">Sponsorship Tiers</h2>
+                        <p className="description text-custom-rhino text-center">
+                            We would greatly appreciate your financial support, and our sponsorship tiers are shown below. If you are interested in sponsoring our team through a monetary or component donation, please email 
+                                <Link href="mailto:cansatuci@gmail.com" target="_blank" className="emphasis !not-italic underline underline-offset-8">cansatuci@gmail.com</Link>
+                             for the next steps. Tier benefits are negotiable.
+                        </p>
+
+                        {/* <div className="flex flex-row justify-between">
+                            {sponsorshipTiers.map((tier) => {
+                                return (
+                                    <div className="tierCard">
+                                        
+                                    </div>
+                                )
+                            })}
+                        </div> */}
+                        <div className="flex flex-row justify-between gap-10 mt-5">
+                            {sponsorshipTiers.map((tier, index) => (
+                                <div key={index} className="tier-card w-1/3">
+
+                                    {/* top */}
+                                    <div className="tier-top">
+                                        <h3 className="tier-amount">{tier.amount}</h3>
+                                        <p className="tier-title">{tier.title}</p>
+                                    </div>
+
+                                    {/* bottom */}
+                                    <ul className="tier-bottom">
+                                        {tier.benefits.map((benefit, i) => (
+                                            <li key={i} className="tier-benefit">
+                                                {/* <span className={`inline-block w-4 h-4 ${benefit.checked ? 'bg-green-500' : 'bg-gray-500'} rounded-full`}></span> */}
+                                                {benefit.checked ? 
+                                                    <FaCheck className="tier-checked text-green-600" />
+                                                :
+                                                    <FaXmark className="tier-checked text-red-600" />
+                                                }
+                                                <span className="tier-benefitText">{benefit.text}</span>
+                                            </li>
+                                        ))}
+
+                                        <div className="text-center mt-8">
+                                            <Button asChild variant="outline" className="text-custom-easternBlue border-custom-easternBlue rounded-full">
+                                                <Link href="/contact">
+                                                    Contact Us Now
+                                                </Link>
+                                            </Button>
+                                        </div>
+                                    </ul>
+
+                                    {/* <div className="text-center">
+                                        <Button asChild variant="outline" className="text-custom-easternBlue border-custom-easternBlue rounded-full">
+                                            <Link href="/contact">
+                                                Contact Us Now
+                                            </Link>
+                                        </Button>
+                                    </div> */}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* thanks to sponsors */}
+                <section className="section-container !h-auto">
+                    <div className="text-container !flex-col gap-10 !h-auto !px-80 text-center">
+                        {/* icons */}
+                        <div className="flex flex-row gap-20 justify-center text-3xl">
+                            <FaCode className="text-custom-rhino " />
+                            <FaHeart className="text-[#E93A7D]" />
+                            <VscRocket className="text-custom-rhino" />
+                        </div>
+                        {/* title */}
+                        <h2 className="header !text-[42px] uppercase">big thanks to our sponsors &lt;3</h2>
+                        <p className="description text-custom-rhino">On behalf of UCI CanSat, our team would like to thank you for your interest in sponsoring our team! If you have any questions about our team, feel free to contact us at cansatuci@gmail.com!</p>
                     </div>
                 </section>
 

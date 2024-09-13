@@ -1,5 +1,7 @@
 // navigation and routing
 
+import { FaBullseye } from "react-icons/fa";
+
 export const navLinks = [
     {
         label: "About",
@@ -125,11 +127,11 @@ export const projectsLinks = [
 export const sponsorsLinks = [
     {
         label: 'Why Sponsor Us',
-        route: '/sponsors/why-sponsor-us',
+        route: '/sponsors/#whySponsorUs',
     },
     {
         label: 'Sponsorship Tiers',
-        route: '/sponsors/sponsorship-tiers',
+        route: '/sponsors/#sponsorshipTiers',
     },
 ];
 
@@ -563,6 +565,45 @@ export const whySponsorUs = {
         }
     ]
 }
+
+export const sponsorshipTiers = [
+    {
+        title: "Bronze",
+        amount: "$200 - $500",
+        benefits: [
+            { text: "Shoutout on Social Media", checked: true },
+            { text: "Logo on Website", checked: true },
+            { text: "Logo on University / Competition Presentation Materials", checked: true },
+            { text: "Logo on UCI CanSat Uniform", checked: false },
+            { text: "Resume List", checked: false },
+            { text: "Speaker Event / Lab Visit", checked: false }
+        ],
+    },
+    {
+        title: "Silver",
+        amount: "$500 - $1000",
+        benefits: [
+            { text: "Shoutout on Social Media", checked: true },
+            { text: "Logo on Website", checked: true },
+            { text: "Logo on University / Competition Presentation Materials", checked: true },
+            { text: "Logo on UCI CanSat Uniform", checked: true },
+            { text: "Resume List", checked: true },
+            { text: "Speaker Event / Lab Visit", checked: false }
+        ],
+    },
+    {
+        title: "Gold",
+        amount: "$1000+",
+        benefits: [
+            { text: "Shoutout on Social Media", checked: true },
+            { text: "Logo on Website", checked: true },
+            { text: "Logo on University / Competition Presentation Materials", checked: true },
+            { text: "Logo on UCI CanSat Uniform", checked: true },
+            { text: "Resume List", checked: true },
+            { text: "Speaker Event / Lab Visit", checked: true }
+        ],
+    }
+]
 
 
 

@@ -351,13 +351,42 @@ html {
 }
 
 .card-label-dark {
-  @apply text-custom-white
+  @apply text-custom-white;
 }
 
 .card-image {
   @apply rounded-md shadow-2xl;
 }
 
+/* collection news */
+/* w-[850px] h-[450px] */
+.newsCard-card {
+  @apply w-[700px] h-auto bg-custom-white shadow-2xl rounded-xl;
+}
+
+.newsCard-card-placeholder {
+  @apply w-[700px] h-[400px] bg-custom-orange shadow-2xl rounded-xl cursor-pointer;
+}
+
+.newsCard-title {
+  @apply text-custom-rhino text-center font-medium text-[22px] mt-1
+}
+
+.newsCard-subtitle {
+  @apply text-custom-gray text-center font-normal text-base mt-1
+}
+
+.newsCard-image {
+  @apply mb-0;
+}
+
+.newsCard-placeholder {
+  @apply w-[500px] h-[320px] bg-custom-orange;
+}
+
+.newsCard-date {
+  @apply text-custom-rhino font-bold text-base tracking-widest absolute bottom-1 left-1 uppercase;
+}
 
 /* team page */
 .team-background {

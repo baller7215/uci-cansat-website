@@ -22,6 +22,19 @@ declare type CollectionProps = {
     dark: boolean;
 }
 
+// news collection props
+declare type NewsCard = {
+    title: string;
+    subtitle: string;
+    route: string;
+    date: string;
+    image?: string;
+}
+
+declare type CollectionNewsProps = {
+    cards: NewsCard[];
+}
+
 // cover page props
 declare type CoverPageProps = {
     page: string;

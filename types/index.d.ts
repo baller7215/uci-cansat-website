@@ -77,3 +77,35 @@ declare type ProfilesGridProps = {
 declare type ProfileCardProps = {
     member: Member;
 }
+
+
+// testimonial component props
+declare type TestimonialProps = {
+    name: string;
+    year: string;
+    role: string;
+    quote: string;
+    image?: string;
+}
+
+// subteam info component props
+declare type Responsibilities = {
+    description: string;
+    bullets: {
+            title: string;
+            description: string;
+    }[]
+
+}
+
+declare type Requirements = {
+        title: string;
+        description: string;
+}[]
+
+
+declare type SubteamInfoProps = {
+    subteam: string;
+    responsibilities: Responsibilities;
+    requirements: Requirements;
+}

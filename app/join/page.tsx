@@ -1,8 +1,13 @@
+
 import CoverPage from "@/components/shared/CoverPage";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Footer from "@/components/shared/Footer";
 import SubscribeForm from "@/components/shared/SubscribeForm";
+import { electricalPathway, faq, generalPathway, mechanicalPathway, operationsPathway, softwarePathway, webDevPathway } from "@/constants";
+import Testimonial from "@/components/shared/Testimonial";
+import SubteamInfo from "@/components/shared/SubteamInfo";
+import CustomAccordion from "@/components/shared/Accordion";
 
 const Join = () => {
 
@@ -47,6 +52,96 @@ const Join = () => {
 
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                {/* pathway and requirements */}
+                <section className="section-container">
+                    <div className="text-container !flex-col !justify-center gap-10">
+                        <h2 className="header">Pathway and Requirements</h2>
+                        <div className="flex flex-row gap-5">
+                            {/* left (general info) */}
+                            <div className="leftText !justify-start w-1/2 text-left !gap-5">
+                                <h2 className="tableTitle uppercase">General Info For All Applicants</h2>
+                                <ul className="list-disc pl-8">
+                                    {generalPathway.info.map((point) => {
+                                        return (
+                                            <li key={point.title} className="text-2xl font-thin text-custom-rhino mb-2 leading-10">
+                                                {point.title &&
+                                                    <span className="font-bold">{point.title}: </span>
+                                                }
+                                                {point.description}
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                            {/* right (general requirements) */}
+                            <div className="leftText !justify-start w-1/2 text-left !gap-5">
+                                <h2 className="tableTitle uppercase">General Requirements</h2>
+                                <ul className="list-disc pl-8">
+                                    {generalPathway.requirements.map((point) => {
+                                        return (
+                                            <li key={point.title} className="text-2xl font-thin text-custom-rhino mb-2 leading-10">
+                                                {point.title &&
+                                                    <span className="font-bold">{point.title}: </span>
+                                                }
+                                                {point.description}
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                {/* mechanical pathway */}
+                <section className="section-container">
+                    <div className="text-container !p-28 !gap-16">
+                        <Testimonial name={mechanicalPathway.testimonial.name} year={mechanicalPathway.testimonial.year} role={mechanicalPathway.testimonial.role} quote={mechanicalPathway.testimonial.quote} />
+                        <SubteamInfo subteam="Mechanical" responsibilities={mechanicalPathway.responsibilities} requirements={mechanicalPathway.requirements} />
+                    </div>
+                </section>
+
+                {/* electrical pathway */}
+                <section className="section-container">
+                    <div className="text-container !p-28 !gap-16">
+                        <SubteamInfo subteam="Electrical" responsibilities={electricalPathway.responsibilities} requirements={electricalPathway.requirements} />
+                        <Testimonial name={electricalPathway.testimonial.name} year={electricalPathway.testimonial.year} role={electricalPathway.testimonial.role} quote={electricalPathway.testimonial.quote} />
+                    </div>
+                </section>
+
+                {/* software pathway */}
+                <section className="section-container">
+                    <div className="text-container !p-28 !gap-16">
+                        <Testimonial name={softwarePathway.testimonial.name} year={softwarePathway.testimonial.year} role={softwarePathway.testimonial.role} quote={softwarePathway.testimonial.quote} />
+                        <SubteamInfo subteam="Embedded Software" responsibilities={softwarePathway.responsibilities} requirements={softwarePathway.requirements} />
+                    </div>
+                </section>
+
+                {/* operations pathway */}
+                <section className="section-container">
+                    <div className="text-container !p-28 !gap-16">
+                        <SubteamInfo subteam="Operations" responsibilities={operationsPathway.responsibilities} requirements={operationsPathway.requirements} />
+                        <Testimonial name={operationsPathway.testimonial.name} year={operationsPathway.testimonial.year} role={operationsPathway.testimonial.role} quote={operationsPathway.testimonial.quote} />
+                    </div>
+                </section>
+
+                {/* web development pathway */}
+                <section className="section-container">
+                    <div className="text-container !p-28 !gap-16">
+                        <Testimonial name={webDevPathway.testimonial.name} year={webDevPathway.testimonial.year} role={webDevPathway.testimonial.role} quote={webDevPathway.testimonial.quote} />
+                        <SubteamInfo subteam="Web Development" responsibilities={webDevPathway.responsibilities} requirements={webDevPathway.requirements} />
+                    </div>
+                </section>
+
+                {/* frequently asked questions */}
+                <section className="section-container !h-auto">
+                    <div className="text-container !flex-col !justify-center !gap-0">
+                        <h2 className="header capitalize !m-0">Frequently Asked Questions</h2>
+                        <CustomAccordion accordionItems={faq} />
                     </div>
                 </section>
 

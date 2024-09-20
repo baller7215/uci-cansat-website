@@ -92,7 +92,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* history */}
+        {/* competition history */}
         <section className="section-container">
           <div className="text-container">
 

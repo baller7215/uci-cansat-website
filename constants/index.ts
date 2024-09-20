@@ -656,6 +656,297 @@ export const updates = [
 
 
 
+// join us with team / subteam information
+export const generalPathway = {
+    info: [
+        {
+            title: "Team Environment",
+            description: "Work in a close-knit team of around 10 Engineering members and approximately 5 Operations/Web Development members. Collaborate to achieve team goals and deliverables."
+        },
+        {
+            title: "Meeting Schedule",
+            description: "Attend weekly general meetings and subteam-specific meetings.",
+        },
+        {
+            title: "Presentation Preparation",
+            description: "Engineering members are expected to present at the Preliminary Design Review (PDR) and Critical Design Review (CDR)."
+        },
+        {
+            title: "Competition Attendance",
+            description: "Attend the final competition in Virginia, if possible."
+        },
+    ],
+    requirements: [
+        {
+            title: "Minimum GPA",
+            description: "3.3 (exceptions may be made for highly skilled candidates)",
+        },
+        {
+            title: "Commitment",
+            description: "Three-Quarter commitment (2024 Fall, 2025 Winter, 2025 Spring)",
+        },
+        {
+            title: "Course Enrollmentt",
+            description: "Must enroll in 2-4 units of MAE 93 for school credit"
+        },
+        {
+            title: "Personal Attributes",
+            description: "Personal Attributes: Strong work ethic, commitment to team goals, willingness to learn, strong writing, and communication skills."
+        }
+    ]
+}
+
+export const mechanicalPathway = {
+    responsibilities: {
+        description: "Design, fabricate, assemble, and test the mechanical structure, mechanisms, and descent control devices of the CanSat.",
+        bullets: [
+            {
+                title: "Fall Quarter",
+                description: "Focus on creating the mechanical design using Solidworks, primarily working individually with weekly team meetings.",
+            },
+            {
+                title: "Winter Quarter",
+                description: "Focus on 3D printing, manufacturing, and testing mechanisms. Attend lab sessions to manage prints, test, and assemble prototypes."
+            },
+            {
+                title: "Spring Quarter",
+                description: "Dedicate time to design iteration, testing, and finalizing the CanSat. Perform environmental tests including vacuum, thermal, vibration, and drop tests."
+            }
+        ]
+    },
+    requirements: [
+        {
+            title: "Recommended Majors",
+            description: "Mechanical Engineering, Aerospace Engineering",
+        },
+        {
+            title: "Recommended Courses",
+            description: "ENGR 7A/B, MAE 106, MAE 52, MAE 189, MAE 195, MAE 30, MAE 80, MAE 130A/130B",
+        },
+        {
+            title: "Skills",
+            description: "Proficiency in Solidworks (required), experience with 3D printing and manufacturing, knowledge of basic aerodynamics, leadership, and time management skills."
+        }
+    ],
+    testimonial: {
+        name: "Name",
+        year: "Year",
+        role: "role",
+        quote: "quote",
+        // image: "",
+    }
+}
+
+export const electricalPathway = {
+    responsibilities: {
+        description: "Develop the CanSat’s Electrical subsystem through Printed Circuit Board (PCB) development.",
+        bullets: [
+            {
+                title: "",
+                description: "Select appropriate power components to support all sensors and mechanical hardware.",
+            },
+            {
+                title: "",
+                description: "Design and develop custom PCBs, focusing on efficient layout, component selection, and power management."
+            },
+            {
+                title: "",
+                description: "Manage PCB manufacturing, assembly, and testing."
+            },
+            {
+                title: "",
+                description: "Test wireless data transmission and antenna performance.",
+            },
+            {
+                title: "",
+                description: "Coordinate with other teams to integrate electrical systems with mechanical and software components."
+            }
+        ]
+    },
+    requirements: [
+        {
+            title: "Recommended Majors",
+            description: "Electrical Engineering, Computer Engineering, Computer Science and Engineering",
+        },
+        {
+            title: "Recommended Courses",
+            description: "EECS 70A",
+        },
+        {
+            title: "Useful Courses",
+            description: "EECS 70B, EECS 50 or 150, EECS 10",
+        },
+        {
+            title: "Skills",
+            description: "Experience with PCB/electrical design programs, soldering, electrical troubleshooting, lab equipment usage (e.g., oscilloscopes), preferred previous electrical design, and manufacturing experience."
+        }
+    ],
+    testimonial: {
+        name: "Name",
+        year: "Year",
+        role: "role",
+        quote: "quote",
+        image: "",
+    }
+}
+
+export const softwarePathway = {
+    responsibilities: {
+        description: "Develop software systems for CanSat, including Ground Station, Flight Software, and Test Benches.",
+        bullets: [
+            {
+                title: "",
+                description: "Design and implement a Ground Station to communicate with CanSat.",
+            },
+            {
+                title: "",
+                description: "Collaborate with mechanical and electrical teams to test components using Arduino."
+            },
+            {
+                title: "",
+                description: "Develop embedded systems for the Payload using microcontrollers like STM32 or ESP32."
+            },
+            {
+                title: "",
+                description: "Perform integration testing to ensure functionality.",
+            },
+        ]
+    },
+    requirements: [
+        {
+            title: "Recommended Majors",
+            description: "Computer Science, Computer Science and Engineering, Computer Engineering, Electrical Engineering",
+        },
+        {
+            title: "Recommended Courses",
+            description: "COMPSCI 145, COMPSCI 147, EECS 20",
+        },
+        {
+            title: "Skills",
+            description: "Proficiency in C/C++ Embedded Programming (required), familiarity with Git, experience with communication protocols (e.g., I2C), preferred radio communication experience."
+        }
+    ],
+    testimonial: {
+        name: "Name",
+        year: "Year",
+        role: "role",
+        quote: "quote",
+        image: "",
+    }
+}
+
+export const operationsPathway = {
+    responsibilities: {
+        description: "Support the UCI CanSat team through outreach, event management, and operations.",
+        bullets: [
+            {
+                title: "",
+                description: "Coordinate outreach programs to promote the team’s mission.",
+            },
+            {
+                title: "",
+                description: "Organize events, workshops, and presentations for the UCI community and sponsors."
+            },
+            {
+                title: "",
+                description: "Assist in documentation, reporting, and communication tasks."
+            },
+            {
+                title: "",
+                description: "Represent the team at university events and competitions.",
+            },
+        ]
+    },
+    requirements: [
+        {
+            title: "Recommended Majors",
+            description: "Business Administration, Business Information Management; Engineering/ICS majors with enthusiasm for tech are welcome.",
+        },
+        {
+            title: "Skills",
+            description: "Organizational and communication skills, ability to create promotional materials, collaborative mindset, finance management skills, preferred experience in outreach, event management, or operations."
+        }
+    ],
+    testimonial: {
+        name: "Name",
+        year: "Year",
+        role: "role",
+        quote: "quote",
+        image: "",
+    }
+}
+
+export const webDevPathway = {
+    responsibilities: {
+        description: "Design, develop, and maintain the UCI CanSat team website.",
+        bullets: [
+            {
+                title: "",
+                description: "Ensure the website is mobile-responsive and optimized for various browsers.",
+            },
+            {
+                title: "",
+                description: "Collaborate with team members to gather content and align with the team’s brand."
+            },
+            {
+                title: "",
+                description: "Implement security measures to protect the website."
+            },
+            {
+                title: "",
+                description: "Regularly update the website with news, events, and team achievements.",
+            },
+        ]
+    },
+    requirements: [
+        {
+            title: "Recommended Majors",
+            description: "Computer Science, Software Engineering",
+        },
+        {
+            title: "Skills",
+            description: "Experience with web design frameworks (e.g., React), strong visual design skills, problem-solving abilities, familiarity with web standards and accessibility best practices, preferred experience in UI/UX design and web design for teams or organizations."
+        }
+    ],
+    testimonial: {
+        name: "Name",
+        year: "Year",
+        role: "role",
+        quote: "quote",
+        image: "",
+    }
+}
+
+
+// frequently asked questions
+export const faq = [
+    {
+        id: 1,
+        title: 'How can I apply?',
+        content: "Unfortunately applications for the 2024 - 2025 year are now closed."
+    },
+    {
+        id: 2,
+        title: "Are there any requirements to joining?",
+        content: "Requirements vary based on the subsystem. For more details, read the requirements of each pathway above.",
+    },
+    {
+        id: 3,
+        title: "What is the time commitment",
+        content: "CanSat holds a weekly team meeting. This will be scheduled so everyone can attend without missing class. We also schedule engineering work time in 2 or 3-hour increments. These will be separated by subsystem (Mechanical, Electrical, Embdedded Systems). Expect to attend at least 1 session per week to work on hardware or software. You’re also encouraged to work independently when no sessions are scheduled. In general, please estimate 4 hours per week, per MAE 189 unit (most students take 2 units, or put in the equivalent hours)."
+    },
+    {
+        id: 4,
+        title: "When / Where is the competition?",
+        content: "Each year, the competition is held in Virginia."
+    },
+    {
+        id: 5,
+        title: "What will I be doing each week?",
+        content: "Different pathways work on different parts of the CanSat. For more details, read the description of each pathway."
+    }
+]
+
 
 // connect year with corresponding object
 export const yearTeamProject = {

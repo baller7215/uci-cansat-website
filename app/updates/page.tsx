@@ -2,8 +2,6 @@
 
 import CoverPage from "@/components/shared/CoverPage";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "@/components/shared/Footer";
 import { featuredNews, updates } from "@/constants";
 import CardNews from "@/components/shared/CardNews";

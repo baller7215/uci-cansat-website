@@ -1,7 +1,4 @@
 // navigation and routing
-
-import { FaBullseye } from "react-icons/fa";
-
 export const navLinks = [
     {
         label: "About",

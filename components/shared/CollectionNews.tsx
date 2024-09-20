@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import CardNews from './CardNews';
 
@@ -10,7 +8,7 @@ const CollectionNews = ({ cards }: CollectionNewsProps) => {
 
         <div className="collection-container">
             {cards.map((card) => (
-                <CardNews title={card.title} subtitle={card.subtitle} route={card.route} date={card.date} image={card.image} />
+                <CardNews key={card.title} title={card.title} subtitle={card.subtitle} route={card.route} date={card.date} image={card.image} />
             ))}
         </div>
         

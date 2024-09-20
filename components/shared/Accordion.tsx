@@ -9,7 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-
+// TODO: FIX
 
 const CustomAccordion = ({ accordionItems }: CustomAccordionProps) => {
   return (

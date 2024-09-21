@@ -5,21 +5,21 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='p-40 py-20 bg-[var(--color-white)] w-full h-auto flex flex-row justify-between'>
+    <footer className='footer'>
         {/* logo + social media */}
         <div className="w-1/3">
-            <div className="flex flex-col self-start">
+            <div className="footer-branding">
                 <Link href='/'>
                     <Image src='/assets/icons/footer-logo.png' alt="cansat footer logo" width={500} height={100} />
                 </Link>
                 
-                <div className='flex-col flex font-normal text-[15px] text-[var(--color-rhino)] leading-7 m1-5'>
+                <div className='footer-branding-text'>
                     <p>Irvine, CA</p>
                     <p>Est. 2017</p>
                 </div>
             </div>
             {/* social media links */}
-            <div className="flex flex-row self-end mt-16">
+            <div className="footer-socials-container">
                 <ul className='socials-elements'>
                     {socials.map((social) => {
                         return (
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         {/* footer navigation */}
-        <div className="w-2/3 flex flex-row justify-end gap-10">
+        <div className="footer-nav-container">
             {/* About Section */}
             <div className='footer-pageContainer'>
                 <h4 className='footer-mainPages'>About</h4>

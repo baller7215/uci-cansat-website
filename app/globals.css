@@ -180,12 +180,32 @@ html {
 }
 
 /* FOOTER */
+.footer {
+  @apply p-40 py-20 bg-[var(--color-white)] w-full h-auto hidden md:flex flex-row justify-between;
+}
+
+.footer-branding {
+  @apply flex flex-col self-start;
+}
+
+.footer-branding-text {
+  @apply flex-col flex font-normal text-[15px] text-[var(--color-rhino)] leading-7 mt-5;
+}
+
+.footer-socials-container {
+  @apply flex flex-row self-end mt-16;
+}
+
 .socials-elements {
   @apply flex flex-row gap-5
 }
 
 .socials-element {
   @apply stroke-white;
+}
+
+.footer-nav-container {
+  @apply w-2/3 flex flex-row justify-end gap-10;
 }
 
 .footer-mainPages {
@@ -203,6 +223,36 @@ html {
 .footer-pageContainer {
   @apply h-auto w-32 text-left
 }
+
+
+
+/* MOBILE FOOTER */
+.mobile-footer {
+  @apply flex flex-col md:hidden w-full h-auto bg-custom-white p-10;
+}
+
+.mobile-footer-nav-container {
+  @apply w-full flex flex-col justify-start gap-2 items-center;
+}
+
+.mobile-footer-pageContainer {
+  @apply h-auto w-full text-center;
+}
+
+.mobile-footer-mainPages {
+  @apply font-normal text-xl text-[var(--color-rhino)] my-5
+}
+
+.mobile-footer-subPages {
+  @apply font-normal text-2xl text-[var(--color-rhino)] my-3
+}
+
+
+
+.mobile-footer-branding-text {
+  @apply flex-col flex font-normal text-[15px] text-[var(--color-rhino)] leading-7 mt-5;
+}
+
 
 
 

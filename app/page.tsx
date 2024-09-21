@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import Footer from "@/components/shared/Footer";
+import MobileFooter from "@/components/shared/MobileFooter";
 
 export default function Home() {
   return (
@@ -75,6 +76,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <MobileFooter />
     </>
   );
 }

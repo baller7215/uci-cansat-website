@@ -111,6 +111,10 @@ html {
 }
 
 /* NAVBAR */
+.navbar {
+  @apply h-[160px] w-full flex-row justify-between gap-4 p-8 hidden lg:flex;
+}
+
 .navbar-logo {
   @apply flex flex-row text-center gap-4
 }
@@ -156,6 +160,23 @@ html {
   background-color: transparent;
   border-color: var(--color-gray);
   color: var(--color-gray);
+}
+
+/* MOBILE NAV */
+.mobileNav {
+  @apply h-[100px] w-full flex-row justify-between gap-4 p-8 flex lg:hidden;
+}
+
+.mobile-navTitle {
+  @apply my-auto text-3xl font-bold text-custom-gray;
+}
+
+.mobile-icon {
+  @apply text-3xl text-custom-gray h-7 w-7 my-auto;
+}
+
+.hoverTransition {
+  @apply transform transition-transform duration-300 hover:scale-125;
 }
 
 /* FOOTER */
@@ -214,7 +235,7 @@ html {
 }
 
 .cover-textContainer {
-  @apply flex flex-col justify-between mx-auto my-auto w-2/3 lg:w-1/2 h-full text-center py-20
+  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-full text-center py-20
 }
 
 .cover-branding {
@@ -224,7 +245,7 @@ html {
 
 .cover-title {
   /* color: var(--color-whiteIce); */
-  @apply font-bold text-[4rem] md:text-[5rem] lg:text-[6rem] tracking-[1px] my-3 mb-8 capitalize indent-0 underline-offset-auto underline decoration-[var(--color-shakespeare)] text-[var(--color-whiteIce)]
+  @apply font-bold text-[4rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] tracking-[1px] my-3 mb-8 capitalize indent-0 underline-offset-auto underline decoration-[var(--color-shakespeare)] text-[var(--color-whiteIce)]
 }
 
 .cover-subtitle {

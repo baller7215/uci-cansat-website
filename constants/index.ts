@@ -124,22 +124,22 @@ export const projectsLinks = [
 export const sponsorsLinks = [
     {
         label: 'Why Sponsor Us',
-        route: '/sponsors/#whySponsorUs',
+        route: '/sponsors#whySponsorUs',
     },
     {
         label: 'Sponsorship Tiers',
-        route: '/sponsors/#sponsorshipTiers',
+        route: '/sponsors#sponsorshipTiers',
     },
 ];
 
 export const updateLinks = [
     {
         label: 'Featured News',
-        route: '/updates/featured-news',
+        route: '/updates#overview',
     },
     {
         label: 'News Archive',
-        route: '/updates/news-archive',
+        route: '/updates#archive',
     }
 ];
 

@@ -65,7 +65,7 @@ const Sponsors = () => {
                 </section>
 
                 {/* why sponsor us */}
-                <section className="section-container" id="#whySponsorUs">
+                <section className="section-container" id="whySponsorUs">
                     <div className="text-container !flex-col !justify-center">
                         {/* top */}
                         <div className="flex flex-row justify-between">

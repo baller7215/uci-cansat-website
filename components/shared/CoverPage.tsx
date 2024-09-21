@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
+import MobileNav from './MobileNav';
 
 
 const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
@@ -15,6 +16,7 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
         {/* gradient */}
         <div className="gradient">
             <Navbar />
+            <MobileNav />
             <div className="cover-textContainer">
                 <div className='my-auto'>
                     <h3 className='cover-branding'>UCI CANSAT</h3>

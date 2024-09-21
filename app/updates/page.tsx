@@ -62,7 +62,7 @@ const Updates = () => {
                 </section>
 
                 {/* see what we are up to */}
-                <section className="section-container !h-auto">
+                <section className="section-container !h-auto" id="archive">
                     <div className="text-container !flex-col !h-auto">
                         <div className="flex flex-row justify-between w-full">
                             <h2 className="header capitalize">See What We are Up To</h2>

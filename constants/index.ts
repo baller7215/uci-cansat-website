@@ -90,7 +90,7 @@ export const teamLinks = [
   
 export const projectsLinks = [
     {
-        label: "Projects",
+        label: "Our Projects",
         route: "/projects/",
     },
     {
@@ -274,7 +274,7 @@ export const management = [
     },
     {
         name: 'Khushu Gupta',
-        role: 'Electrical and Controls Team Lead',
+        role: 'Electrical Lead',
         profileImg: '',
     },
     {

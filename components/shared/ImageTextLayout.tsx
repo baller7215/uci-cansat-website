@@ -10,7 +10,7 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
         <section className="section-container !bg-custom-black" id='overview'>
             <div className="text-container">
                 {/* left */}
-                <div className="w-3/5 h-full flex justify-center">
+                <div className="w-full md:w-3/5 h-full flex justify-center">
                     {image ? 
                         <Image
                             src={image}
@@ -25,11 +25,11 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
                     
                 </div>
                 {/* right */}
-                <div className="leftText w-2/5">
+                <div className="leftText w-full md:w-2/5">
                     <h2 className="header leading-[60px]">{title}</h2>
                     <p className="description text-custom-white whitespace-pre-wrap">{description}
                         {link && 
-                            <Button variant="link" className="!description !text-custom-orange !p-0 !m-0 !text-2xl">
+                            <Button variant="link" className="!description !text-custom-orange !p-0 !m-0 !sm-text-base !md:text-xl !lg:text-2xl">
                                 <Link href={link} target="_blank">here</Link>
                             </Button>
                             

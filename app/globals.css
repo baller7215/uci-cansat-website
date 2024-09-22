@@ -240,7 +240,7 @@ html {
 }
 
 .mobile-footer-mainPages {
-  @apply font-normal text-xl text-[var(--color-rhino)] my-5
+  @apply font-normal text-xl text-[var(--color-gray)] my-5
 }
 
 .mobile-footer-subPages {
@@ -315,7 +315,7 @@ html {
 }
 
 .text-container {
-  @apply flex flex-row h-screen w-full p-40 justify-between gap-10
+  @apply flex flex-col md:flex-row h-full md:h-screen w-full p-10 md:p-20 lg:p-40 justify-between gap-10
 }
 
 .graphic-container {
@@ -336,15 +336,15 @@ html {
 
 /* table container */
 .mainContent-container {
-  @apply bg-custom-gray/[0.8] h-full p-10 flex flex-col justify-between
+  @apply bg-custom-gray/[0.8] h-auto md:h-full gap-3 md:gap-0 p-3 md:p-5 lg:p-10 flex flex-col justify-between
 }
 
 .title-container {
-  @apply bg-custom-lightBlack/[0.8] h-full w-20 flex items-center justify-center 
+  @apply bg-custom-lightBlack/[0.8] h-auto md:h-full w-12 md:w-20 flex items-center justify-center
 }
 
 .image-container {
-  @apply h-[100px] w-[100px] bg-[var(--color-orange)] rounded-full
+  @apply h-[60px] md:h-[100px] w-[60px] md:w-[100px] bg-[var(--color-orange)] rounded-full
 }
 
 /* timeline */
@@ -361,9 +361,9 @@ html {
 }
 
 .marker-line-wrapper {
-  @apply relative flex items-center;
-  width: 100px; /* Width to match the marker size */
-  height: 100%; /* Full height to align the line properly */
+  @apply relative flex items-center md:w-[100px] md:h-full w-[60px];
+  /* width: 100px;
+  height: 100%; */
 }
 
 .timeline-marker {
@@ -591,15 +591,15 @@ html {
 /* text */
 /* text-[64px] */
 .header {
-  @apply text-[var(--color-orange)] font-bold text-[64px] mb-5 m-0 p-0
+  @apply text-[var(--color-orange)] font-bold text-3xl md:text-5xl lg:text-[64px] mb-2 md:mb-5 m-0 p-0
 }
 
 .subHeader {
-  @apply font-bold text-[32px] leading-9 text-[var(--color-rhino)]
+  @apply font-bold text-lg md:text-[32px] leading-9 text-[var(--color-rhino)]
 }
 
 .description {
-  @apply font-normal text-2xl leading-10 tracking-wide
+  @apply font-normal text-base md:text-xl lg:text-2xl leading-6 md:leading-10 tracking-wide
 }
 
 .emphasis {
@@ -607,9 +607,9 @@ html {
 }
 
 .tableTitle {
-  @apply text-[var(--color-rhino)] font-medium text-3xl
+  @apply text-[var(--color-rhino)] font-medium text-lg md:text-2xl lg:text-3xl
 }
 
 .tableSubtitle {
-  @apply text-[var(--color-lightBlack)] font-bold text-base tracking-wider
+  @apply text-[var(--color-lightBlack)] font-bold text-xs md:text-sm lg:text-base tracking-wider
 }

@@ -8,6 +8,7 @@ import { teamLinks } from "@/constants";
 import React, { useState } from 'react';
 import { Skeleton } from "@/components/ui/skeleton";
 import ImageTextLayout from "@/components/shared/ImageTextLayout";
+import MobileFooter from "@/components/shared/MobileFooter";
 
 const overview = {
     title: "Meet the UCI CanSat Team",
@@ -44,8 +45,8 @@ const Team = () => {
                 {/* see our teams */}
                 <section className="section-container !h-auto">
                     <div className="text-container !flex-col !h-auto">
-                        <div className="flex flex-row justify-between w-full">
-                            <h2 className="header">See Our Teams</h2>
+                        <div className="flex flex-row justify-between w-full gap-3">
+                            <h2 className="header !m-0 h-full my-auto">See Our Teams</h2>
                             <Button
                                 onClick={handleToggleTeams} // Toggle the teams on button click
                                 className="text-custom-white bg-custom-lightBlack rounded-full p-5 my-auto"
@@ -59,7 +60,7 @@ const Team = () => {
                         // Show skeleton loaders while loading
                         <div className="collection-container">
                             {[...Array(4)].map((_, index) => (
-                                <Skeleton key={index} className="w-[450px] h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
+                                <Skeleton key={index} className="w-[350px] h-[250px] md:w-[450px] md:h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
                             ))}
                         </div>
                         ) : (
@@ -70,6 +71,7 @@ const Team = () => {
                 </section>
 
                 <Footer />
+                <MobileFooter />
             </main>
         </>
     );

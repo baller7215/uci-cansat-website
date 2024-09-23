@@ -5,7 +5,7 @@ import clsx from 'clsx';
 const Testimonial = ({ name, year, role, quote, image }: TestimonialProps) => {
     return (
         <>
-            <div className="testimonial-container h-full w-1/4 flex flex-row my-auto">
+            <div className="testimonial-container h-full w-full md:w-1/4 flex flex-row my-auto">
 
                 {/* title */}
                 <div className="title-container rounded-s-md m-0">

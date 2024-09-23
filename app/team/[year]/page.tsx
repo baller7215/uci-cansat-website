@@ -6,6 +6,7 @@ import React from 'react';
 import { useParams } from 'next/navigation'; // New hook for App Router
 import { yearTeamProject } from "@/constants";
 import ProfilesGrid from "@/components/shared/ProfilesGrid";
+import MobileFooter from "@/components/shared/MobileFooter";
 
 const TeamYearPage = () => {
     const params = useParams(); // Get dynamic parameters in the App Router
@@ -66,6 +67,7 @@ const TeamYearPage = () => {
                 </section>
 
                 <Footer />
+                <MobileFooter />
             </main>
         </>
     );

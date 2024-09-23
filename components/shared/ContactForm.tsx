@@ -54,7 +54,7 @@ const ContactForm = () => {
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
                 {/* row 1 */}
-                <div className="flex flex-row gap-5 ">
+                <div className="flex flex-col md:flex-row gap-5 ">
                     {/* Name Field */}
                     <FormField
                         control={form.control}
@@ -85,7 +85,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* row 2 */}
-                <div className="flex flex-row gap-5">
+                <div className="flex flex-col md:flex-row gap-5">
                     {/* Organization Field */}
                     <FormField
                         control={form.control}

@@ -9,9 +9,9 @@ import React, { useState } from 'react';
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import Link from "next/link";
-// import { FaCheck } from "react-icons/fa";
 import { FaCheck, FaXmark, FaCode, FaHeart } from "react-icons/fa6";
 import { VscRocket } from "react-icons/vsc";
+import MobileFooter from "@/components/shared/MobileFooter";
 
 
 const Sponsors = () => {
@@ -68,9 +68,9 @@ const Sponsors = () => {
                 <section className="section-container" id="whySponsorUs">
                     <div className="text-container !flex-col !justify-center">
                         {/* top */}
-                        <div className="flex flex-row justify-between">
+                        <div className="flex flex-col md:flex-row justify-between">
                             {/* text */}
-                            <div className="leftText w-3/4 gap-3">
+                            <div className="leftText w-full md:w-3/4 gap-3">
                                 <h2 className="header">Why Sponsor Us?</h2>
                                 <p className="description text-custom-rhino">{whySponsorUs.description}</p>
                             </div>
@@ -88,7 +88,7 @@ const Sponsors = () => {
                         <hr className="my-5"/>
 
                         {/* bottom */}
-                        <div className="flex flex-row justify-between gap-20">
+                        <div className="flex flex-col md:flex-row justify-between gap-20">
                             {whySponsorUs.reasons.map((reason) => {
                                 return (
                                     <div key={reason.title} className="w-full h-ful flex flex-col gap-3">
@@ -111,18 +111,9 @@ const Sponsors = () => {
                              for the next steps. Tier benefits are negotiable.
                         </p>
 
-                        {/* <div className="flex flex-row justify-between">
-                            {sponsorshipTiers.map((tier) => {
-                                return (
-                                    <div className="tierCard">
-                                        
-                                    </div>
-                                )
-                            })}
-                        </div> */}
-                        <div className="flex flex-row justify-between gap-10 mt-5">
+                        <div className="flex flex-col md:flex-row justify-between gap-10 mt-5">
                             {sponsorshipTiers.map((tier, index) => (
-                                <div key={index} className="tier-card w-1/3">
+                                <div key={index} className="tier-card w-full md:w-1/3">
 
                                     {/* top */}
                                     <div className="tier-top">
@@ -168,7 +159,7 @@ const Sponsors = () => {
 
                 {/* thanks to sponsors */}
                 <section className="section-container !h-auto">
-                    <div className="text-container !flex-col gap-10 !h-auto !px-80 text-center">
+                    <div className="text-container !flex-col gap-10 !h-auto px-10 !md:px-80 text-center">
                         {/* icons */}
                         <div className="flex flex-row gap-20 justify-center text-3xl">
                             <FaCode className="text-custom-rhino " />
@@ -182,6 +173,7 @@ const Sponsors = () => {
                 </section>
 
                 <Footer />
+                <MobileFooter />
             </main>
         </>
     );

@@ -7,6 +7,7 @@ import React from 'react';
 import { useParams } from 'next/navigation'; // New hook for App Router
 import { yearTeamProject } from "@/constants";
 import ImageTextLayout from "@/components/shared/ImageTextLayout";
+import MobileFooter from "@/components/shared/MobileFooter";
 
 const ProjectYearPage = () => {
     const params = useParams(); // Get dynamic parameters in the App Router
@@ -29,7 +30,7 @@ const ProjectYearPage = () => {
                     <div className="text-container">
 
                         {/* left */}
-                        <div className="leftText w-3/5">
+                        <div className="leftText w-full md:w-3/5">
                             <h2 className="header">Project Definition</h2>
                             {/* planning */}
                             <div className="flex flex-col gap-3 my-5">
@@ -62,7 +63,7 @@ const ProjectYearPage = () => {
                     <div className="text-container">
 
                         {/* left */}
-                        <div className="justify-start w-1/3 graphic-container">
+                        <div className="justify-start w-full md:w-1/3 graphic-container">
                             {/* title */}
                             <div className="title-container rounded-s-md m-0">
                                 <h2 className="header rotate-[270deg] origin-center whitespace-nowrap">3 Key Components</h2>
@@ -84,7 +85,7 @@ const ProjectYearPage = () => {
                         </div>
                         
                         {/* right */}
-                        <div className="leftText w-2/3">
+                        <div className="leftText w-full md:w-2/3">
                             <h2 className="header">Conceptual / Preliminary Design</h2>
                             <div className="flex flex-col gap-3 my-5">
                                 <h3 className="subHeader uppercase">Major Components</h3>
@@ -110,7 +111,7 @@ const ProjectYearPage = () => {
                     {/* mechanical */}
                     <div className="text-container !min-h-screen">
                         {/* left */}
-                        <div className="leftText w-3/5">
+                        <div className="leftText w-full md:w-3/5">
                             <h2 className="header">Our Works</h2>
                             <h3 className="subHeader uppercase">Mechanical</h3>
                             <p className="description text-custom-rhino">{project?.design.ourWorks.mechanical.description}</p>
@@ -141,7 +142,7 @@ const ProjectYearPage = () => {
                         </div>
                         
                         {/* right */}
-                        <div className="leftText w-3/5">
+                        <div className="leftText w-full md:w-3/5">
                             <h3 className="subHeader uppercase">Electrical</h3>
                             <p className="description text-custom-rhino">{project?.design.ourWorks.electrical.description}</p>
                         </div>
@@ -150,7 +151,7 @@ const ProjectYearPage = () => {
                     {/* controls */}
                     <div className="text-container !min-h-screen">
                         {/* left */}
-                        <div className="leftText w-3/5">
+                        <div className="leftText w-full md:w-3/5">
                             <h3 className="subHeader uppercase">Controls</h3>
                             <p className="description text-custom-rhino">{project?.design.ourWorks.controls.description}</p>
                         </div>
@@ -168,6 +169,7 @@ const ProjectYearPage = () => {
                 </section>
 
                 <Footer />
+                <MobileFooter />
             </main>
         </>
     )

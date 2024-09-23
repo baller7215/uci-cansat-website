@@ -7,6 +7,7 @@ import Collection from "@/components/shared/Collection";
 import { projectsLinks } from "@/constants";
 import React, { useState } from 'react';
 import { Skeleton } from "@/components/ui/skeleton";
+import MobileFooter from "@/components/shared/MobileFooter";
 
 const Projects = () => {
     const [showAll, setShowAll] = useState(false); // tracks state to show all teams or not
@@ -57,6 +58,7 @@ const Projects = () => {
                     </div>
                 </section>
                 <Footer />
+                <MobileFooter />
             </main>
         </>
     );

@@ -8,6 +8,7 @@ import CardNews from "@/components/shared/CardNews";
 import React, { useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import CollectionNews from "@/components/shared/CollectionNews";
+import MobileFooter from "@/components/shared/MobileFooter";
 
 const Updates = () => {
     const [showAll, setShowAll] = useState(false); // tracks state to show all teams or not
@@ -39,7 +40,7 @@ const Updates = () => {
                                 <CardNews key={card.title} title={card.title} subtitle={card.subtitle} route={card.route} date={card.date} image={card.image} />
                             )}
                         </div> */}
-                        <div className="relative flex flex-row justify-center">
+                        <div className="relative flex flex-col md:flex-row justify-center">
                             {featuredNews.map((card, index) => (
                                 <div
                                     key={card.title}
@@ -90,6 +91,7 @@ const Updates = () => {
                 </section>
 
                 <Footer />
+                <MobileFooter />
             </main>
         </>
     );

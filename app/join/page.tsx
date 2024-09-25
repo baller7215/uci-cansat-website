@@ -47,7 +47,7 @@ const Join = () => {
 
                             {/* right - email newsletter form */}
                             <div className="rightForm w-full md:w-1/2 h-full flex flex-col items-center justify-center bg-custom-white p-5 md:p-20 rounded-lg shadow-lg">
-                                <h3 className="text-custom-orange text-center text-5xl font-bold mb-4">Join Our Newsletter</h3>
+                                <h3 className="header !text-3xl !md:text-5xl text-center w-full">Join Our Newsletter</h3>
 
                                 <SubscribeForm />
 

@@ -39,7 +39,7 @@ const Sponsors = () => {
                 <section className="section-container !h-auto min-h-screen !bg-custom-black" id="overview">
                     <div className="text-container !flex-col !h-auto min-h-screen text-custom-white">
                         <div className="flex flex-row justify-between w-full">
-                            <h2 className="header">See Our Teams</h2>
+                            <h2 className="header">See Our Sponsors</h2>
                             <Button
                                 variant="outline"
                                 onClick={handleToggleTeams} // Toggle the teams on button click

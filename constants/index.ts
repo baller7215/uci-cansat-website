@@ -123,6 +123,10 @@ export const projectsLinks = [
 
 export const sponsorsLinks = [
     {
+        label: 'See Our Sponsors',
+        route: '/sponsors#overview',
+    },
+    {
         label: 'Why Sponsor Us',
         route: '/sponsors#whySponsorUs',
     },

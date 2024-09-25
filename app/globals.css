@@ -575,7 +575,7 @@ html {
 
 /* testimonial */
 .testimonial-container {
-  @apply rounded-lg
+  @apply rounded-lg text-center mx-auto;
 }
 
 .testimonial-image-container {

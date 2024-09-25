@@ -44,7 +44,7 @@ const SubscribeForm = () => {
                     name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormDescription className="text-custom-rhino text-center text-xl">
+                            <FormDescription className="text-custom-rhino text-center text-md md:text-xl">
                                 Enter your email to keep up with our team and receive updates on the competition, promotions, application openings, and more!
                             </FormDescription>
                             {/* <FormLabel className="text-custom-gray">Email</FormLabel> */}

@@ -22,7 +22,7 @@ const ProfileCard = ({ member }: ProfileCardProps) => {
                         <div className="profile-mainContents">
                             <h2 className='profile-name my-3 mt-0'>{member.name}</h2>
                             <h3 className='profile-role'>{member.role}</h3>
-                            <h3 className='profile-description'>{member.major} '{member.gradYear}</h3>
+                            <h3 className='profile-description'>{member.major} &apos;{member.gradYear}</h3>
                             <h3 className='profile-description'>{member.description}</h3>
                         </div>
                         <div className="socials-grid">

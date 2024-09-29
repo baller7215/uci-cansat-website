@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '../ui/button';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React from 'react';
 import ProfileCard from './ProfileCard';
 
 
 const ProfilesGrid = ({ members }: ProfilesGridProps) => {
-    const [showBack, setShowBack] = useState(false);
-
     return (
         <div className='profiles-grid'>
             {members.map((member) => {

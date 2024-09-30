@@ -75,7 +75,7 @@ const ProfileCard = ({ member }: ProfileCardProps) => {
                                     </Link>
                                 </div>
                             }
-                        </div>    
+                        </div>
                     </>
                 }
             </div>

@@ -45,7 +45,7 @@ const Sponsors = () => {
                                 onClick={handleToggleTeams} // Toggle the teams on button click
                                 className="text-custom-white bg-transparent rounded-full p-5 my-auto"
                             >
-                                {showAll ? "Collapse Teams" : "View all Teams"}
+                                {showAll ? "Collapse Sponsors" : "View all Sponsors"}
                             </Button>
                         </div>
                     
@@ -54,7 +54,7 @@ const Sponsors = () => {
                         // Show skeleton loaders while loading
                         <div className="collection-container">
                             {[...Array(4)].map((_, index) => (
-                                <Skeleton key={index} className="w-[450px] h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
+                                <Skeleton key={index} className="w-[300px] h-[200px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
                             ))}
                         </div>
                         ) : (

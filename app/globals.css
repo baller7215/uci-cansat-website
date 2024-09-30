@@ -281,11 +281,11 @@ html {
 }
 
 .gradient {
-  @apply flex flex-col h-full w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
+  @apply flex flex-col h-screen w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
 }
 
 .cover-textContainer {
-  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-full text-center py-20
+  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-full text-center py-10 md:py-20
 }
 
 .cover-branding {
@@ -299,7 +299,7 @@ html {
 }
 
 .cover-subtitle {
-  @apply font-normal text-[20px] leading-[25.2px] tracking-[2px] capitalize text-[var(--color-gray)]
+  @apply font-normal text-base md:text-[20px] leading-[25.2px] tracking-[2px] capitalize text-[var(--color-gray)]
 }
 
 .cover-joinButton {
@@ -432,11 +432,11 @@ html {
 /* collection news */
 /* w-[850px] h-[450px] */
 .newsCard-card {
-  @apply w-[350px] md:w-[700px] h-auto bg-custom-white shadow-2xl rounded-xl;
+  @apply w-[300px] md:w-[700px] h-auto bg-custom-white shadow-2xl rounded-xl;
 }
 
 .newsCard-card-placeholder {
-  @apply w-[350px] h-[250px] md:w-[700px] md:h-[400px] bg-custom-orange shadow-2xl rounded-xl cursor-pointer;
+  @apply w-[300px] h-[200px] md:w-[700px] md:h-[400px] bg-custom-orange shadow-2xl rounded-xl cursor-pointer;
 }
 
 .newsCard-title {
@@ -475,7 +475,7 @@ html {
 }
 
 .profile-cell {
-  @apply rounded-xl border-2 border-custom-white flex flex-col m-12 justify-center transform transition-transform duration-300 hover:scale-105;
+  @apply rounded-xl border-2 border-custom-white flex flex-col m-8 md:m-12 justify-center transform transition-transform duration-300 hover:scale-105;
   /* perspective: 1000px; */
   position: relative;
 }
@@ -545,7 +545,7 @@ html {
 }
 
 .tier-top {
-  @apply w-full bg-custom-black rounded-t-xl p-12 px-20 text-custom-orange flex flex-col gap-5
+  @apply w-full bg-custom-black rounded-t-xl p-12 px-10 md:px-20 text-custom-orange flex flex-col gap-5
 }
 
 .tier-amount {
@@ -557,7 +557,7 @@ html {
 }
 
 .tier-bottom {
-  @apply w-full bg-custom-gray p-12 px-20 flex flex-col gap-5 list-none rounded-b-xl 
+  @apply w-full bg-custom-gray p-12 px-10 md:px-20 flex flex-col gap-5 list-none rounded-b-xl
 }
 
 .tier-benefit {
@@ -595,7 +595,7 @@ html {
 }
 
 .subHeader {
-  @apply font-bold text-lg md:text-[32px] leading-9 text-[var(--color-rhino)]
+  @apply font-bold sm:text-base md:text-lg lg:text-[32px] leading-9 text-[var(--color-rhino)]
 }
 
 .description {
@@ -607,9 +607,9 @@ html {
 }
 
 .tableTitle {
-  @apply text-[var(--color-rhino)] font-medium text-lg md:text-2xl lg:text-3xl
+  @apply text-[var(--color-rhino)] font-medium text-base sm:text-lg md:text-2xl lg:text-3xl
 }
 
 .tableSubtitle {
-  @apply text-[var(--color-lightBlack)] font-bold text-xs md:text-sm lg:text-base tracking-wider
+  @apply text-[var(--color-lightBlack)] font-bold text-[10px] sm:text-xs md:text-sm lg:text-base tracking-wider
 }

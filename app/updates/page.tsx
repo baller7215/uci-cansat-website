@@ -34,12 +34,7 @@ const Updates = () => {
                 {/* featured news */}
                 <section className="section-container !bg-custom-black" id="overview">
                     <div className="text-container !justify-start !flex-col text-center">
-                        <h2 className="header ">Featured News</h2>
-                        {/* <div>
-                            {featuredNews.map((card) => 
-                                <CardNews key={card.title} title={card.title} subtitle={card.subtitle} route={card.route} date={card.date} image={card.image} />
-                            )}
-                        </div> */}
+                        <h2 className="header">Featured News</h2>
                         <div className="relative flex flex-col md:flex-row justify-center">
                             {featuredNews.map((card, index) => (
                                 <div
@@ -80,7 +75,7 @@ const Updates = () => {
                         // Show skeleton loaders while loading
                         <div className="collection-container">
                             {[...Array(4)].map((_, index) => (
-                                <Skeleton key={index} className="w-[450px] h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
+                                <Skeleton key={index} className="w-[300px] h-[200px] md:w-[450px] md:h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
                             ))}
                         </div>
                         ) : (

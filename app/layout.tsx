@@ -29,10 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <Head>
+      <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" href="/icon.png" />
-      </Head> */}
+      </Head>
       <body
         className={`${inter.variable} antialiased`}
       >

@@ -13,7 +13,7 @@ const Testimonial = ({ name, year, role, quote, image }: TestimonialProps) => {
                 </div>
 
                 {/* testimonial content */}
-                <div className='mainContent-container !p-5 !justify-center items-center gap-10 w-full rounded-e-md relative text-center'>
+                <div className='mainContent-container !p-5 !justify-center items-center !gap-10 w-full rounded-e-md relative text-center'>
                     <PiQuotesFill className='text-custom-black absolute top-5 right-5 text-5xl' />
 
                     {/* Conditionally set background image or color */}

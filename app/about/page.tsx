@@ -115,7 +115,7 @@ const About = () => {
                 <Link href='https://www.cansatcompetition.com/' target="_blank" className="subHeader flex flex-row items-center gap-2">
                   Learn More About the Competition
 
-                  <Button variant="ghost" size="icon" className="hidden md:block bg-[var(--color-orange)] rounded-full">
+                  <Button variant="ghost" size="icon" className="hidden md:flex bg-[var(--color-orange)] rounded-full">
                       <ArrowUpRightIcon className="h-6 w-6" />
                   </Button>
                   <Button variant="ghost" size="icon" className="md:hidden bg-[var(--color-orange)] rounded-full h-6 w-6">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 
 // TODO: RUN WHEN CACHING HAS ERRORS
@@ -38,6 +38,7 @@ export default function RootLayout({
           <div className='root-container'>
             <div className="wrapper">
                 { children }
+                <Analytics />
             </div>
           </div>
         </main>

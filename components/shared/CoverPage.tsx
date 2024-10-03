@@ -36,7 +36,7 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
 
                 <br></br>
 
-                <Button variant="ghost" className='mt-40 self-center' size="icon">
+                <Button variant="ghost" className='mt-20 self-center' size="icon">
 
                     <a href="#overview" className="scroll-smooth">
                         <ChevronDown className="h-7 w-7" />

@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Join Our Team Section */}
         <section className="relative bg-[var(--color-black)] w-full h-auto">
-          <div className="flex flex-col md:flex-row p-10 md:p-40 w-full h-auto justify-between gap-5 md:gap-0">
+          <div className="flex flex-col lg:flex-row p-10 md:p-40 w-full h-auto justify-between gap-10 lg:gap-0">
 
             {/* left */}
             <div className="home-left">
@@ -77,9 +77,9 @@ export default function Home() {
         <section className="relative bg-custom-rhino w-full h-auto text-center">
           <div className="absolute inset-0 bg-internAd bg-cover bg-center opacity-30 z-0"></div>
           <div className="relative z-10 flex flex-col p-10 md:p-40 w-full h-auto justify-between gap-5">
-            <h4 className="uppercase text-custom-orange text-sm tracking-wider font-bold">Mentorship Opportunity</h4>
-            <h2 className="capitalize text-custom-white text-6xl font-bold">UCI CanSat Student Interns Wanted</h2>
-            <p className="text-custom-white text-lg font-medium">Are you a freshman or transfer student eager to dive into engineering? The UCI CanSat team is looking for motivated interns to observe, learn, and contribute to an exciting and competitive aerospace project. Gain hands-on experience with 3D printing and soldering, understand the inner workings of our Mechanical and Electrical subteams, and be part of a team that designs, builds, and competes in a global competition.</p>
+            <h4 className="uppercase text-custom-orange text-xs md:text-sm tracking-wider font-bold">Mentorship Opportunity</h4>
+            <h2 className="capitalize text-custom-white text-4xl md:text-6xl font-bold">UCI CanSat Student Interns Wanted</h2>
+            <p className="text-custom-white text-md md:text-lg font-medium">Are you a freshman or transfer student eager to dive into engineering? The UCI CanSat team is looking for motivated interns to observe, learn, and contribute to an exciting and competitive aerospace project. Gain hands-on experience with 3D printing and soldering, understand the inner workings of our Mechanical and Electrical subteams, and be part of a team that designs, builds, and competes in a global competition.</p>
 
             <div className="flex flex-col md:flex-row gap-5 mx-auto">
               <Button asChild variant='default' className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5">

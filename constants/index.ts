@@ -661,6 +661,30 @@ export const updates = [
 
 
 // join us with team / subteam information
+export const internshipInfo = {
+    responsibilities: [
+        {
+            title: "Learn how to operate a 3D printer/soldering iron",
+            // description: "UCI CanSat is a young and vibrant team. As an emerging group in the CanSat competition landscape, your sponsorship provides a unique opportunity to be part of an inspiring underdog story.",
+        },
+        {
+            title: "Observe the progress and engineering design of their associated subteam",
+            // description: "While we may not have a broad global reach, our impact is deeply felt within the UCI community and its surrounding areas. Your sponsorship not only elevates our project but also contributes to local educational enrichment and workforce development.",
+        },
+        {
+            title: "Keep the lab space clean and organized; learn about lab safety",
+            // description: "Our small team size ensures that every member is highly engaged and plays a critical role in the project. By sponsoring us, you're investing in dedicated individuals who are the future of aerospace engineering and related fields.",
+        },
+        {
+            title: "Occasionally present progress at general meetings",
+            // description: "We provide other unique perks, such as placing your company's logo on our CanSat and including your branding in any publications or presentations.",
+        },
+        {
+            title: "ask questions"
+        }
+    ]
+}
+
 export const generalPathway = {
     info: [
         {

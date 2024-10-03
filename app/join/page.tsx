@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Footer from "@/components/shared/Footer";
 import SubscribeForm from "@/components/shared/SubscribeForm";
-import { electricalPathway, faq, generalPathway, mechanicalPathway, operationsPathway, softwarePathway, webDevPathway } from "@/constants";
+import { electricalPathway, faq, generalPathway, internshipInfo, mechanicalPathway, operationsPathway, softwarePathway, webDevPathway } from "@/constants";
 import Testimonial from "@/components/shared/Testimonial";
 import SubteamInfo from "@/components/shared/SubteamInfo";
 import CustomAccordion from "@/components/shared/Accordion";
 import MobileFooter from "@/components/shared/MobileFooter";
+import Image from "next/image";
 
 const Join = () => {
 
@@ -16,7 +17,58 @@ const Join = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="sponsors" title="Join Us" background="./assets/images/home-alt.jpg" />
+                <CoverPage page="join" title="Join Us" background="./assets/images/home-alt.jpg" />
+
+                {/* internship opportunity */}
+                <section className="section-container !bg-custom-black !border-custom-white" id="internship">
+                    <div className="text-container !flex-col !justify-center">
+                        {/* top */}
+                        <div className="flex flex-col md:flex-row justify-between">
+                            {/* text */}
+                            <div className="leftText w-full md:w-3/4 gap-3">
+                                <h2 className="header">Fall 2024 Internship Recruitment!</h2>
+                                <p className="description text-custom-gray">
+                                    We&apos;re looking for highly motivated and engaged interns to join the UCI CanSat team. If you&apos;re a <span className="text-custom-orange transition ease-in-out hover:underline">freshman</span> or <span className="text-custom-orange transition ease-in-out hover:underline">transfer student</span> interested in learning more about engineering at UCI, this is the place for you!
+                                    <br></br><br></br>
+                                    This application will officially close Friday, October 11th, but will be reviewed on a rolling basis.
+                                    <br></br><br></br>
+                                    Thank you for your interest in UCI CanSat!
+                                </p>
+                            </div>
+                            <div className="rightImage">
+                                <Image
+                                    src='/assets/icons/logo.png'
+                                    alt="uci cansat logo"
+                                    width={250}
+                                    height={250}
+                                    className="m-auto"
+                                />
+                            </div>
+                        </div>
+
+                        <hr className="my-5"/>
+
+                        {/* bottom */}
+                        <div className="flex flex-col gap-10">
+                            <p className="description text-custom-gray">Interns will shadow our Mechanical or Electrical subteam, with the responsibilities displayed below:</p>
+                            </div>
+                            <div className="flex flex-col md:flex-row justify-between gap-20">
+                                {internshipInfo.responsibilities.map((responsibility) => {
+                                    return (
+                                        <div key={responsibility.title} className="w-full h-ful flex flex-col gap-3 transition ease-in-out hover:scale-110">
+                                            <h3 className="font-bold text-base leading-6 tracking-wide text-custom-gray uppercase">{responsibility.title}</h3>
+                                            {/* <p className="!text-base !font-thin !leading-7 !tracking-normal !text-custom-lightBlack">{reason.description}</p> */}
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        <div>
+                            <Button asChild variant='default' className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5">
+                                <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdEn-LXCAi8nY6t-NdRtl_JRpVdoEVT95m5nBaLwtzB1yZYyg/viewform' target="_blank">Apply Now</Link>
+                            </Button>
+                        </div>
+                    </div>
+                </section>
 
                 {/* applications are closed */}
                 <section className="section-container !bg-custom-black" id="overview">

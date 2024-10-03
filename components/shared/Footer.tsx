@@ -10,7 +10,8 @@ const Footer = () => {
         <div className="w-1/3">
             <div className="footer-branding">
                 <Link href='/'>
-                    <Image src='/assets/icons/footer-logo.png' alt="cansat footer logo" width={500} height={100} />
+                    {/* <Image src='/assets/icons/footer-logo.png' alt="cansat footer logo" width={500} height={100} /> */}
+                    <h3 className='text-custom-rhino text-2xl font-bold'>UCI CanSat</h3>
                 </Link>
                 
                 <div className='footer-branding-text'>

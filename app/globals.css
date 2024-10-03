@@ -181,7 +181,7 @@ html {
 
 /* FOOTER */
 .footer {
-  @apply p-40 py-20 bg-[var(--color-white)] w-full h-auto hidden md:flex flex-row justify-between;
+  @apply md:p-20 md:py-10 lg:p-40 lg:py-20 bg-[var(--color-white)] w-full h-auto hidden md:flex flex-row justify-between;
 }
 
 .footer-branding {
@@ -221,7 +221,7 @@ html {
 }
 
 .footer-pageContainer {
-  @apply h-auto w-32 text-left
+  @apply h-auto w-36 text-left
 }
 
 
@@ -277,29 +277,24 @@ html {
 /* REUSABLE ELEMENTS */
 /* COVER PAGE */
 .coverPage {
-  /* background-image: url('../public/assets/images/home-cover.jpg'); */
-  /* bg-[url('/img/hero-pattern.svg')] */
-  /* bg-[url('../public/assets/images/home-cover.jpg')] */
   @apply bg-cover bg-center
 
 }
 
 .gradient {
-  @apply flex flex-col h-screen w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
+  @apply flex flex-col h-lvh w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
 }
 
 .cover-textContainer {
-  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-full text-center py-5 md:py-10
+  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-auto text-center py-5 md:py-10
 }
 
 .cover-branding {
-  /* color: var(--color-orange); */
   @apply font-medium text-[18px] leading-8 tracking-[5px] indent-0 text-[var(--color-orange)]
 }
 
 .cover-title {
-  /* color: var(--color-whiteIce); */
-  @apply font-bold text-[4rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] tracking-[1px] my-3 mb-8 capitalize indent-0 underline-offset-auto underline decoration-[var(--color-shakespeare)] text-[var(--color-whiteIce)]
+  @apply font-bold text-[4rem] md:text-[4rem] lg:text-[5rem] xl:text-[5rem] 2xl:text-[6rem] tracking-[1px] my-3 mb-8 capitalize indent-0 underline-offset-auto underline decoration-[var(--color-shakespeare)] text-[var(--color-whiteIce)]
 }
 
 .cover-subtitle {

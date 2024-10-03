@@ -143,14 +143,6 @@ const Sponsors = () => {
                                             </Button>
                                         </div>
                                     </ul>
-
-                                    {/* <div className="text-center">
-                                        <Button asChild variant="outline" className="text-custom-easternBlue border-custom-easternBlue rounded-full">
-                                            <Link href="/contact">
-                                                Contact Us Now
-                                            </Link>
-                                        </Button>
-                                    </div> */}
                                 </div>
                             ))}
                         </div>

@@ -23,7 +23,7 @@ export default function Home() {
             {/* left */}
             <div className="home-left text-[var(--color-white)] w-full md:w-1/2 tracking-normal">
               <h2 className="capitalize text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">Who We Are</h2>
-              <h5 className="font-medium text-[20px] md:text-[40px] leading-[30px] md:leading-[44px] my-5 md:my-10 mb-7 md:mb-14 text-pretty">We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system.</h5>
+              <h5 className="font-medium text-[20px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[44px] my-5 md:my-10 mb-7 md:mb-14 text-pretty">We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system.</h5>
               <div className="flex flex-row gap-5">
                 <Button asChild variant="link" className="text-[var(--color-white)] font-bold text-[20px] md:text-[40px] tracking-normal capitalize p-0">
                   <Link href='/about'>
@@ -47,10 +47,10 @@ export default function Home() {
 
         {/* Join Our Team Section */}
         <section className="relative bg-[var(--color-black)] w-full h-auto">
-          <div className="flex flex-col lg:flex-row p-10 md:p-40 w-full h-auto justify-between gap-10 lg:gap-0">
+          <div className="flex flex-col lg:flex-row p-10 md:p-20 lg:p-40 w-full h-auto justify-between items-center gap-10 lg:gap-0">
 
             {/* left */}
-            <div className="home-left">
+            <div className="home-left w-full md:w-3/4">
               <h2 className="capitalize text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">Join Our Team</h2>
               <p className="text-[var(--color-whiteIce)] font-normal text-[16px] md:text-[18px] h-[100px] my-5">Unfortunately, we are no longer looking for applicants for the 2024 - 2025 school year. Recruitment typically occurs during the spring quarter so check back soon! Don&apos;t hesitate to explore our website and learn more about what we do and what positions we offer.</p>
 
@@ -66,8 +66,15 @@ export default function Home() {
             </div>
 
             {/* right */}
-            <div className="home-right mt-10 md:mt-0">
-              <div className="h-[300px] md:h-[350px] w-full md:w-[600px] bg-[var(--color-orange)] rounded-xl"></div>
+            <div className="home-right mt-10 md:mt-0 w-full md:w-1/4 !h-auto">
+              {/* <div className="h-[300px] md:h-[350px] w-full md:w-[600px] bg-[var(--color-orange)] rounded-xl"></div> */}
+              <Image
+                  src='/assets/images/components/sicko_mode.jpg'
+                  alt="uci breadboard"
+                  width={400}
+                  height={400}
+                  className="my-auto rounded-xl"
+              />
             </div>
             
           </div>

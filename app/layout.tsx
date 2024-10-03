@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 // TODO: RUN WHEN CACHING HAS ERRORS
@@ -39,6 +40,7 @@ export default function RootLayout({
             <div className="wrapper">
                 { children }
                 <Analytics />
+                <SpeedInsights />
             </div>
           </div>
         </main>

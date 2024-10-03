@@ -23,7 +23,7 @@ const About = () => {
           {/* background image */}
           <div className='hidden md:flex relative h-screen w-full home-sectionBackground' ></div>
           {/* gradient */}
-          <div className="hidden md:flex flex-col md:flex-row h-auto md:h-full w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-20 md:py-20 lg:p-40 lg:py-40 justify-center md:justify-between gap-5">
+          <div className="hidden md:flex flex-col md:flex-row h-full md:h-screen w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-20 md:py-10 lg:p-40 lg:py-20 justify-center md:justify-between gap-5">
             {/* left */}
             <div className="leftText w-full md:w-1/2">
               <h2 className="header">Introduction</h2>

@@ -52,7 +52,7 @@ export default function Home() {
             {/* left */}
             <div className="home-left">
               <h2 className="capitalize text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">Join Our Team</h2>
-              <p className="text-[var(--color-whiteIce)] font-normal text-[16px] md:text-[18px] h-[100px] my-5">Description of why you should join us and who we are looking for</p>
+              <p className="text-[var(--color-whiteIce)] font-normal text-[16px] md:text-[18px] h-[100px] my-5">Unfortunately, we are no longer looking for applicants for the 2024 - 2025 school year. Recruitment typically occurs during the spring quarter so check back soon! Don&apos;t hesitate to explore our website and learn more about what we do and what positions we offer.</p>
 
               <div className="flex flex-col md:flex-row gap-5">
                 <Button asChild variant='default' className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5">
@@ -70,6 +70,26 @@ export default function Home() {
               <div className="h-[300px] md:h-[350px] w-full md:w-[600px] bg-[var(--color-orange)] rounded-xl"></div>
             </div>
             
+          </div>
+        </section>
+
+        {/* internship apps are open section */}
+        <section className="relative bg-custom-rhino w-full h-auto text-center">
+          <div className="absolute inset-0 bg-internAd bg-cover bg-center opacity-30 z-0"></div>
+          <div className="relative z-10 flex flex-col p-10 md:p-40 w-full h-auto justify-between gap-5">
+            <h4 className="uppercase text-custom-orange text-sm tracking-wider font-bold">Mentorship Opportunity</h4>
+            <h2 className="capitalize text-custom-white text-6xl font-bold">UCI CanSat Student Interns Wanted</h2>
+            <p className="text-custom-white text-lg font-medium">Are you a freshman or transfer student eager to dive into engineering? The UCI CanSat team is looking for motivated interns to observe, learn, and contribute to an exciting and competitive aerospace project. Gain hands-on experience with 3D printing and soldering, understand the inner workings of our Mechanical and Electrical subteams, and be part of a team that designs, builds, and competes in a global competition.</p>
+
+            <div className="flex flex-col md:flex-row gap-5 mx-auto">
+              <Button asChild variant='default' className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5">
+                <Link href='https://docs.google.com/forms/d/e/1FAIpQLSdEn-LXCAi8nY6t-NdRtl_JRpVdoEVT95m5nBaLwtzB1yZYyg/viewform' target="_blank">Apply Now</Link>
+              </Button>
+
+              <Button asChild variant='ghost' className="capitalize rounded-full text-[var(--color-orange)] font-medium text-[16px] md:text-[18px] px-10 py-3 md:py-5">
+                <Link href='/join#internship'>Learn More</Link>
+              </Button>
+            </div>
           </div>
         </section>
 

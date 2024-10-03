@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import { Inter } from "next/font/google";
-import Head from 'next/head';
 import "./globals.css";
 
 
@@ -20,6 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "UCI CanSat",
   description: "Design. Build. Launch. Compete",
+
 };
 
 export default function RootLayout({
@@ -29,10 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/icon.png" />
-      </Head>
       <body
         className={`${inter.variable} antialiased`}
       >

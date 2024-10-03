@@ -269,6 +269,10 @@ html {
   @apply justify-center my-auto flex flex-col h-full
 }
 
+.bg-internAd {
+  @apply bg-[url('../public/assets/images/action/solder.jpg')];
+}
+
 
 /* REUSABLE ELEMENTS */
 /* COVER PAGE */
@@ -285,7 +289,7 @@ html {
 }
 
 .cover-textContainer {
-  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-full text-center py-10 md:py-20
+  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-full text-center py-5 md:py-10
 }
 
 .cover-branding {

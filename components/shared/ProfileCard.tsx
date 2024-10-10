@@ -51,7 +51,7 @@ const ProfileCard = ({ member }: ProfileCardProps) => {
                                     alt={`${member.name} profile image`}
                                     width={130}
                                     height={130}
-                                    className="profile-image"
+                                    className="profile-image border-4 border-custom-shakespeare"
                                 />
                             ) : (
                                 <div className="profile-image"></div>

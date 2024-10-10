@@ -112,7 +112,7 @@ html {
 
 /* NAVBAR */
 .navbar {
-  @apply h-[160px] w-full flex-row justify-between gap-4 p-8 hidden lg:flex;
+  @apply h-[160px] w-full flex-row justify-between gap-4 p-8 py-8 hidden lg:flex;
 }
 
 .navbar-logo {
@@ -120,7 +120,7 @@ html {
 }
 
 .navTitle {
-  @apply my-auto text-[40px] font-bold;
+  @apply my-auto lg:text-3xl xl:text-[40px] font-bold;
   color: --color-gray;
 }
 
@@ -277,16 +277,16 @@ html {
 /* REUSABLE ELEMENTS */
 /* COVER PAGE */
 .coverPage {
-  @apply bg-cover bg-center
+  @apply bg-cover bg-center relative min-h-screen
 
 }
 
 .gradient {
-  @apply flex flex-col h-lvh w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
+  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
 }
 
 .cover-textContainer {
-  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-auto text-center py-5 md:py-10
+  @apply flex flex-col justify-between mx-auto my-auto w-full md:w-2/3 lg:w-1/2 h-auto text-center py-0
 }
 
 .cover-branding {
@@ -304,6 +304,23 @@ html {
 .cover-joinButton {
   /* background-color: var(--color-rhino); */
   @apply bg-[var(--color-orange)] text-[var(--color-white)] px-20 font-bold text-[18px] mt-16
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .cover-textContainer {
+    @apply w-full;
+    /* Add padding to prevent content from being squished */
+  }
+
+  .cover-title {
+    /* @apply text-[3rem]; */
+    /* Reduce title size slightly */
+  }
+
+  .cover-joinButton {
+    @apply mt-8;
+    /* Adjust button margin for better spacing */
+  }
 }
 
 
@@ -470,11 +487,11 @@ html {
 
 /* divide-x-2 divide-custom-white  */
 .profiles-grid {
-  @apply w-full h-auto bg-custom-white/55 rounded-lg grid grid-cols-1 md:grid-cols-3 
+  @apply w-full h-auto bg-custom-white/55 rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
 }
 
 .profile-cell {
-  @apply rounded-xl border-2 border-custom-white flex flex-col m-8 md:m-12 justify-center transform transition-transform duration-300 hover:scale-105;
+  @apply rounded-xl border-2 border-custom-white flex flex-col m-5 md:m-8 lg:m-12 justify-center transform transition-transform duration-300 hover:scale-105;
   /* perspective: 1000px; */
   position: relative;
 }
@@ -510,7 +527,7 @@ html {
 }
 
 .profile-image {
-  @apply rounded-full bg-custom-orange w-[130px] h-[130px]
+  @apply rounded-full bg-custom-orange w-[130px] h-[130px] object-cover
 }
 
 .profile-name {

@@ -23,47 +23,70 @@ const TeamYearPage = () => {
 
                 {/* profiles */}
                 <section className="section-container team-background" id="overview">
-                    {/* Advisors Section */}
-                    <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
-                        <h1 className="team-title">Advisors</h1>
-                        <ProfilesGrid members={team?.advisors || []} />
-                    </div>
+                    {team?.advisors && team?.advisors.length > 0 &&
+                        // {/* Advisors Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Advisors</h1>
+                            <ProfilesGrid members={team?.advisors || []} />
+                        </div>
+                    }
 
-                    {/* Management Section */}
-                    <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
-                        <h1 className="team-title">Management</h1>
-                        <ProfilesGrid members={team?.management || []} />
-                    </div>
+                    {team?.management && team?.management.length > 0 &&
+                        // {/* Management Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Management</h1>
+                            <ProfilesGrid members={team?.management || []} />
+                        </div>
+                    }
 
-                    {/* Mechanical Section */}
-                    <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
-                        <h1 className="team-title">Mechanical</h1>
-                        <ProfilesGrid members={team?.mechanical || []} />
-                    </div>
+                    {team?.executives && team?.executives.length > 0 &&
+                        // {/* Management Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Executives</h1>
+                            <ProfilesGrid members={team?.executives || []} />
+                        </div>
+                    }
 
-                    {/* Electrical Section */}
-                    <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
-                        <h1 className="team-title">Electrical</h1>
-                        <ProfilesGrid members={team?.electrical || []} />
-                    </div>
+                    {team?.mechanical && team?.mechanical.length > 0 &&
+                        // {/* Mechanical Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Mechanical</h1>
+                            <ProfilesGrid members={team?.mechanical || []} />
+                        </div>
+                    }
 
-                    {/* Controls Section */}
-                    <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
-                        <h1 className="team-title">Controls</h1>
-                        <ProfilesGrid members={team?.controls || []} />
-                    </div>
+                    {team?.electrical && team?.electrical.length > 0 &&
+                        // {/* Electrical Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Electrical</h1>
+                            <ProfilesGrid members={team?.electrical || []} />
+                        </div>
+                    }
 
-                    {/* Operations Section */}
-                    <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
-                        <h1 className="team-title">Operations</h1>
-                        <ProfilesGrid members={team?.operations || []} />
-                    </div>
+                    {team?.controls && team?.controls.length > 0 &&
+                        // {/* Controls Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Controls</h1>
+                            <ProfilesGrid members={team?.controls || []} />
+                        </div>
+                    }
 
-                    {/* Web Developer Section */}
-                    <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
-                        <h1 className="team-title">Web Development</h1>
-                        <ProfilesGrid members={team?.webDev || []} />
-                    </div>
+                    {team?.operations && team?.operations.length > 0 &&
+                        // {/* Operations Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Operations</h1>
+                            <ProfilesGrid members={team?.operations || []} />
+                        </div>
+                    }
+
+                    {team?.webDev && team?.webDev.length > 0 &&
+                        // {/* Web Developer Section */}
+                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                            <h1 className="team-title">Web Development</h1>
+                            <ProfilesGrid members={team?.webDev || []} />
+                        </div>
+                    }
+
                 </section>
 
                 <Footer />

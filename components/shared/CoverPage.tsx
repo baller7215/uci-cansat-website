@@ -11,7 +11,7 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
     // from-white from-0% to-black to-100%
     <>
         {/* background image */}
-        <div className='h-screen w-full flex coverPage' style={{backgroundImage: `url(${background})`}}></div>
+        <div className='w-full flex coverPage' style={{backgroundImage: `url(${background})`}}></div>
 
         {/* gradient */}
         <div className="gradient">

@@ -23,7 +23,7 @@ export default function Home() {
             {/* left */}
             <div className="home-left text-[var(--color-white)] w-full md:w-1/2 tracking-normal">
               <h2 className="capitalize text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">Who We Are</h2>
-              <h5 className="font-medium text-[20px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[44px] my-5 md:my-10 mb-7 md:mb-14 text-pretty">We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system.</h5>
+              <h5 className="font-medium text-xl md:text-2xl lg:text-3xl leading-[30px] md:leading-[44px] my-5 md:my-10 mb-7 md:mb-14 text-pretty">We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system.</h5>
               <div className="flex flex-row gap-5">
                 <Button asChild variant="link" className="text-[var(--color-white)] font-bold text-[20px] md:text-[40px] tracking-normal capitalize p-0">
                   <Link href='/about'>
@@ -51,8 +51,11 @@ export default function Home() {
 
             {/* left */}
             <div className="home-left w-full md:w-3/4">
-              <h2 className="capitalize text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">Join Our Team</h2>
-              <p className="text-[var(--color-whiteIce)] font-normal text-[16px] md:text-[18px] h-[100px] my-5">Unfortunately, we are no longer looking for applicants for the 2024 - 2025 school year. Recruitment typically occurs during the spring quarter so check back soon! Don&apos;t hesitate to explore our website and learn more about what we do and what positions we offer.</p>
+              <div className="flex flex-col gap-2 h-auto">
+                <h2 className="capitalize text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">Join Our Team</h2>
+                <p className="text-[var(--color-whiteIce)] font-normal text-[16px] md:text-[18px] h-auto lg:h-[100px] my-5">Unfortunately, we are no longer looking for applicants for the 2024 - 2025 school year. Recruitment typically occurs during the spring quarter so check back soon! Don&apos;t hesitate to explore our website and learn more about what we do and what positions we offer.</p>
+              </div>
+
 
               <div className="flex flex-col md:flex-row gap-5">
                 <Button asChild variant='default' className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5">

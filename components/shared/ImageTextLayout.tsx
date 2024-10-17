@@ -10,7 +10,7 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
         <section className="section-container !bg-custom-black" id='overview'>
             <div className="text-container ">
                 {/* left */}
-                <div className="w-full md:w-3/5 h-full flex justify-center">
+                <div className="w-full md:2/5 lg:w-2/5 h-full flex justify-center">
                     {image ? 
                         <Image
                             src={image}
@@ -25,7 +25,7 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
                     
                 </div>
                 {/* right */}
-                <div className="leftText w-full md:w-2/5">
+                <div className="leftText w-full md:w-3/5 lg:w-3/5">
                     <h2 className="header leading-[60px]">{title}</h2>
                     <p className="description text-custom-white whitespace-pre-wrap">{description}
                         {link && 

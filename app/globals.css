@@ -351,6 +351,7 @@ html {
 }
 
 /* table container */
+/* h-auto md:h-full */
 .mainContent-container {
   @apply bg-custom-gray/[0.8] h-auto md:h-full gap-3 md:gap-0 p-3 md:p-5 lg:p-10 flex flex-col justify-between
 }
@@ -539,7 +540,7 @@ html {
 }
 
 .profile-description {
-  @apply font-normal text-base tracking-wider text-custom-rhino/40 my-2
+  @apply font-normal text-base tracking-wider leading-3 text-custom-rhino/40 my-2
 }
 
 .socials-grid {
@@ -615,7 +616,7 @@ html {
 }
 
 .description {
-  @apply font-normal text-base md:text-xl lg:text-2xl leading-6 md:leading-10 tracking-wide
+  @apply font-normal text-base md:text-xl lg:text-2xl leading-3 md:leading-5 tracking-wide
 }
 
 .emphasis {

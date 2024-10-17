@@ -282,7 +282,7 @@ export const management = [
         profileImg: '',
     },
     {
-        name: 'Sarah',
+        name: 'Sarah Ho',
         role: 'Mechanical Lead',
         profileImg: '',
     },
@@ -331,14 +331,14 @@ export const team2024_2025 = {
     executives: [],
     mechanical: [
         {
-            name: 'Sarah Mo',
+            name: 'Sarah Ho',
             role: 'Mechanical Lead',
             profileImg: '',
             github: '',
             linkedin: '',
-            major: '',
-            gradYear: '',
-            description: ''
+            major: 'Mechanical Engineering',
+            gradYear: '2026',
+            description: 'Hi, My name is Sarah! I am a fourth year Mechanical Engineering student and the Mechanical Lead for the 2024-2025 year. I will be overseeing the progress of the mechanical team as well as designing and fabricating the physical structure of the CanSat. '
         },
         {
             name: 'Dayeon Yoon',
@@ -361,14 +361,14 @@ export const team2024_2025 = {
             description: "My name is Andrei and I am a mechanical engineer for UCI CanSat. Some of my responsibilities on CanSat consist of designing and fabricating the structural components of our satellite and ensuring that it can withstand the mechanical stresses throughout the various stages of the mission. Other roles include material selection and integrating the satellite's hardware components, as well as conducting tests such as FEA and CFD to analyze and optimize the CanSat's structure and functionality."
         },
         {
-            name: 'Alan Duong',
+            name: 'Felix Jing',
             role: 'Mechanical Engineer',
             profileImg: '',
             github: '',
-            linkedin: '',
-            major: '',
-            gradYear: '',
-            description: ''
+            linkedin: 'http://linkedin.com/in/felixjing',
+            major: 'Mechanical Engineering',
+            gradYear: '2028',
+            description: 'With 9 years of robotics experience and over 40 unique robots built, I have led my Beckman High School VEX Robotics team to win three California State Championships. I also compete in BattleBots, a 250lb combat robotics competition, where my team ranked among the world’s top 8 teams in both 2021 and 2022. Currently, I am engineering the nosecone release mechanisms, landing gear, and flywheel to maintain CanSat rotational stability. '
         },   
     ],
     electrical: [
@@ -377,10 +377,10 @@ export const team2024_2025 = {
             role: 'Electrical Lead',
             profileImg: '',
             github: '',
-            linkedin: '',
-            major: '',
-            gradYear: '',
-            description: ''
+            linkedin: 'https://www.linkedin.com/in/khushi-gupta-45a9871a4/',
+            major: 'Electrical Engineering',
+            gradYear: '2025',
+            description: 'Hello! My name is Khushi and I am a senior at UCI studying Electrical Engineering with a specialization in Circuit Design. I am currently serving as the Electrical Lead for the 2024-2025 year and will be working on designing the PCB that will the utilized for the competition!'
         },
         {
             name: 'Naethan Fajarito',
@@ -390,7 +390,7 @@ export const team2024_2025 = {
             linkedin: 'https://www.linkedin.com/in/naethanf2001/',
             major: 'Computer Engineering',
             gradYear: '2025',
-            description: "I'm apart of the electrical team for UCI's CanSat where I focus on the PCB design and the integration of essential systems like sensors, telemetry, and the microcontroller. I'm passionate about what I do here at UCI and enjoy taking on various projects and hobbies that help me learn more and grow as an engineer!"
+            description: "I'm a Computer Engineering major with a strong passion for hands-on projects. As part of the CanSat electrical team, I'm responsible for designing and implementing PCBs to support our embedded systems."
         },
         {
             name: 'Timothy Yee',

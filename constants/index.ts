@@ -1447,6 +1447,84 @@ export const project2023_2024 = {
                 image: "/assets/images/projects/2023-2024/controls.png"
             }
         }
+    },
+    posters: {
+        fall: "",
+        winter: ""
+    }
+}
+
+export const project2021_2022 = {
+    overview: {
+        team: "", //team photo
+        description: "Fall Quarter: consisted mostly of researching and design work, where we worked to complete the design for prototyping the preliminary design report which is additional documentation that the team needs to complete for the competition. Software development focused on creating a ground station capable of receiving and displaying telemetry data from the CanSat’s sensors, while hardware focused on having electrical and mechanical prototype designs for the following quarter to test.\n\nWinter quarter was dedicated to practicing our presentation for the Competitions Preliminary Design Review (PDR). All subteams worked focused on their forces to complete the presentation and practice presentation times.\n\nThis Spring quarter involved us finally taking all our research and designing over the past year and implementing them into a physical solution. Electrical components were ordered, container segments were printed and assembled, and the various performances of our design were tested to verify requirements compliance."
+    },
+    projectDefinition: {
+        planning: "Telemetry, an automated communication process for remotely measuring and monitoring data, has evolved significantly since its inception in aerospace during the 1930s. The CanSat competition, sponsored by the American Astronautical Society (AAS), offers students the opportunity to engage in the complete lifecycle of a telemetry payload system. The competition challenges university teams to design, build, and deploy a space-related system according to specific guidelines, culminating in a competitive launch at the end of the academic year.",
+        problemStatement: "Design a container that will be stored in and deployed from a rocket. The container should have predetermined descent rates based on altitude, controlled by a total of 2 parachutes: at above 400m, the container should descend at 15m/s, at below 400m, the container should descend at 5m/s. At 300m, the container should deploy a payload, attached to the container by a tether and consisting of a camera, at a decent rate of 0.5m/s, until the payload is 10m away from the container. The camera from the payload should face South and 45 degrees below the horizon at all times. The container should report telemetry while descending."
+    },
+    design: {
+        majorComponents: {
+            description: "The overall design consists of three key components in order for the CanSat to function effectively. They are separated into the three parts that make up the CanSat.",
+            bulletPoints: [
+                {
+                    id: 1,
+                    text: "The first part of the CanSat is the top cap. The purpose of the top cap is to stow both the first and second parachutes for deployment at their specific altitudes in order to slow down the descent rate of the CanSat. The key component in the top cap is the secondary parachute deployment mechanism."
+                },
+                {
+                    id: 2,
+                    text: "The second part is the body. Is it the middle cylinder that connects both the top cap and the payload (third component). It is the largest part which is used to house the pulley system, the key component of the body, which is used to deploy the payload via 10 meter long tether(s)."
+                },
+                {
+                    id: 3,
+                    text: "The third part is its own key component: the payload. The payload is the “cargo” of the CanSat which sits at the bottom of the CanSat. It houses a camera that requires a very specific orientation (cardinal direction and angle) along with its necessary electronics."
+                }
+            ]
+        },
+        keyComponents: [
+            {
+                name: "Top Cap",
+                description: "Houses and deploys the parachutes at designated altitudes, featuring a solenoid mechanism for secure deployment."
+            },
+            {
+                name: "Body",
+                description: "The largest section, containing the pulley system that deploys the payload, ensuring stability during descent with a four-tether system."
+            },
+            {
+                name: "Payload",
+                description: "The camera housing, designed for specific orientation and equipped with necessary electronics, protected to ensure survivability upon landing."
+            }
+        ],
+        ourWorks: {
+            mechanical: {
+                name: "",
+                description: "",
+                image: "",
+                // name: "Mechanical",
+                // description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
+                // image: "/assets/images/projects/2023-2024/mechanical.png"
+            },
+            electrical: {
+                name: "",
+                description: "",
+                image: "",
+                // name: "Electrical",
+                // description: "The electrical team was responsible for developing the avionics printed circuit board (PCB). This PCB connects various sensors and actuators, GPS, and radio to the main microcontroller (an STM32F1). After outlining requirements, conducting trade studies, and selecting components, we began designing the PCB in Altium Designer. We went through three iterations in total, reducing weight, improving RF performance, and making small mechanical improvements along the way. We hand soldered all PCBs to reduce the cost of the iterative process we followed. As part of this process, we focused on first developing a minimum viable product (achieved in revision two) so that we would be able to launch should any following revisions fail. Thankfully, all of the improvements we implemented in revision three were executed successfully, and we plan to launch with this version.",
+                // image: "/assets/images/projects/2023-2024/electrical.png"
+            },
+            controls: {
+                name: "",
+                description: "",
+                image: "",
+                // name: "Controls",
+                // description: "The controls subteam focused on designing and implementing the ground station program using PyQt5, adhering to the CanSat competition mission guide. The ground station interface, which includes commands like “Activate Heatshield” and “Activate Parachute,” communicates with the CanSat, displays received data, and controls operations. A “Simulation Mode” was also developed to test functionalities by mimicking flight data. Real-time data graphs on the ground station were designed and implemented using PyQtGraphs. Another main controls task is developing embedded systems for the CanSat payload using the electrical schematics provided by the electrical subteam. The embedded software, written in C, will run on the STM32 microcontroller.",
+                // image: "/assets/images/projects/2023-2024/controls.png"
+            }
+        }
+    },
+    posters: {
+        fall: "/assets/images/projects/2021-2022/AntSat Fall Design Review 2021.pptx.png",
+        winter: "/assets/images/projects/2021-2022/AntSat Winter Design Review 2022.pptx.png"
     }
 }
 
@@ -1931,7 +2009,7 @@ export const yearTeamProject = {
         id: '2021-2022',
         label: '2021 - 2022',
         team: team2021_2022,
-        project: project2023_2024,
+        project: project2021_2022,
     },
     id2020_2021: {
         id: '2020-2021',

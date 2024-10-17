@@ -209,7 +209,7 @@ html {
 }
 
 .footer-mainPages {
-  @apply font-normal text-[14px] text-[var(--color-rhino)] my-5
+  @apply font-normal text-[14px] text-[var(--color-rhino)] mb-5
 }
 
 .footer-subPages {

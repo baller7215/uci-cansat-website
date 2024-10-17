@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <Link href='/' className='navbar-logo'>
-                <Image src='/assets/icons/logo.png' alt='logo' width={100} height={100} />
+                <Image src='/assets/icons/logo.png' alt='logo' width={75} height={75} />
                 <p className="navTitle">UC Irvine</p>
             </Link>
 

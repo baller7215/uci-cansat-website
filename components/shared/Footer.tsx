@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='footer'>
         {/* logo + social media */}
-        <div className="w-1/3">
+        <div className="md:w-full lg:w-1/4 flex md:flex-row lg:flex-col md:justify-between">
             <div className="footer-branding">
                 <Link href='/'>
                     {/* <Image src='/assets/icons/footer-logo.png' alt="cansat footer logo" width={500} height={100} /> */}
@@ -20,7 +20,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* social media links */}
-            <div className="footer-socials-container">
+            <div className="footer-socials-container lg:justify-start">
                 <ul className='socials-elements'>
                     {socials.map((social) => {
                         return (

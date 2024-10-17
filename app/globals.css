@@ -112,7 +112,7 @@ html {
 
 /* NAVBAR */
 .navbar {
-  @apply h-[160px] w-full flex-row justify-between gap-4 p-8 py-8 hidden lg:flex;
+  @apply w-full flex-row justify-between gap-4 p-8 py-5 hidden lg:flex;
 }
 
 .navbar-logo {
@@ -181,7 +181,7 @@ html {
 
 /* FOOTER */
 .footer {
-  @apply md:p-20 md:py-10 lg:p-40 lg:py-20 bg-[var(--color-white)] w-full h-auto hidden md:flex flex-row justify-between;
+  @apply md:p-10 md:py-10 lg:p-20 lg:py-10 bg-[var(--color-white)] w-full h-auto hidden md:flex md:flex-col lg:flex-row md:gap-5 lg:gap-0 md:justify-center justify-between;
 }
 
 .footer-branding {
@@ -193,7 +193,7 @@ html {
 }
 
 .footer-socials-container {
-  @apply flex flex-row self-end mt-16;
+  @apply flex flex-row md:self-end lg:self-start md:mb-auto md:mt-0 lg:mt-16;
 }
 
 .socials-elements {
@@ -205,7 +205,7 @@ html {
 }
 
 .footer-nav-container {
-  @apply w-2/3 flex flex-row justify-end gap-10;
+  @apply md:w-full lg:w-3/4 flex flex-row md:justify-between lg:justify-end md:gap-5 lg:gap-10;
 }
 
 .footer-mainPages {
@@ -221,7 +221,7 @@ html {
 }
 
 .footer-pageContainer {
-  @apply h-auto w-36 text-left
+  @apply h-auto min-w-24 text-left
 }
 
 

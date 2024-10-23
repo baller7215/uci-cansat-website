@@ -616,7 +616,7 @@ html {
 }
 
 .description {
-  @apply font-normal text-base md:text-xl lg:text-2xl leading-3 md:leading-5 tracking-wide
+  @apply font-normal text-base md:text-xl lg:text-2xl leading-5 md:leading-8 tracking-wide
 }
 
 .emphasis {

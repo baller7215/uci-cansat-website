@@ -308,19 +308,19 @@ export const team2024_2025 = {
         {
             name: 'Professor Rangel',
             role: 'Primary Faculty Advisor',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/rangel.jpeg',
         },
         {
             name: 'Professor Hassaan',
             role: 'Faculty Co-Advisor',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/hassaan.jpeg',
         },
     ],
     management: [
         {
             name: 'Kaylee Kim',
             role: 'Team Lead',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/kaylee.png',
             github: '',
             linkedin: 'https://www.linkedin.com/in/kayleesk/',
             major: 'Mathematics / Mechanical Engineering',
@@ -333,7 +333,7 @@ export const team2024_2025 = {
         {
             name: 'Sarah Ho',
             role: 'Mechanical Lead',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/sarah.JPG',
             github: '',
             linkedin: '',
             major: 'Mechanical Engineering',
@@ -343,7 +343,7 @@ export const team2024_2025 = {
         {
             name: 'Dayeon Yoon',
             role: 'Mechanical Engineer',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/diane.JPG',
             github: '',
             linkedin: 'http://www.linkedin.com/in/diane611',
             major: 'Aerospace Engineering',
@@ -353,7 +353,7 @@ export const team2024_2025 = {
         {
             name: 'Andrei Darjuan',
             role: 'Mechanical Engineer',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/andrei.jpeg',
             github: '',
             linkedin: 'https://www.linkedin.com/in/andrei-darjuan-088796224/',
             major: 'Mechanical Engineering',
@@ -363,7 +363,7 @@ export const team2024_2025 = {
         {
             name: 'Felix Jing',
             role: 'Mechanical Engineer',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/felix.jpg',
             github: '',
             linkedin: 'http://linkedin.com/in/felixjing',
             major: 'Mechanical Engineering',
@@ -375,7 +375,7 @@ export const team2024_2025 = {
         {
             name: 'Khushi Gupta',
             role: 'Electrical Lead',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/khushi.JPG',
             github: '',
             linkedin: 'https://www.linkedin.com/in/khushi-gupta-45a9871a4/',
             major: 'Electrical Engineering',
@@ -385,7 +385,7 @@ export const team2024_2025 = {
         {
             name: 'Naethan Fajarito',
             role: 'Electrical Engineer',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/naethan.jpg',
             github: '',
             linkedin: 'https://www.linkedin.com/in/naethanf2001/',
             major: 'Computer Engineering',
@@ -395,7 +395,7 @@ export const team2024_2025 = {
         {
             name: 'Timothy Yee',
             role: 'Electrical Engineer',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/timothy.jpg',
             github: 'https://github.com/timyee1',
             linkedin: 'http://www.linkedin.com/in/timothy-youlin-yee',
             major: 'Computer Engineering',
@@ -407,7 +407,7 @@ export const team2024_2025 = {
         {
             name: 'Brady Cason',
             role: 'Lead Software Engineer',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/brady.JPG',
             github: 'https://github.com/BradyCason',
             linkedin: 'https://www.linkedin.com/in/brady-cason/',
             major: 'Computer Science and Engineering',
@@ -417,7 +417,7 @@ export const team2024_2025 = {
         {
             name: 'Zhanhao Ruan',
             role: 'Software Engineer',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/zhanhao.jpg',
             github: '',
             linkedin: 'https://www.linkedin.com/in/zhanhao-ruan-3294582b8/',
             major: 'Computer Science',
@@ -429,7 +429,7 @@ export const team2024_2025 = {
         {
             name: 'Satvika Bommadevara',
             role: 'Operations Lead',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/satvika.jpg',
             github: '',
             linkedin: 'https://www.linkedin.com/in/satvika-bommadevara/',
             major: 'Business Information Management',
@@ -441,7 +441,7 @@ export const team2024_2025 = {
         {
             name: 'Leo Siu',
             role: 'Website Developer Lead',
-            profileImg: '',
+            profileImg: '/assets/images/team/2024-2025/leo.jpg',
             github: 'https://github.com/baller7215',
             linkedin: 'http://www.linkedin.com/in/leonardo-siu',
             major: 'Computer Science / Informatics',

@@ -264,27 +264,27 @@ export const management = [
     {
         name: 'Professor Rangel',
         role: 'Primary Faculty Advisor',
-        profileImg: '',
+        profileImg: '/assets/images/management/rangel.jpeg',
     },
     {
         name: 'Professor Hassaan',
         role: 'Faculty Co-Advisor',
-        profileImg: '',
+        profileImg: '/assets/images/management/hassaan.jpeg',
     },
     {
         name: 'Kaylee Kim',
         role: 'Team Lead',
-        profileImg: '',
+        profileImg: '/assets/images/management/kaylee.png',
     },
     {
-        name: 'Khushu Gupta',
+        name: 'Khushi Gupta',
         role: 'Electrical Lead',
-        profileImg: '',
+        profileImg: '/assets/images/management/khushi.JPG',
     },
     {
         name: 'Sarah Ho',
         role: 'Mechanical Lead',
-        profileImg: '',
+        profileImg: '/assets/images/management/sarah.JPG',
     },
 ]
 

@@ -103,7 +103,7 @@ const Sponsors = () => {
 
                 {/* sponsorship tiers */}
                 <section className="section-container" id="sponsorshipTiers">
-                    <div className="text-container !flex-col !gap-0 !py-20">
+                    <div className="text-container !h-fit lg:!h-screen !flex-col !gap-0 !py-20">
                         <h2 className="header text-center !mb-0">Sponsorship Tiers</h2>
                         <p className="description text-custom-rhino text-center">
                             We would greatly appreciate your financial support, and our sponsorship tiers are shown below. If you are interested in sponsoring our team through a monetary or component donation, please email 
@@ -111,9 +111,9 @@ const Sponsors = () => {
                              for the next steps. Tier benefits are negotiable.
                         </p>
 
-                        <div className="flex flex-col md:flex-row justify-between gap-10 mt-5">
+                        <div className="flex flex-col lg:flex-row justify-between gap-10 mt-5">
                             {sponsorshipTiers.map((tier, index) => (
-                                <div key={index} className="tier-card w-full md:w-1/3">
+                                <div key={index} className="tier-card w-fit lg:w-1/3 mx-auto">
 
                                     {/* top */}
                                     <div className="tier-top">
@@ -127,11 +127,11 @@ const Sponsors = () => {
                                             <li key={i} className="tier-benefit">
                                                 {/* <span className={`inline-block w-4 h-4 ${benefit.checked ? 'bg-green-500' : 'bg-gray-500'} rounded-full`}></span> */}
                                                 {benefit.checked ? 
-                                                    <FaCheck className="tier-checked text-green-600" />
+                                                    <FaCheck className="w-5 text-green-600" size={16} />
                                                 :
-                                                    <FaXmark className="tier-checked text-red-600" />
+                                                    <FaXmark className="w-5 text-red-600" size={16} />
                                                 }
-                                                <span className="tier-benefitText">{benefit.text}</span>
+                                                <span className="flex ml-3 tier-benefitText">{benefit.text}</span>
                                             </li>
                                         ))}
 

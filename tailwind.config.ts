@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		screens: {
+			'2xl': '1440px',
+			// Add more custom breakpoints if needed
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

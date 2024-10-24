@@ -133,8 +133,8 @@ html {
 }
 
 .navbar-nav-element {
-  @apply my-auto text-[20px];
-  color: --color-gray;
+  @apply my-auto text-[20px] text-custom-gray;
+  /* color: --color-gray; */
 }
 
 .navbar-nav-element:hover {
@@ -331,7 +331,11 @@ html {
 }
 
 .text-container {
-  @apply flex flex-col md:flex-row h-full md:h-screen w-full p-10 md:p-10 lg:p-40 justify-between gap-10
+  @apply flex flex-col md:flex-row h-full md:h-screen w-full p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 justify-between gap-10
+}
+
+.imageLayout-text-container {
+  @apply flex flex-col lg:flex-row h-full md:h-screen w-full p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 justify-between gap-10
 }
 
 .graphic-container {
@@ -343,7 +347,7 @@ html {
 }
 
 .leftText {
-  @apply flex flex-col justify-center h-full
+  @apply flex flex-col justify-center my-auto h-full
 }
 
 .rightImage {
@@ -353,11 +357,11 @@ html {
 /* table container */
 /* h-auto md:h-full */
 .mainContent-container {
-  @apply bg-custom-gray/[0.8] h-auto md:h-full gap-3 md:gap-0 p-3 md:p-5 lg:p-10 flex flex-col justify-between
+  @apply bg-custom-gray/[0.8] h-auto xl:h-full gap-3 md:gap-5 lg:gap-5 xl:gap-10 p-3 md:p-5 lg:p-5 xl:p-10 flex flex-col justify-between
 }
 
 .title-container {
-  @apply bg-custom-lightBlack/[0.8] h-auto md:h-full w-12 md:w-20 flex items-center justify-center
+  @apply bg-custom-lightBlack/[0.8] h-auto xl:h-auto w-12 md:w-20 flex items-center justify-center
 }
 
 .image-container {
@@ -366,7 +370,7 @@ html {
 
 /* timeline */
 .timeline-container {
-  @apply flex flex-col justify-center h-full my-auto justify-items-end gap-5
+  @apply flex flex-col justify-center mx-auto h-full my-auto justify-items-center lg:justify-items-end gap-5
 }
 
 .timeline-event {
@@ -419,7 +423,7 @@ html {
 
 /* collection */
 .collection-container {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-8 w-full;
+  @apply grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 w-full mx-auto;
 }
 
 .card-item {
@@ -431,7 +435,7 @@ html {
 }
 
 .card-placeholder {
-  @apply w-[350px] h-[250px] md:w-[450px] md:h-[350px] bg-custom-orange rounded-md shadow-2xl;
+  @apply w-[350px] h-[275px] md:w-[400px] md:h-[300px] lg:w-[450px] lg:h-[350px] bg-custom-orange rounded-md shadow-2xl;
 }
 
 .card-label {
@@ -449,11 +453,11 @@ html {
 /* collection news */
 /* w-[850px] h-[450px] */
 .newsCard-card {
-  @apply w-[300px] md:w-[700px] h-auto bg-custom-white shadow-2xl rounded-xl;
+  @apply w-[400px] sm:w-[500px] md:w-[500px] lg:w-[550px] xl:w-[650px] h-auto bg-custom-white shadow-2xl rounded-xl;
 }
 
 .newsCard-card-placeholder {
-  @apply w-[300px] h-[200px] md:w-[700px] md:h-[400px] bg-custom-orange shadow-2xl rounded-xl cursor-pointer;
+  @apply w-[350px] h-[275px] md:w-[400px] md:h-[300px] lg:w-[650px] lg:h-[350px] bg-custom-orange shadow-2xl rounded-xl cursor-pointer;
 }
 
 .newsCard-title {
@@ -492,7 +496,7 @@ html {
 }
 
 .profile-cell {
-  @apply rounded-xl border-2 border-custom-white flex flex-col m-5 md:m-8 lg:m-12 justify-center transform transition-transform duration-300 hover:scale-105;
+  @apply rounded-xl border-2 border-custom-white flex flex-col m-5 md:m-4 lg:m-8 xl:m-12 justify-center transform transition-transform duration-300 hover:scale-105;
   /* perspective: 1000px; */
   position: relative;
 }
@@ -528,7 +532,7 @@ html {
 }
 
 .profile-image {
-  @apply rounded-full bg-custom-orange w-[130px] h-[130px] object-cover
+  @apply rounded-full bg-custom-orange 2xl:w-[130px] 2xl:h-[130px] xl:w-28 xl:h-28 lg:w-28 lg:h-28 w-20 h-20 object-cover
 }
 
 .profile-name {
@@ -540,7 +544,7 @@ html {
 }
 
 .profile-description {
-  @apply font-normal text-base tracking-wider leading-3 text-custom-rhino/40 my-2
+  @apply font-normal text-base tracking-wider leading-5 text-custom-rhino/40 my-2
 }
 
 .socials-grid {
@@ -562,7 +566,7 @@ html {
 }
 
 .tier-top {
-  @apply w-full bg-custom-black rounded-t-xl p-12 px-10 md:px-20 text-custom-orange flex flex-col gap-5
+  @apply w-full bg-custom-black rounded-t-xl p-12 px-8 md:px-7 lg:px-10 xl:px-14 text-custom-orange flex flex-col gap-5
 }
 
 .tier-amount {
@@ -574,11 +578,11 @@ html {
 }
 
 .tier-bottom {
-  @apply w-full bg-custom-gray p-12 px-10 md:px-20 flex flex-col gap-5 list-none rounded-b-xl
+  @apply w-full bg-custom-gray p-12 px-8 md:px-7 lg:px-10 xl:px-14 flex flex-col gap-5 list-none rounded-b-xl
 }
 
 .tier-benefit {
-  @apply flex flex-row items-center gap-5 w-full
+  @apply items-center w-full flex flex-row
 }
 
 .tier-checked {
@@ -608,15 +612,15 @@ html {
 /* text */
 /* text-[64px] */
 .header {
-  @apply text-[var(--color-orange)] font-bold text-3xl md:text-5xl lg:text-[64px] mb-2 md:mb-5 m-0 p-0
+  @apply text-[var(--color-orange)] font-bold text-3xl md:text-4xl lg:text-5xl xl:text-5xl mb-2 md:mb-3 lg:mb-5 xl:mb-5 m-0 p-0
 }
 
 .subHeader {
-  @apply font-bold sm:text-base md:text-lg lg:text-[32px] leading-9 text-[var(--color-rhino)]
+  @apply font-bold sm:text-base md:text-lg lg:text-[32px] leading-9 text-[var(--color-rhino)] mb-3
 }
 
 .description {
-  @apply font-normal text-base md:text-xl lg:text-2xl leading-5 md:leading-8 tracking-wide
+  @apply font-normal text-base md:text-lg lg:text-xl xl:text-2xl leading-5 md:leading-6 lg:leading-8 tracking-wide
 }
 
 .emphasis {
@@ -624,9 +628,9 @@ html {
 }
 
 .tableTitle {
-  @apply text-[var(--color-rhino)] font-medium text-base sm:text-lg md:text-2xl lg:text-3xl
+  @apply text-[var(--color-rhino)] font-medium text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl;
 }
 
 .tableSubtitle {
-  @apply text-[var(--color-lightBlack)] font-bold text-[10px] sm:text-xs md:text-sm lg:text-base tracking-wider
+  @apply text-[var(--color-lightBlack)] font-bold text-[10px] sm:text-xs md:text-xs lg:text-sm xl:text-base tracking-wider
 }

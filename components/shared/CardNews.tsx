@@ -18,8 +18,8 @@ const CardNews = ({ title, subtitle, route, date, image }: NewsCard) => {
                             <Image
                                 src={image}
                                 alt={`${title} image`}
-                                width={450}
-                                height={280}
+                                width={300}
+                                height={300}
                                 className="newsCard-image"
                             />
                         ) : (

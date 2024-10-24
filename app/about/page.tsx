@@ -23,7 +23,7 @@ const About = () => {
           {/* background image */}
           <div className='hidden md:flex relative h-screen w-full home-sectionBackground' ></div>
           {/* gradient */}
-          <div className="hidden md:flex flex-col md:flex-row h-full md:h-screen w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-20 md:py-10 lg:p-40 lg:py-20 justify-center md:justify-between gap-5">
+          <div className="hidden md:flex flex-col md:flex-row h-full md:h-screen w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-10 md:py-5 lg:p-20 lg:py-10 xl:p-20 xl:py-10 2xl:p-40 2xl:py-20 justify-center md:justify-between gap-5">
             {/* left */}
             <div className="leftText w-full md:w-1/2">
               <h2 className="header">Introduction</h2>
@@ -36,13 +36,24 @@ const About = () => {
             </div>
 
             {/* right */}
-            <div className="justify-center md:justify-end my-auto w-full md:w-1/2 flex flex-row h-full">
+            <div className="justify-center md:justify-end my-auto w-full md:w-1/2 flex flex-row h-fit">
               {/* management profiles */}
-              <div className="mainContent-container rounded-s-md">
+              <div className="mainContent-container rounded-s-md !h-fit">
                   {management.map((profile) => {
                     return (
                       <li key={profile.name} className="flex flex-row gap-3 md:gap-5">
-                        <div className="image-container w-2/5"></div>
+                        {/* <div className="image-container w-2/5"></div> */}
+                        {(profile.profileImg) ? (
+                          <Image
+                              src={profile.profileImg}
+                              alt={`${profile.name} profile image`}
+                              width={130}
+                              height={130}
+                              className="profile-image border-4 border-custom-shakespeare"
+                          />
+                        ) : (
+                          <div className="profile-image"></div>
+                        )}
                         <div className="my-auto w-3/5 flex flex-col gap-0 md:gap-2">
                           <h3 className="tableTitle">{profile.name}</h3>
                           <h4 className="tableSubtitle uppercase">{profile.role}</h4>
@@ -51,6 +62,7 @@ const About = () => {
                     )
                   })}
               </div>
+              {/* title */}
               {/* title */}
               <div className="title-container rounded-e-md">
                 <h2 className="header rotate-90 origin-center whitespace-nowrap">Management</h2>
@@ -84,7 +96,18 @@ const About = () => {
                 {management.map((profile) => {
                   return (
                     <li key={profile.name} className="flex flex-row gap-3 md:gap-5">
-                      <div className="image-container w-2/5"></div>
+                      {/* <div className="image-container w-2/5"></div> */}
+                      {(profile.profileImg) ? (
+                          <Image
+                              src={profile.profileImg}
+                              alt={`${profile.name} profile image`}
+                              width={130}
+                              height={130}
+                              className="profile-image border-4 border-custom-shakespeare"
+                          />
+                        ) : (
+                          <div className="profile-image"></div>
+                        )}
                       <div className="my-auto w-3/5 flex flex-col gap-0 md:gap-2">
                         <h3 className="tableTitle">{profile.name}</h3>
                         <h4 className="tableSubtitle uppercase">{profile.role}</h4>
@@ -107,7 +130,7 @@ const About = () => {
         <section className="section-container">
           <div className="text-container">
             {/* left */}
-            <div className="leftText w-full md:w-3/5">
+            <div className="leftText w-full lg:w-3/5">
               <h2 className="header">Overview</h2>
               <p className="description text-custom-rhino">The UCI CanSat team is a prominent representation of the University of California, Irvine&apos;s commitment to pushing the boundaries of student-led engineering projects. Comprised of a dedicated and dynamic group of students, the team participates in the CanSat competition to hone their engineering skills. The competition not only offers an avenue to apply theoretical knowledge but also propels UCI&apos;s engineering students into real-world scenarios that mimic the challenges faced by professionals in the industry.</p>
             
@@ -129,7 +152,7 @@ const About = () => {
             </div>
 
             {/* right */}
-            <div className="rightImage">
+            <div className="rightImage flex md:hidden lg:flex">
               <Image 
                 src='/assets/images/verticalRocketBlack.jpg'
                 alt="rocket in space"
@@ -146,7 +169,7 @@ const About = () => {
           <div className="text-container">
 
             {/* left */}
-            <div className="justify-center md:justify-start w-full md:w-1/3 graphic-container">
+            <div className="justify-center lg:justify-start w-full lg:w-1/3 flex graphic-container !h-fit">
               {/* title */}
               <div className="title-container rounded-s-md m-0">
                 <h2 className="header rotate-[270deg] origin-center whitespace-nowrap">Competition History</h2>
@@ -169,7 +192,7 @@ const About = () => {
             </div>
 
             {/* right */}
-            <div className="leftText w-full md:w-2/3">
+            <div className="leftText w-full lg:w-2/3 flex">
               <h2 className="header">History</h2>
               <p className="description text-custom-rhino">UCI AntSat was founded in 2017 by a group of undergraduate students at UC Irvine with the mission to compete in the American Astronautical Society International CanSat Competition. <br /> <br />
               Founded in the 2017 - 2018 academic year, UCI CanSat is a specialized undergraduate project within the Mechanical and Aerospace Engineering (MAE) department at the University of California, Irvine. We participate in the annual CanSat competition, a global engineering challenge to design, build, and launch a space-type system. Each year brings a new mission; for 2022 - 2023, our focus is to create a probe that will be deployed at an altitude of approximately 700m, transmit real-time telemetry and execute a controlled landing using a parachute and aerobraking heat shield. Beyond competition goals, we aim to furnish our members with practical engineering skills. Over the course of three academic quarters, our team transitioned from brainstorming to actual launch, offering hands-on experience in engineering design. Last year, under the guidance of our faculty adviser, Professor Roger Rangel, our team of 10 students placed 14th in the world.</p>
@@ -188,7 +211,7 @@ const About = () => {
             </div>
             
             {/* right timeline */}
-            <div className='timeline-container w-full md:w-1/2 '>
+            <div className='timeline-container w-fit md:w-1/2 '>
               {competitionTimeline.map((event, index) => (
                 <div className='timeline-event' key={index}>
                   <span className='timeline-date tableSubtitle'>{event.date}</span>
@@ -201,8 +224,8 @@ const About = () => {
                     {index === competitionTimeline.length - 1 ? (
                       // arrow for last timeline marker
                       <>
-                        <div className="timeline-line"></div>
-                        <div className="timeline-arrow"></div>
+                        <div className="timeline-line hidden md:flex"></div>
+                        <div className="timeline-arrow hidden md:flex"></div>
                       </>
                       
                     ) : (

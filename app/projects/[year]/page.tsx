@@ -33,7 +33,7 @@ const ProjectYearPage = () => {
                         <div className="text-container">
 
                             {/* left */}
-                            <div className="leftText w-full md:w-3/5">
+                            <div className="leftText w-full md:w-full lg:w-3/5">
                                 <h2 className="header">Project Definition</h2>
                                 {/* planning */}
                                 <div className="flex flex-col gap-3 my-5">
@@ -48,7 +48,7 @@ const ProjectYearPage = () => {
                             </div>
 
                             {/* right */}
-                            <div className="rightImage">
+                            <div className="rightImage w-full md:w-2/5 flex md:hidden lg:flex">
                                 <Image
                                     src='/assets/images/verticalRocketBlack.jpg'
                                     alt="rocket in space with black background"
@@ -65,13 +65,13 @@ const ProjectYearPage = () => {
                 {/* conceptual / preliminary design */}
                 {project?.design.keyComponents &&
                     <section className="section-container">
-                        <div className="text-container">
+                        <div className="text-container !flex-col xl:!flex-row !justify-center">
 
                             {/* left */}
-                            <div className="justify-start w-full md:w-1/3 graphic-container">
+                            <div className="justify-start w-full xl:w-1/3 graphic-container !h-fit">
                                 {/* title */}
                                 <div className="title-container rounded-s-md m-0">
-                                    <h2 className="header rotate-[270deg] origin-center whitespace-nowrap">3 Key Components</h2>
+                                    <h2 className="header md:!text-4xl lg:!text-4xl rotate-[270deg] origin-center whitespace-nowrap">Components</h2>
                                 </div>
 
                                 {/* 3 key components */}
@@ -90,15 +90,15 @@ const ProjectYearPage = () => {
                             </div>
                             
                             {/* right */}
-                            <div className="leftText w-full md:w-2/3">
-                                <h2 className="header">Conceptual / Preliminary Design</h2>
+                            <div className="leftText w-full xl:w-2/3 !h-fit xl!h-full">
+                                <h2 className="header lg:!text-4xl">Conceptual / Preliminary Design</h2>
                                 <div className="flex flex-col gap-3 my-5">
-                                    <h3 className="subHeader uppercase">Major Components</h3>
-                                    <p className="description text-custom-rhino">{project?.design.majorComponents.description}</p>
+                                    <h3 className="subHeader lg:!text-2xl uppercase">Major Components</h3>
+                                    <p className="description lg:!text-xl text-custom-rhino">{project?.design.majorComponents.description}</p>
                                     <ul className="list-disc pl-10">
                                         {project?.design.majorComponents.bulletPoints.map((point) => {
                                             return (
-                                                <li key={point.id} className="description text-custom-rhino">
+                                                <li key={point.id} className="description lg:!text-xl text-custom-rhino">
                                                     {point.text}
                                                     {/* <p className="description text-custom-rhino">{point.text}</p> */}
                                                 </li>

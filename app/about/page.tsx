@@ -105,7 +105,7 @@ const About = () => {
             <motion.div className="leftText w-full lg:w-3/5" variants={fadeIn}>
               <h2 className="header">Overview</h2>
               <p className="description text-custom-rhino">
-                The UCI CanSat team is a prominent representation of the University of California, Irvine's commitment to pushing the boundaries of student-led engineering projects. Comprised of a dedicated and dynamic group of students, the team participates in the CanSat competition to hone their engineering skills. The competition not only offers an avenue to apply theoretical knowledge but also propels UCI's engineering students into real-world scenarios that mimic the challenges faced by professionals in the industry.
+                The UCI CanSat team is a prominent representation of the University of California, Irvine&apos;s commitment to pushing the boundaries of student-led engineering projects. Comprised of a dedicated and dynamic group of students, the team participates in the CanSat competition to hone their engineering skills. The competition not only offers an avenue to apply theoretical knowledge but also propels UCI&apos;s engineering students into real-world scenarios that mimic the challenges faced by professionals in the industry.
               </p>
 
               <Button variant="link" className="mx-0 px-0 my-3 flex-none inline-block w-fit">

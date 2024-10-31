@@ -136,7 +136,7 @@ export default function Home() {
         </motion.section>
 
         {/* internship apps are open section */}
-        <motion.section className="relative bg-custom-rhino w-full h-auto text-center"
+        {/* <motion.section className="relative bg-custom-rhino w-full h-auto text-center"
           initial="hidden"
           whileInView="visible"
           variants={staggerContainer}
@@ -174,7 +174,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </motion.section>
+        </motion.section> */}
 
         <Footer />
         <MobileFooter />

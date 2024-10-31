@@ -255,7 +255,13 @@ const Sponsors = () => {
                 </motion.section>
 
                 {/* why sponsor us */}
-                <section className="section-container" id="whySponsorUs">
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={staggerContainer}
+                    className="section-container" 
+                    id="whySponsorUs"
+                >
                     <motion.div className="text-container !flex-col !justify-center" variants={fadeIn}>
                         <div className="flex flex-col md:flex-row justify-between">
                             <motion.div className="leftText w-full md:w-3/4 gap-3" variants={fadeIn}>
@@ -284,10 +290,16 @@ const Sponsors = () => {
                             ))}
                         </div>
                     </motion.div>
-                </section>
+                </motion.section>
 
                 {/* sponsorship tiers */}
-                <section className="section-container" id="sponsorshipTiers">
+                <motion.section
+                    className="section-container"
+                    id="sponsorshipTiers"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={staggerContainer}
+                >
                     <motion.div className="text-container !h-fit lg:!h-screen !flex-col !gap-0 !py-20" variants={fadeIn}>
                         <h2 className="header text-center !mb-0">Sponsorship Tiers</h2>
                         <p className="description text-custom-rhino text-center">
@@ -326,10 +338,15 @@ const Sponsors = () => {
                             ))}
                         </div>
                     </motion.div>
-                </section>
+                </motion.section>
 
                 {/* thanks to sponsors */}
-                <section className="section-container !h-auto">
+                <motion.section
+                    className="section-container !h-auto"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={staggerContainer}
+                >
                     <motion.div className="text-container !flex-col gap-10 !h-auto px-10 !md:px-80 text-center" variants={fadeIn}>
                         <div className="flex flex-row gap-20 justify-center text-3xl">
                             <FaCode className="text-custom-rhino" />
@@ -339,7 +356,7 @@ const Sponsors = () => {
                         <h2 className="header !text-[42px] uppercase">big thanks to our sponsors &lt;3</h2>
                         <p className="description text-custom-rhino">On behalf of UCI CanSat, our team would like to thank you for your interest in sponsoring our team! If you have any questions about our team, feel free to contact us at cansatuci@gmail.com!</p>
                     </motion.div>
-                </section>
+                </motion.section>
 
                 <Footer />
                 <MobileFooter />

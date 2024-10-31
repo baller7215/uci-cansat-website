@@ -9,7 +9,7 @@ import Testimonial from "@/components/shared/Testimonial";
 import SubteamInfo from "@/components/shared/SubteamInfo";
 import CustomAccordion from "@/components/shared/Accordion";
 import MobileFooter from "@/components/shared/MobileFooter";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Join = () => {
 

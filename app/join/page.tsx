@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Footer from "@/components/shared/Footer";
 import SubscribeForm from "@/components/shared/SubscribeForm";
-import { electricalPathway, faq, generalPathway, internshipInfo, mechanicalPathway, operationsPathway, softwarePathway, webDevPathway } from "@/constants";
+import { electricalPathway, faq, generalPathway, mechanicalPathway, operationsPathway, softwarePathway, webDevPathway } from "@/constants";
 import Testimonial from "@/components/shared/Testimonial";
 import SubteamInfo from "@/components/shared/SubteamInfo";
 import CustomAccordion from "@/components/shared/Accordion";

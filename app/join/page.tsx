@@ -20,11 +20,9 @@ const Join = () => {
                 <CoverPage page="join" title="Join Us" background="../assets/images/competiton-photos/launch3.jpg" />
 
                 {/* internship opportunity */}
-                <section className="section-container !bg-custom-black !border-custom-white" id="internship">
+                {/* <section className="section-container !bg-custom-black !border-custom-white" id="internship">
                     <div className="text-container !flex-col !justify-center">
-                        {/* top */}
                         <div className="flex flex-col md:flex-row justify-between">
-                            {/* text */}
                             <div className="leftText w-full md:w-3/4 gap-3">
                                 <h2 className="header">Fall 2024 Internship Recruitment!</h2>
                                 <p className="description text-custom-gray">
@@ -48,7 +46,6 @@ const Join = () => {
 
                         <hr className="my-5"/>
 
-                        {/* bottom */}
                         <div className="flex flex-col gap-10">
                             <p className="description text-custom-gray">Interns will shadow our Mechanical or Electrical subteam, with the responsibilities displayed below:</p>
                             </div>
@@ -57,7 +54,6 @@ const Join = () => {
                                     return (
                                         <div key={responsibility.title} className="w-full h-ful flex flex-col gap-3 transition ease-in-out hover:scale-110">
                                             <h3 className="font-bold text-base leading-6 tracking-wide text-custom-gray uppercase">{responsibility.title}</h3>
-                                            {/* <p className="!text-base !font-thin !leading-7 !tracking-normal !text-custom-lightBlack">{reason.description}</p> */}
                                         </div>
                                     )
                                 })}
@@ -68,7 +64,7 @@ const Join = () => {
                             </Button>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* applications are closed */}
                 <section className="section-container !bg-custom-black" id="overview">

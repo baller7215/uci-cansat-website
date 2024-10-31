@@ -184,7 +184,7 @@ const ProjectYearPage = () => {
                                     height={630}
                                     className=""
                                 />
-                                <p className="description text-custom-rhino italic text-center">{project?.design.ourWorks.mechanical.caption}</p>
+                                <p className="description text-custom-rhino italic text-center mt-3">{project?.design.ourWorks.mechanical.caption}</p>
                             </div>
                         </div>
 
@@ -199,7 +199,7 @@ const ProjectYearPage = () => {
                                     height={630}
                                     className=""
                                 />
-                                <p className="description text-custom-rhino italic text-center">{project?.design.ourWorks.electrical.caption}</p>
+                                <p className="description text-custom-rhino italic text-center mt-3">{project?.design.ourWorks.electrical.caption}</p>
                             </div>
                             
                             {/* right */}

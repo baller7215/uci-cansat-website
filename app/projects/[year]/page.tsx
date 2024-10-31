@@ -23,7 +23,7 @@ const ProjectYearPage = () => {
                 <CoverPage page="teamYear" title="Projects" subtitle={yearObject?.label} background="../assets/images/components/double2.jpg" />
 
                 {/* overview */}
-                {project?.overview &&
+                {project?.overview && project?.overview?.team && project?.overview?.description &&
                     <ImageTextLayout title="Overview" description={project?.overview.description || ""} image={project?.overview.team || ""} />
                 }
                 
@@ -51,7 +51,8 @@ const ProjectYearPage = () => {
                             <div className="rightImage w-full md:w-2/5 flex md:hidden lg:flex">
                                 <Image
                                     // src='/assets/images/verticalRocketBlack.jpg'
-                                    src='/assets/images/components/sicko_mode_vertical.jpg'
+                                    // src='/assets/images/components/sicko_mode_vertical.jpg'
+                                    src={project?.projectDefinition.image}
                                     alt="rocket in space with black background"
                                     width={620}
                                     height={940}
@@ -64,7 +65,7 @@ const ProjectYearPage = () => {
                 }
 
                 {/* conceptual / preliminary design */}
-                {project?.design.keyComponents &&
+                {project?.design.show &&
                     <section className="section-container">
                         <div className="text-container !flex-col xl:!flex-row !justify-center">
 
@@ -82,7 +83,7 @@ const ProjectYearPage = () => {
                                             <div key={component.name} className="flex flex-row">
                                                 <div className="graphic-cell">
                                                     <h3 className="tableTitle">{component.name}</h3>
-                                                    <h4 className="tableSubtitle uppercase !text-custom-rhino/40">{component.description} uppercase</h4>
+                                                    <h4 className="tableSubtitle uppercase !text-custom-rhino/40">{component.description}</h4>
                                                 </div>
                                             </div>
                                         )
@@ -113,6 +114,56 @@ const ProjectYearPage = () => {
                     </section>
                 }
 
+                {/* competition requirements */}
+                {project?.competitionRequirements?.show &&
+                    <section className="section-container">
+                        <div className="text-container !flex-col xl:!flex-row !justify-center">
+
+                            {/* left */}
+                            <div className="justify-start w-full xl:w-1/3 graphic-container !h-fit">
+                                {/* title */}
+                                <div className="title-container rounded-s-md m-0">
+                                    <h2 className="header md:!text-4xl lg:!text-4xl rotate-[270deg] origin-center whitespace-nowrap">Team Goals</h2>
+                                </div>
+
+                                {/* team goals */}
+                                <div className="mainContent-container rounded-e-md">
+                                    {project?.teamGoals.map((goal) => {
+                                        return (
+                                            <div key={goal.id} className="flex flex-row">
+                                                <div className="graphic-cell">
+                                                    {/* <h3 className="tableTitle">{component.name}</h3> */}
+                                                    <h4 className="tableSubtitle !text-custom-rhino/40">{goal.point}</h4>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                            
+                            {/* right */}
+                            <div className="leftText w-full xl:w-2/3 !h-fit xl!h-full">
+                                <h2 className="header lg:!text-4xl">CanSat Competition Requirements</h2>
+                                <div className="flex flex-col gap-3 my-5">
+                                    <h3 className="subHeader lg:!text-2xl uppercase">Major Components</h3>
+                                    <p className="description lg:!text-xl text-custom-rhino">{project?.competitionRequirements.description}</p>
+                                    <ul className="list-disc pl-10">
+                                        {project?.competitionRequirements.bullets.map((point) => {
+                                            return (
+                                                <li key={point.id} className="description lg:!text-xl text-custom-rhino">
+                                                    {point.point}
+                                                    {/* <p className="description text-custom-rhino">{point.text}</p> */}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                }
+
                 {/* our works */}
                 {project?.design.ourWorks && project?.design.ourWorks.mechanical.description && project?.design.ourWorks.electrical.description && project?.design.ourWorks.controls.description &&
                     <section className="section-container bg-fixed min-h-screen my-auto !bg-custom-white">
@@ -131,8 +182,9 @@ const ProjectYearPage = () => {
                                     alt="mechanical subteam image"
                                     width={690}
                                     height={630}
-                                    className="m-auto"
+                                    className=""
                                 />
+                                <p className="description text-custom-rhino italic text-center">{project?.design.ourWorks.mechanical.caption}</p>
                             </div>
                         </div>
 
@@ -145,8 +197,9 @@ const ProjectYearPage = () => {
                                     alt="electrical subteam image"
                                     width={690}
                                     height={630}
-                                    className="m-auto"
+                                    className=""
                                 />
+                                <p className="description text-custom-rhino italic text-center">{project?.design.ourWorks.electrical.caption}</p>
                             </div>
                             
                             {/* right */}
@@ -157,23 +210,26 @@ const ProjectYearPage = () => {
                         </div>
 
                         {/* controls */}
-                        <div className="text-container !min-h-screen">
-                            {/* left */}
-                            <div className="leftText w-full md:w-3/5">
-                                <h3 className="subHeader uppercase">Controls</h3>
-                                <p className="description text-custom-rhino">{project?.design.ourWorks.controls.description}</p>
+                        {project?.design.ourWorks.controls.show && 
+                            <div className="text-container !min-h-screen">
+                                {/* left */}
+                                <div className="leftText w-full md:w-3/5">
+                                    <h3 className="subHeader uppercase">Controls</h3>
+                                    <p className="description text-custom-rhino">{project?.design.ourWorks.controls.description}</p>
+                                </div>
+                                {/* right */}
+                                <div className="rightImage">
+                                    <Image
+                                        src={project?.design.ourWorks.controls.image || ""}
+                                        alt="controls subteam image"
+                                        width={690}
+                                        height={630}
+                                        className="m-auto"
+                                    />
+                                </div>
                             </div>
-                            {/* right */}
-                            <div className="rightImage">
-                                <Image
-                                    src={project?.design.ourWorks.controls.image || ""}
-                                    alt="controls subteam image"
-                                    width={690}
-                                    height={630}
-                                    className="m-auto"
-                                />
-                            </div>
-                        </div>
+                        }
+                        
                     </section>
                 }
                 

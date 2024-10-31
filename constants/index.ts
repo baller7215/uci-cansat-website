@@ -1397,9 +1397,11 @@ export const project2023_2024 = {
     },
     projectDefinition: {
         planning: "Telemetry, an automated communication process for remotely measuring and monitoring data, has evolved significantly since its inception in aerospace during the 1930s. The CanSat competition, sponsored by the American Astronautical Society (AAS), offers students the opportunity to engage in the complete lifecycle of a telemetry payload system. The competition challenges university teams to design, build, and deploy a space-related system according to specific guidelines, culminating in a competitive launch at the end of the academic year.",
-        problemStatement: "The mission requires designing a container deployable from a rocket, with controlled descent rates using parachutes. The container must descend at 15m/s above 400m and at 5m/s below 400m. At 300m, a payload attached by a 10-meter tether must deploy, descending at 0.5m/s, while maintaining a specific camera orientation. Throughout the descent, the container should report telemetry data."
+        problemStatement: "The mission requires designing a container deployable from a rocket, with controlled descent rates using parachutes. The container must descend at 15m/s above 400m and at 5m/s below 400m. At 300m, a payload attached by a 10-meter tether must deploy, descending at 0.5m/s, while maintaining a specific camera orientation. Throughout the descent, the container should report telemetry data.",
+        image: "/assets/images/components/sicko_mode_vertical.jpg"
     },
     design: {
+        show: true,
         majorComponents: {
             description: "The overall design consists of three key components in order for the CanSat to function effectively. They are separated into the three parts that make up the CanSat.",
             bulletPoints: [
@@ -1435,20 +1437,30 @@ export const project2023_2024 = {
             mechanical: {
                 name: "Mechanical",
                 description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
-                image: "/assets/images/projects/2023-2024/mechanical.png"
+                image: "/assets/images/projects/2023-2024/mechanical.png",
+                caption: ""
             },
             electrical: {
                 name: "Electrical",
                 description: "The electrical team was responsible for developing the avionics printed circuit board (PCB). This PCB connects various sensors and actuators, GPS, and radio to the main microcontroller (an STM32F1). After outlining requirements, conducting trade studies, and selecting components, we began designing the PCB in Altium Designer. We went through three iterations in total, reducing weight, improving RF performance, and making small mechanical improvements along the way. We hand soldered all PCBs to reduce the cost of the iterative process we followed. As part of this process, we focused on first developing a minimum viable product (achieved in revision two) so that we would be able to launch should any following revisions fail. Thankfully, all of the improvements we implemented in revision three were executed successfully, and we plan to launch with this version.",
-                image: "/assets/images/projects/2023-2024/electrical.png"
+                image: "/assets/images/projects/2023-2024/electrical.png",
+                caption: "",
             },
             controls: {
+                show: true,
                 name: "Controls",
                 description: "The controls subteam focused on designing and implementing the ground station program using PyQt5, adhering to the CanSat competition mission guide. The ground station interface, which includes commands like “Activate Heatshield” and “Activate Parachute,” communicates with the CanSat, displays received data, and controls operations. A “Simulation Mode” was also developed to test functionalities by mimicking flight data. Real-time data graphs on the ground station were designed and implemented using PyQtGraphs. Another main controls task is developing embedded systems for the CanSat payload using the electrical schematics provided by the electrical subteam. The embedded software, written in C, will run on the STM32 microcontroller.",
                 image: "/assets/images/projects/2023-2024/controls.png"
             }
         }
     },
+    competitionRequirements: {
+        show: false,
+        description: "",
+        bullets: [
+        ]
+    },
+    teamGoals: [],
     posters: {
         fall: "",
         winter: ""
@@ -1462,9 +1474,11 @@ export const project2021_2022 = {
     },
     projectDefinition: {
         planning: "Telemetry, an automated communication process for remotely measuring and monitoring data, has evolved significantly since its inception in aerospace during the 1930s. The CanSat competition, sponsored by the American Astronautical Society (AAS), offers students the opportunity to engage in the complete lifecycle of a telemetry payload system. The competition challenges university teams to design, build, and deploy a space-related system according to specific guidelines, culminating in a competitive launch at the end of the academic year.",
-        problemStatement: "Design a container that will be stored in and deployed from a rocket. The container should have predetermined descent rates based on altitude, controlled by a total of 2 parachutes: at above 400m, the container should descend at 15m/s, at below 400m, the container should descend at 5m/s. At 300m, the container should deploy a payload, attached to the container by a tether and consisting of a camera, at a decent rate of 0.5m/s, until the payload is 10m away from the container. The camera from the payload should face South and 45 degrees below the horizon at all times. The container should report telemetry while descending."
+        problemStatement: "Design a container that will be stored in and deployed from a rocket. The container should have predetermined descent rates based on altitude, controlled by a total of 2 parachutes: at above 400m, the container should descend at 15m/s, at below 400m, the container should descend at 5m/s. At 300m, the container should deploy a payload, attached to the container by a tether and consisting of a camera, at a decent rate of 0.5m/s, until the payload is 10m away from the container. The camera from the payload should face South and 45 degrees below the horizon at all times. The container should report telemetry while descending.",
+        image: "/assets/images/components/sicko_mode_vertical.jpg"
     },
     design: {
+        show: true,
         majorComponents: {
             description: "The overall design consists of three key components in order for the CanSat to function effectively. They are separated into the three parts that make up the CanSat.",
             bulletPoints: [
@@ -1501,6 +1515,7 @@ export const project2021_2022 = {
                 name: "",
                 description: "",
                 image: "",
+                caption: "",
                 // name: "Mechanical",
                 // description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
                 // image: "/assets/images/projects/2023-2024/mechanical.png"
@@ -1509,11 +1524,13 @@ export const project2021_2022 = {
                 name: "",
                 description: "",
                 image: "",
+                caption: "",
                 // name: "Electrical",
                 // description: "The electrical team was responsible for developing the avionics printed circuit board (PCB). This PCB connects various sensors and actuators, GPS, and radio to the main microcontroller (an STM32F1). After outlining requirements, conducting trade studies, and selecting components, we began designing the PCB in Altium Designer. We went through three iterations in total, reducing weight, improving RF performance, and making small mechanical improvements along the way. We hand soldered all PCBs to reduce the cost of the iterative process we followed. As part of this process, we focused on first developing a minimum viable product (achieved in revision two) so that we would be able to launch should any following revisions fail. Thankfully, all of the improvements we implemented in revision three were executed successfully, and we plan to launch with this version.",
                 // image: "/assets/images/projects/2023-2024/electrical.png"
             },
             controls: {
+                show: true,
                 name: "",
                 description: "",
                 image: "",
@@ -1523,12 +1540,138 @@ export const project2021_2022 = {
             }
         }
     },
+    competitionRequirements: {
+        show: false,
+        description: "",
+        bullets: [
+        ]
+    },
+    teamGoals: [],
     posters: {
         fall: "/assets/images/projects/2021-2022/AntSat Fall Design Review 2021.pptx.png",
         winter: "/assets/images/projects/2021-2022/AntSat Winter Design Review 2022.pptx.png"
     }
 }
 
+export const project2020_2021 = {
+    overview: {
+        // public/assets/images/competiton-photos/verticalLaunch.jpg
+        team: "", //team photo
+        description: ""
+    },
+    projectDefinition: {
+        planning: "This year’s mission is to design a container and two auto-rotating maple seed science payloads. The CanSat will be launched to 700m using a high-powered model rocket. The CanSat then descends using parachute at 15 m/s. At 500m, the first payload is released and the second payload will be released at 400m. These payloads will rotate and descend slower than 20 m/s. While descending, the container will collect its own telemetry as well as telemetry from both payloads.",
+        problemStatement: "Our competition project involves designing and building a CanSat, consisting of a container and two science payloads that will descend from an altitude of 670 to 725 meters. The container and payload descend together at 15 m/s until 500 meters, where the first payload is released to rotate and descend at less than 20 m/s, followed by the release of the second payload at 400 meters. The payloads are equipped with sensors to measure air temperature, pressure, and rotation rate, transmitting data in real-time to the container, which relays it along with GPS, pressure, battery voltage, and an audio beacon. Our goal is to perform well in the CanSat Competition, ensure all teammates gain engineering design experience, and meet UCI's MAE Department requirements for senior design. The launch system is provided by the organizers, while we focus on CanSat and ground station design and construction.",
+        image: "/assets/images/projects/2020-2021/mission.png"
+    },
+    design: {
+        show: false,
+        majorComponents: {
+            description: "",
+            bulletPoints: []
+        },
+        keyComponents: [],
+        ourWorks: {
+            mechanical: {
+                name: "Mechanical",
+                description: "The mechanical team completed designs and calculations for the container and payload. We calculated the descent velocities of the parachute and wrote python sizing scripts to estimate the size of the maple seed payloads to achieve the desired velocity that the competition required. In addition, we completed the SolidWorks 3D Models, drafted drawings, and ran FEA structural simulations on the container to withstand 15G launch acceleration and 30G shock.",
+                image: "/assets/images/projects/2020-2021/mechanical.png",
+                caption: "Figure: Container FEA Analysis"
+            },
+            electrical: {
+                name: "Software / Electrical",
+                description: "As for the software and electrical team, all electronics components (sensors, capacitors, resistors, ect.) have been selected and the container and payload PCB designs are completed. Firmware to read the sensor data and ground station is being completed. One of the prototype payload PCB boards have been completed and is currently being tested.",
+                image: "/assets/images/projects/2020-2021/software-electrical.png",
+                caption: "Figure: Payload PCB Rendering"
+            },
+            controls: {
+                show: false,
+                name: "Controls",
+                description: "The controls subteam focused on designing and implementing the ground station program using PyQt5, adhering to the CanSat competition mission guide. The ground station interface, which includes commands like “Activate Heatshield” and “Activate Parachute,” communicates with the CanSat, displays received data, and controls operations. A “Simulation Mode” was also developed to test functionalities by mimicking flight data. Real-time data graphs on the ground station were designed and implemented using PyQtGraphs. Another main controls task is developing embedded systems for the CanSat payload using the electrical schematics provided by the electrical subteam. The embedded software, written in C, will run on the STM32 microcontroller.",
+                image: "/assets/images/projects/2023-2024/software-electrical.png"
+            }
+        }
+    },
+    competitionRequirements: {
+        show: true,
+        description: "While there are 66 requirements published by the CanSat Competition. The most important requirements regarding CanSat's design are listed below:",
+        bullets: [
+            {
+                id: 1,
+                point: "Total mass of the CanSat (science payloads and container) shall be 600 grams +/- 10 grams.",
+            },
+            {
+                id: 2,
+                point: "CanSat shall fit in a cylindrical envelope of 125 mm diameter x 400 mm length.",
+            },
+            {
+                id: 3,
+                point: "The descent rate of the CanSat (container and science payload) shall be 15 meters/second +/- 5m/s.",
+
+            },
+            {
+                id: 4,
+                point: "The science payload shall have a maximum descent rate of 20 m/s.",
+
+            },
+            {
+                id: 5,
+                point: "The science payload will be released at 500 m and 400 m.",
+
+            },
+            {
+                id: 6,
+                point: "The science payload shall measure altitude using an air pressure sensor, air temperature, and rotation rate as it descends.",
+            },
+            {
+                id: 7,
+                point: "The container shall include a GPS sensor to track its position, pressure sensor to measure altitude, and a battery voltage sensor.",
+
+            },
+            {
+                id: 8,
+                point: "Each team must develop a ground station to plot sensor data in real time.",
+
+            },
+            {
+                id: 9,
+                point: "The CanSat must survive 15 Gs launch acceleration, and 30 Gs shock. Electronics must be secured and, with the exception of sensors, enclosed.",
+
+            },
+            {
+                id: 10,
+                point: "The total cost of the CanSat shall be under $1000, not including ground station equipment."
+
+            }
+        ]
+    },
+    teamGoals: [
+        {
+            id: 1,
+            point: "Design and build a CanSat that meets all competition requirements.",
+        },
+        {
+            id: 2,
+            point: "Provide all team members with practical experience in the engineering design process.",
+        },
+        {
+            id: 3,
+            point: "Fall: Complete research, design, resource procurement, and initial prototypes; submit Preliminary Design Report."
+        },
+        {
+            id: 4,
+            point: "Winter: Focus on manufacturing, refining designs for prototype two, and completing the Critical Design Review (CDR)."
+        },
+        {
+            id: 5,
+            point: "Spring: Conduct testing, address any issues, and prepare for competition after finals."
+        }
+    ],
+    posters: {
+        fall: "",
+        winter: ""
+    }
+}
 
 
 // sponsors
@@ -2000,12 +2143,12 @@ export const yearTeamProject = {
         team: team2023_2024,
         project: project2023_2024,
     },
-    id2022_2023: {
-        id: '2022-2023',
-        label: '2022 - 2023',
-        team: team2022_2023,
-        project: project2023_2024,
-    },
+    // id2022_2023: {
+    //     id: '2022-2023',
+    //     label: '2022 - 2023',
+    //     team: team2022_2023,
+    //     project: project2023_2024,
+    // },
     id2021_2022: {
         id: '2021-2022',
         label: '2021 - 2022',
@@ -2016,7 +2159,7 @@ export const yearTeamProject = {
         id: '2020-2021',
         label: '2020 - 2021',
         team: team2020_2021,
-        project: project2023_2024,
+        project: project2020_2021,
     },
     id2019_2020: {
         id: '2019-2020',

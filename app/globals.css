@@ -336,7 +336,7 @@ html {
 }
 
 .text-container {
-  @apply flex flex-col md:flex-row h-full md:h-screen w-full p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 justify-between gap-10
+  @apply flex flex-col md:flex-row h-full md:h-screen w-full p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-32 justify-between gap-10
 }
 
 .imageLayout-text-container {

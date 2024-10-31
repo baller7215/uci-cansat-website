@@ -1763,7 +1763,15 @@ export const sponsorshipTiers = [
 
 
 // updates / news
+/** @todo: add new card for samueli 25th year anniversary */
 export const featuredNews = [
+    {
+        title: "UCI Samueli School of Engineering",
+        subtitle: "Thank you Henry and Susan Samueli for your dedication to future engineers at the UC Irvine Samueli School of Engineering! Celebrating 25 years of impact!🤘🎉💛💙",
+        date: "Oct 28, 2024",
+        image: "/assets/images/news/25-year-anniversary.jpeg",
+        route: "https://www.linkedin.com/posts/ucirvineengineering_thank-you-henry-and-susan-samueli-for-your-activity-7257088350157746177-NmpH/"
+    },
     {
         title: "UCI Samueli School of Engineering",
         subtitle: "Anteater CanSat Team Takes Second Place in U.S., Fourth Worldwide",
@@ -1771,16 +1779,23 @@ export const featuredNews = [
         image: "/assets/images/news/anteater-cansat-team.jpeg",
         route: "https://engineering.uci.edu/news/2024/7/anteater-cansat-team-takes-second-place-us-fourth-worldwide"
     },
-    {
-        title: "UCI Giving Day 2024",
-        subtitle: "CanSat Student Group",
-        date: "",
-        image: "/assets/images/news/giving-day-2024.jpeg",
-        route: "https://givingday.uci.edu/giving-day/80306/department/89677"
-    }
+    // {
+    //     title: "UCI Giving Day 2024",
+    //     subtitle: "CanSat Student Group",
+    //     date: "",
+    //     image: "/assets/images/news/giving-day-2024.jpeg",
+    //     route: "https://givingday.uci.edu/giving-day/80306/department/89677"
+    // }
 ]
 
 export const updates = [
+    {
+        title: "UCI Samueli School of Engineering",
+        subtitle: "Thank you Henry and Susan Samueli for your dedication to future engineers at the UC Irvine Samueli School of Engineering! Celebrating 25 years of impact!🤘🎉💛💙",
+        date: "Oct 28, 2024",
+        image: "/assets/images/news/25-year-anniversary.jpeg",
+        route: "https://www.linkedin.com/posts/ucirvineengineering_thank-you-henry-and-susan-samueli-for-your-activity-7257088350157746177-NmpH/"
+    },
     {
         title: "UCI Samueli School of Engineering",
         subtitle: "Anteater CanSat Team Takes Second Place in U.S., Fourth Worldwide",

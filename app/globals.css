@@ -470,7 +470,7 @@ html {
 }
 
 .newsCard-subtitle {
-  @apply text-custom-gray text-center font-normal text-base mt-1
+  @apply text-custom-rhino/70 text-center font-normal text-base my-1
 }
 
 .newsCard-image {

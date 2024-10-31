@@ -37,7 +37,7 @@ const Team = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="team" title="The Team" background="./assets/images/competiton-photos/midLaunch.jpg" />
+                <CoverPage page="team" title="The Team" background="./assets/images/competiton-photos/preLaunchRocket2.jpg" />
 
                 {/* overview */}
                 <ImageTextLayout title={overview.title} description={overview.description} image={overview.image} link={overview.link} />

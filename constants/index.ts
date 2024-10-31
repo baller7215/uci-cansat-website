@@ -56,11 +56,11 @@ export const teamLinks = [
         route: "/team/2023-2024",
         image: '/assets/images/team/2023-2024/team.png',
     },
-    {
-        label: "2022 - 2023",
-        route: "/team/2022-2023",
-        image: '',
-    },
+    // {
+    //     label: "2022 - 2023",
+    //     route: "/team/2022-2023",
+    //     image: '',
+    // },
     {
         label: "2021 - 2022",
         route: "/team/2021-2022",
@@ -103,11 +103,11 @@ export const projectsLinks = [
         route: "/projects/2023-2024",
         image: '/assets/images/team/2023-2024/team.png',
     },
-    {
-        label: "2022 - 2023",
-        route: "/projects/2022-2023",
-        image: '',
-    },
+    // {
+    //     label: "2022 - 2023",
+    //     route: "/projects/2022-2023",
+    //     image: '',
+    // },
     {
         label: "2021 - 2022",
         route: "/projects/2021-2022",

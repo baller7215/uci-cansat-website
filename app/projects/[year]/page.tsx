@@ -20,7 +20,7 @@ const ProjectYearPage = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="teamYear" title="Projects" subtitle={yearObject?.label} background="../assets/images/competiton-photos/midLaunch.jpg" />
+                <CoverPage page="teamYear" title="Projects" subtitle={yearObject?.label} background="../assets/images/components/double2.jpg" />
 
                 {/* overview */}
                 {project?.overview &&

@@ -19,7 +19,7 @@ const TeamYearPage = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="teamYear" title="The Team" subtitle={yearObject?.label} background="../assets/images/competiton-photos/midLaunch.jpg" />
+                <CoverPage page="teamYear" title="The Team" subtitle={yearObject?.label} background="../assets/images/competiton-photos/preLaunchRocket2.jpg" />
 
                 {/* profiles */}
                 <section className="section-container team-background" id="overview">

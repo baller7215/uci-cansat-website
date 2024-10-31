@@ -28,7 +28,7 @@ const Projects = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="team" title="Projects" subtitle="2024 - 2025" background="./assets/images/competiton-photos/midLaunch.jpg" />
+                <CoverPage page="team" title="Projects" subtitle="2024 - 2025" background="./assets/images/components/double2.jpg" />
 
                 {/* see our projects */}
                 <section className="section-container !h-auto" id="overview">

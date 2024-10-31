@@ -103,10 +103,10 @@ export default function Home() {
               variants={fadeInUp}
             >
               <div className="flex flex-col gap-2 h-auto">
-                <h2 className="capitalize text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">
+                <h2 className="capitalize text-custom-white text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">
                   Join Our Team
                 </h2>
-                <p className="text-[var(--color-whiteIce)] font-normal text-[16px] md:text-[18px] h-auto lg:h-[100px] my-5">
+                <p className="text-custom-white font-normal text-[16px] md:text-[18px] h-auto lg:h-[100px] my-5">
                   Unfortunately, we are no longer looking for applicants for the 2024 - 2025 school year. Recruitment typically occurs during the spring quarter so check back soon! Don&apos;t hesitate to explore our website and learn more about what we do and what positions we offer.
                 </p>
               </div>

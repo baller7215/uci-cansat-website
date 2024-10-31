@@ -2,15 +2,37 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+  
+const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3,
+        },
+    },
+};
 
 const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutProps) => {
   return (
     <>
         {/* overview */}
-        <section className="section-container !bg-custom-black" id='overview'>
-            <div className="imageLayout-text-container">
+        <motion.section 
+            className="section-container !bg-custom-black"
+            id='overview'
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+        >
+            <motion.div variants={fadeIn} className="imageLayout-text-container">
                 {/* left */}
-                <div className="w-full lg:w-2/5 xl:w-2/5 h-full flex justify-center">
+                <motion.div variants={fadeIn} className="w-full lg:w-2/5 xl:w-2/5 h-full flex justify-center">
                     {image ? 
                         <Image
                             src={image}
@@ -23,9 +45,9 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
                         <div className='card-placeholder !w-full !h-full !rounded-2xl'></div>
                     }
                     
-                </div>
+                </motion.div>
                 {/* right */}
-                <div className="leftText w-full lg:w-3/5">
+                <motion.div variants={fadeIn} className="leftText w-full lg:w-3/5">
                     <h2 className="header leading-[60px]">{title}</h2>
                     <p className="description text-custom-white whitespace-pre-wrap">{description}
                         {link && 
@@ -36,9 +58,9 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
                         }
                         
                     </p>
-                </div>
-            </div>
-        </section>
+                </motion.div>
+            </motion.div>
+        </motion.section>
     </>
     
   )

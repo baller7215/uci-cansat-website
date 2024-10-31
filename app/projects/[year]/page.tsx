@@ -8,6 +8,22 @@ import { useParams } from 'next/navigation'; // New hook for App Router
 import { yearTeamProject } from "@/constants";
 import ImageTextLayout from "@/components/shared/ImageTextLayout";
 import MobileFooter from "@/components/shared/MobileFooter";
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+  
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
 
 const ProjectYearPage = () => {
     const params = useParams(); // Get dynamic parameters in the App Router
@@ -29,26 +45,31 @@ const ProjectYearPage = () => {
                 
                 {/* project definition */}
                 {project?.projectDefinition &&
-                    <section className="section-container">
-                        <div className="text-container">
+                    <motion.section
+                        className="section-container"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container">
 
                             {/* left */}
-                            <div className="leftText w-full md:w-full lg:w-3/5">
+                            <motion.div variants={fadeIn} className="leftText w-full md:w-full lg:w-3/5">
                                 <h2 className="header">Project Definition</h2>
                                 {/* planning */}
-                                <div className="flex flex-col gap-3 my-5">
+                                <motion.div variants={fadeIn} className="flex flex-col gap-3 my-5">
                                     <h3 className="subHeader uppercase">Planning</h3>
                                     <p className="description text-custom-rhino">{project?.projectDefinition.planning}</p>
-                                </div>
+                                </motion.div>
                                 {/* problem statement */}
-                                <div className="flex flex-col gap-3 my-5">
-                                <h3 className="subHeader uppercase">Problem Statement</h3>
+                                <motion.div variants={fadeIn} className="flex flex-col gap-3 my-5">
+                                    <h3 className="subHeader uppercase">Problem Statement</h3>
                                     <p className="description text-custom-rhino">{project?.projectDefinition.problemStatement}</p>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
 
                             {/* right */}
-                            <div className="rightImage w-full md:w-2/5 flex md:hidden lg:flex">
+                            <motion.div variants={fadeIn} className="rightImage w-full md:w-2/5 flex md:hidden lg:flex">
                                 <Image
                                     // src='/assets/images/verticalRocketBlack.jpg'
                                     // src='/assets/images/components/sicko_mode_vertical.jpg'
@@ -58,125 +79,140 @@ const ProjectYearPage = () => {
                                     height={940}
                                     className="m-auto"
                                 />
-                            </div>
+                            </motion.div>
 
-                        </div>
-                    </section>
+                        </motion.div>
+                    </motion.section>
                 }
 
                 {/* conceptual / preliminary design */}
                 {project?.design.show &&
-                    <section className="section-container">
-                        <div className="text-container !flex-col xl:!flex-row !justify-center">
+                    <motion.section
+                        className="section-container"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !flex-col xl:!flex-row !justify-center">
 
                             {/* left */}
-                            <div className="justify-start w-full xl:w-1/3 graphic-container !h-fit">
+                            <motion.div variants={fadeIn} className="justify-start w-full xl:w-1/3 graphic-container !h-fit">
                                 {/* title */}
-                                <div className="title-container rounded-s-md m-0">
+                                <motion.div variants={fadeIn} className="title-container rounded-s-md m-0">
                                     <h2 className="header md:!text-4xl lg:!text-4xl rotate-[270deg] origin-center whitespace-nowrap">Components</h2>
-                                </div>
+                                </motion.div>
 
                                 {/* 3 key components */}
-                                <div className="mainContent-container rounded-e-md">
+                                <motion.div variants={fadeIn} className="mainContent-container rounded-e-md">
                                     {project?.design.keyComponents.map((component) => {
                                         return (
-                                            <div key={component.name} className="flex flex-row">
-                                                <div className="graphic-cell">
+                                            <motion.div variants={fadeIn} key={component.name} className="flex flex-row">
+                                                <motion.div variants={fadeIn} className="graphic-cell">
                                                     <h3 className="tableTitle">{component.name}</h3>
                                                     <h4 className="tableSubtitle uppercase !text-custom-rhino/40">{component.description}</h4>
-                                                </div>
-                                            </div>
+                                                </motion.div>
+                                            </motion.div>
                                         )
                                     })}
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                             
                             {/* right */}
-                            <div className="leftText w-full xl:w-2/3 !h-fit xl!h-full">
+                            <motion.div variants={fadeIn} className="leftText w-full xl:w-2/3 !h-fit xl!h-full">
                                 <h2 className="header lg:!text-4xl">Conceptual / Preliminary Design</h2>
-                                <div className="flex flex-col gap-3 my-5">
+                                <motion.div variants={fadeIn} className="flex flex-col gap-3 my-5">
                                     <h3 className="subHeader lg:!text-2xl uppercase">Major Components</h3>
                                     <p className="description lg:!text-xl text-custom-rhino">{project?.design.majorComponents.description}</p>
                                     <ul className="list-disc pl-10">
                                         {project?.design.majorComponents.bulletPoints.map((point) => {
                                             return (
-                                                <li key={point.id} className="description lg:!text-xl text-custom-rhino">
+                                                <motion.li variants={fadeIn} key={point.id} className="description lg:!text-xl text-custom-rhino">
                                                     {point.text}
                                                     {/* <p className="description text-custom-rhino">{point.text}</p> */}
-                                                </li>
+                                                </motion.li>
                                             )
                                         })}
                                     </ul>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
 
-                        </div>
-                    </section>
+                        </motion.div>
+                    </motion.section>
                 }
 
                 {/* competition requirements */}
                 {project?.competitionRequirements?.show &&
-                    <section className="section-container">
-                        <div className="text-container !flex-col xl:!flex-row !justify-center">
+                    <motion.section
+                        className="section-container"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !flex-col xl:!flex-row !justify-center">
 
                             {/* left */}
-                            <div className="justify-start w-full xl:w-1/3 graphic-container !h-fit">
+                            <motion.div variants={fadeIn} className="justify-start w-full xl:w-1/3 graphic-container !h-fit">
                                 {/* title */}
-                                <div className="title-container rounded-s-md m-0">
+                                <motion.div variants={fadeIn} className="title-container rounded-s-md m-0">
                                     <h2 className="header md:!text-4xl lg:!text-4xl rotate-[270deg] origin-center whitespace-nowrap">Team Goals</h2>
-                                </div>
+                                </motion.div>
 
                                 {/* team goals */}
-                                <div className="mainContent-container rounded-e-md">
+                                <motion.div variants={fadeIn} className="mainContent-container rounded-e-md">
                                     {project?.teamGoals.map((goal) => {
                                         return (
-                                            <div key={goal.id} className="flex flex-row">
-                                                <div className="graphic-cell">
+                                            <motion.div variants={fadeIn} key={goal.id} className="flex flex-row">
+                                                <motion.div variants={fadeIn} className="graphic-cell">
                                                     {/* <h3 className="tableTitle">{component.name}</h3> */}
                                                     <h4 className="tableSubtitle !text-custom-rhino/40">{goal.point}</h4>
-                                                </div>
-                                            </div>
+                                                </motion.div>
+                                            </motion.div>
                                         )
                                     })}
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                             
                             {/* right */}
-                            <div className="leftText w-full xl:w-2/3 !h-fit xl!h-full">
+                            <motion.div variants={fadeIn} className="leftText w-full xl:w-2/3 !h-fit xl!h-full">
                                 <h2 className="header lg:!text-4xl">CanSat Competition Requirements</h2>
-                                <div className="flex flex-col gap-3 my-5">
+                                <motion.div variants={fadeIn} className="flex flex-col gap-3 my-5">
                                     <h3 className="subHeader lg:!text-2xl uppercase">Major Components</h3>
                                     <p className="description lg:!text-xl text-custom-rhino">{project?.competitionRequirements.description}</p>
                                     <ul className="list-disc pl-10">
                                         {project?.competitionRequirements.bullets.map((point) => {
                                             return (
-                                                <li key={point.id} className="description lg:!text-xl text-custom-rhino">
+                                                <motion.li variants={fadeIn} key={point.id} className="description lg:!text-xl text-custom-rhino">
                                                     {point.point}
                                                     {/* <p className="description text-custom-rhino">{point.text}</p> */}
-                                                </li>
+                                                </motion.li>
                                             )
                                         })}
                                     </ul>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
 
-                        </div>
-                    </section>
+                        </motion.div>
+                    </motion.section>
                 }
 
                 {/* our works */}
                 {project?.design.ourWorks && project?.design.ourWorks.mechanical.description && project?.design.ourWorks.electrical.description && project?.design.ourWorks.controls.description &&
-                    <section className="section-container bg-fixed min-h-screen my-auto !bg-custom-white">
+                    <motion.section
+                        className="section-container bg-fixed min-h-screen my-auto !bg-custom-white"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
                         {/* mechanical */}
-                        <div className="text-container !min-h-screen">
+                        <motion.div variants={fadeIn} className="text-container !min-h-screen">
                             {/* left */}
-                            <div className="leftText w-full md:w-3/5">
+                            <motion.div variants={fadeIn} className="leftText w-full md:w-3/5">
                                 <h2 className="header">Our Works</h2>
                                 <h3 className="subHeader uppercase">Mechanical</h3>
                                 <p className="description text-custom-rhino">{project?.design.ourWorks.mechanical.description}</p>
-                            </div>
+                            </motion.div>
                             {/* right */}
-                            <div className="rightImage">
+                            <motion.div variants={fadeIn} className="rightImage">
                                 <Image
                                     src={project?.design.ourWorks.mechanical.image || ""}
                                     alt="mechanical subteam image"
@@ -185,13 +221,13 @@ const ProjectYearPage = () => {
                                     className=""
                                 />
                                 <p className="description text-custom-rhino italic text-center mt-3">{project?.design.ourWorks.mechanical.caption}</p>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
 
                         {/* electrical */}
-                        <div className="text-container !min-h-screen">
+                        <motion.div variants={fadeIn} className="text-container !min-h-screen">
                             {/* left */}
-                            <div className="rightImage">
+                            <motion.div variants={fadeIn} className="rightImage">
                                 <Image
                                     src={project?.design.ourWorks.electrical.image || ""}
                                     alt="electrical subteam image"
@@ -200,25 +236,25 @@ const ProjectYearPage = () => {
                                     className=""
                                 />
                                 <p className="description text-custom-rhino italic text-center mt-3">{project?.design.ourWorks.electrical.caption}</p>
-                            </div>
+                            </motion.div>
                             
                             {/* right */}
-                            <div className="leftText w-full md:w-3/5">
+                            <motion.div variants={fadeIn} className="leftText w-full md:w-3/5">
                                 <h3 className="subHeader uppercase">Electrical</h3>
                                 <p className="description text-custom-rhino">{project?.design.ourWorks.electrical.description}</p>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
 
                         {/* controls */}
                         {project?.design.ourWorks.controls.show && 
-                            <div className="text-container !min-h-screen">
+                            <motion.div variants={fadeIn} className="text-container !min-h-screen">
                                 {/* left */}
-                                <div className="leftText w-full md:w-3/5">
+                                <motion.div variants={fadeIn} className="leftText w-full md:w-3/5">
                                     <h3 className="subHeader uppercase">Controls</h3>
                                     <p className="description text-custom-rhino">{project?.design.ourWorks.controls.description}</p>
-                                </div>
+                                </motion.div>
                                 {/* right */}
-                                <div className="rightImage">
+                                <motion.div variants={fadeIn} className="rightImage">
                                     <Image
                                         src={project?.design.ourWorks.controls.image || ""}
                                         alt="controls subteam image"
@@ -226,20 +262,25 @@ const ProjectYearPage = () => {
                                         height={630}
                                         className="m-auto"
                                     />
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         }
                         
-                    </section>
+                    </motion.section>
                 }
                 
                 {/* posters */}
                 {project?.posters.fall && project?.posters.winter &&
-                    <section className="section-container min-h-screen !bg-custom-white my-auto">
-                        <div className="text-container !min-h-screen !flex-col !justify-center">
+                    <motion.section
+                        className="section-container min-h-screen !bg-custom-white my-auto"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !min-h-screen !flex-col !justify-center">
                             <h2 className="header">Posters</h2>
-                            <div className="flex flex-col md:flex-row justify-between gap-5">
-                                <div className="flex flex-col gap-2 w-full md:w-1/2">
+                            <motion.div variants={fadeIn} className="flex flex-col md:flex-row justify-between gap-5">
+                                <motion.div variants={fadeIn} className="flex flex-col gap-2 w-full md:w-1/2">
                                     <h3 className="subHeader uppercase">Fall Design Review</h3>
                                     <Image
                                         src={project?.posters?.fall}
@@ -248,8 +289,8 @@ const ProjectYearPage = () => {
                                         alt="fall review poster"
                                         className="w-full"
                                     />
-                                </div>
-                                <div className="flex flex-col gap-2 w-full md:w-1/2">
+                                </motion.div>
+                                <motion.div variants={fadeIn} className="flex flex-col gap-2 w-full md:w-1/2">
                                     <h3 className="subHeader uppercase">Winter Design Review</h3>
                                     <Image
                                         src={project?.posters?.winter}
@@ -258,13 +299,13 @@ const ProjectYearPage = () => {
                                         alt="winter review poster"
                                         className="w-full"
                                     />    
-                                </div>
+                                </motion.div>
                                 
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                         
                         
-                    </section>
+                    </motion.section>
                 }
 
                 <Footer />

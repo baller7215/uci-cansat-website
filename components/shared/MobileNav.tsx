@@ -92,7 +92,7 @@ const MobileNav = () => {
                                 return (
                                     <motion.li
                                         key={link.route}
-                                        className={`navbar-nav-element group ${isActive ? 'navLink-bold' : 'navLink'}`}
+                                        className={`navbar-nav-element !text-custom-white group ${isActive ? 'navLink-bold' : 'navLink'}`}
                                         variants={itemVariants}
                                     >
                                         <Link href={link.route} onClick={toggleMenu}>

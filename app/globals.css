@@ -458,7 +458,7 @@ html {
 /* collection news */
 /* w-[850px] h-[450px] */
 .newsCard-card {
-  @apply w-[400px] sm:w-[500px] md:w-[500px] lg:w-[550px] xl:w-[650px] h-auto bg-custom-white shadow-2xl rounded-xl;
+  @apply w-[400px] sm:w-[400px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-auto bg-custom-white shadow-2xl rounded-xl;
 }
 
 .newsCard-card-placeholder {

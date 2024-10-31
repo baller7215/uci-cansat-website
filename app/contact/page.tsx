@@ -8,7 +8,7 @@ const Contact = async () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="contact" title="Contact Us" background="./assets/images/home-alt.jpg" />
+                <CoverPage page="contact" title="Contact Us" background="../assets/images/competiton-photos/launch3.jpg" />
 
                 {/* contact form */}
                 <section className="section-container !bg-custom-lightBlack">

@@ -17,7 +17,7 @@ const Join = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="join" title="Join Us" background="./assets/images/home-alt.jpg" />
+                <CoverPage page="join" title="Join Us" background="../assets/images/competiton-photos/launch3.jpg" />
 
                 {/* internship opportunity */}
                 <section className="section-container !bg-custom-black !border-custom-white" id="internship">

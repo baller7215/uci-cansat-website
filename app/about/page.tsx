@@ -31,7 +31,7 @@ const About = () => {
     <>
       <main>
         {/* cover page */}
-        <CoverPage page="about" title="About Us" background="./assets/images/starfield.png" />
+        <CoverPage page="about" title="About Us" background="./assets/images/competiton-photos/midLaunch.jpg" />
 
         {/* introduction */}
         <motion.section
@@ -124,7 +124,7 @@ const About = () => {
             </motion.div>
 
             <motion.div className="rightImage flex md:hidden lg:flex" variants={fadeIn}>
-              <Image src="/assets/images/verticalRocketBlack.jpg" alt="rocket in space" width={620} height={940} className="m-auto" />
+              <Image src="/assets/images/competiton-photos/verticalLaunch.jpg" alt="rocket in space" width={620} height={940} className="m-auto" />
             </motion.div>
           </motion.div>
         </motion.section>
@@ -192,8 +192,8 @@ const About = () => {
                       {index === competitionTimeline.length - 1 ? (
                         // arrow for last timeline marker
                         <>
-                          <div className="timeline-line hidden md:flex"></div>
-                          <div className="timeline-arrow hidden md:flex"></div>
+                          {/* <div className="timeline-line hidden md:flex"></div> */}
+                          {/* <div className="timeline-arrow hidden md:flex"></div> */}
                         </>
                         
                       ) : (

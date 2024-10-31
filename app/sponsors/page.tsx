@@ -33,7 +33,7 @@ const Sponsors = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="sponsors" title="Sponsors" background="./assets/images/home-alt.jpg" />
+                <CoverPage page="sponsors" title="Sponsors" background="../assets/images/competiton-photos/midLaunch.jpg" />
 
                 {/* see our sponsors */}
                 <section className="section-container !h-auto min-h-screen !bg-custom-black" id="overview">

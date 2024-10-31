@@ -20,7 +20,7 @@ const ProjectYearPage = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="teamYear" title="Projects" subtitle={yearObject?.label} background="../assets/images/starfield.png" />
+                <CoverPage page="teamYear" title="Projects" subtitle={yearObject?.label} background="../assets/images/competiton-photos/midLaunch.jpg" />
 
                 {/* overview */}
                 {project?.overview &&
@@ -50,7 +50,8 @@ const ProjectYearPage = () => {
                             {/* right */}
                             <div className="rightImage w-full md:w-2/5 flex md:hidden lg:flex">
                                 <Image
-                                    src='/assets/images/verticalRocketBlack.jpg'
+                                    // src='/assets/images/verticalRocketBlack.jpg'
+                                    src='/assets/images/components/sicko_mode_vertical.jpg'
                                     alt="rocket in space with black background"
                                     width={620}
                                     height={940}

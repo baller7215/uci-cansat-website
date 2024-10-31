@@ -19,10 +19,11 @@ const TeamYearPage = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="teamYear" title="The Team" subtitle={yearObject?.label} background="../assets/images/starfield.png" />
+                <CoverPage page="teamYear" title="The Team" subtitle={yearObject?.label} background="../assets/images/competiton-photos/midLaunch.jpg" />
 
                 {/* profiles */}
                 <section className="section-container team-background" id="overview">
+                    {/** @todo: center the members so that if the number of members in the group is not divisble by three, it should be centered */}
                     {team?.advisors && team?.advisors.length > 0 &&
                         // {/* Advisors Section */}
                         <div className="text-container !min-h-screen !flex-col !justify-center !items-center">

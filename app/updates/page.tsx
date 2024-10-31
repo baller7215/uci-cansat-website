@@ -29,7 +29,7 @@ const Updates = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="updates" title="Updates / News" background="./assets/images/home-alt.jpg" />
+                <CoverPage page="updates" title="Updates / News" background="./assets/images/competiton-photos/launch3.jpg" />
 
                 {/* featured news */}
                 <section className="section-container !bg-custom-black" id="overview">

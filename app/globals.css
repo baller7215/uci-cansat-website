@@ -121,7 +121,8 @@ html {
 
 .navTitle {
   @apply my-auto lg:text-3xl xl:text-[40px] font-bold;
-  color: --color-gray;
+  /* color: --color-gray; */
+  color: var(--color-lightBlack);
 }
 
 .navbar-nav {
@@ -133,7 +134,7 @@ html {
 }
 
 .navbar-nav-element {
-  @apply my-auto text-[20px] text-custom-gray;
+  @apply my-auto text-[20px] text-custom-lightBlack;
   /* color: --color-gray; */
 }
 
@@ -259,6 +260,10 @@ html {
 /* HOME PAGE */
 .home-sectionBackground {
   @apply bg-[url('../public/assets/images/starfield.png')] bg-cover bg-center
+  /* public/assets/images/competiton-photos/launch3.jpg */
+  /* @apply bg-[url('../public/assets/images/competiton-photos/launch3.jpg')] bg-cover bg-center */
+  /* public/assets/images/competiton-photos/launchSky.jpg */
+  /* @apply bg-[url('../public/assets/images/competiton-photos/launchSky.jpg')] bg-cover bg-center */
 }
 
 .home-left {
@@ -282,7 +287,7 @@ html {
 }
 
 .gradient {
-  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/100
+  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/0 to-black/90
 }
 
 .cover-textContainer {
@@ -290,7 +295,7 @@ html {
 }
 
 .cover-branding {
-  @apply font-medium text-[18px] leading-8 tracking-[5px] indent-0 text-[var(--color-orange)]
+  @apply font-extrabold text-[18px] leading-8 tracking-[5px] indent-0 text-[var(--color-orange)]
 }
 
 .cover-title {
@@ -484,6 +489,7 @@ html {
 .team-background {
   @apply !bg-transparent bg-fixed bg-cover bg-center min-h-screen my-auto;
   background-image: url('../public/assets/images/background.jpg');
+  /* background-image: url('../public/assets/images/competiton-photos/launch3.jpg'); */
 }
 
 .team-title {

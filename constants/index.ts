@@ -1391,7 +1391,8 @@ export const team2017_2018 = {
 // 2023 - 2024
 export const project2023_2024 = {
     overview: {
-        team: "", //team photo
+        // public/assets/images/competiton-photos/verticalLaunch.jpg
+        team: "/assets/images/competiton-photos/verticalLaunch.jpg", //team photo
         description: "Fall Quarter: Focused on research, design work, and developing the Preliminary Design Report (PDR). Software development concentrated on creating a ground station capable of receiving and displaying telemetry data from the CanSat’s sensors, while the hardware team worked on electrical and mechanical prototype designs.\nWinter Quarter: Dedicated to preparing and practicing for the Preliminary Design Review (PDR) presentation, with all subteams refining their work to meet competition standards. \nSpring Quarter: Implemented the designs into physical solutions, including ordering electrical components, assembling container segments, and testing the system’s performance to ensure compliance with competition requirements"
     },
     projectDefinition: {
@@ -1456,7 +1457,7 @@ export const project2023_2024 = {
 
 export const project2021_2022 = {
     overview: {
-        team: "", //team photo
+        team: "/assets/images/competiton-photos/verticalLaunch.jpg", //team photo
         description: "Fall Quarter: consisted mostly of researching and design work, where we worked to complete the design for prototyping the preliminary design report which is additional documentation that the team needs to complete for the competition. Software development focused on creating a ground station capable of receiving and displaying telemetry data from the CanSat’s sensors, while hardware focused on having electrical and mechanical prototype designs for the following quarter to test.\n\nWinter quarter was dedicated to practicing our presentation for the Competitions Preliminary Design Review (PDR). All subteams worked focused on their forces to complete the presentation and practice presentation times.\n\nThis Spring quarter involved us finally taking all our research and designing over the past year and implementing them into a physical solution. Electrical components were ordered, container segments were printed and assembled, and the various performances of our design were tested to verify requirements compliance."
     },
     projectDefinition: {

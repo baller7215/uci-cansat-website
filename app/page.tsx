@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <main>
         {/* cover page */}
-        <CoverPage page="home" title="Design. Build. Launch. Compete." subtitle="Elevate Your Engineering Skills" background="./assets/images/home-cover.jpg" />
+        <CoverPage page="home" title="Design. Build. Launch. Compete." subtitle="Elevate Your Engineering Skills" background="./assets/images/competiton-photos/wideLaunch.jpg" />
 
         {/* who we are */}
         <motion.section 
@@ -49,7 +49,7 @@ export default function Home() {
           {/* background image */}
           <div className='h-screen w-full flex home-sectionBackground' ></div>
           {/* gradient */}
-          <div className="flex flex-col md:flex-row h-full w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 p-10 md:p-40 justify-between gap-5">
+          <div className="flex flex-col md:flex-row h-full w-full inset-x-0 top-0 absolute bg-gradient-to-b from-black/100 to-black/100 p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 justify-between gap-5">
             
             {/* left */}
             <motion.div className="home-left text-[var(--color-white)] w-full md:w-1/2 tracking-normal"
@@ -97,7 +97,7 @@ export default function Home() {
           variants={staggerContainer}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col lg:flex-row p-10 md:p-20 lg:p-40 w-full h-auto justify-between items-center gap-10 lg:gap-0">
+          <div className="flex flex-col lg:flex-row  p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 w-full h-auto justify-between items-center gap-10 lg:gap-0">
             {/* left */}
             <motion.div className="home-left w-full md:w-3/4"
               variants={fadeInUp}
@@ -143,7 +143,7 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <div className="absolute inset-0 bg-internAd bg-cover bg-center opacity-30 z-0"></div>
-          <div className="relative z-10 flex flex-col p-10 md:p-40 w-full h-auto justify-between gap-5">
+          <div className="relative z-10 flex flex-col  p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 w-full h-auto justify-between gap-5">
             <motion.h4 className="uppercase text-custom-orange text-xs md:text-sm tracking-wider font-bold"
               variants={fadeInUp}
             >

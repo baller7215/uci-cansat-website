@@ -498,13 +498,16 @@ html {
 
 /* divide-x-2 divide-custom-white  */
 .profiles-grid {
-  @apply w-full h-auto bg-custom-white/55 rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+  /* @apply w-full h-auto bg-custom-white/55 rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto justify-items-center */
+  @apply w-full h-auto bg-custom-white/55 rounded-lg flex flex-wrap justify-center gap-4;
+
 }
 
 .profile-cell {
-  @apply rounded-xl border-2 border-custom-white flex flex-col m-5 md:m-4 lg:m-8 xl:m-12 justify-center transform transition-transform duration-300 hover:scale-105;
+  @apply w-[25%] min-w-[250px] rounded-xl border-2 border-custom-white flex flex-col m-5 md:m-4 lg:m-8 xl:m-12 justify-center transform transition-transform duration-300 hover:scale-105;
   /* perspective: 1000px; */
   position: relative;
+  /* width: calc(33.333% - 1rem); Ensures three items per row */
 }
 
 .profile-cell:hover {

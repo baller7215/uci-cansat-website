@@ -60,7 +60,7 @@ const MobileNav = () => {
             {/* Full-Screen Menu Overlay */}
             {menuOpen && (
                 <motion.div
-                    className="fixed inset-0 bg-[var(--color-black)] text-custom-gray flex flex-col items-center justify-center z-50 pb-5"
+                    className="fixed inset-0 bg-[var(--color-black)] text-custom-white flex flex-col items-center justify-center z-50 pb-5"
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}
@@ -68,7 +68,7 @@ const MobileNav = () => {
                     <div className='mobileNav'>
                         <div className="w-full flex justify-between">
                             <Link href='/'>
-                                <p className='mobile-navTitle hoverTransition'>UC Irvine</p>
+                                <p className='mobile-navTitle !text-custom-white/70 hoverTransition'>UC Irvine</p>
                                 {/* <motion.p
                                     className='mobile-navTitle hoverTransition'
                                     variants={itemVariants}
@@ -77,7 +77,7 @@ const MobileNav = () => {
                                 </motion.p> */}
                             </Link>
                             
-                            <button onClick={toggleMenu} className='mobile-icon hoverTransition'>
+                            <button onClick={toggleMenu} className='mobile-icon !text-custom-white/70 hoverTransition'>
                                 {menuOpen ? <FaXmark className='h-8 w-8' /> : <LuMenu className='h-8 w-8' />}
                             </button>
                         </div>

@@ -78,7 +78,7 @@ const Join = () => {
                                     Unfortunately applications for the 2024 - 2025 year have closed. If you would like to learn more about the application process and the competition itself, we encourage you to visit the competition website at 
 
                                     <Button variant="link" className="!description !text-custom-orange !p-0 !m-0 underline underline-offset-8">
-                                        <Link className="description" href='https://www.cansatcompetition.com/' target="_blank">www.cansat.competition.com</Link>
+                                        <Link className="description" href='https://www.cansatcompetition.com/' target="_blank">www.cansatcompetition.com</Link>
                                     </Button>
 
                                     . In addition, feel free to email us at 

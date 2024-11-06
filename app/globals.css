@@ -169,11 +169,11 @@ html {
 }
 
 .mobile-navTitle {
-  @apply my-auto text-3xl font-bold text-custom-gray;
+  @apply my-auto text-3xl font-bold text-custom-lightBlack;
 }
 
 .mobile-icon {
-  @apply text-3xl text-custom-gray h-7 w-7 my-auto;
+  @apply text-3xl text-custom-lightBlack h-7 w-7 my-auto;
 }
 
 .hoverTransition {
@@ -287,7 +287,7 @@ html {
 }
 
 .gradient {
-  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/10 to-black/90
+  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/50 to-black/90
 }
 
 .cover-textContainer {

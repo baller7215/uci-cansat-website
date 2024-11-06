@@ -179,7 +179,12 @@ const Sponsors = () => {
                             <VscRocket className="text-custom-rhino" />
                         </div>
                         <h2 className="header !text-[42px] uppercase">big thanks to our sponsors &lt;3</h2>
-                        <p className="description text-custom-rhino">On behalf of UCI CanSat, our team would like to thank you for your interest in sponsoring our team! If you have any questions about our team, feel free to contact us at cansatuci@gmail.com!</p>
+                        <p className="description text-custom-rhino">On behalf of UCI CanSat, our team would like to thank you for your interest in sponsoring our team! If you have any questions about our team, feel free to contact us at 
+                            <Button variant="link" className="!description !text-custom-orange !p-0 !m-0 underline underline-offset-">
+                                <Link className="description" href="mailto:cansatuci@gmail.com" target="_blank">cansatuci@gmail.com</Link>
+                            </Button>
+                            !
+                        </p>
                     </motion.div>
                 </motion.section>
 

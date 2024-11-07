@@ -60,7 +60,9 @@ const Team = () => {
                         // Show skeleton loaders while loading
                         <div className="collection-container">
                             {[...Array(4)].map((_, index) => (
-                                <Skeleton key={index} className="w-[300px] h-[200px] md:w-[450px] md:h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
+                                <div className="w-full items-center justify-center">
+                                    <Skeleton key={index} className="w-[300px] h-[200px] md:w-[450px] md:h-[350px] bg-custom-gray flex flex-col mx-auto rounded-md shadow-2xl" />
+                                </div>
                             ))}
                         </div>
                         ) : (

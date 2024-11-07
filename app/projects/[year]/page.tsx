@@ -456,7 +456,7 @@ const ProjectYearPage = () => {
                                 <motion.div variants={fadeIn} className="flex flex-col gap-8 w-full md:w-2/3">
                                     {project?.design?.flightSoftware?.items.map((item, index) => {
                                         return (
-                                            <motion.div variants={fadeIn} className="flex flex-col">
+                                            <motion.div key={index} variants={fadeIn} className="flex flex-col">
                                                 <h3 className="subHeader lg:!text-2xl uppercase">{item.name}</h3>
                                                 <ul className="">
                                                     {project?.design?.electricalPowerSubsystem.bullets.map((bullet, index) => (

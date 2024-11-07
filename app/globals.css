@@ -120,9 +120,8 @@ html {
 }
 
 .navTitle {
-  @apply my-auto lg:text-3xl xl:text-[40px] font-bold;
+  @apply my-auto lg:text-3xl xl:text-[40px] font-bold text-custom-lightBlack;
   /* color: --color-gray; */
-  color: var(--color-lightBlack);
 }
 
 .navbar-nav {

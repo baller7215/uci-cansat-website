@@ -12,7 +12,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     return (
-        <div className="navbar">
+        <div className="navbar bg-gradient-to-b from-white/70 to-transparent">
             <Link href='/' className='navbar-logo'>
                 <Image src='/assets/icons/logo.png' alt='logo' width={75} height={75} />
                 <p className="navTitle">UC Irvine</p>

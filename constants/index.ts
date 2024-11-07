@@ -118,7 +118,11 @@ export const projectsLinks = [
         route: "/projects/2020-2021",
         image: '',
     },
-    // add more if needed
+    {
+        label: "2019 - 2020",
+        route: "/projects/2019-2020",
+        image: '',
+    },
 ];
 
 export const sponsorsLinks = [
@@ -1434,6 +1438,7 @@ export const project2023_2024 = {
             }
         ],
         ourWorks: {
+            show: true,
             mechanical: {
                 name: "Mechanical",
                 description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
@@ -1452,6 +1457,54 @@ export const project2023_2024 = {
                 description: "The controls subteam focused on designing and implementing the ground station program using PyQt5, adhering to the CanSat competition mission guide. The ground station interface, which includes commands like “Activate Heatshield” and “Activate Parachute,” communicates with the CanSat, displays received data, and controls operations. A “Simulation Mode” was also developed to test functionalities by mimicking flight data. Real-time data graphs on the ground station were designed and implemented using PyQtGraphs. Another main controls task is developing embedded systems for the CanSat payload using the electrical schematics provided by the electrical subteam. The embedded software, written in C, will run on the STM32 microcontroller.",
                 image: "/assets/images/projects/2023-2024/controls.png"
             }
+        },
+        seniorSubsystem: {
+            show: false,
+            description: "",
+            image: "",
+            caption: ""
+        },
+        descentControl: {
+            show: false,
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                    image: "",
+                }
+            ]
+        },
+        mechanicalSubsystem: {
+            show: false,
+            image: "",
+            description: "",
+            items: [
+                {
+                    name: "",
+                    bullets: []
+                }
+            ]
+        },
+        electricalPowerSubsystem: {
+            show:false,
+            image: "",
+            caption: "",
+            bullets: []
+        },
+        flightSoftware: {
+            show: false,
+            image: "",
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                }
+            ]
+        },
+        groundControlSystem: {
+            show: false,
+            leftImage: "",
+            rightImage: "",
         }
     },
     competitionRequirements: {
@@ -1511,23 +1564,18 @@ export const project2021_2022 = {
             }
         ],
         ourWorks: {
+            show: true,
             mechanical: {
                 name: "",
                 description: "",
                 image: "",
                 caption: "",
-                // name: "Mechanical",
-                // description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
-                // image: "/assets/images/projects/2023-2024/mechanical.png"
             },
             electrical: {
                 name: "",
                 description: "",
                 image: "",
                 caption: "",
-                // name: "Electrical",
-                // description: "The electrical team was responsible for developing the avionics printed circuit board (PCB). This PCB connects various sensors and actuators, GPS, and radio to the main microcontroller (an STM32F1). After outlining requirements, conducting trade studies, and selecting components, we began designing the PCB in Altium Designer. We went through three iterations in total, reducing weight, improving RF performance, and making small mechanical improvements along the way. We hand soldered all PCBs to reduce the cost of the iterative process we followed. As part of this process, we focused on first developing a minimum viable product (achieved in revision two) so that we would be able to launch should any following revisions fail. Thankfully, all of the improvements we implemented in revision three were executed successfully, and we plan to launch with this version.",
-                // image: "/assets/images/projects/2023-2024/electrical.png"
             },
             controls: {
                 show: true,
@@ -1538,6 +1586,54 @@ export const project2021_2022 = {
                 // description: "The controls subteam focused on designing and implementing the ground station program using PyQt5, adhering to the CanSat competition mission guide. The ground station interface, which includes commands like “Activate Heatshield” and “Activate Parachute,” communicates with the CanSat, displays received data, and controls operations. A “Simulation Mode” was also developed to test functionalities by mimicking flight data. Real-time data graphs on the ground station were designed and implemented using PyQtGraphs. Another main controls task is developing embedded systems for the CanSat payload using the electrical schematics provided by the electrical subteam. The embedded software, written in C, will run on the STM32 microcontroller.",
                 // image: "/assets/images/projects/2023-2024/controls.png"
             }
+        },
+        seniorSubsystem: {
+            show: false,
+            description: "",
+            image: "",
+            caption: ""
+        },
+        descentControl: {
+            show: false,
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                    image: "",
+                }
+            ]
+        },
+        mechanicalSubsystem: {
+            show: false,
+            image: "",
+            description: "",
+            items: [
+                {
+                    name: "",
+                    bullets: []
+                }
+            ]
+        },
+        electricalPowerSubsystem: {
+            show:false,
+            image: "",
+            caption: "",
+            bullets: []
+        },
+        flightSoftware: {
+            show: false,
+            image: "",
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                }
+            ]
+        },
+        groundControlSystem: {
+            show: false,
+            leftImage: "",
+            rightImage: "",
         }
     },
     competitionRequirements: {
@@ -1572,6 +1668,7 @@ export const project2020_2021 = {
         },
         keyComponents: [],
         ourWorks: {
+            show: true,
             mechanical: {
                 name: "Mechanical",
                 description: "The mechanical team completed designs and calculations for the container and payload. We calculated the descent velocities of the parachute and wrote python sizing scripts to estimate the size of the maple seed payloads to achieve the desired velocity that the competition required. In addition, we completed the SolidWorks 3D Models, drafted drawings, and ran FEA structural simulations on the container to withstand 15G launch acceleration and 30G shock.",
@@ -1590,6 +1687,54 @@ export const project2020_2021 = {
                 description: "The controls subteam focused on designing and implementing the ground station program using PyQt5, adhering to the CanSat competition mission guide. The ground station interface, which includes commands like “Activate Heatshield” and “Activate Parachute,” communicates with the CanSat, displays received data, and controls operations. A “Simulation Mode” was also developed to test functionalities by mimicking flight data. Real-time data graphs on the ground station were designed and implemented using PyQtGraphs. Another main controls task is developing embedded systems for the CanSat payload using the electrical schematics provided by the electrical subteam. The embedded software, written in C, will run on the STM32 microcontroller.",
                 image: "/assets/images/projects/2023-2024/software-electrical.png"
             }
+        },
+        seniorSubsystem: {
+            show: false,
+            description: "",
+            image: "",
+            caption: ""
+        },
+        descentControl: {
+            show: false,
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                    image: "",
+                }
+            ]
+        },
+        mechanicalSubsystem: {
+            show: false,
+            image: "",
+            description: "",
+            items: [
+                {
+                    name: "",
+                    bullets: []
+                }
+            ]
+        },
+        electricalPowerSubsystem: {
+            show:false,
+            image: "",
+            caption: "",
+            bullets: []
+        },
+        flightSoftware: {
+            show: false,
+            image: "",
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                }
+            ]
+        },
+        groundControlSystem: {
+            show: false,
+            leftImage: "",
+            rightImage: "",
         }
     },
     competitionRequirements: {
@@ -1643,6 +1788,210 @@ export const project2020_2021 = {
                 point: "The total cost of the CanSat shall be under $1000, not including ground station equipment."
 
             }
+        ]
+    },
+    teamGoals: [
+        {
+            id: 1,
+            point: "Design and build a CanSat that meets all competition requirements.",
+        },
+        {
+            id: 2,
+            point: "Provide all team members with practical experience in the engineering design process.",
+        },
+        {
+            id: 3,
+            point: "Fall: Complete research, design, resource procurement, and initial prototypes; submit Preliminary Design Report."
+        },
+        {
+            id: 4,
+            point: "Winter: Focus on manufacturing, refining designs for prototype two, and completing the Critical Design Review (CDR)."
+        },
+        {
+            id: 5,
+            point: "Spring: Conduct testing, address any issues, and prepare for competition after finals."
+        }
+    ],
+    posters: {
+        fall: "",
+        winter: ""
+    }
+}
+
+export const project2019_2020 = {
+    overview: {
+        team: "", //team photo
+        description: ""
+    },
+    projectDefinition: {
+        planning: "The CanSat Competition is an international design/build/fly engineering competition taking place at Virginia Tech University. In this year’s mission, the CanSat will be launched to 700m using a high-powered model rocket and then perform a controlled descent while transmitting data from its onboard sensors to a ground station computer. The CanSat consists of a container and science payload. Initially, both descend under a parachute. At 450m, the payload is released and continues its descent as a delta wing glider. The glider then descends in a circular pattern of radius 250m for one minute while staying above the altitude of 100m. Finally, the delta wing glider releases its own parachute and descends at 10 m/s back to the ground.",
+        problemStatement: "Our CanSat project for the competition involves designing and building a container and science payload that descend from 670 to 725 meters. Initially, both parts descend together under a parachute at 15 m/s, then the first payload is released at 500 m, rotating to descend at under 20 m/s, followed by the release of a second maple-seed payload at 400 m. Equipped with sensors for air temperature, pressure, and rotation rate, the payload transmits data to the container, which relays all information and includes GPS, pressure, battery voltage, and an audio beacon. Our goal is to excel in the CanSat Competition, ensure all team members gain hands-on engineering experience, and meet both the MAE Department's senior design requirements and UCI’s standards in design reviews. The competition provides a high-power rocket for standardized launches, and our container is designed to protect the payload throughout launch and deployment.",
+        image: "/assets/images/projects/2020-2021/mission.png"
+    },
+    design: {
+        show: false,
+        majorComponents: {
+            description: "",
+            bulletPoints: []
+        },
+        keyComponents: [],
+        ourWorks: {
+            show: false,
+            mechanical: {
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            },
+            electrical: {
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            },
+            controls: {
+                show: false,
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            }
+        },
+        seniorSubsystem: {
+            show: true,
+            description: "Most of the CanSat sensors are soldered directly onto the custom printed circuit board (PCB). The battery voltage measurement is integrated onto the PCB.\nThe MS5611 provides altitude, temperature, and pressure readings. The XA1110 provides GPS latitude, longitude, altitude, and time. It can report the number of GPS satellites tracked. The 5525DSO provides readings of airspeed, which works in conjunction with a pitot tube. The GP2Y1010AU0F provides particulate concentration readings.",
+            image: "/assets/images/projects/2019-2020/seniorSubsystem.png",
+            caption: "Figure: CanSat Sensors placed on the PCB"
+        },
+        descentControl: {
+            show: true,
+            items: [
+                {
+                    name: "Parachute (Container and Payload Descent Control System)",
+                    bullets: [
+                        "The container parachute is 13.3 cm with a 1 cm spill hole to reach 20 m/s. This spill hole will help stabilize the descent and reduce drifting.",
+                        "Both will be dome parachutes made of 30d Silicone Nylon 66 Cloth",
+                        "Compression spring launches payload from canister",
+                    ],
+                    image: "/assets/images/projects/2019-2020/parachute.png",
+                },
+                {
+                    name: "Delta Wing Glider (Payload Descent Control System)",
+                    bullets: [
+                        "Canister parachute sits on top of canister and payload",
+                        "When ejected from the rocket, parachute is immediately deployed",
+                        "Payload parachute is stored in a release box triggered by a nichrome wire switch"
+                    ],
+                    image: "/assets/images/projects/2019-2020/parachute-deployment.png"
+                },
+                {
+                    name: "Delta Wing Glider (Payload Descent Control System)",
+                    bullets: [
+                        "Glider will be made compoundly of fiberglass and 3-D printed ABS material",
+                        "Joint areas will be made from ABS while flat areas of wing will be replaced with thin layers of fiberglass",
+                        "Glider wings will be rigid and each incorporate a two stage folding mechanism to be stored within the container",
+                        "Glider has been designed to achieve a vertical velocity of 4.59 m/s which vertically displaces the glider 275.4 m in one minute"
+                    ],
+                    image: "/assets/images/projects/2019-2020/delta-wing-glider.png"
+                },
+            ]
+        },
+        mechanicalSubsystem: {
+            show: true,
+            image: "/assets/images/projects/2019-2020/mechanical-subsystem.png",
+            description: "This displays an overview of our mechanical subsystem. The payload structure is made from a 3D printed ABS components that consist of a base plate, as well as electronic, battery and air particle sensor mounts. The base plate also stores servo motors that rotate the wings about their hinged axis’. The two part folding wing design is made of joint fiberglass- ABS material design to reduce weight. The canister is designed to fall horizontally and contains a compression spring loaded piston mechanism for easier deployment from the canister. The canister itself has two 3D printed ABS end caps as well as a LDPE sidewall sheet. The payload is ejected from the canister using a nichrome wire release switch, along with a fishing wire that runs through both the canister and payload.",
+            items: [
+                {
+                    name: "Payload Structural Elements",
+                    bullets: [
+                        "3D printed mounts to hold PCB, battery and servo",
+                        "Base plate with mounting holes",
+                        "Two part folding wing design",
+                        "Retractable horizontal stabilizer"
+                    ],
+                },
+                {
+                    name: "Material Selection",
+                    bullets: [
+                        "Thin flat plate fiberglass wings, connected to 3D printed rotating joints",
+                        "Steel slotted spring pins and music wire torsion springs"
+                    ],
+                },
+                {
+                    name: "Canister Structural Elements",
+                    bullets: [
+                        "ABS top and bottom caps",
+                        "Compression spring piston deployment mechanism",
+                        "Horizontal descent orientation",
+                        "Nichrome wire release mechanism"
+                    ]
+                }
+            ]
+        },
+        electricalPowerSubsystem: {
+            show: true,
+            image: "/assets/images/projects/2019-2020/electrical-power-subsystem.png",
+            caption: "Figure: Diagram of the Electrical Power System components",
+            bullets: [
+                "The EPS has two power rails: 6V for motors and other high power devices, and 3.3V for low power devices.",
+                "The main battery is a 6V, 350mAh, NiMH battery. An RTC battery allows the GPS module to keep time.",
+                "A buck converter is used to convert 6V down to 3.3V."
+            ]
+        },
+        flightSoftware: {
+            show: true,
+            image: "/assets/images/projects/2019-2020/flight-software-design.png",
+            items: [
+                {
+                    name: "Glider",
+                    bullets: [
+                        "STM32 programed in Arduino IDE in C++/C with the stm32duino plugin",
+                        "Sensor communication is through I2C and SPI",
+                        "STM32F103C8Tx as MCU"
+                    ],
+                },
+                {
+                    name: "Ground Station",
+                    bullets: [
+                        "XBee is mounted onto the XBee Explorer board which converts serial data to USB",
+                        "Uses PySerial library for Python to read/send data from the XBee via USB port.",
+                        "Data will be graphed/visualized using Python Graph QT."
+                    ]
+                }
+            ]
+        },
+        groundControlSystem: {
+            show: true,
+            leftImage: "/assets/images/projects/2019-2020/gcs.png",
+            rightImage: "/assets/images/projects/2019-2020/gcs-design.png",
+        }
+    },
+    competitionRequirements: {
+        show: true,
+        description: "While there are 66 requirements published by the CanSat Competition. The most important requirements regarding CanSat's design are listed below:",
+        bullets: [
+            {
+                id: 1,
+                point: "CanSat must include sensors for temperature, pressure, GPS, altitude, particulates, orientation, and battery voltage, adhering to competition specifications.",
+            },
+            {
+                id: 2,
+                point: "Real-time data transmission to a ground station, including a primary and backup laptop, handheld receiver, and XBEE radio."
+            },
+            {
+                id: 3,
+                point: "Data packets must be sent wirelessly, plotted on a GUI in real-time, and saved as a .CSV file for post-flight analysis.",
+            },
+            {
+                id: 4,
+                point: "Project scope includes only CanSat and ground station design and build; the high-power rocket launch system is provided by the organizers.",
+
+            },
+            {
+                id: 5,
+                point: "CanSat container must protect the payload during launch and deployment.",
+
+            },
         ]
     },
     teamGoals: [
@@ -2173,7 +2522,7 @@ export const yearTeamProject = {
         id: '2019-2020',
         label: '2019 - 2020',
         team: team2019_2020,
-        project: project2023_2024,
+        project: project2019_2020,
     },
     id2018_2019: {
         id: '2018-2019',

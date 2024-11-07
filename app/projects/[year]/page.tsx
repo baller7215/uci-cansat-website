@@ -59,12 +59,12 @@ const ProjectYearPage = () => {
                                 {/* planning */}
                                 <motion.div variants={fadeIn} className="flex flex-col gap-3 my-5">
                                     <h3 className="subHeader uppercase">Planning</h3>
-                                    <p className="description text-custom-rhino">{project?.projectDefinition.planning}</p>
+                                    <p className="description xl:!text-xl text-custom-rhino">{project?.projectDefinition.planning}</p>
                                 </motion.div>
                                 {/* problem statement */}
                                 <motion.div variants={fadeIn} className="flex flex-col gap-3 my-5">
                                     <h3 className="subHeader uppercase">Problem Statement</h3>
-                                    <p className="description text-custom-rhino">{project?.projectDefinition.problemStatement}</p>
+                                    <p className="description xl:!text-xl text-custom-rhino">{project?.projectDefinition.problemStatement}</p>
                                 </motion.div>
                             </motion.div>
 
@@ -196,7 +196,7 @@ const ProjectYearPage = () => {
                 }
 
                 {/* our works */}
-                {project?.design.ourWorks && project?.design.ourWorks.mechanical.description && project?.design.ourWorks.electrical.description && project?.design.ourWorks.controls.description &&
+                {project?.design.ourWorks.show &&
                     <motion.section
                         className="section-container bg-fixed min-h-screen my-auto !bg-custom-white"
                         initial="hidden"
@@ -266,6 +266,246 @@ const ProjectYearPage = () => {
                             </motion.div>
                         }
                         
+                    </motion.section>
+                }
+
+                {/* senior subsystem design */}
+                {project?.design?.seniorSubsystem.show &&
+                    <motion.section
+                        className="section-container !h-auto !bg-custom-white my-auto"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !flex-col gap-3 !justify-center">
+                            <h2 className="header">Senior Subsystem Design</h2>
+                            <motion.div variants={fadeIn} className="flex flex-col md:flex-row justify-between gap-5">
+                                <motion.div variants={fadeIn} className="flex flex-col gap-2">
+                                    <Image
+                                        src={project?.design?.seniorSubsystem.image}
+                                        width={800}
+                                        height={400}
+                                        alt="senior subsytem image"
+                                        className="w-full"
+                                    />
+                                    <p className="description text-custom-rhino italic text-center mt-3">{project?.design?.seniorSubsystem?.caption}</p>
+                                </motion.div>
+                                <p className="description w-full md:w-2/3 text-custom-rhino my-auto">{project?.design?.seniorSubsystem?.description}</p>
+                            </motion.div>
+                        </motion.div>
+                    </motion.section>
+                }
+
+                {/* descent control design */}
+                {project?.design?.descentControl.show &&
+                    <motion.section
+                        className="section-container !h-auto !bg-custom-white my-auto"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !h-auto !flex-col gap-3 !justify-center">
+                            <h2 className="header">Descent Control Design</h2>
+                            {project?.design?.descentControl?.items?.map((item, index) => {
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        variants={fadeIn}
+                                        className="flex flex-col md:flex-row justify-between gap-5"
+                                    >
+                                        <motion.div variants={fadeIn} className="flex flex-col gap-2 justify-center w-full md:w-3/5">
+                                            <h3 className="subHeader lg:!text-2xl uppercase">{item.name}</h3>
+                                            <ol>
+                                                {item.bullets.map((bullet, index) => (
+                                                    <motion.li key={index} className="flex flex-row gap-2">
+                                                        <p className="description justify-start text-custom-rhino mb-auto">
+                                                            {`${index + 1}. `}
+                                                        </p>
+                                                        <p className="description w-full text-custom-rhino my-auto">
+                                                            {bullet}
+                                                        </p>
+                                                    </motion.li>
+                                                ))}
+                                            </ol>
+                                        </motion.div>
+                                        <motion.div variants={fadeIn} className="flex flex-col gap-2 w-full md:w-2/5">
+                                            <Image
+                                                src={item.image}
+                                                width={800}
+                                                height={400}
+                                                alt={`${item.name} image`}
+                                                className="w-full"
+                                            />
+                                            <p className="description text-custom-rhino italic text-center mt-3">
+                                                {project?.design?.seniorSubsystem?.caption}
+                                            </p>
+                                        </motion.div>
+                                    </motion.div>
+                                )
+                            })}
+                        </motion.div>
+                    </motion.section>
+                }
+
+                {/* mechanical subsystem design */}
+                {project?.design?.mechanicalSubsystem.show &&
+                    <motion.section
+                        className="section-container !h-auto !bg-custom-white my-auto"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !h-auto !flex-col gap-3 !justify-center">
+                            <h2 className="header">Mechanical Subsystem Design</h2>
+                            <Image
+                                src={project?.design?.mechanicalSubsystem?.image}
+                                width={800}
+                                height={400}
+                                alt="mechanical subsystem design overview image"
+                                className="w-full max-w-[800px] mx-auto"
+                            />
+                            <p className="description w-full text-custom-rhino my-auto">{project?.design?.mechanicalSubsystem?.description}</p>
+                            <div className="flex flex-col md:flex-row gap-5 justify-between">
+                                {project?.design?.mechanicalSubsystem?.items.map((item, index) => {
+                                    return (
+                                        <motion.div
+                                            key={index}
+                                            variants={fadeIn}
+                                            className="flex flex-col gap-2 justify-start w-1/3"
+                                        >
+                                            <h3 className="subHeader lg:!text-2xl uppercase">{item.name}</h3>
+                                            <ul>
+                                                {item.bullets.map((bullet, index) => (
+                                                    <motion.li key={index} className="flex flex-row gap-2">
+                                                        <p className="description justify-start text-custom-rhino mb-auto">
+                                                            {`${index + 1}. `}
+                                                        </p>
+                                                        <p className="description w-full text-custom-rhino my-auto">
+                                                            {bullet}
+                                                        </p>
+                                                    </motion.li>
+                                                ))}
+                                            </ul>
+                                        </motion.div>
+                                    )
+                                })}
+                            </div>
+                        </motion.div>
+                    </motion.section>
+                }
+
+                {/* electrical power subsystem design */}
+                {project?.design?.electricalPowerSubsystem.show &&
+                    <motion.section
+                        className="section-container !h-auto !bg-custom-white my-auto"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !flex-col gap-3 !justify-center">
+                            <h2 className="header">Electrical Power Subsystem Design</h2>
+                            <motion.div variants={fadeIn} className="flex flex-col md:flex-row justify-between gap-5">
+                                <ul className="my-auto">
+                                    {project?.design?.electricalPowerSubsystem.bullets.map((bullet, index) => (
+                                        <motion.li key={index} className="flex flex-row gap-2">
+                                            <p className="description justify-start text-custom-rhino mb-auto">
+                                                {`${index + 1}. `}
+                                            </p>
+                                            <p className="description w-full text-custom-rhino my-auto">
+                                                {bullet}
+                                            </p>
+                                        </motion.li>
+                                    ))}
+                                </ul>
+                                <motion.div variants={fadeIn} className="flex flex-col gap-2">
+                                    <Image
+                                        src={project?.design?.electricalPowerSubsystem.image}
+                                        width={800}
+                                        height={400}
+                                        alt="electrical power subsystem image"
+                                        className="w-full"
+                                    />
+                                    <p className="description text-custom-rhino italic text-center mt-3">{project?.design?.electricalPowerSubsystem?.caption}</p>
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.section>
+                }
+
+                {/* flight software design */}
+                {project?.design?.flightSoftware.show &&
+                    <motion.section
+                        className="section-container !h-auto !bg-custom-white my-auto"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !flex-col gap-3 !justify-center">
+                            <h2 className="header">Flight Software Design</h2>
+                            <motion.div variants={fadeIn} className="flex flex-col md:flex-row justify-between gap-5">
+                                <motion.div variants={fadeIn} className="flex flex-col gap-2 w-full md:w-1/3">
+                                    <Image
+                                        src={project?.design?.flightSoftware.image}
+                                        width={800}
+                                        height={400}
+                                        alt="flight image"
+                                        className="w-full"
+                                    />
+                                    <p className="description text-custom-rhino italic text-center mt-3">{project?.design?.electricalPowerSubsystem?.caption}</p>
+                                </motion.div>
+                                <motion.div variants={fadeIn} className="flex flex-col gap-8 w-full md:w-2/3">
+                                    {project?.design?.flightSoftware?.items.map((item, index) => {
+                                        return (
+                                            <motion.div variants={fadeIn} className="flex flex-col">
+                                                <h3 className="subHeader lg:!text-2xl uppercase">{item.name}</h3>
+                                                <ul className="">
+                                                    {project?.design?.electricalPowerSubsystem.bullets.map((bullet, index) => (
+                                                        <motion.li key={index} className="flex flex-row">
+                                                            <p className="description justify-start text-custom-rhino mb-auto">
+                                                                {`${index + 1}. `}
+                                                            </p>
+                                                            <p className="description w-full text-custom-rhino my-auto">
+                                                                {bullet}
+                                                            </p>
+                                                        </motion.li>
+                                                    ))}
+                                                </ul>
+                                            </motion.div>
+                                        )
+                                    })}
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.section>
+                }
+
+                {/* ground control system design */}
+                {project?.design?.groundControlSystem.show &&
+                    <motion.section
+                        className="section-container !h-auto !bg-custom-white my-auto"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.div variants={fadeIn} className="text-container !flex-col gap-3 !justify-center">
+                            <h2 className="header">Ground Control System Design</h2>
+                            <motion.div variants={fadeIn} className="flex flex-col md:flex-row gap-5 justify-between">
+                                <Image
+                                    src={project?.design?.groundControlSystem.leftImage}
+                                    width={800}
+                                    height={400}
+                                    alt="ground control system image"
+                                    className="w-full"
+                                />
+                                <Image
+                                    src={project?.design?.groundControlSystem.rightImage}
+                                    width={800}
+                                    height={400}
+                                    alt="ground control system design image"
+                                    className="w-full"
+                                />
+                            </motion.div>
+                        </motion.div>
                     </motion.section>
                 }
                 

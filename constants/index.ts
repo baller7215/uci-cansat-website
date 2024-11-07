@@ -373,7 +373,17 @@ export const team2024_2025 = {
             major: 'Mechanical Engineering',
             gradYear: '2028',
             description: 'With 9 years of robotics experience and over 40 unique robots built, I have led my Beckman High School VEX Robotics team to win three California State Championships. I also compete in BattleBots, a 250lb combat robotics competition, where my team ranked among the world’s top 8 teams in both 2021 and 2022. Currently, I am engineering the nosecone release mechanisms, landing gear, and flywheel to maintain CanSat rotational stability. '
-        },   
+        },
+        {
+            name: 'Kaitlin Otsuka',
+            role: 'Mechanical Engineer Intern',
+            profileImg: '/assets/images/team/2024-2025/kaitlin.jpeg',
+            github: '',
+            linkedin: '',
+            major: '',
+            gradYear: '2028',
+            description: ''
+        }
     ],
     electrical: [
         {
@@ -406,6 +416,16 @@ export const team2024_2025 = {
             gradYear: '2027',
             description: "My name is Timothy Yee, and I'm a second-year student at UC Irvine currently studying computer engineering! I'm on the electrical subteam for CanSat where I'll be helping with PCB design, power management, and sensor integration with our system."
         },
+        {
+            name: 'Carolynn Nguyen',
+            role: 'Electrical Engineer Intern',
+            profileImg: '/assets/images/team/2024-2025/carolynn.JPG',
+            github: '',
+            linkedin: 'https://www.linkedin.com/in/carolynn-nguyen-b47941287',
+            major: 'Electrical Engineering',
+            gradYear: '2028',
+            description: 'First year electrical engineering, intern, help out with soldering, clean up lab and present at general meetings'
+        }
     ],
     controls: [
         {

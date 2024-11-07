@@ -1817,13 +1817,6 @@ export const updates = [
         image: "",
         route: "",
     },
-    {
-        title: "",
-        subtitle: "",
-        date: "",
-        image: "",
-        route: "",
-    }
 ]
 
 

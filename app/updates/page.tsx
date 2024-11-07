@@ -38,7 +38,7 @@ const Updates = () => {
                         <div className="relative flex flex-col lg:flex-row justify-center w-fit mx-auto">
                             {featuredNews.map((card, index) => (
                                 <div
-                                    key={card.title}
+                                    key={index}
                                     className={`scale-110 transform transition-all ${
                                         index !== 0 ? 'translate-y-20' : ''
                                     } z-[${10 - index}]`}
@@ -75,7 +75,10 @@ const Updates = () => {
                         // Show skeleton loaders while loading
                         <div className="collection-container">
                             {[...Array(4)].map((_, index) => (
-                                <Skeleton key={index} className="w-[300px] h-[200px] md:w-[450px] md:h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
+                                <div key={index} className="w-full items-center justify-center">
+                                    <Skeleton className="w-[300px] md:w-[500px] md:h-[300px] bg-custom-gray flex flex-col mx-auto rounded-md shadow-2xl" />
+                                </div>
+                                // <Skeleton key={index} className="w-[300px] h-[200px] md:w-[450px] md:h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
                             ))}
                         </div>
                         ) : (

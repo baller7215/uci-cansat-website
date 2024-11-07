@@ -286,7 +286,7 @@ html {
 }
 
 .gradient {
-  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/50 to-black/90
+  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/30 to-black/90
 }
 
 .cover-textContainer {
@@ -457,11 +457,12 @@ html {
 /* collection news */
 /* w-[850px] h-[450px] */
 .newsCard-card {
-  @apply w-[400px] sm:w-[400px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-auto bg-custom-white shadow-2xl rounded-xl;
+  /* @apply w-[400px] sm:w-[400px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-auto bg-custom-white shadow-2xl rounded-xl; */
+  @apply w-[300px] md:w-[500px] h-auto bg-custom-white shadow-2xl rounded-xl;
 }
 
 .newsCard-card-placeholder {
-  @apply w-[350px] h-[275px] md:w-[400px] md:h-[300px] lg:w-[650px] lg:h-[350px] bg-custom-orange shadow-2xl rounded-xl cursor-pointer;
+  @apply w-[300px] md:w-[500px] h-[300px] lg:h-full bg-custom-orange shadow-2xl rounded-xl cursor-pointer;
 }
 
 .newsCard-title {
@@ -477,11 +478,11 @@ html {
 }
 
 .newsCard-placeholder {
-  @apply w-[500px] h-[320px] bg-custom-orange;
+  @apply w-[300px] md:w-[500px] h-[300px] lg:h-full bg-custom-orange;
 }
 
 .newsCard-date {
-  @apply text-custom-rhino font-bold text-base tracking-widest absolute bottom-1 left-1 uppercase;
+  @apply text-custom-rhino font-bold text-base tracking-widest absolute bottom-0 left-0 uppercase;
 }
 
 /* team page */

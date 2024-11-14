@@ -44,7 +44,7 @@ const ProjectYearPage = () => {
                 }
                 
                 {/* project definition */}
-                {project?.projectDefinition &&
+                {project?.projectDefinition.show &&
                     <motion.section
                         className="section-container"
                         initial="hidden"
@@ -540,6 +540,18 @@ const ProjectYearPage = () => {
                                         className="w-full"
                                     />    
                                 </motion.div>
+                                {project?.posters?.spring &&
+                                    <motion.div variants={fadeIn} className="flex flex-col gap-2 w-full md:w-1/2">
+                                        <h3 className="subHeader uppercase">Spring Design Review</h3>
+                                        <Image
+                                            src={project?.posters?.spring}
+                                            width={500}
+                                            height={600}
+                                            alt="spring review poster"
+                                            className="w-full"
+                                        />    
+                                    </motion.div>
+                                }
                                 
                             </motion.div>
                         </motion.div>

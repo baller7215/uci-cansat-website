@@ -103,11 +103,6 @@ export const projectsLinks = [
         route: "/projects/2023-2024",
         image: '/assets/images/team/2023-2024/team.png',
     },
-    // {
-    //     label: "2022 - 2023",
-    //     route: "/projects/2022-2023",
-    //     image: '',
-    // },
     {
         label: "2021 - 2022",
         route: "/projects/2021-2022",
@@ -121,6 +116,16 @@ export const projectsLinks = [
     {
         label: "2019 - 2020",
         route: "/projects/2019-2020",
+        image: '',
+    },
+    {
+        label: "2018 - 2019",
+        route: "/projects/2018-2019",
+        image: '',
+    },
+    {
+        label: "2017 - 2018",
+        route: "/projects/2017-2018",
         image: '',
     },
 ];
@@ -1420,6 +1425,7 @@ export const project2023_2024 = {
         description: "Fall Quarter: Focused on research, design work, and developing the Preliminary Design Report (PDR). Software development concentrated on creating a ground station capable of receiving and displaying telemetry data from the CanSat’s sensors, while the hardware team worked on electrical and mechanical prototype designs.\nWinter Quarter: Dedicated to preparing and practicing for the Preliminary Design Review (PDR) presentation, with all subteams refining their work to meet competition standards. \nSpring Quarter: Implemented the designs into physical solutions, including ordering electrical components, assembling container segments, and testing the system’s performance to ensure compliance with competition requirements"
     },
     projectDefinition: {
+        show: true,
         planning: "Telemetry, an automated communication process for remotely measuring and monitoring data, has evolved significantly since its inception in aerospace during the 1930s. The CanSat competition, sponsored by the American Astronautical Society (AAS), offers students the opportunity to engage in the complete lifecycle of a telemetry payload system. The competition challenges university teams to design, build, and deploy a space-related system according to specific guidelines, culminating in a competitive launch at the end of the academic year.",
         problemStatement: "The mission requires designing a container deployable from a rocket, with controlled descent rates using parachutes. The container must descend at 15m/s above 400m and at 5m/s below 400m. At 300m, a payload attached by a 10-meter tether must deploy, descending at 0.5m/s, while maintaining a specific camera orientation. Throughout the descent, the container should report telemetry data.",
         image: "/assets/images/components/sicko_mode_vertical.jpg"
@@ -1536,7 +1542,8 @@ export const project2023_2024 = {
     teamGoals: [],
     posters: {
         fall: "",
-        winter: ""
+        winter: "",
+        spring: "",
     }
 }
 
@@ -1546,6 +1553,7 @@ export const project2021_2022 = {
         description: "Fall Quarter: consisted mostly of researching and design work, where we worked to complete the design for prototyping the preliminary design report which is additional documentation that the team needs to complete for the competition. Software development focused on creating a ground station capable of receiving and displaying telemetry data from the CanSat’s sensors, while hardware focused on having electrical and mechanical prototype designs for the following quarter to test.\n\nWinter quarter was dedicated to practicing our presentation for the Competitions Preliminary Design Review (PDR). All subteams worked focused on their forces to complete the presentation and practice presentation times.\n\nThis Spring quarter involved us finally taking all our research and designing over the past year and implementing them into a physical solution. Electrical components were ordered, container segments were printed and assembled, and the various performances of our design were tested to verify requirements compliance."
     },
     projectDefinition: {
+        show: true,
         planning: "Telemetry, an automated communication process for remotely measuring and monitoring data, has evolved significantly since its inception in aerospace during the 1930s. The CanSat competition, sponsored by the American Astronautical Society (AAS), offers students the opportunity to engage in the complete lifecycle of a telemetry payload system. The competition challenges university teams to design, build, and deploy a space-related system according to specific guidelines, culminating in a competitive launch at the end of the academic year.",
         problemStatement: "Design a container that will be stored in and deployed from a rocket. The container should have predetermined descent rates based on altitude, controlled by a total of 2 parachutes: at above 400m, the container should descend at 15m/s, at below 400m, the container should descend at 5m/s. At 300m, the container should deploy a payload, attached to the container by a tether and consisting of a camera, at a decent rate of 0.5m/s, until the payload is 10m away from the container. The camera from the payload should face South and 45 degrees below the horizon at all times. The container should report telemetry while descending.",
         image: "/assets/images/components/sicko_mode_vertical.jpg"
@@ -1584,7 +1592,7 @@ export const project2021_2022 = {
             }
         ],
         ourWorks: {
-            show: true,
+            show: false,
             mechanical: {
                 name: "",
                 description: "",
@@ -1598,7 +1606,7 @@ export const project2021_2022 = {
                 caption: "",
             },
             controls: {
-                show: true,
+                show: false,
                 name: "",
                 description: "",
                 image: "",
@@ -1665,7 +1673,8 @@ export const project2021_2022 = {
     teamGoals: [],
     posters: {
         fall: "/assets/images/projects/2021-2022/AntSat Fall Design Review 2021.pptx.png",
-        winter: "/assets/images/projects/2021-2022/AntSat Winter Design Review 2022.pptx.png"
+        winter: "/assets/images/projects/2021-2022/AntSat Winter Design Review 2022.pptx.png",
+        spring: "",
     }
 }
 
@@ -1676,6 +1685,7 @@ export const project2020_2021 = {
         description: ""
     },
     projectDefinition: {
+        show: true,
         planning: "This year’s mission is to design a container and two auto-rotating maple seed science payloads. The CanSat will be launched to 700m using a high-powered model rocket. The CanSat then descends using parachute at 15 m/s. At 500m, the first payload is released and the second payload will be released at 400m. These payloads will rotate and descend slower than 20 m/s. While descending, the container will collect its own telemetry as well as telemetry from both payloads.",
         problemStatement: "Our competition project involves designing and building a CanSat, consisting of a container and two science payloads that will descend from an altitude of 670 to 725 meters. The container and payload descend together at 15 m/s until 500 meters, where the first payload is released to rotate and descend at less than 20 m/s, followed by the release of the second payload at 400 meters. The payloads are equipped with sensors to measure air temperature, pressure, and rotation rate, transmitting data in real-time to the container, which relays it along with GPS, pressure, battery voltage, and an audio beacon. Our goal is to perform well in the CanSat Competition, ensure all teammates gain engineering design experience, and meet UCI's MAE Department requirements for senior design. The launch system is provided by the organizers, while we focus on CanSat and ground station design and construction.",
         image: "/assets/images/projects/2020-2021/mission.png"
@@ -1833,8 +1843,9 @@ export const project2020_2021 = {
         }
     ],
     posters: {
-        fall: "",
-        winter: ""
+        fall: "/assets/images/projects/2020-2021/2020-2021 Fall Poster.png",
+        winter: "/assets/images/projects/2020-2021/2020-2021 Winter Poster.png",
+        spring: ""
     }
 }
 
@@ -1844,6 +1855,7 @@ export const project2019_2020 = {
         description: ""
     },
     projectDefinition: {
+        show: true,
         planning: "The CanSat Competition is an international design/build/fly engineering competition taking place at Virginia Tech University. In this year’s mission, the CanSat will be launched to 700m using a high-powered model rocket and then perform a controlled descent while transmitting data from its onboard sensors to a ground station computer. The CanSat consists of a container and science payload. Initially, both descend under a parachute. At 450m, the payload is released and continues its descent as a delta wing glider. The glider then descends in a circular pattern of radius 250m for one minute while staying above the altitude of 100m. Finally, the delta wing glider releases its own parachute and descends at 10 m/s back to the ground.",
         problemStatement: "Our CanSat project for the competition involves designing and building a container and science payload that descend from 670 to 725 meters. Initially, both parts descend together under a parachute at 15 m/s, then the first payload is released at 500 m, rotating to descend at under 20 m/s, followed by the release of a second maple-seed payload at 400 m. Equipped with sensors for air temperature, pressure, and rotation rate, the payload transmits data to the container, which relays all information and includes GPS, pressure, battery voltage, and an audio beacon. Our goal is to excel in the CanSat Competition, ensure all team members gain hands-on engineering experience, and meet both the MAE Department's senior design requirements and UCI’s standards in design reviews. The competition provides a high-power rocket for standardized launches, and our container is designed to protect the payload throughout launch and deployment.",
         image: "/assets/images/projects/2020-2021/mission.png"
@@ -2037,8 +2049,213 @@ export const project2019_2020 = {
         }
     ],
     posters: {
-        fall: "",
-        winter: ""
+        fall: "/assets/images/projects/2019-2020/2019-2020 Fall Poster.png",
+        winter: "/assets/images/projects/2019-2020/2019-2020 Winter Poster.png",
+        spring: ""
+    }
+}
+
+export const project2018_2019 = {
+    overview: {
+        team: "", //team photo
+        description: ""
+    },
+    projectDefinition: {
+        show: false,
+        planning: "",
+        problemStatement: "",
+        image: ""
+    },
+    design: {
+        show: false,
+        majorComponents: {
+            description: "",
+            bulletPoints: []
+        },
+        keyComponents: [],
+        ourWorks: {
+            show: false,
+            mechanical: {
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            },
+            electrical: {
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            },
+            controls: {
+                show: false,
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            }
+        },
+        seniorSubsystem: {
+            show: false,
+            description: "",
+            image: "",
+            caption: ""
+        },
+        descentControl: {
+            show: false,
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                    image: "",
+                },
+                {
+                    name: "",
+                    bullets: [],
+                    image: ""
+                },
+                {
+                    name: "",
+                    bullets: [],
+                    image: ""
+                },
+            ]
+        },
+        mechanicalSubsystem: {
+            show: false,
+            image: "",
+            description: "",
+            items: []
+        },
+        electricalPowerSubsystem: {
+            show: false,
+            image: "",
+            caption: "",
+            bullets: []
+        },
+        flightSoftware: {
+            show: false,
+            image: "",
+            items: []
+        },
+        groundControlSystem: {
+            show: false,
+            leftImage: "",
+            rightImage: "",
+        }
+    },
+    competitionRequirements: {
+        show: false,
+        description: "",
+        bullets: []
+    },
+    teamGoals: [],
+    posters: {
+        fall: "/assets/images/projects/2018-2019/2018-2019 Fall Poster.png",
+        winter: "/assets/images/projects/2018-2019/2018-2019 Winter Poster.png",
+        spring: "/assets/images/projects/2018-2019/2018-2019 Spring Poster.png"
+    }
+}
+
+export const project2017_2018 = {
+    overview: {
+        team: "", //team photo
+        description: ""
+    },
+    projectDefinition: {
+        show: false,
+        planning: "",
+        problemStatement: "",
+        image: ""
+    },
+    design: {
+        show: false,
+        majorComponents: {
+            description: "",
+            bulletPoints: []
+        },
+        keyComponents: [],
+        ourWorks: {
+            show: false,
+            mechanical: {
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            },
+            electrical: {
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            },
+            controls: {
+                show: false,
+                name: "",
+                description: "",
+                image: "",
+                caption: "",
+            }
+        },
+        seniorSubsystem: {
+            show: false,
+            description: "",
+            image: "",
+            caption: ""
+        },
+        descentControl: {
+            show: false,
+            items: [
+                {
+                    name: "",
+                    bullets: [],
+                    image: "",
+                },
+                {
+                    name: "",
+                    bullets: [],
+                    image: ""
+                },
+                {
+                    name: "",
+                    bullets: [],
+                    image: ""
+                },
+            ]
+        },
+        mechanicalSubsystem: {
+            show: false,
+            image: "",
+            description: "",
+            items: []
+        },
+        electricalPowerSubsystem: {
+            show: false,
+            image: "",
+            caption: "",
+            bullets: []
+        },
+        flightSoftware: {
+            show: false,
+            image: "",
+            items: []
+        },
+        groundControlSystem: {
+            show: false,
+            leftImage: "",
+            rightImage: "",
+        }
+    },
+    competitionRequirements: {
+        show: false,
+        description: "",
+        bullets: []
+    },
+    teamGoals: [],
+    posters: {
+        fall: "/assets/images/projects/2017-2018/2017-2018 Fall Poster.png",
+        winter: "/assets/images/projects/2017-2018/2017-2018 Winter Poster.png",
+        spring: "/assets/images/projects/2017-2018/2017-2018 Spring Poster.png"
     }
 }
 
@@ -2548,12 +2765,12 @@ export const yearTeamProject = {
         id: '2018-2019',
         label: '2018 - 2019',
         team: team2018_2019,
-        project: project2023_2024,
+        project: project2018_2019,
     },
     id2017_2018: {
         id: '2017-2018',
         label: '2017 - 2018',
         team: team2017_2018,
-        project: project2023_2024,
+        project: project2017_2018,
     },
 }

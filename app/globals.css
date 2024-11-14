@@ -146,7 +146,7 @@ html {
 }
 
 .navLink {
-  @apply font-normal;
+  @apply font-medium;
 }
 
 .navbar-join-button {
@@ -286,7 +286,7 @@ html {
 }
 
 .gradient {
-  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/30 to-black/90
+  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/30 to-transparent/90
 }
 
 .cover-textContainer {

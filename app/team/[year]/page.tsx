@@ -26,7 +26,7 @@ const TeamYearPage = () => {
                     {/** @todo: center the members so that if the number of members in the group is not divisble by three, it should be centered */}
                     {team?.advisors && team?.advisors.length > 0 &&
                         // {/* Advisors Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Advisors</h1>
                             <ProfilesGrid members={team?.advisors || []} />
                         </div>
@@ -34,7 +34,7 @@ const TeamYearPage = () => {
 
                     {team?.management && team?.management.length > 0 &&
                         // {/* Management Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Management</h1>
                             <ProfilesGrid members={team?.management || []} />
                         </div>
@@ -42,7 +42,7 @@ const TeamYearPage = () => {
 
                     {team?.executives && team?.executives.length > 0 &&
                         // {/* Management Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Executives</h1>
                             <ProfilesGrid members={team?.executives || []} />
                         </div>
@@ -50,7 +50,7 @@ const TeamYearPage = () => {
 
                     {team?.mechanical && team?.mechanical.length > 0 &&
                         // {/* Mechanical Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Mechanical</h1>
                             <ProfilesGrid members={team?.mechanical || []} />
                         </div>
@@ -58,7 +58,7 @@ const TeamYearPage = () => {
 
                     {team?.electrical && team?.electrical.length > 0 &&
                         // {/* Electrical Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Electrical</h1>
                             <ProfilesGrid members={team?.electrical || []} />
                         </div>
@@ -66,7 +66,7 @@ const TeamYearPage = () => {
 
                     {team?.controls && team?.controls.length > 0 &&
                         // {/* Controls Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Controls</h1>
                             <ProfilesGrid members={team?.controls || []} />
                         </div>
@@ -74,7 +74,7 @@ const TeamYearPage = () => {
 
                     {team?.operations && team?.operations.length > 0 &&
                         // {/* Operations Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Operations</h1>
                             <ProfilesGrid members={team?.operations || []} />
                         </div>

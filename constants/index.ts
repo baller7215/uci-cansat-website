@@ -429,7 +429,7 @@ export const team2024_2025 = {
             linkedin: 'https://www.linkedin.com/in/carolynn-nguyen-b47941287',
             major: 'Electrical Engineering',
             gradYear: '2028',
-            description: 'First year electrical engineering, intern, help out with soldering, clean up lab and present at general meetings'
+            description: 'Hello, my name is Carolynn Nguyen. I am a first-year electrical engineering student and this year’s Cansat electrical intern! I will be helping out the electrical subteam with various activities such as research, soldering, and presenting during meetings.'
         }
     ],
     controls: [

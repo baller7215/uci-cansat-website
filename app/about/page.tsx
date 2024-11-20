@@ -38,17 +38,17 @@ const About = () => {
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="relative"
+          className="relative h-auto"
           id="overview"
         >
           {/* desktop */}
-          <div className="hidden md:flex relative h-screen w-full home-sectionBackground"></div>
+          <div className="hidden md:flex relative min-h-screen h-auto w-full home-sectionBackground"></div>
 
           <motion.div
             variants={fadeIn}
-            className="hidden md:flex flex-col md:flex-row h-full md:h-screen w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-10 md:py-5 lg:p-20 lg:py-10 xl:p-20 xl:py-10 2xl:p-40 2xl:py-20 justify-center md:justify-between gap-5"
+            className="hidden md:flex flex-col md:flex-row h-full md:h-auto w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-10 md:py-5 lg:p-20 lg:py-10 xl:p-20 xl:py-10 2xl:p-40 2xl:py-20 justify-center md:justify-between gap-5"
           >
-            <motion.div className="leftText w-full md:w-1/2" variants={fadeIn}>
+            <motion.div className="leftText !h-auto w-full md:w-1/2" variants={fadeIn}>
               <h2 className="header">Introduction</h2>
               <p className="text-custom-whiteIce description">
                 We are UCI CanSat, a vibrant and enthusiastic student engineering team from the University of California, Irvine (UCI). Our team is composed of a diverse blend of passionate students unified under one mission: to excel in the International CanSat competition. This annual student design-build-launch event, spearheaded by the American Astronautical Society (AAS), provides an opportunity for us to experience the entire development cycle of a complex engineering project – from conceptual design through integration and testing, to real-world operation and post-mission summary. Last year, we placed
@@ -67,7 +67,7 @@ const About = () => {
                         alt={`${profile.name} profile image`}
                         width={130}
                         height={130}
-                        className="profile-image border-4 border-custom-shakespeare"
+                        className="profile-image border-4 border-custom-shakespeare max-h-24 max-w-24"
                       />
                     ) : (
                       <div className="profile-image"></div>
@@ -99,9 +99,9 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           variants={staggerContainer}
-          className="section-container"
+          className="section-container !h-auto"
         >
-          <motion.div className="text-container" variants={fadeIn}>
+          <motion.div className="text-container md:!h-auto md:!min-h-screen" variants={fadeIn}>
             <motion.div className="leftText w-full lg:w-3/5" variants={fadeIn}>
               <h2 className="header">Overview</h2>
               <p className="description text-custom-rhino">
@@ -134,15 +134,15 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           variants={staggerContainer}
-          className="section-container"
+          className="section-container !h-auto"
         >
-          <motion.div className="text-container" variants={fadeIn}>
+          <motion.div className="text-container md:!h-auto md:!min-h-screen" variants={fadeIn}>
             {/* left */}
             <div className="justify-center lg:justify-start w-full lg:w-1/3 flex graphic-container !h-fit">
               <div className="title-container rounded-s-md m-0">
                 <h2 className="header rotate-[270deg] origin-center whitespace-nowrap">Competition History</h2>
               </div>
-              <div className="mainContent-container items-center w-full md:w-auto rounded-e-md">
+              <div className="mainContent-container xl:gap-10 xl:p-10 items-center w-full md:w-auto rounded-e-md">
                 {competitionHistory.map((year) => (
                   <motion.li key={year.year} className="flex flex-row" variants={fadeIn}>
                     <div className="graphic-cell">
@@ -170,7 +170,7 @@ const About = () => {
           variants={staggerContainer}
           className="section-container"
         >
-           <motion.div className="text-container" variants={fadeIn}>
+           <motion.div className="text-container md:!h-auto md:!min-h-screen" variants={fadeIn}>
              {/* left text */}
              <motion.div className="leftText w-full md:w-1/2" variants={fadeIn}>
                <h2 className="header">Competition Timeline</h2>

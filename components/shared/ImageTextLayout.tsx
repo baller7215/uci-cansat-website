@@ -24,13 +24,13 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
     <>
         {/* overview */}
         <motion.section 
-            className="section-container !bg-custom-black"
+            className="section-container !h-auto !bg-custom-black"
             id='overview'
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
         >
-            <motion.div variants={fadeIn} className="imageLayout-text-container">
+            <motion.div variants={fadeIn} className="imageLayout-text-container md:!h-auto md:!min-h-screen">
                 {/* left */}
                 <motion.div variants={fadeIn} className="w-full lg:w-2/5 xl:w-2/5 h-full flex justify-center">
                     {image ? 
@@ -55,8 +55,7 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
                                 <Link className='description' href={link} target="_blank">here</Link>
                             </Button>
                             
-                        }
-                        
+                        } 
                     </p>
                 </motion.div>
             </motion.div>

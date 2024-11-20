@@ -46,12 +46,12 @@ const ProjectYearPage = () => {
                 {/* project definition */}
                 {project?.projectDefinition.show &&
                     <motion.section
-                        className="section-container"
+                        className="section-container !h-auto"
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
                     >
-                        <motion.div variants={fadeIn} className="text-container">
+                        <motion.div variants={fadeIn} className="text-container md:!h-auto md:!min-h-screen">
 
                             {/* left */}
                             <motion.div variants={fadeIn} className="leftText w-full md:w-full lg:w-3/5">
@@ -88,12 +88,12 @@ const ProjectYearPage = () => {
                 {/* conceptual / preliminary design */}
                 {project?.design.show &&
                     <motion.section
-                        className="section-container"
+                        className="section-container h-auto"
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
                     >
-                        <motion.div variants={fadeIn} className="text-container !flex-col xl:!flex-row !justify-center">
+                        <motion.div variants={fadeIn} className="text-container md:!h-auto md:!min-h-screen !flex-col xl:!flex-row !justify-center">
 
                             {/* left */}
                             <motion.div variants={fadeIn} className="justify-start w-full xl:w-1/3 graphic-container !h-fit">
@@ -103,7 +103,7 @@ const ProjectYearPage = () => {
                                 </motion.div>
 
                                 {/* 3 key components */}
-                                <motion.div variants={fadeIn} className="mainContent-container rounded-e-md">
+                                <motion.div variants={fadeIn} className="mainContent-container xl:!gap-10 xl:!p-10 rounded-e-md">
                                     {project?.design.keyComponents.map((component) => {
                                         return (
                                             <motion.div variants={fadeIn} key={component.name} className="flex flex-row">

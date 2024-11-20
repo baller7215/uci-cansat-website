@@ -87,10 +87,10 @@ const Sponsors = () => {
                     initial="hidden"
                     whileInView="visible"
                     variants={staggerContainer}
-                    className="section-container" 
+                    className="section-container !h-auto" 
                     id="whySponsorUs"
                 >
-                    <motion.div className="text-container !flex-col !justify-center" variants={fadeIn}>
+                    <motion.div className="text-container md:!h-auto md:!min-h-screen !flex-col !justify-center" variants={fadeIn}>
                         <div className="flex flex-col md:flex-row justify-between">
                             <motion.div className="leftText w-full md:w-3/4 gap-3" variants={fadeIn}>
                                 <h2 className="header">Why Sponsor Us?</h2>
@@ -122,13 +122,13 @@ const Sponsors = () => {
 
                 {/* sponsorship tiers */}
                 <motion.section
-                    className="section-container"
+                    className="section-container !h-auto"
                     id="sponsorshipTiers"
                     initial="hidden"
                     whileInView="visible"
                     variants={staggerContainer}
                 >
-                    <motion.div className="text-container !h-fit lg:!h-screen !flex-col !gap-0 !py-20" variants={fadeIn}>
+                    <motion.div className="text-container md:!h-auto md:!min-h-screen !h-fit !flex-col !gap-0 !py-20" variants={fadeIn}>
                         <h2 className="header text-center !mb-0">Sponsorship Tiers</h2>
                         <p className="description text-custom-rhino text-center">
                             We would greatly appreciate your financial support, and our sponsorship tiers are shown below. If you are interested in sponsoring our team through a monetary or component donation, please email 

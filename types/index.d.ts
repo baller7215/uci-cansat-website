@@ -1,3 +1,12 @@
+declare type LinkItem = {
+    route: string;
+    label: string;
+}
+
+declare type NavbarDropdownProps = {
+    links: LinkItem[];
+}
+
 // accordion props
 declare type AccordionItem = {
     id: number;

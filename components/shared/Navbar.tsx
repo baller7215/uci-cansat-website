@@ -6,10 +6,37 @@ import { navLinks } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
-
+import { cn } from "@/lib/utils";
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import {
+    projectsLinks,
+    teamLinks,
+} from "@/constants";
 
 const Navbar = () => {
     const pathname = usePathname();
+
+    const renderDropdownLinks = (links: any) => (
+        <div className="absolute hidden group-hover:block bg-custom-white/100 shadow-xl rounded-md w-48 transition ease-in-out duration-500">
+            {links.map((link: any) => (
+                <Link
+                    key={link.route}
+                    href={link.route}
+                    className="block px-4 py-2 text-custom-rhino hover:bg-custom-orange/50 m-2 rounded-md hover:text-gray-900 transition ease-in-out duration-500"
+                >
+                    {link.label}
+                </Link>
+            ))}
+        </div>
+    );
 
     return (
         <div className="navbar bg-gradient-to-b from-white/100 to-white/0 backdrop-saturate-150 backdrop-blur-[1px]">
@@ -20,21 +47,31 @@ const Navbar = () => {
 
             <nav className="navbar-nav">
                 <ul className='navbar-nav-elements'>
-                    {navLinks.map((link) => {
-                        const isActive = link.route === pathname;
+                    <Link href="/about" className={`navbar-nav-element group ${pathname === '/about' ? 'navLink-bold' : 'navLink'}`}>
+                        About
+                    </Link>
 
-                        return (
-                            <li key={link.route} className={`navbar-nav-element group ${
-                                isActive ? 'navLink-bold' : 'navLink'
-                            }`}>
-                                <Link className='' href={link.route}>
-                                    {link.label}
-                                </Link>
-                            </li>
-                        )
-                    })}
+                    {/* Team Dropdown */}
+                    <div className="relative group">
+                        <button className={`navbar-nav-element group ${pathname === '/team' ? 'navLink-bold' : 'navLink'}`}>Team</button>
+                        {renderDropdownLinks(teamLinks)}
+                    </div>
+
+                    {/* Projects Dropdown */}
+                    <div className="relative group">
+                        <button className={`navbar-nav-element group ${pathname === '/projects' ? 'navLink-bold' : 'navLink'}`}>Projects</button>
+                        {renderDropdownLinks(projectsLinks)}
+                    </div>
+
+                    <Link href="/updates" className={`navbar-nav-element group ${pathname === '/updates' ? 'navLink-bold' : 'navLink'}`}>
+                        Updates
+                    </Link>
+                    <Link href="/contact" className={`navbar-nav-element group ${pathname === '/contact' ? 'navLink-bold' : 'navLink'}`}>
+                        Contact
+                    </Link>
                 </ul>
             </nav>
+            {/* <NavbarDropdown /> */}
 
             <Button asChild variant="outline" className='navbar-join-button hover:navbar-join-hover'>
                 <Link href="/join">Join Now</Link>

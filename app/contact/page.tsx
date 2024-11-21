@@ -21,7 +21,7 @@ visible: {
 },
 };
 
-const Contact = async () => {
+const Contact = () => {
     return (
         <>
             <main>

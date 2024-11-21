@@ -15,7 +15,7 @@ const Navbar = () => {
 
     const renderDropdownLinks = (links: LinkItem[]) => (
         <div className="absolute hidden group-hover:block bg-custom-white/100 shadow-xl rounded-md w-48 transition ease-in-out duration-500">
-            {links.map((link: any) => (
+            {links.map((link: LinkItem) => (
                 <Link
                     key={link.route}
                     href={link.route}

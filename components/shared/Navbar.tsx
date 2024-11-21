@@ -2,20 +2,9 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { navLinks } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils";
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 import {
     projectsLinks,
     teamLinks,

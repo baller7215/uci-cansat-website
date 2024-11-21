@@ -13,7 +13,7 @@ import {
 const Navbar = () => {
     const pathname = usePathname();
 
-    const renderDropdownLinks = (links: any) => (
+    const renderDropdownLinks = (links: LinkItem[]) => (
         <div className="absolute hidden group-hover:block bg-custom-white/100 shadow-xl rounded-md w-48 transition ease-in-out duration-500">
             {links.map((link: any) => (
                 <Link

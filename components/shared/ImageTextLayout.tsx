@@ -30,7 +30,7 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
             animate="visible"
             variants={staggerContainer}
         >
-            <motion.div variants={fadeIn} className="imageLayout-text-container md:!h-auto md:!min-h-screen">
+            <motion.div variants={fadeIn} className="imageLayout-text-container">
                 {/* left */}
                 <motion.div variants={fadeIn} className="w-full lg:w-2/5 xl:w-2/5 h-full flex justify-center">
                     {image ? 

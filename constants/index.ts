@@ -79,12 +79,12 @@ export const teamLinks = [
     {
         label: "2018 - 2019",
         route: "/team/2018-2019",
-        image: '',
+        image: '/assets/images/team/2018-2019/team.jpg',
     },
     {
         label: "2017 - 2018",
         route: "/team/2017-2018",
-        image: '',
+        image: '/assets/images/team/2017-2018/team.jpg',
     },
 ]
   
@@ -121,12 +121,12 @@ export const projectsLinks = [
     {
         label: "2018 - 2019",
         route: "/projects/2018-2019",
-        image: '',
+        image: '/assets/images/team/2018-2019/team.jpg',
     },
     {
         label: "2017 - 2018",
         route: "/projects/2017-2018",
-        image: '',
+        image: '/assets/images/team/2017-2018/team.jpg',
     },
 ];
 

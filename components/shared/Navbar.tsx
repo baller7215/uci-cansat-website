@@ -42,13 +42,17 @@ const Navbar = () => {
 
                     {/* Team Dropdown */}
                     <div className="relative group">
-                        <button className={`navbar-nav-element group ${pathname === '/team' ? 'navLink-bold' : 'navLink'}`}>Team</button>
+                        <Link href="/team" className={`navbar-nav-element group ${pathname === '/team' ? 'navLink-bold' : 'navLink'}`}>
+                            Team
+                        </Link>
                         {renderDropdownLinks(teamLinks)}
                     </div>
 
                     {/* Projects Dropdown */}
                     <div className="relative group">
-                        <button className={`navbar-nav-element group ${pathname === '/projects' ? 'navLink-bold' : 'navLink'}`}>Projects</button>
+                        <Link href="/projects" className={`navbar-nav-element group ${pathname === '/projects' ? 'navLink-bold' : 'navLink'}`}>
+                            Projects
+                        </Link>
                         {renderDropdownLinks(projectsLinks)}
                     </div>
 

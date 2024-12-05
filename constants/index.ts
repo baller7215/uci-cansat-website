@@ -385,9 +385,9 @@ export const team2024_2025 = {
             profileImg: '/assets/images/team/2024-2025/kaitlin.jpeg',
             github: '',
             linkedin: '',
-            major: '',
+            major: 'Mechanical Engineering',
             gradYear: '2028',
-            description: ''
+            description: 'Hello! My name is Kaitlin Otsuka, and I am a first-year mechanical engineering student at UC Irvine. This year I am serving as the intern for the mechanical subteam, where I will be helping the team through 3D printing, research, and presenting progress at meetings.'
         }
     ],
     electrical: [

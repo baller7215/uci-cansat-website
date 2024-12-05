@@ -3,30 +3,120 @@ export const navLinks = [
     {
         label: "About",
         route: "/about",
+        children: []
     //   icon: "/assets/icons/image.svg",
     },
     {
         label: 'Team',
         route: '/team',
+        children: [
+            {
+                label: "The Team",
+                route: "/team",
+            },
+            {
+                label: "2024 - 2025",
+                route: "/team/2024-2025",
+                image: '',
+            },
+            {
+                label: "2023 - 2024",
+                route: "/team/2023-2024",
+                image: '/assets/images/team/2023-2024/team.png',
+            },
+            // {
+            //     label: "2022 - 2023",
+            //     route: "/team/2022-2023",
+            //     image: '',
+            // },
+            {
+                label: "2021 - 2022",
+                route: "/team/2021-2022",
+                image: '',
+            },
+            {
+                label: "2020 - 2021",
+                route: "/team/2020-2021",
+                image: '',
+            },
+            {
+                label: "2019 - 2020",
+                route: "/team/2019-2020",
+                image: '',
+            },
+            {
+                label: "2018 - 2019",
+                route: "/team/2018-2019",
+                image: '/assets/images/team/2018-2019/team.jpg',
+            },
+            {
+                label: "2017 - 2018",
+                route: "/team/2017-2018",
+                image: '/assets/images/team/2017-2018/team.jpg',
+            },
+        ]
     },
     {
         label: "Projects",
         route: "/projects",
-    //   icon: "/assets/icons/stars.svg",
+        children: [
+            {
+                label: "Our Projects",
+                route: "/projects/",
+            },
+            {
+                label: "2024 - 2025",
+                route: "/projects/2024-2025",
+                image: '',
+            },
+            {
+                label: "2023 - 2024",
+                route: "/projects/2023-2024",
+                image: '/assets/images/team/2023-2024/team.png',
+            },
+            {
+                label: "2021 - 2022",
+                route: "/projects/2021-2022",
+                image: '',
+            },
+            {
+                label: "2020 - 2021",
+                route: "/projects/2020-2021",
+                image: '',
+            },
+            {
+                label: "2019 - 2020",
+                route: "/projects/2019-2020",
+                image: '',
+            },
+            {
+                label: "2018 - 2019",
+                route: "/projects/2018-2019",
+                image: '/assets/images/team/2018-2019/team.jpg',
+            },
+            {
+                label: "2017 - 2018",
+                route: "/projects/2017-2018",
+                image: '/assets/images/team/2017-2018/team.jpg',
+            },
+        ]
     },
     {
         label: "Sponsors",
         route: "/sponsors",
+        children: []
     //   icon: "/assets/icons/scan.svg",
     },
     {
         label: "Updates",
         route: "/updates",
+        children: []
     //   icon: "/assets/icons/filter.svg",
     },
     {
         label: "Contact",
         route: "/contact",
+        children: []
     //   icon: "/assets/icons/camera.svg",
     },
 
@@ -36,6 +126,7 @@ export const aboutLinks = [
     {
         label: "About Us",
         route: "/about",
+        children: []
         //   icon: "/assets/icons/logo.png",
     },
     

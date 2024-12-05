@@ -89,7 +89,7 @@ const MobileNav = () => {
                                                 </button>
                                                 {expandedSection === 'team' && expandedSection == link.label.toLowerCase() && (
                                                     <motion.ul
-                                                        className="mt-2 flex flex-col items-center gap-2 mb-3 text-base text-custom-gray"
+                                                        className="mt-2 flex flex-col items-center gap-2 mb-1 text-base text-custom-gray"
                                                         initial="hidden"
                                                         animate="visible"
                                                         variants={containerVariants}
@@ -108,7 +108,7 @@ const MobileNav = () => {
                                                 )}
                                                 {expandedSection === 'projects' && expandedSection == link.label.toLowerCase() && (
                                                     <motion.ul
-                                                        className="mt-2 flex flex-col items-center gap-2 mb-3 text-base text-custom-gray"
+                                                        className="mt-2 flex flex-col items-center gap-2 mb-1 text-base text-custom-gray"
                                                         initial="hidden"
                                                         animate="visible"
                                                         variants={containerVariants}

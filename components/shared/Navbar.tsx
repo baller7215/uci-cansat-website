@@ -56,6 +56,9 @@ const Navbar = () => {
                         {renderDropdownLinks(projectsLinks)}
                     </div>
 
+                    <Link href="/sponsors" className={`navbar-nav-element group ${pathname === '/sponsors' ? 'navLink-bold' : 'navLink'}`}>
+                        Sponsors
+                    </Link>
                     <Link href="/updates" className={`navbar-nav-element group ${pathname === '/updates' ? 'navLink-bold' : 'navLink'}`}>
                         Updates
                     </Link>

@@ -1,6 +1,6 @@
 "use client"; // This marks the component as a client component
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'; // Import Framer Motion
 import Navbar from './Navbar';
 import { Button } from '../ui/button';
@@ -24,6 +24,29 @@ const fadeInUp = {
 };
 
 const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  const [ratio, setRatio] = useState<number>();
+  const [resize, setResize] = useState<boolean>(false);
+  
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+      setRatio(window.innerWidth/window.innerHeight);
+
+      console.log
+      if (window.innerWidth / window.innerHeight >= (1200 / 700)) {
+        setResize(true);
+      } else {
+        setResize(false);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
       {/* background image */}
@@ -34,7 +57,7 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
         <Navbar />
         <MobileNav />
         <motion.div
-            className="cover-textContainer z-10"
+            className={`cover-textContainer z-10 ${resize ? '!w-2/3' : ''}`}
             variants={container}
             initial="hidden"
             animate="visible"

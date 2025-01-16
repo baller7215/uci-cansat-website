@@ -43,10 +43,10 @@ const About = () => {
         >
           {/* desktop */}
           <div className="hidden md:flex relative min-h-screen h-auto w-full home-sectionBackground"></div>
-
+          {/* text-container md:!h-auto md:!min-h-screen */}
           <motion.div
             variants={fadeIn}
-            className="hidden md:flex flex-col md:flex-row h-full md:h-auto w-full inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-10 md:py-5 lg:p-20 lg:py-10 xl:p-20 xl:py-10 2xl:p-40 2xl:py-20 justify-center md:justify-between gap-5"
+            className="hidden md:flex flex-col md:flex-row h-full md:!h-auto w-full md:!min-h-screen inset-x-0 top-0 absolute bg-gradient-to-b from-white/0 to-black/100 py-5 p-10 md:p-10 md:py-5 lg:p-20 lg:py-10 xl:p-20 xl:py-10 2xl:p-40 2xl:py-20 justify-center md:justify-between gap-5"
           >
             <motion.div className="leftText !h-auto w-full md:w-1/2" variants={fadeIn}>
               <h2 className="header">Introduction</h2>

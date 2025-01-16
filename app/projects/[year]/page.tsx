@@ -198,13 +198,13 @@ const ProjectYearPage = () => {
                 {/* our works */}
                 {project?.design.ourWorks.show &&
                     <motion.section
-                        className="section-container bg-fixed min-h-screen my-auto !bg-custom-white"
+                        className="section-container bg-fixed min-h-screen !h-auto my-auto !bg-custom-white"
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
                     >
                         {/* mechanical */}
-                        <motion.div variants={fadeIn} className="text-container !min-h-screen">
+                        <motion.div variants={fadeIn} className="text-container !min-h-screen !h-auto">
                             {/* left */}
                             <motion.div variants={fadeIn} className="leftText w-full md:w-3/5">
                                 <h2 className="header">Our Works</h2>
@@ -225,7 +225,7 @@ const ProjectYearPage = () => {
                         </motion.div>
 
                         {/* electrical */}
-                        <motion.div variants={fadeIn} className="text-container !min-h-screen">
+                        <motion.div variants={fadeIn} className="text-container !min-h-screen !h-auto">
                             {/* left */}
                             <motion.div variants={fadeIn} className="rightImage">
                                 <Image
@@ -247,7 +247,7 @@ const ProjectYearPage = () => {
 
                         {/* controls */}
                         {project?.design.ourWorks.controls.show && 
-                            <motion.div variants={fadeIn} className="text-container !min-h-screen">
+                            <motion.div variants={fadeIn} className="text-container !min-h-screen !h-auto">
                                 {/* left */}
                                 <motion.div variants={fadeIn} className="leftText w-full md:w-3/5">
                                     <h3 className="subHeader uppercase">Controls</h3>

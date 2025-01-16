@@ -1,6 +1,6 @@
 "use client"; // This marks the component as a client component
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion'; // Import Framer Motion
 import Navbar from './Navbar';
 import { Button } from '../ui/button';

@@ -91,6 +91,7 @@ export default function Home() {
         </motion.section>
 
         {/* Join Our Team Section */}
+        {/* see our team */}
         <motion.section className="relative bg-[var(--color-black)] w-full h-auto"
           initial="hidden"
           whileInView="visible"
@@ -104,7 +105,7 @@ export default function Home() {
             >
               <div className="flex flex-col gap-2 h-auto">
                 <h2 className="capitalize text-custom-white text-[40px] md:text-[64px] font-bold leading-[48px] md:leading-[62px]">
-                  Join Our Team
+                  See Our Team
                 </h2>
                 <p className="text-custom-white font-normal text-[16px] md:text-[18px] h-auto lg:h-[100px] my-5">
                   Unfortunately, we are no longer looking for applicants for the 2024 - 2025 school year. Recruitment typically occurs during the spring quarter so check back soon! Don&apos;t hesitate to explore our website and learn more about what we do and what positions we offer.
@@ -112,13 +113,13 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col md:flex-row gap-5">
-                <Button asChild variant='default' className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5">
+                <Button asChild variant='default' className="cursor-pointer capitalize rounded-full bg-[var(--color-orange)] hover:bg-custom-black hover:text-custom-orange transition-colors text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-5 md:px-10 py-3 md:py-5">
                   <motion.div variants={fadeInUp}>
-                    <Link href='/join'>Join Us Now</Link>
+                    <Link href='/join'>See the 2024-2025 Team</Link>
                   </motion.div>
                 </Button>
 
-                <Button asChild variant='ghost' className="capitalize rounded-full text-[var(--color-orange)] font-medium text-[16px] md:text-[18px] px-10 py-3 md:py-5">
+                <Button asChild variant='ghost' className="cursor-pointer capitalize rounded-full text-[var(--color-orange)] hover:bg-custom-orange hover:text-custom-white transition-colors font-medium text-[16px] md:text-[18px] px-10 py-3 md:py-5">
                   <motion.div variants={fadeInUp}>
                     <Link href='/contact'>Contact Us</Link>
                   </motion.div>

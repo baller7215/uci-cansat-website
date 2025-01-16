@@ -34,7 +34,7 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
         <Navbar />
         <MobileNav />
         <motion.div
-            className="cover-textContainer"
+            className="cover-textContainer z-10"
             variants={container}
             initial="hidden"
             animate="visible"

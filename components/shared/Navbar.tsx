@@ -14,7 +14,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const renderDropdownLinks = (links: LinkItem[]) => (
-        <div className="absolute hidden group-hover:block bg-custom-white/100 shadow-xl rounded-md w-48 transition ease-in-out duration-500">
+        <div className="z-20 absolute hidden group-hover:block bg-custom-white/100 shadow-xl rounded-md w-48 transition ease-in-out duration-500">
             {links.map((link: LinkItem) => (
                 <Link
                     key={link.route}
@@ -28,7 +28,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar bg-gradient-to-b from-white/100 to-white/0 backdrop-saturate-150 backdrop-blur-[1px]">
+        <div className="z-20 navbar bg-gradient-to-b from-white/100 to-white/0 backdrop-saturate-150 backdrop-blur-[1px]">
             <Link href='/' className='navbar-logo'>
                 <Image src='/assets/icons/logo.png' alt='logo' width={75} height={75} />
                 <p className="navTitle">UC Irvine</p>

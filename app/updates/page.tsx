@@ -33,7 +33,7 @@ const Updates = () => {
 
                 {/* featured news */}
                 <section className="section-container !bg-custom-black" id="overview">
-                    <div className="text-container !h-fit md:!h-screen !justify-start !flex-col text-center">
+                    <div className="text-container !h-fit md:!min-h-screen md:!h-auto !justify-start !flex-col text-center">
                         <h2 className="header">Featured News</h2>
                         <div className="relative flex flex-col lg:flex-row justify-center w-fit mx-auto">
                             {featuredNews.map((card, index) => (

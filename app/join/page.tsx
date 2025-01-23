@@ -68,7 +68,7 @@ const Join = () => {
 
                 {/* applications are closed */}
                 <section className="section-container !bg-custom-black" id="overview">
-                    <div className="text-container !flex-col !justify-center !gap-10">
+                    <div className="text-container md:!min-h-screen md:!h-auto !flex-col !justify-center !gap-10">
                         <h2 className="header leading-[60px] text-center">2024 - 2025 Applications Are Now Closed</h2>
 
                         <div className="flex flex-col md:flex-row gap-10">

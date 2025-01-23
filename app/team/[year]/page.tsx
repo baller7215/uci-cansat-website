@@ -82,7 +82,7 @@ const TeamYearPage = () => {
 
                     {team?.webDev && team?.webDev.length > 0 &&
                         // {/* Web Developer Section */}
-                        <div className="text-container !min-h-screen !flex-col !justify-center !items-center">
+                        <div className="text-container !min-h-screen !h-auto !flex-col !justify-center !items-center">
                             <h1 className="team-title">Web Development</h1>
                             <ProfilesGrid members={team?.webDev || []} />
                         </div>

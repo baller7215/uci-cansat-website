@@ -9,6 +9,7 @@ import { yearTeamProject } from "@/constants";
 import ImageTextLayout from "@/components/shared/ImageTextLayout";
 import MobileFooter from "@/components/shared/MobileFooter";
 import { motion } from 'framer-motion';
+import VisualizeModel from "@/components/shared/VisualizeModel";
 
 const fadeIn = {
     hidden: { opacity: 0, y: 50 },
@@ -213,13 +214,14 @@ const ProjectYearPage = () => {
                             </motion.div>
                             {/* right */}
                             <motion.div variants={fadeIn} className="rightImage">
-                                <Image
+                                {/* <Image
                                     src={project?.design.ourWorks.mechanical.image || ""}
                                     alt="mechanical subteam image"
                                     width={690}
                                     height={630}
                                     className=""
-                                />
+                                /> */}
+                                <VisualizeModel />
                                 <p className="description text-custom-rhino italic text-center mt-3">{project?.design.ourWorks.mechanical.caption}</p>
                             </motion.div>
                         </motion.div>

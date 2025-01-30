@@ -17,7 +17,11 @@ const VisualizeModel = ({ modelPath } : { modelPath : string }) => {
         renderer.setClearColor(0xeeeeee, 1);
 
         const container = document.getElementById('threejs-container');
-        container.appendChild(renderer.domElement);
+        if (container) {
+            container.appendChild(renderer.domElement);
+        } else {
+            console.error('Container element not found');
+        }
 
         // lighting
         const light = new THREE.DirectionalLight(0xffffff, 2);

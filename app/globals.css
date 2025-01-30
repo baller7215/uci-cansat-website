@@ -280,13 +280,21 @@ html {
 
 /* REUSABLE ELEMENTS */
 /* COVER PAGE */
-.coverPage {
-  @apply bg-cover bg-center relative min-h-screen
+/* .coverPage {
+  @apply bg-cover bg-center relative min-h-screen h-auto
 
 }
 
 .gradient {
-  @apply flex flex-col min-h-screen w-full absolute inset-0 bg-gradient-to-b from-white/30 to-transparent/90
+  @apply flex flex-col min-h-screen h-auto w-full absolute inset-0 bg-gradient-to-b from-white/30 to-transparent/90
+} */
+
+.coverPage {
+  @apply absolute inset-0 bg-cover bg-center min-h-screen;
+}
+
+.gradient {
+  @apply relative min-h-screen flex flex-col w-full bg-gradient-to-b from-white/30 to-transparent/90;
 }
 
 .cover-textContainer {

@@ -50,10 +50,10 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
   return (
     <>
       {/* background image */}
-      <div className="w-full flex coverPage" style={{ backgroundImage: `url(${background})` }}></div>
+      <div className="coverPage absolute inset-0 w-full h-full bg-cover bg-center z-0" style={{ backgroundImage: `url(${background})` }}></div>
 
       {/* gradient */}
-      <div className="gradient">
+      <div className="gradient relative flex flex-col w-full z-10">
         <Navbar />
         <MobileNav />
         <motion.div

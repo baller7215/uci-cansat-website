@@ -15638,17 +15638,17 @@
 			{
 				"sampler": 0,
 				"source": 0,
-				"name": "n__brushed.dds"
+				"name": "n__brushed.png"
 			},
 			{
 				"sampler": 1,
 				"source": 1,
-				"name": "n_PlasticPolystyrene_normalmap.dds"
+				"name": "n_PlasticPolystyrene_normalmap.png"
 			},
 			{
 				"sampler": 2,
 				"source": 2,
-				"name": "n_plasticmt11150_normalmap.dds"
+				"name": "n_plasticmt11150_normalmap.png"
 			},
 			{
 				"sampler": 3,
@@ -15658,40 +15658,40 @@
 			{
 				"sampler": 4,
 				"source": 4,
-				"name": "n_canvas_n.dds"
+				"name": "n_canvas_n.png"
 			},
 			{
 				"sampler": 5,
 				"source": 5,
-				"name": "n_burnished_n.dds"
+				"name": "n_burnished_n.png"
 			},
 			{
 				"sampler": 6,
 				"source": 6,
-				"name": "n_satinwood_n.dds"
+				"name": "n_satinwood_n.png"
 			}
 	],
 	"images": [
 			{
-				"uri": "n__brushed.dds"
+				"uri": "n__brushed.png"
 			},
 			{
-				"uri": "n_PlasticPolystyrene_normalmap.dds"
+				"uri": "n_PlasticPolystyrene_normalmap.png"
 			},
 			{
-				"uri": "n_plasticmt11150_normalmap.dds"
+				"uri": "n_plasticmt11150_normalmap.png"
 			},
 			{
 				"uri": "canvas.jpg"
 			},
 			{
-				"uri": "n_canvas_n.dds"
+				"uri": "n_canvas_n.png"
 			},
 			{
-				"uri": "n_burnished_n.dds"
+				"uri": "n_burnished_n.png"
 			},
 			{
-				"uri": "n_satinwood_n.dds"
+				"uri": "n_satinwood_n.png"
 			}
 	],
 	"samplers": [

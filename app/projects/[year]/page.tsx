@@ -214,14 +214,19 @@ const ProjectYearPage = () => {
                             </motion.div>
                             {/* right */}
                             <motion.div variants={fadeIn} className="rightImage">
-                                {/* <Image
-                                    src={project?.design.ourWorks.mechanical.image || ""}
-                                    alt="mechanical subteam image"
-                                    width={690}
-                                    height={630}
-                                    className=""
-                                /> */}
-                                <VisualizeModel />
+                                
+                                {project?.design.ourWorks.mechanical.model ?
+                                    <VisualizeModel modelPath={project?.design.ourWorks.mechanical.model} />
+                                    :
+                                    <Image
+                                        src={project?.design.ourWorks.mechanical.image || ""}
+                                        alt="mechanical subteam image"
+                                        width={690}
+                                        height={630}
+                                        className=""
+                                    />
+                                }
+                               
                                 <p className="description text-custom-rhino italic text-center mt-3">{project?.design.ourWorks.mechanical.caption}</p>
                             </motion.div>
                         </motion.div>

@@ -115,7 +115,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row gap-5">
                 <Button asChild variant='default' className="cursor-pointer capitalize rounded-full bg-[var(--color-orange)] hover:bg-custom-black hover:text-custom-orange transition-colors text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-5 md:px-10 py-3 md:py-5">
                   <motion.div variants={fadeInUp}>
-                    <Link href='/join'>See the 2024-2025 Team</Link>
+                    <Link href='/team/2024-2025'>See the 2024-2025 Team</Link>
                   </motion.div>
                 </Button>
 

@@ -93,7 +93,7 @@ const VisualizeModel = ({ modelPath } : { modelPath : string }) => {
         };
     }, []);
 
-    return <div id="threejs-container" className="w-[690px] h-[630px] m-auto"></div>;
+    return <div id="threejs-container" className="w-full md:w-[690px] h-full md:h-[630px] m-auto"></div>;
 };
 
 export default VisualizeModel;

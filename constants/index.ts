@@ -1558,13 +1558,14 @@ export const project2024_2025 = {
                 name: "Mechanical",
                 description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
                 image: "/assets/images/projects/2023-2024/mechanical.png",
-                model: "/assets/models/2024-2025/top_level.gltf",
+                model: "/assets/models/2024-2025/mechanical/top_level.gltf",
                 caption: ""
             },
             electrical: {
                 name: "Electrical",
                 description: "The electrical team was responsible for developing the avionics printed circuit board (PCB). This PCB connects various sensors and actuators, GPS, and radio to the main microcontroller (an STM32F1). After outlining requirements, conducting trade studies, and selecting components, we began designing the PCB in Altium Designer. We went through three iterations in total, reducing weight, improving RF performance, and making small mechanical improvements along the way. We hand soldered all PCBs to reduce the cost of the iterative process we followed. As part of this process, we focused on first developing a minimum viable product (achieved in revision two) so that we would be able to launch should any following revisions fail. Thankfully, all of the improvements we implemented in revision three were executed successfully, and we plan to launch with this version.",
                 image: "/assets/images/projects/2023-2024/electrical.png",
+                model: "/assets/models/2024-2025/electrical/Image_to_STL_main.gltf",
                 caption: "",
             },
             controls: {
@@ -1696,6 +1697,7 @@ export const project2023_2024 = {
                 name: "Electrical",
                 description: "The electrical team was responsible for developing the avionics printed circuit board (PCB). This PCB connects various sensors and actuators, GPS, and radio to the main microcontroller (an STM32F1). After outlining requirements, conducting trade studies, and selecting components, we began designing the PCB in Altium Designer. We went through three iterations in total, reducing weight, improving RF performance, and making small mechanical improvements along the way. We hand soldered all PCBs to reduce the cost of the iterative process we followed. As part of this process, we focused on first developing a minimum viable product (achieved in revision two) so that we would be able to launch should any following revisions fail. Thankfully, all of the improvements we implemented in revision three were executed successfully, and we plan to launch with this version.",
                 image: "/assets/images/projects/2023-2024/electrical.png",
+                model: null,
                 caption: "",
             },
             controls: {
@@ -1825,6 +1827,7 @@ export const project2021_2022 = {
                 name: "",
                 description: "",
                 image: "",
+                model: null,
                 caption: "",
             },
             controls: {
@@ -1932,6 +1935,7 @@ export const project2020_2021 = {
                 name: "Software / Electrical",
                 description: "As for the software and electrical team, all electronics components (sensors, capacitors, resistors, ect.) have been selected and the container and payload PCB designs are completed. Firmware to read the sensor data and ground station is being completed. One of the prototype payload PCB boards have been completed and is currently being tested.",
                 image: "/assets/images/projects/2020-2021/software-electrical.png",
+                model: null,
                 caption: "Figure: Payload PCB Rendering"
             },
             controls: {
@@ -2103,6 +2107,7 @@ export const project2019_2020 = {
                 name: "",
                 description: "",
                 image: "",
+                model: null,
                 caption: "",
             },
             controls: {
@@ -2310,6 +2315,7 @@ export const project2018_2019 = {
                 name: "",
                 description: "",
                 image: "",
+                model: null,
                 caption: "",
             },
             controls: {
@@ -2413,6 +2419,7 @@ export const project2017_2018 = {
                 name: "",
                 description: "",
                 image: "",
+                model: null,
                 caption: "",
             },
             controls: {

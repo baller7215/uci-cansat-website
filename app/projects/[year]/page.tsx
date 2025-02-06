@@ -216,7 +216,7 @@ const ProjectYearPage = () => {
                             <motion.div variants={fadeIn} className="rightImage">
                                 
                                 {project?.design.ourWorks.mechanical.model ?
-                                    <VisualizeModel modelPath={project?.design.ourWorks.mechanical.model} />
+                                    <VisualizeModel modelPath={project?.design.ourWorks.mechanical.model || ""} />
                                     :
                                     <Image
                                         src={project?.design.ourWorks.mechanical.image || ""}
@@ -235,13 +235,19 @@ const ProjectYearPage = () => {
                         <motion.div variants={fadeIn} className="text-container !min-h-screen !h-auto">
                             {/* left */}
                             <motion.div variants={fadeIn} className="rightImage">
-                                <Image
-                                    src={project?.design.ourWorks.electrical.image || ""}
-                                    alt="electrical subteam image"
-                                    width={690}
-                                    height={630}
-                                    className=""
-                                />
+
+                                {project?.design.ourWorks.electrical.model ?
+                                    <VisualizeModel modelPath={project?.design.ourWorks.electrical.model || ""} />
+                                    :
+                                    <Image
+                                        src={project?.design.ourWorks.electrical.image || ""}
+                                        alt="electrical subteam image"
+                                        width={690}
+                                        height={630}
+                                        className=""
+                                    />
+                                }
+
                                 <p className="description text-custom-rhino italic text-center mt-3">{project?.design.ourWorks.electrical.caption}</p>
                             </motion.div>
                             

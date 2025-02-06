@@ -153,12 +153,11 @@ html {
   @apply my-auto text-[20px] font-bold px-10;
   background-color: var(--color-gray);
   color: var(--color-lightBlack);
-  border-width: 0;
 }
 
 .navbar-join-button-hover {
-  background-color: transparent;
-  border-color: var(--color-gray);
+  /* background-color: transparent; */
+  /* border-color: var(--color-gray); */
   color: var(--color-gray);
 }
 

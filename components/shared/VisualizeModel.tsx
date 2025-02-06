@@ -68,7 +68,7 @@ const VisualizeModel = ({ modelPath }: { modelPath: string }) => {
                 model.position.sub(center);
 
                 // scale model based on screen size
-                const scaleFactor = width < 600 ? 1.0 : 1.5; // Smaller scale for mobile
+                const scaleFactor = width < 600 ? 1.0 : 1.75; // Smaller scale for mobile
                 model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
                 scene.add(model);

@@ -69,8 +69,8 @@ const Navbar = () => {
             </nav>
             {/* <NavbarDropdown /> */}
 
-            <Button asChild variant="outline" className='navbar-join-button hover:navbar-join-hover'>
-                <Link href="/join">Join Now</Link>
+            <Button asChild variant="outline" className='navbar-join-button hover:navbar-join-hover !bg-custom-rhino !text-custom-white hover:!bg-transparent hover:!text-custom-rhino border-2 !border-custom-rhino transition ease-in-out duration-500'>
+                <Link href="/about">Learn More</Link>
             </Button>
         </div>
     )

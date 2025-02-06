@@ -1558,7 +1558,7 @@ export const project2024_2025 = {
                 name: "Mechanical",
                 description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
                 image: "/assets/images/projects/2023-2024/mechanical.png",
-                model: "/assets/models/2024-2025/mechanical/top_level.gltf",
+                model: null,
                 caption: ""
             },
             electrical: {
@@ -1690,7 +1690,7 @@ export const project2023_2024 = {
                 name: "Mechanical",
                 description: "The mechanical team was responsible for designing all structural components of the CanSat, which can be described by seven different subsystems. These include: Nose Cone (also functions as the heat shield), Landing Gear, Electronics Compartment, Egg Protection, Grid Fins, Streamer Release, and Parachute Release. During the competition, each of these subsystems serve a specific function in order to comply with a certain requirement, which gives us points towards our final ranking. Our job this year was to design, fabricate, test, (and redesign) each of these subsystems until they functioned reliably and robustly, and then integrate them into a full structure.",
                 image: "/assets/images/projects/2023-2024/mechanical.png",
-                model: null,
+                model: "/assets/models/2024-2025/mechanical/top_level.gltf",
                 caption: ""
             },
             electrical: {

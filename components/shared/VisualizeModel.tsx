@@ -1,27 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-const VisualizeModel = ({ modelPath } : { modelPath : string }) => {
+const VisualizeModel = ({ modelPath }: { modelPath: string }) => {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
     useEffect(() => {
+        if (!containerRef.current) return;
+
+        // get container size
+        const container = containerRef.current;
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
         // set up scene, camera, and renderer
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xeeeeee); // light gray background to see canvas more clearly
+        scene.background = new THREE.Color(0xeeeeee); // light gray background
 
-        const camera = new THREE.PerspectiveCamera(75, 690 / 630, 0.1, 1000);
+        const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+        camera.position.z = 3; // default position
+
         const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(690, 630);
+        renderer.setSize(width, height);
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setClearColor(0xeeeeee, 1);
-
-        const container = document.getElementById('threejs-container');
-        if (container) {
-            container.appendChild(renderer.domElement);
-        } else {
-            console.error('Container element not found');
-        }
+        container.appendChild(renderer.domElement);
 
         // lighting
         const light = new THREE.DirectionalLight(0xffffff, 2);
@@ -31,7 +36,7 @@ const VisualizeModel = ({ modelPath } : { modelPath : string }) => {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
         scene.add(ambientLight);
 
-        // orbit Controls
+        // orbit controls
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
         controls.dampingFactor = 0.1;
@@ -47,12 +52,11 @@ const VisualizeModel = ({ modelPath } : { modelPath : string }) => {
         loader.setDRACOLoader(dracoLoader);
 
         loader.load(
-            // '/assets/models/top_level.gltf',
             modelPath,
             (gltf) => {
                 console.log('Model successfully loaded:', gltf);
                 const model = gltf.scene;
-                
+
                 // compute bounding box and center the model
                 const box = new THREE.Box3().setFromObject(model);
                 const size = box.getSize(new THREE.Vector3());
@@ -62,14 +66,16 @@ const VisualizeModel = ({ modelPath } : { modelPath : string }) => {
                 console.log('Model Center:', center);
 
                 model.position.sub(center);
-                
-                model.scale.set(1.5, 1.5, 1.5);
+
+                // scale model based on screen size
+                const scaleFactor = width < 600 ? 1.0 : 1.5; // Smaller scale for mobile
+                model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
                 scene.add(model);
 
-                // adjust camera position
+                // adjust camera position dynamically
                 const distance = Math.max(size.x, size.y + 0.25, size.z);
-                camera.position.set(center.x, center.y, distance);
+                camera.position.set(center.x, center.y, distance * 1.5);
                 camera.lookAt(center);
 
                 controls.target.set(center.x, center.y - 0.1, center.z);
@@ -87,13 +93,32 @@ const VisualizeModel = ({ modelPath } : { modelPath : string }) => {
         };
         animate();
 
+        // handle window resizing dynamically
+        const handleResize = () => {
+            const newWidth = container.clientWidth;
+            const newHeight = container.clientHeight;
+
+            camera.aspect = newWidth / newHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(newWidth, newHeight);
+        };
+
+        window.addEventListener('resize', handleResize);
+
         // cleanup
         return () => {
-            if (container) container.removeChild(renderer.domElement);
+            window.removeEventListener('resize', handleResize);
+            container.removeChild(renderer.domElement);
         };
-    }, []);
+    }, [modelPath]);
 
-    return <div id="threejs-container" className="w-full md:w-[690px] h-full md:h-[630px] m-auto"></div>;
+    return (
+        <div
+            ref={containerRef}
+            className="w-full h-[60vh] md:w-[690px] md:h-[630px] mx-auto max-w-full"
+        ></div>
+    );
 };
 
 export default VisualizeModel;

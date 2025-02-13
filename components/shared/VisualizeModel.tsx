@@ -51,34 +51,41 @@ const VisualizeModel = ({ modelPath }: { modelPath: string }) => {
         dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
         loader.setDRACOLoader(dracoLoader);
 
+
         loader.load(
             modelPath,
             (gltf) => {
                 console.log('Model successfully loaded:', gltf);
                 const model = gltf.scene;
 
-                // compute bounding box and center the model
+                // compute bounding box
                 const box = new THREE.Box3().setFromObject(model);
-                const size = box.getSize(new THREE.Vector3());
                 const center = box.getCenter(new THREE.Vector3());
+                const size = box.getSize(new THREE.Vector3());
 
+                console.log('Bounding Box:', box.min, box.max);
                 console.log('Model Bounding Box:', size);
                 console.log('Model Center:', center);
 
+                // instead of assuming 0, move to the calculated center
                 model.position.sub(center);
 
-                // scale model based on screen size
-                const scaleFactor = 2;
+                // adjust manually if it's still off
+                model.position.x -= size.x * 0.1;  // slightly shift left/right
+                model.position.y += size.y * 0.1;  // slightly move up/down
+
+                // scale model
+                const scaleFactor = 1.5;
                 model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
                 scene.add(model);
 
-                // adjust camera position dynamically
-                const distance = Math.max(size.x, size.y + 0.25, size.z);
-                camera.position.set(center.x, center.y, distance * 1.5);
-                camera.lookAt(center);
+                // adjust camera
+                const distance = Math.max(size.x, size.y, size.z) * 1.5;
+                camera.position.set(0, size.y * 0.5, distance);
+                camera.lookAt(0, 0, 0);
 
-                controls.target.set(center.x, center.y - 0.1, center.z);
+                controls.target.set(0, 0, 0);
                 controls.update();
             },
             undefined,

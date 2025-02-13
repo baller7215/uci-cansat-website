@@ -2506,9 +2506,9 @@ export const sponsors = [
         image: "/assets/images/sponsors/nxbeam.png",
     },
     {
-        label: "",
-        route: "",
-        image: ""
+        label: "UROP",
+        route: "https://urop.uci.edu/",
+        image: "/assets/images/sponsors/urop.jpg",
     },
     {
         label: "",

@@ -170,12 +170,12 @@ const Sponsors = () => {
 
                 {/* thanks to sponsors */}
                 <motion.section
-                    className="section-container !h-auto"
+                    className="section-container !min-h-fit !h-fit"
                     initial="hidden"
                     whileInView="visible"
                     variants={staggerContainer}
                 >
-                    <motion.div className="text-container !flex-col gap-10 !h-auto px-10 !md:px-80 text-center" variants={fadeIn}>
+                    <motion.div className="text-container !flex-col gap-10 !h-auto !min-h-fit px-10 !md:px-80 text-center" variants={fadeIn}>
                         <div className="flex flex-row gap-20 justify-center text-3xl">
                             <FaCode className="text-custom-rhino" />
                             <FaHeart className="text-[#E93A7D]" />

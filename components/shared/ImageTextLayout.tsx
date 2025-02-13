@@ -32,7 +32,7 @@ const ImageTextLayout = ({ title, description, image, link }: ImageTextLayoutPro
         >
             <motion.div variants={fadeIn} className="imageLayout-text-container">
                 {/* left */}
-                <motion.div variants={fadeIn} className="w-full lg:w-2/5 xl:w-2/5 h-full flex justify-center">
+                <motion.div variants={fadeIn} className="w-full lg:w-2/5 xl:w-2/5 h-full flex my-auto justify-center">
                     {image ? 
                         <Image
                             src={image}

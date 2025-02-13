@@ -51,7 +51,6 @@ const VisualizeModel = ({ modelPath }: { modelPath: string }) => {
         dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
         loader.setDRACOLoader(dracoLoader);
 
-
         loader.load(
             modelPath,
             (gltf) => {

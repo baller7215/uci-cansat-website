@@ -53,7 +53,13 @@ const MobileNav = () => {
     <div className="mobileNav">
       <div className="w-full flex justify-between">
         <Link href="/">
-          <p className="mobile-navTitle hoverTransition">UC Irvine</p>
+          <motion.p
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            className="mobile-navTitle"
+          >
+            UCI CanSat
+          </motion.p>
         </Link>
 
         <button onClick={toggleMenu} className="mobile-icon hoverTransition">
@@ -173,7 +179,6 @@ const MobileNav = () => {
                         <Link href={link.route}>{link.label}</Link>
                       </motion.li>
                     )}
-
                   </>
                 );
               })}

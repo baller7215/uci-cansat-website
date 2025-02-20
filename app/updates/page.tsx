@@ -35,7 +35,10 @@ const Updates = () => {
         />
 
         {/* featured news */}
-        <section className="section-container !h-auto min-h-[100vh] md:min-h-screen !bg-custom-black" id="overview">
+        <section
+          className="section-container !h-auto min-h-[100vh] md:min-h-screen !bg-custom-black"
+          id="overview"
+        >
           <div className="text-container !my-auto !h-auto !min-h-[100vh] md:!min-h-screen !justify-start !flex-col text-center">
             <h2 className="header">Featured News</h2>
             <div className="relative flex flex-col gap-8 lg:flex-row justify-center w-fit mx-auto">
@@ -56,10 +59,7 @@ const Updates = () => {
                 </div>
               ))}
               {featuredNews.map((card, index) => (
-                <div
-                  key={index}
-                  className={`flex md:hidden`}
-                >
+                <div key={index} className={`flex md:hidden`}>
                   <CardNews
                     title={card.title}
                     subtitle={card.subtitle}

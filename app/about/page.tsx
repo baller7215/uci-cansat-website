@@ -298,7 +298,6 @@ const About = () => {
             {/* right timeline */}
             <div className="timeline-container w-fit md:w-1/2 ">
               {competitionTimeline.map((event, index) => (
-                // <>
                 <motion.div
                   className="timeline-event"
                   key={index}
@@ -307,7 +306,6 @@ const About = () => {
                   <span className="timeline-date tableSubtitle">
                     {event.date}
                   </span>
-                  {/* <div className='timeline-marker image-container'></div> */}
 
                   {/* Wrapper for marker and line */}
                   <div className="marker-line-wrapper relative">
@@ -315,10 +313,7 @@ const About = () => {
                     {/* Add the line that will pass through */}
                     {index === competitionTimeline.length - 1 ? (
                       // arrow for last timeline marker
-                      <>
-                        {/* <div className="timeline-line hidden md:flex"></div> */}
-                        {/* <div className="timeline-arrow hidden md:flex"></div> */}
-                      </>
+                      <></>
                     ) : (
                       <div className="timeline-line"></div>
                     )}
@@ -337,15 +332,9 @@ const About = () => {
 
         {/* footer */}
         <Footer />
-        {/* <motion.section initial="hidden" whileInView="visible" variants={fadeIn}>
-          <Footer />
-        </motion.section> */}
 
         {/* mobile footer */}
         <MobileFooter />
-        {/* <motion.section initial="hidden" whileInView="visible" variants={fadeIn}>
-          <MobileFooter />
-        </motion.section> */}
       </main>
     </>
   );

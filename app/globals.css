@@ -489,8 +489,11 @@ html {
 
 /* team page */
 .team-background {
-  @apply !bg-transparent bg-fixed bg-cover bg-center min-h-screen my-auto;
+  @apply !bg-transparent bg-fixed bg-cover bg-center bg-no-repeat min-h-screen my-auto;
   background-image: url("../public/assets/images/background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   /* background-image: url('../public/assets/images/competiton-photos/launch3.jpg'); */
 }
 

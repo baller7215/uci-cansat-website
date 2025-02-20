@@ -30,7 +30,6 @@ const TeamYearPage = () => {
 
         {/* profiles */}
         <section className="section-container team-background" id="overview">
-          {/** @todo: center the members so that if the number of members in the group is not divisble by three, it should be centered */}
           {team?.advisors && team?.advisors.length > 0 && (
             // {/* Advisors Section */}
             <div className="text-container my-20 md:my-0 md:min-h-screen !h-auto !flex-col !justify-center !items-center">

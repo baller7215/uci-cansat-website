@@ -2498,12 +2498,12 @@ export const sponsors = [
     {
         label: "Blue Origin",
         route: "https://www.blueorigin.com/",
-        image: "/assets/images/sponsors/blueOrigin.png",
+        image: "/assets/images/sponsors/blueOrigin.jpg",
     },
     {
         label: "Nxbeam",
         route: "https://www.nxbeam.com/",
-        image: "/assets/images/sponsors/nxbeam.png",
+        image: "/assets/images/sponsors/nxBeam.png",
     },
     {
         label: "UROP",

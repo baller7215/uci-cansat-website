@@ -29,7 +29,7 @@ const TeamYearPage = () => {
         />
 
         {/* profiles */}
-        <section className="section-container team-background" id="overview">
+        <section className="section-container team-background !overflow-hidden" id="overview">
           {team?.advisors && team?.advisors.length > 0 && (
             // {/* Advisors Section */}
             <div className="text-container my-20 md:my-0 md:min-h-screen !h-auto !flex-col !justify-center !items-center">

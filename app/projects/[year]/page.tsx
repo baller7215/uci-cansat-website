@@ -723,7 +723,7 @@ const ProjectYearPage = () => {
         )}
 
         {/* posters */}
-        {project?.posters.fall && project?.posters.winter && (
+        {project?.posters.fall || project?.posters.winter && (
           <motion.section
             className="section-container min-h-screen !bg-custom-white my-auto"
             initial="hidden"
@@ -739,32 +739,36 @@ const ProjectYearPage = () => {
                 variants={fadeIn}
                 className="flex flex-col md:flex-row justify-between gap-5"
               >
-                <motion.div
-                  variants={fadeIn}
-                  className="flex flex-col gap-2 w-full md:w-1/2"
-                >
-                  <h3 className="subHeader uppercase">Fall Design Review</h3>
-                  <Image
-                    src={project?.posters?.fall}
-                    width={500}
-                    height={600}
-                    alt="fall review poster"
-                    className="w-full"
-                  />
-                </motion.div>
-                <motion.div
-                  variants={fadeIn}
-                  className="flex flex-col gap-2 w-full md:w-1/2"
-                >
-                  <h3 className="subHeader uppercase">Winter Design Review</h3>
-                  <Image
-                    src={project?.posters?.winter}
-                    width={500}
-                    height={600}
-                    alt="winter review poster"
-                    className="w-full"
-                  />
-                </motion.div>
+                {project?.posters?.fall && (
+                  <motion.div
+                    variants={fadeIn}
+                    className="flex flex-col gap-2 w-full md:w-1/2"
+                  >
+                    <h3 className="subHeader uppercase">Fall Design Review</h3>
+                    <Image
+                      src={project?.posters?.fall}
+                      width={500}
+                      height={600}
+                      alt="fall review poster"
+                      className="w-full"
+                    />
+                  </motion.div>
+                )}
+                {project?.posters?.winter && (
+                  <motion.div
+                    variants={fadeIn}
+                    className="flex flex-col gap-2 w-full md:w-1/2"
+                  >
+                    <h3 className="subHeader uppercase">Winter Design Review</h3>
+                    <Image
+                      src={project?.posters?.winter}
+                      width={500}
+                      height={600}
+                      alt="winter review poster"
+                      className="w-full"
+                    />
+                  </motion.div>
+                )}
                 {project?.posters?.spring && (
                   <motion.div
                     variants={fadeIn}

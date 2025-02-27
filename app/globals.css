@@ -488,14 +488,34 @@ html {
 }
 
 /* team page */
-.team-background {
+/* .team-background {
   @apply !bg-transparent bg-fixed bg-cover bg-center bg-no-repeat min-h-screen my-auto;
   background-image: url("../public/assets/images/background.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  /* background-image: url('../public/assets/images/competiton-photos/launch3.jpg'); */
+} */
+.team-background {
+  @apply !bg-transparent !bg-scroll md:!bg-fixed bg-cover bg-center bg-no-repeat min-h-screen my-auto;
+  background-image: url("/assets/images/background.jpg");
 }
+
+/* Ensure `fixed` is applied only on larger screens */
+/* @media (min-width: 769px) {
+  .team-background {
+    background-attachment: scroll;
+  }
+} */
+
+/* Ensure mobile correctly uses `scroll` */
+/* @media (max-width: 768px) {
+  .team-background {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+} */
+
 
 .team-title {
   @apply text-custom-whiteIce font-bold text-5xl w-full mx-auto text-center;

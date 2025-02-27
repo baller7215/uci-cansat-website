@@ -1649,7 +1649,7 @@ export const project2024_2025 = {
   teamGoals: [],
   posters: {
     fall: "",
-    winter: "",
+    winter: "/assets/images/projects/2024-2025/UCI CanSat Design Review Poster 2025.pptx.png",
     spring: "",
   },
 };

@@ -2946,7 +2946,7 @@ export const softwarePathway = {
     year: "2024",
     role: "Software Lead",
     quote: "CanSat is an invaluable experience that broadened my technical skills significantly. From mastering new technologies through designing the satellite's software to honing leadership abilities through team coordination and project management, every aspect of the endeavor pushed me to grow. Most importantly, tackling real-world problems within the project context not only deepened my understanding of engineering principles but also made me apply and deploy my technical skills effectively, preparing me for future challenges in the field.",
-    image: "/assets/images/team/2023-2024/husain.jpg",
+    image: "/assets/images/team/2023-2024/husain.jpeg",
   },
 };
 

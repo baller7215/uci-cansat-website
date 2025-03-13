@@ -91,7 +91,7 @@ declare type ProfileCardProps = {
 // testimonial component props
 declare type TestimonialProps = {
     name: string;
-    year: string;
+    // year: string;
     role: string;
     quote: string;
     image?: string;

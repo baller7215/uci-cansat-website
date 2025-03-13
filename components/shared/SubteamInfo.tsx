@@ -2,7 +2,7 @@ import React from 'react'
 
 const SubteamInfo = ({ subteam, responsibilities, requirements}: SubteamInfoProps) => {
     return (
-        <div className='subteam-text-container w-full md:w-3/4 justify-center'>
+        <div className='subteam-text-container w-full md:w-3/4 justify-center my-auto'>
             <h2 className='header !m-0 capitalize'>{subteam} Pathway</h2>
             <div className='flex flex-col gap-1'>
                 <h3 className='tableTitle uppercase'>Responsibilities</h3>

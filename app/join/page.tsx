@@ -149,7 +149,7 @@ const Join = () => {
                 {/* mechanical pathway */}
                 <section className="section-container">
                     <div className="text-container p-5 md:!p-28 !gap-16">
-                        <Testimonial name={mechanicalPathway.testimonial.name} year={mechanicalPathway.testimonial.year} role={mechanicalPathway.testimonial.role} quote={mechanicalPathway.testimonial.quote} />
+                        <Testimonial name={mechanicalPathway.testimonial.name} role={mechanicalPathway.testimonial.role} quote={mechanicalPathway.testimonial.quote} image={mechanicalPathway.testimonial.image} />
                         <SubteamInfo subteam="Mechanical" responsibilities={mechanicalPathway.responsibilities} requirements={mechanicalPathway.requirements} />
                     </div>
                 </section>
@@ -158,14 +158,14 @@ const Join = () => {
                 <section className="section-container">
                     <div className="text-container p-5 md:!p-28 !gap-16">
                         <SubteamInfo subteam="Electrical" responsibilities={electricalPathway.responsibilities} requirements={electricalPathway.requirements} />
-                        <Testimonial name={electricalPathway.testimonial.name} year={electricalPathway.testimonial.year} role={electricalPathway.testimonial.role} quote={electricalPathway.testimonial.quote} />
+                        <Testimonial name={electricalPathway.testimonial.name} role={electricalPathway.testimonial.role} quote={electricalPathway.testimonial.quote} image={electricalPathway.testimonial.image} />
                     </div>
                 </section>
 
                 {/* software pathway */}
                 <section className="section-container">
                     <div className="text-container p-5 md:!p-28 !gap-16">
-                        <Testimonial name={softwarePathway.testimonial.name} year={softwarePathway.testimonial.year} role={softwarePathway.testimonial.role} quote={softwarePathway.testimonial.quote} />
+                        <Testimonial name={softwarePathway.testimonial.name} role={softwarePathway.testimonial.role} quote={softwarePathway.testimonial.quote} image={softwarePathway.testimonial.image} />
                         <SubteamInfo subteam="Embedded Software" responsibilities={softwarePathway.responsibilities} requirements={softwarePathway.requirements} />
                     </div>
                 </section>
@@ -174,14 +174,14 @@ const Join = () => {
                 <section className="section-container">
                     <div className="text-container p-5 md:!p-28 !gap-16">
                         <SubteamInfo subteam="Operations" responsibilities={operationsPathway.responsibilities} requirements={operationsPathway.requirements} />
-                        <Testimonial name={operationsPathway.testimonial.name} year={operationsPathway.testimonial.year} role={operationsPathway.testimonial.role} quote={operationsPathway.testimonial.quote} />
+                        <Testimonial name={operationsPathway.testimonial.name} role={operationsPathway.testimonial.role} quote={operationsPathway.testimonial.quote} image={operationsPathway.testimonial.image} />
                     </div>
                 </section>
 
                 {/* web development pathway */}
                 <section className="section-container">
                     <div className="text-container p-5 md:!p-28 !gap-16">
-                        <Testimonial name={webDevPathway.testimonial.name} year={webDevPathway.testimonial.year} role={webDevPathway.testimonial.role} quote={webDevPathway.testimonial.quote} />
+                        <Testimonial name={webDevPathway.testimonial.name}role={webDevPathway.testimonial.role} quote={webDevPathway.testimonial.quote} image={operationsPathway.testimonial.image} />
                         <SubteamInfo subteam="Web Development" responsibilities={webDevPathway.responsibilities} requirements={webDevPathway.requirements} />
                     </div>
                 </section>

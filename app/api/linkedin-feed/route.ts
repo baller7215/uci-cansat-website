@@ -3,6 +3,14 @@
 import axios from 'axios';
 import { NextResponse } from 'next/server';
 
+type Post = {
+  content:
+    {
+      media?: { id: string },
+      multiImage?: { images: { id: string }[] }
+    }
+};
+
 const BASE_URL = process.env.LINKEDIN_BASE_URL;
 const ORGANIZATION_URN = process.env.LINKEDIN_ORG_URN;
 const LINKEDIN_API_VERSION = process.env.LINKEDIN_API_VERSION;
@@ -31,29 +39,30 @@ export async function GET() {
 
   // Step 2: Fetch media assets for each post
   const enrichedPosts = await Promise.all(
-    postsData.elements.map(async (post: any) => {
-      const mediaId = post?.content?.media?.id || post?.content?.multiImage?.images?.[0]?.id;
+    postsData.elements.map(async (post: Post) => {
+      const mediaUrn = post?.content?.media?.id
+              || post?.content?.multiImage?.images?.[0]?.id;
+      if (!mediaUrn) return { ...post, imageUrl: null };
 
-      if (!mediaId) return { ...post, imageUrl: null };
-
-      try {
-        console.log('mediaId:', mediaId);
-        await axios.get(`https://api.linkedin.com/v2/assets/${mediaId.split(':').pop()}`, {
+      // encode the URN so the colons etc. are escaped
+      const encodedImageUrn = encodeURIComponent(mediaUrn);
+      // GET the image metadata
+      const { data: imageInfo } = await axios.get(
+        `${BASE_URL}/rest/images/${encodedImageUrn}`,
+        {
           headers: {
             Authorization: `Bearer ${BEARER_TOKEN}`,
+            'LinkedIn-Version': LINKEDIN_API_VERSION,
+            'X-Restli-Protocol-Version': '2.0.0',
           },
-        });
-
-        const imageUrl = `https://media.licdn.com/dms/image/${mediaId.split(':')[2]}/${mediaId.split(':')[3]}/feedshare-image`;
-        return { ...post, imageUrl };
-      } catch (assetError) {
-        console.error('Error fetching asset:', assetError);
-        return { ...post, imageUrl: null };
-      }
+        }
+      );
+      // get the download URL from the image metadata
+      return { ...post, imageUrl: imageInfo.downloadUrl };
     })
   );
 
-  console.log('enrichedPosts:', enrichedPosts);
+  // console.log('enrichedPosts:', enrichedPosts);
 
   return NextResponse.json({ posts: enrichedPosts });
 }

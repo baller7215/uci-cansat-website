@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/shared/Footer";
 import { featuredNews, updates } from "@/constants";
 import CardNews from "@/components/shared/CardNews";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import CollectionNews from "@/components/shared/CollectionNews";
 import MobileFooter from "@/components/shared/MobileFooter";
+import { LinkedInPost } from "@/components/shared/LinkedInCard";
+import LinkedInFeed from "@/components/shared/LinkedInFeed";
 
 const Updates = () => {
   const [showAll, setShowAll] = useState(false); // tracks state to show all teams or not
@@ -23,6 +25,21 @@ const Updates = () => {
       setLoading(false);
     }, 1000);
   };
+
+  const [posts, setPosts] = useState<LinkedInPost[]>([]);
+  const [loadingPosts, setLoadingPosts] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/linkedin-feed')
+      .then(res => res.json())
+      .then(data => {
+        setPosts(data.posts || []);
+      })
+      .catch(console.error)
+      .finally(() => setLoadingPosts(false));
+  }, []);
+
+  if (loadingPosts) return <p>Loading feed…</p>;
 
   return (
     <>
@@ -106,6 +123,13 @@ const Updates = () => {
                 cards={showAll ? updates.slice(0) : updates.slice(0, 4)}
               />
             )}
+          </div>
+        </section>
+
+        <section className="section-container !h-auto" id="linkedin">
+          <div className="text-container !flex-col !h-auto">
+            <h1 className="header capitalize">Latest from LinkedIn</h1>
+            <LinkedInFeed posts={posts} />
           </div>
         </section>
 

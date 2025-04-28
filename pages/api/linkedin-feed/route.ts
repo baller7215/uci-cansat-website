@@ -1,4 +1,6 @@
 // app/api/linkedin-feed/route.ts
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 import axios from 'axios';
 import { NextResponse } from 'next/server';
@@ -28,43 +30,51 @@ export async function GET() {
   const encodedUrn = encodeURIComponent(authorUrn);
   const url = `${BASE_URL}/rest/posts?author=${encodedUrn}&q=author&count=10&sortBy=LAST_MODIFIED`;
 
-  const { data: postsData } = await axios.get(url, {
-    headers: {
-      Authorization: `Bearer ${BEARER_TOKEN}`,
-      'LinkedIn-Version': LINKEDIN_API_VERSION,
-      'X-Restli-Protocol-Version': '2.0.0',
-      'X-RestLi-Method': 'FINDER',
-    },
-  });
+  try {
 
-  // Step 2: Fetch media assets for each post
-  const enrichedPosts = await Promise.all(
-    postsData.elements.map(async (post: Post) => {
-      const mediaUrn = post?.content?.media?.id
-              || post?.content?.multiImage?.images?.[0]?.id;
-      if (!mediaUrn) return { ...post, imageUrl: null };
+    const { data: postsData } = await axios.get(url, {
+      headers: {
+        Authorization: `Bearer ${BEARER_TOKEN}`,
+        'LinkedIn-Version': LINKEDIN_API_VERSION,
+        'X-Restli-Protocol-Version': '2.0.0',
+        'X-RestLi-Method': 'FINDER',
+      },
+    });
 
-      // encode the URN so the colons etc. are escaped
-      const encodedImageUrn = encodeURIComponent(mediaUrn);
-      // GET the image metadata
-      const { data: imageInfo } = await axios.get(
-        `${BASE_URL}/rest/images/${encodedImageUrn}`,
-        {
-          headers: {
-            Authorization: `Bearer ${BEARER_TOKEN}`,
-            'LinkedIn-Version': LINKEDIN_API_VERSION,
-            'X-Restli-Protocol-Version': '2.0.0',
-          },
-        }
-      );
-      // get the download URL from the image metadata
-      return { ...post, imageUrl: imageInfo.downloadUrl };
-    })
-  );
+    // Step 2: Fetch media assets for each post
+    const enrichedPosts = await Promise.all(
+      postsData.elements.map(async (post: Post) => {
+        const mediaUrn = post?.content?.media?.id
+                || post?.content?.multiImage?.images?.[0]?.id;
+        if (!mediaUrn) return { ...post, imageUrl: null };
 
-  // console.log('enrichedPosts:', enrichedPosts);
+        // encode the URN so the colons etc. are escaped
+        const encodedImageUrn = encodeURIComponent(mediaUrn);
+        // GET the image metadata
+        const { data: imageInfo } = await axios.get(
+          `${BASE_URL}/rest/images/${encodedImageUrn}`,
+          {
+            headers: {
+              Authorization: `Bearer ${BEARER_TOKEN}`,
+              'LinkedIn-Version': LINKEDIN_API_VERSION,
+              'X-Restli-Protocol-Version': '2.0.0',
+            },
+          }
+        );
+        // get the download URL from the image metadata
+        return { ...post, imageUrl: imageInfo.downloadUrl };
+      })
+    );
 
-  return NextResponse.json({ posts: enrichedPosts });
+    return NextResponse.json({ posts: enrichedPosts });
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error('Error fetching LinkedIn posts:', err.message);
+    } else {
+      console.error('Error fetching LinkedIn posts:', err);
+    }
+    return NextResponse.json({ posts: [] }, { status: 200 });
+  }
 }
 
 

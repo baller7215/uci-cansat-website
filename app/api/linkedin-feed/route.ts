@@ -17,10 +17,10 @@ const LINKEDIN_API_VERSION = process.env.LINKEDIN_API_VERSION;
 const BEARER_TOKEN = process.env.LINKEDIN_ACCESS_TOKEN!;
 
 export async function GET() {
-  console.log('BASE_URL', BASE_URL);
-  console.log('ORGANIZATION_URN', ORGANIZATION_URN);
-  console.log('LINKEDIN_API_VERSION', LINKEDIN_API_VERSION);
-  console.log('BEARER_TOKEN', BEARER_TOKEN);
+  // console.log('BASE_URL', BASE_URL);
+  // console.log('ORGANIZATION_URN', ORGANIZATION_URN);
+  // console.log('LINKEDIN_API_VERSION', LINKEDIN_API_VERSION);
+  // console.log('BEARER_TOKEN', BEARER_TOKEN);
 
 
   // step 1: fetch posts
@@ -69,6 +69,7 @@ export async function GET() {
 
 
 
+// /** @TODO TEST BATCH REQUEST PLS */
 // // TEST BATCH REQUEST
 // // app/api/linkedin-feed/route.ts
 

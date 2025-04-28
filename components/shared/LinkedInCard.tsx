@@ -1,11 +1,11 @@
 // components/LinkedInCard.tsx
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export type LinkedInPost = {
   id: string;
-  commentary: string;
+  commentary?: string;
   imageUrl?: string | null;
 };
 
@@ -15,34 +15,51 @@ type Props = {
 
 export default function LinkedInCard({ post }: Props) {
   const { id, commentary, imageUrl } = post;
+  const hasText = commentary && commentary.trim().length > 0;
+  const hasMedia = Boolean(imageUrl);
+
   // Turn the URN into a LinkedIn web URL
-  const postUrl = `https://www.linkedin.com/feed/update/${encodeURIComponent(id)}`;
+  const postUrl = `https://www.linkedin.com/feed/update/${encodeURIComponent(
+    id
+  )}`;
+
+  console.log("LinkedInCard post:", post);
 
   return (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
-      {imageUrl && (
+    <div className="bg-white rounded-2xl shadow-md flex flex-col max-w-[500px] !h-fit my-auto">
+      {hasMedia && (
         <Link href={postUrl} target="_blank" rel="noopener noreferrer">
-          <div className="relative h-48 w-full">
+          <div className="relative h-[350px] sm:h-[400px] md:h-[500px] w-full">
             <Image
-              src={imageUrl}
+              src={imageUrl!}
               alt="LinkedIn post image"
               fill
-              style={{ objectFit: 'cover' }}
+              className="object-cover rounded-t-2xl hover:opacity-80 transition-opacity duration-300"
+              //   style={{ objectFit: 'cover' }}
               sizes="(max-width: 640px) 100vw, 33vw"
             />
           </div>
         </Link>
       )}
       <div className="p-4 flex-1 flex flex-col">
-        <p className="text-gray-800 mb-4 line-clamp-3">
-          {commentary || '—'}
-        </p>
+        {hasText ? (
+            <p className="text-custom-rhino mb-4 line-clamp-5">
+                {commentary}
+            </p>
+            ) : (
+            <p className="text-custom-rhino mb-4 line-clamp-5">
+                No caption available.
+            </p>
+        )}
+        {/* <p className="text-custom-rhino mb-4 line-clamp-5">
+          {commentary || "—"}
+        </p> */}
         <div className="mt-auto">
           <Link
             href={postUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline text-sm font-medium"
+            className="text-custom-easternBlue hover:underline text-sm font-medium"
           >
             View on LinkedIn →
           </Link>

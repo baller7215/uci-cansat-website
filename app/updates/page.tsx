@@ -5,12 +5,13 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/shared/Footer";
 import { featuredNews, updates } from "@/constants";
 import CardNews from "@/components/shared/CardNews";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import CollectionNews from "@/components/shared/CollectionNews";
 import MobileFooter from "@/components/shared/MobileFooter";
-import { LinkedInPost } from "@/components/shared/LinkedInCard";
-import LinkedInFeed from "@/components/shared/LinkedInFeed";
+import UpdatesLinkedIn from "./UpdatesLinkedIn";
+
+
 
 const Updates = () => {
   const [showAll, setShowAll] = useState(false); // tracks state to show all teams or not
@@ -25,21 +26,6 @@ const Updates = () => {
       setLoading(false);
     }, 1000);
   };
-
-  const [posts, setPosts] = useState<LinkedInPost[]>([]);
-  const [loadingPosts, setLoadingPosts] = useState(true);
-
-  useEffect(() => {
-    fetch('/api/linkedin-feed')
-      .then(res => res.json())
-      .then(data => {
-        setPosts(data.posts || []);
-      })
-      .catch(console.error)
-      .finally(() => setLoadingPosts(false));
-  }, []);
-
-  if (loadingPosts) return <p>Loading feed…</p>;
 
   return (
     <>
@@ -114,7 +100,6 @@ const Updates = () => {
                   >
                     <Skeleton className="w-[300px] md:w-[500px] md:h-[300px] bg-custom-gray flex flex-col mx-auto rounded-md shadow-2xl" />
                   </div>
-                  // <Skeleton key={index} className="w-[300px] h-[200px] md:w-[450px] md:h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
                 ))}
               </div>
             ) : (
@@ -129,7 +114,7 @@ const Updates = () => {
         <section className="section-container !h-auto" id="linkedin">
           <div className="text-container !flex-col !h-auto">
             <h1 className="header capitalize">Latest from LinkedIn</h1>
-            <LinkedInFeed posts={posts} />
+            <UpdatesLinkedIn />
           </div>
         </section>
 

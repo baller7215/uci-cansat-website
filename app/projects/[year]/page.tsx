@@ -27,8 +27,11 @@ const staggerContainer = {
 };
 
 const ProjectYearPage = () => {
-  const params = useParams(); // Get dynamic parameters in the App Router
-  const { year } = params;
+  const params = useParams();
+  if (!params || typeof params.year !== 'string') {
+    return <p>Invalid year</p>;
+  }
+  const year = params.year;  // now TS knows this is a string
 
   const yearObject = Object.values(yearTeamProject).find(
     (obj) => obj.id === year

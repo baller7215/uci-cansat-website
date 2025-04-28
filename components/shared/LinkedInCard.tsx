@@ -29,7 +29,7 @@ export default function LinkedInCard({ post }: Props) {
     <div className="bg-white rounded-2xl shadow-md flex flex-col max-w-[500px] !h-fit my-auto">
       {hasMedia && (
         <Link href={postUrl} target="_blank" rel="noopener noreferrer">
-          <div className="relative h-[350px] sm:h-[400px] md:h-[500px] w-full">
+          <div className="relative aspect-square w-full">
             <Image
               src={imageUrl!}
               alt="LinkedIn post image"

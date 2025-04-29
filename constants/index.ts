@@ -2724,6 +2724,12 @@ export const updates = [
 ];
 
 // join us with team / subteam information
+export const recruitmentJoinUs = [
+  "Placed 4th internationally and 2nd domestically in last year’s competition",
+  "Received Dean's Choice Award in 2022 and 2025",
+  "Secured sponsorships and mentorships from large companies like Blue Origin"
+]
+
 export const internshipInfo = {
   responsibilities: [
     {

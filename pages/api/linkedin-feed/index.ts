@@ -1,4 +1,5 @@
 // pages/api/linkedin-feed/index.ts
+
 // export const dynamic = 'force-dynamic';
 // export const runtime = 'nodejs';
 
@@ -122,7 +123,7 @@ export default async function handler(
     // if (multi?.length) return [multi[0].id];
 
     const multi = post.content?.multiImage?.images?.[0]?.id;
-    if (multi?.startsWith('urn:li:image:')) return [multi];
+    if (multi?.startsWith("urn:li:image:")) return [multi];
 
     return []; // no image on this post
   });
@@ -164,6 +165,15 @@ export default async function handler(
     });
 
     console.log("enriched", enriched);
+
+    // tell Vercel’s CDN (and any browser) to cache this endpoint for 1 hour
+    res.setHeader(
+      "Cache-Control",
+      // public = anyone can cache
+      // s-maxage = how long the CDN holds on to it
+      // stale-while-revalidate = let stale responses serve while we refresh in background
+      "public, s-maxage=216000, stale-while-revalidate=59"
+    );
 
     return res.status(200).json({ posts: enriched });
   }

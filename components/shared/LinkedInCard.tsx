@@ -7,6 +7,7 @@ export type LinkedInPost = {
   id: string;
   commentary?: string;
   imageUrl?: string | null;
+  videoUrl?: string | null;
 };
 
 type Props = {
@@ -14,9 +15,10 @@ type Props = {
 };
 
 export default function LinkedInCard({ post }: Props) {
-  const { id, commentary, imageUrl } = post;
+  const { id, commentary, imageUrl, videoUrl } = post;
   const hasText = commentary && commentary.trim().length > 0;
-  const hasMedia = Boolean(imageUrl);
+  const hasImage = Boolean(imageUrl);
+  const hasVideo = Boolean(videoUrl);
 
   // Turn the URN into a LinkedIn web URL
   const postUrl = `https://www.linkedin.com/feed/update/${encodeURIComponent(
@@ -27,7 +29,17 @@ export default function LinkedInCard({ post }: Props) {
 
   return (
     <div className="bg-white rounded-2xl shadow-md flex flex-col max-w-[500px] !h-fit my-auto">
-      {hasMedia && (
+      {hasVideo ? (
+        <Link href={videoUrl!} target="_blank" rel="noopener noreferrer">
+          <div className="relative aspect-video w-full rounded-t-2xl overflow-hidden">
+            <video
+              src={videoUrl!}
+              controls
+              className="w-full h-full object-cover hover:opacity-80 transition-opacity duration-300"
+            />
+          </div>
+        </Link>
+      ) : hasImage && (
         <Link href={postUrl} target="_blank" rel="noopener noreferrer">
           <div className="relative aspect-square w-full">
             <Image

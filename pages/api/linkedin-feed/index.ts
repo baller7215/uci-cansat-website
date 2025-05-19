@@ -15,10 +15,10 @@ const ORGANIZATION_URN = process.env.LINKEDIN_ORG_URN;
 const LINKEDIN_API_VERSION = process.env.LINKEDIN_API_VERSION;
 const BEARER_TOKEN = process.env.LINKEDIN_ACCESS_TOKEN!;
 
-// cache globals
-let cachedData: { posts: Post[] } | null = null;
-let lastFetched: number | null = null;
-const CACHE_TTL = 1000 * 60 * 60 * 24; // 24 hours in milliseconds
+// // cache globals
+// let cachedData: { posts: Post[] } | null = null;
+// let lastFetched: number | null = null;
+// const CACHE_TTL = 1000 * 60 * 60 * 24; // 24 hours in milliseconds
 
 // batch request
 
@@ -26,18 +26,18 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<{ posts: Post[] }>
 ) {
-  // check if cache is valid
-  const now = Date.now();
-  if (cachedData && lastFetched && now - lastFetched < CACHE_TTL) {
-    console.log("🔁 Serving cached LinkedIn data");
-    res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=86400, stale-while-revalidate=59"
-    );
-    return res.status(200).json(cachedData);
-  }
+  // // check if cache is valid
+  // const now = Date.now();
+  // if (cachedData && lastFetched && now - lastFetched < CACHE_TTL) {
+  //   console.log("🔁 Serving cached LinkedIn data");
+  //   res.setHeader(
+  //     "Cache-Control",
+  //     "public, s-maxage=86400, stale-while-revalidate=59"
+  //   );
+  //   return res.status(200).json(cachedData);
+  // }
 
-  console.log("🌐 Fetching fresh LinkedIn data");
+  // console.log("🌐 Fetching fresh LinkedIn data");
 
   // 1) fetch the 10 most recent posts by your org
   const authorUrn = `urn:li:organization:${ORGANIZATION_URN}`;
@@ -161,12 +161,12 @@ export default async function handler(
   });
 
 
-  cachedData = { posts: enriched };
-  lastFetched = Date.now();
+  // cachedData = { posts: enriched };
+  // lastFetched = Date.now();
 
   res.setHeader(
     "Cache-Control",
     "public, s-maxage=86400, stale-while-revalidate=59"
   );
-  return res.status(200).json(cachedData);
+  return res.status(200).json({ posts: enriched });
 }

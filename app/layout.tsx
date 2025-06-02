@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Providers } from "./providers";
 
 
 // TODO: RUN WHEN CACHING HAS ERRORS
@@ -40,11 +41,13 @@ export default function RootLayout({
         <main className='root'>
           {/* <Navbar /> */}
           <div className='root-container'>
-            <div className="wrapper">
-                { children }
-                <Analytics />
-                <SpeedInsights />
-            </div>
+            <Providers>
+              <div className="wrapper">
+                  { children }
+                  <Analytics />
+                  <SpeedInsights />
+              </div>
+            </Providers>
           </div>
         </main>
       </body>

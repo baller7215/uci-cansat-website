@@ -27,8 +27,11 @@ const staggerContainer = {
 };
 
 const ProjectYearPage = () => {
-  const params = useParams(); // Get dynamic parameters in the App Router
-  const { year } = params;
+  const params = useParams();
+  if (!params || typeof params.year !== "string") {
+    return <p>Invalid year</p>;
+  }
+  const year = params.year;
 
   const yearObject = Object.values(yearTeamProject).find(
     (obj) => obj.id === year
@@ -723,73 +726,78 @@ const ProjectYearPage = () => {
         )}
 
         {/* posters */}
-        {project?.posters.fall || project?.posters.winter && (
-          <motion.section
-            className="section-container min-h-screen !bg-custom-white my-auto"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-          >
-            <motion.div
-              variants={fadeIn}
-              className="text-container !min-h-screen !flex-col !justify-center"
+        {project?.posters.fall ||
+          (project?.posters.winter && (
+            <motion.section
+              className="section-container min-h-screen !bg-custom-white my-auto"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              <h2 className="header">Posters</h2>
               <motion.div
                 variants={fadeIn}
-                className="flex flex-col md:flex-row justify-between gap-5"
+                className="text-container !min-h-screen !flex-col !justify-center"
               >
-                {project?.posters?.fall && (
-                  <motion.div
-                    variants={fadeIn}
-                    className="flex flex-col gap-2 w-full md:w-1/2"
-                  >
-                    <h3 className="subHeader uppercase">Fall Design Review</h3>
-                    <Image
-                      src={project?.posters?.fall}
-                      width={500}
-                      height={600}
-                      alt="fall review poster"
-                      className="w-full"
-                    />
-                  </motion.div>
-                )}
-                {project?.posters?.winter && (
-                  <motion.div
-                    variants={fadeIn}
-                    className="flex flex-col gap-2 w-full md:w-1/2"
-                  >
-                    <h3 className="subHeader uppercase">Winter Design Review</h3>
-                    <Image
-                      src={project?.posters?.winter}
-                      width={500}
-                      height={600}
-                      alt="winter review poster"
-                      className="w-full"
-                    />
-                  </motion.div>
-                )}
-                {project?.posters?.spring && (
-                  <motion.div
-                    variants={fadeIn}
-                    className="flex flex-col gap-2 w-full md:w-1/2"
-                  >
-                    <h3 className="subHeader uppercase">
-                      Spring Design Review
-                    </h3>
-                    <Image
-                      src={project?.posters?.spring}
-                      width={500}
-                      height={600}
-                      alt="spring review poster"
-                      className="w-full"
-                    />
-                  </motion.div>
-                )}
+                <h2 className="header">Posters</h2>
+                <motion.div
+                  variants={fadeIn}
+                  className="flex flex-col md:flex-row justify-between gap-5"
+                >
+                  {project?.posters?.fall && (
+                    <motion.div
+                      variants={fadeIn}
+                      className="flex flex-col gap-2 w-full md:w-1/2"
+                    >
+                      <h3 className="subHeader uppercase">
+                        Fall Design Review
+                      </h3>
+                      <Image
+                        src={project?.posters?.fall}
+                        width={500}
+                        height={600}
+                        alt="fall review poster"
+                        className="w-full"
+                      />
+                    </motion.div>
+                  )}
+                  {project?.posters?.winter && (
+                    <motion.div
+                      variants={fadeIn}
+                      className="flex flex-col gap-2 w-full md:w-1/2"
+                    >
+                      <h3 className="subHeader uppercase">
+                        Winter Design Review
+                      </h3>
+                      <Image
+                        src={project?.posters?.winter}
+                        width={500}
+                        height={600}
+                        alt="winter review poster"
+                        className="w-full"
+                      />
+                    </motion.div>
+                  )}
+                  {project?.posters?.spring && (
+                    <motion.div
+                      variants={fadeIn}
+                      className="flex flex-col gap-2 w-full md:w-1/2"
+                    >
+                      <h3 className="subHeader uppercase">
+                        Spring Design Review
+                      </h3>
+                      <Image
+                        src={project?.posters?.spring}
+                        width={500}
+                        height={600}
+                        alt="spring review poster"
+                        className="w-full"
+                      />
+                    </motion.div>
+                  )}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          </motion.section>
-        )}
+            </motion.section>
+          ))}
 
         <Footer />
         <MobileFooter />

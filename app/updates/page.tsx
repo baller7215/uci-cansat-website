@@ -9,6 +9,9 @@ import React, { useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import CollectionNews from "@/components/shared/CollectionNews";
 import MobileFooter from "@/components/shared/MobileFooter";
+import UpdatesLinkedIn from "./UpdatesLinkedIn";
+
+
 
 const Updates = () => {
   const [showAll, setShowAll] = useState(false); // tracks state to show all teams or not
@@ -97,7 +100,6 @@ const Updates = () => {
                   >
                     <Skeleton className="w-[300px] md:w-[500px] md:h-[300px] bg-custom-gray flex flex-col mx-auto rounded-md shadow-2xl" />
                   </div>
-                  // <Skeleton key={index} className="w-[300px] h-[200px] md:w-[450px] md:h-[350px] bg-custom-gray flex justify-center rounded-md shadow-2xl" />
                 ))}
               </div>
             ) : (
@@ -106,6 +108,13 @@ const Updates = () => {
                 cards={showAll ? updates.slice(0) : updates.slice(0, 4)}
               />
             )}
+          </div>
+        </section>
+
+        <section className="section-container !h-auto" id="linkedin">
+          <div className="text-container !flex-col !h-auto">
+            <h1 className="header capitalize">Latest from LinkedIn</h1>
+            <UpdatesLinkedIn />
           </div>
         </section>
 

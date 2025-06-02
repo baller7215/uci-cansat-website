@@ -9,8 +9,11 @@ import ProfilesGrid from "@/components/shared/ProfilesGrid";
 import MobileFooter from "@/components/shared/MobileFooter";
 
 const TeamYearPage = () => {
-  const params = useParams(); // Get dynamic parameters in the App Router
-  const { year } = params;
+  const params = useParams();
+  if (!params || typeof params.year !== "string") {
+    return <p>Invalid year</p>;
+  }
+  const year = params.year;
 
   const yearObject = Object.values(yearTeamProject).find(
     (obj) => obj.id === year
@@ -29,7 +32,10 @@ const TeamYearPage = () => {
         />
 
         {/* profiles */}
-        <section className="section-container team-background !overflow-hidden" id="overview">
+        <section
+          className="section-container team-background !overflow-hidden"
+          id="overview"
+        >
           {team?.advisors && team?.advisors.length > 0 && (
             // {/* Advisors Section */}
             <div className="text-container my-20 md:my-0 md:min-h-screen !h-auto !flex-col !justify-center !items-center">

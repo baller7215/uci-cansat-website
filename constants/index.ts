@@ -294,6 +294,10 @@ export const subteams = [
 
 export const competitionHistory = [
   {
+    placing: "9th",
+    year: "2024 - 2025",
+  },
+  {
     placing: "4th",
     year: "2023 - 2024",
   },
@@ -372,14 +376,19 @@ export const management = [
     profileImg: "/assets/images/management/kaylee-kim.jpg",
   },
   {
-    name: "Khushi Gupta",
-    role: "Electrical Lead",
-    profileImg: "/assets/images/management/khushi-gupta.jpg",
+    name: "Sarah Ho",
+    role: "Student Advisor",
+    profileImg: "/assets/images/management/sarah-ho.jpg",
   },
   {
-    name: "Sarah Ho",
+    name: "Timothy Yee",
+    role: "Electrical Lead",
+    profileImg: "/assets/images/management/timothy-yee.jpg",
+  },
+  {
+    name: "Andrei Darjuan",
     role: "Mechanical Lead",
-    profileImg: "/assets/images/management/sarah-ho.jpg",
+    profileImg: "/assets/images/management/andrei-darjuan.jpg",
   },
 ];
 

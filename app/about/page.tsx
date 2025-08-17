@@ -73,8 +73,8 @@ const About = () => {
                 project – from conceptual design through integration and
                 testing, to real-world operation and post-mission summary. Last
                 year, we placed
-                <span className="emphasis"> 14th in the World </span>, and
-                <span className="emphasis"> 5th in the United States </span> out
+                <span className="emphasis"> 9th in the World </span>, and
+                <span className="emphasis"> 3rd in the United States </span> out
                 of over 100 participating teams.
               </p>
             </motion.div>
@@ -256,7 +256,7 @@ const About = () => {
                 transitioned from brainstorming to actual launch, offering
                 hands-on experience in engineering design. Last year, under the
                 guidance of our faculty adviser, Professor Roger Rangel, our
-                team of 10 students placed 14th in the world.
+                team of 10 students placed 9th in the world.
               </p>
             </div>
           </motion.div>

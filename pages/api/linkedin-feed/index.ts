@@ -3,12 +3,29 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
-type Post = {
+type LinkedInApiPost = {
+  id: string;
+  commentary?: string;
   content: {
     media?: { id: string };
     multiImage?: { images: { id: string }[] };
   };
-};
+}
+
+type LinkedInPost = {
+  id: string;
+  commentary?: string;
+  content: {
+    media?: { id: string };
+    multiImage?: { images: { id: string }[] };
+  };
+  mediaType?: "image" | "video" | null;
+  mediaUrls: string[];
+}
+
+type ApiResponse =
+  | { posts: LinkedInPost[] }
+  | { error: string, retryAfter?: number };
 
 const BASE_URL = process.env.LINKEDIN_BASE_URL;
 const ORGANIZATION_URN = process.env.LINKEDIN_ORG_URN;
@@ -21,7 +38,7 @@ const CACHE_TTL = 86400; // 24 hours in seconds
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<{ posts: Post[] }>
+  res: NextApiResponse<ApiResponse>
 ) {
   // Set cache headers for Vercel Edge Cache
   res.setHeader(
@@ -32,8 +49,15 @@ export default async function handler(
   // Add cache status header for debugging
   res.setHeader("x-cache-status", "MISS"); // Default to MISS, will be overridden by Vercel if it's a HIT
 
-  console.log("🔍 Request received at:", new Date().toISOString());
-  console.log("🌐 Attempting to fetch LinkedIn data...");
+  console.log("Request received at:", new Date().toISOString());
+  console.log("Attempting to fetch LinkedIn data...");
+
+  if (!BASE_URL || !ORGANIZATION_URN || !LINKEDIN_API_VERSION || !BEARER_TOKEN) {
+    console.error("Missing required environment variables");
+    return res.status(500).json({
+      error: "Missing required environment variables",
+    });
+  }
 
   try {
     // 1) fetch the 10 most recent posts by your org
@@ -43,8 +67,8 @@ export default async function handler(
       `?author=${encodeURIComponent(authorUrn)}` +
       `&q=author&count=10&sortBy=LAST_MODIFIED`;
 
-    console.log("📡 Making LinkedIn API request...");
-    const { data: postsData } = await axios.get<{ elements: Post[] }>(postsUrl, {
+    console.log("Making LinkedIn API request...");
+    const { data: postsData } = await axios.get<{ elements: LinkedInApiPost[] }>(postsUrl, {
       headers: {
         Authorization: `Bearer ${BEARER_TOKEN}`,
         "LinkedIn-Version": LINKEDIN_API_VERSION,
@@ -52,7 +76,7 @@ export default async function handler(
         "X-RestLi-Method": "FINDER",
       },
     });
-    console.log("✅ LinkedIn API request successful");
+    console.log("LinkedIn API request successful");
 
     // 2) pull out every image and video URN from those posts
     const imageUrns = new Set<string>();
@@ -145,9 +169,9 @@ export default async function handler(
         .filter(Boolean) as string[];
 
       const mediaType = mediaIds[0]?.startsWith("urn:li:video:")
-        ? "video"
+        ? "video" as const
         : mediaIds[0]?.startsWith("urn:li:image:")
-        ? "image"
+        ? "image" as const
         : null;
 
       return {
@@ -164,11 +188,20 @@ export default async function handler(
     console.error("Error fetching LinkedIn data:", error);
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 429) {
-        console.error("Rate limit exceeded! This should not happen if caching is working correctly.");
-      } else {
-        console.error(`LinkedIn API error: ${error.response?.status} - ${error.response?.statusText}`);
+        console.error("Rate limit exceeded!");
+        return res.status(429).json({
+          error: "Rate limit exceeded!",
+          retryAfter: 3600
+        });
+      } else if (error.response?.status === 401) {
+        console.error("Authentication failed");
+        return res.status(401).json({
+          error: "Authentication failed",
+        });
       }
     }
-    throw error; // Let Next.js handle the error response
+    return res.status(500).json({
+      error: "Failed to fetch LinkedIn data",
+    });
   }
 }

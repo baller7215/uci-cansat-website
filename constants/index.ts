@@ -2741,18 +2741,18 @@ export const sponsors = [
   {
     label: "Nxbeam",
     route: "https://www.nxbeam.com/",
-    image: "/assets/images/sponsors/nxBeam.png",
+    image: "/assets/images/sponsors/nxbeam.png",
   },
   {
     label: "UROP",
     route: "https://urop.uci.edu/",
     image: "/assets/images/sponsors/urop.jpg",
   },
-  {
-    label: "",
-    route: "",
-    image: "",
-  },
+  // {
+  //   label: "",
+  //   route: "",
+  //   image: "",
+  // },
 ];
 
 export const whySponsorUs = {

@@ -201,7 +201,7 @@ export default function Home() {
         </motion.section> */}
 
         {/* applications for 2025-2026 are open section */}
-        <motion.section
+        {/* <motion.section
           className="relative bg-custom-rhino w-full h-auto text-center"
           initial="hidden"
           whileInView="visible"
@@ -243,6 +243,61 @@ export default function Home() {
                 <motion.div variants={fadeInUp}>
                   <Link href="https://forms.gle/fAQQRGMpHUvPafxH8">
                     Apply Now
+                  </Link>
+                </motion.div>
+              </Button>
+
+              <Button
+                asChild
+                variant="ghost"
+                className="capitalize rounded-full text-[var(--color-orange)] font-medium text-[16px] md:text-[18px] px-10 py-3 md:py-5"
+              >
+                <motion.div variants={fadeInUp}>
+                  <Link href="https://cansatuci.notion.site/">Learn More</Link>
+                </motion.div>
+              </Button>
+            </div>
+          </div>
+        </motion.section> */}
+
+        {/* applications are closed section */}
+        <motion.section
+          className="relative bg-custom-rhino w-full h-auto text-center"
+          initial="hidden"
+          whileInView="visible"
+          variants={staggerContainer}
+          viewport={{ once: true }}
+        >
+          <div className="absolute inset-0 bg-internAd bg-cover bg-center opacity-30 z-0"></div>
+          <div className="relative z-10 flex flex-col  p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 w-full h-auto justify-between gap-5">
+            <motion.h4
+              className="uppercase text-custom-orange text-xs md:text-sm tracking-wider font-bold"
+              variants={fadeInUp}
+            >
+              2025-2026 Recruitment
+            </motion.h4>
+            <motion.h2
+              className="capitalize text-custom-white text-4xl md:text-6xl font-bold"
+              variants={fadeInUp}
+            >
+              Applications are closed
+            </motion.h2>
+            <motion.p
+              className="text-custom-white text-md md:text-lg font-medium"
+              variants={fadeInUp}
+            >
+              Applications for the 2025-2026 school year are now closed. Thank you to all who applied! We will open applications for the 2026-2027 school year in spring 2026.
+            </motion.p>
+
+            <div className="flex flex-col md:flex-row gap-5 mx-auto">
+              <Button
+                asChild
+                variant="default"
+                className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5"
+              >
+                <motion.div variants={fadeInUp}>
+                  <Link href="/team/2025-2026">
+                    See the 2025-2026 Team
                   </Link>
                 </motion.div>
               </Button>

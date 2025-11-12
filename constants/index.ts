@@ -15,6 +15,11 @@ export const navLinks = [
         route: "/team",
       },
       {
+        label: "2025 - 2026",
+        route: "/team/2025-2026",
+        image: "/assets/images/team/2024-2025/team.jpg",
+      },
+      {
         label: "2024 - 2025",
         route: "/team/2024-2025",
         image: "/assets/images/team/2024-2025/team.jpg",
@@ -134,6 +139,11 @@ export const teamLinks = [
   {
     label: "The Team",
     route: "/team",
+  },
+  {
+    label: "2025 - 2026",
+    route: "/team/2025-2026",
+    image: "/assets/images/team/2024-2025/team.jpg",
   },
   {
     label: "2024 - 2025",
@@ -404,6 +414,168 @@ export const management = [
 //     gradYear: '',
 //     description: ''
 // },
+
+// team
+// team 2025-2026
+export const team2025_2026 = {
+  // missing sarah ho, alan duong, khushi gupta
+  advisors: [
+    {
+      name: "Professor Rangel",
+      role: "Primary Faculty Advisor",
+      profileImg: "/assets/images/team/2024-2025/rangel.jpeg",
+    },
+    {
+      name: "Professor Hassaan",
+      role: "Faculty Co-Advisor",
+      profileImg: "/assets/images/team/2024-2025/prof-hassaan.jpg",
+    },
+  ],
+  management: [
+    {
+      name: "Carolynn Nguyen",
+      role: "Team Lead",
+      profileImg: "/assets/images/team/2025-2026/Carolynn-Nguyen.jpg",
+      github: "",
+      linkedin: "www.linkedin.com/in/carolynn-p-nguyen",
+      major: "Electrical Engineering",
+      gradYear: "2028",
+      description:
+        "Hello! I am Carolynn Nguyen, the Cansat Team lead for the 25-26 year. I'll be leading our small, but mighty team to design and build a satellite for the international CanSat competition in June."
+    },
+  ],
+  executives: [],
+  mechanical: [
+    {
+      name: "Andrei Darjuan",
+      role: "Mechanical Lead",
+      profileImg: "/assets/images/team/2025-2026/andrei-darjuan.jpeg",
+      github: "",
+      linkedin: "https://www.linkedin.com/in/andrei-darjuan-088796224/",
+      major: "Mechanical Engineering",
+      gradYear: "2026",
+      description:
+        "Hi! I'm Andrei and I am a fourth year Mechanical Engineering student and I am the Mechanical Team Lead for this 2025-2026 competition. I guide and manage the design, testing, and fabrication of the physical components of our CanSat, while also collaborating with other subsystems to ensure seamless integration and mission success."
+    },
+    {
+      name: "Felix Jing",
+      role: "Mechanical Engineer",
+      profileImg: "/assets/images/team/2025-2026/felix-jing-2.jpg",
+      github: "",
+      linkedin: "http://www.linkedin.com/in/felixjing",
+      major: "Mechanical Engineering",
+      gradYear: "2028",
+      description:
+        "I’m Felix Jing, a mechanical engineer with 9 years of robotics experience. On CanSat's mechanical team, I engineer lightweight paraglider steering mechanism that has to work the first time it flies. Outside CanSat, I have led my VEX Robotics team to win three California State Championships. I also compete in BattleBots, a 250lb combat robotics competition, where my team ranked among the world’s top 8 teams in both 2021 and 2022. "
+    },
+    {
+      name: "Kaitlin Otsuka",
+      role: "Mechanical Engineer",
+      profileImg: "/assets/images/team/2024-2025/kaitlin-otsuka.jpg",
+      github: "",
+      linkedin: "",
+      major: "Mechanical Engineering",
+      gradYear: "2028",
+      description:
+        ""
+    },
+    {
+      name: "Ashley Huynh",
+      role: "Mechanical Engineer Intern",
+      profileImg: "/assets/images/team/2025-2026/ashley-huynh.jpeg",
+      github: "",
+      linkedin: "",
+      major: "Mechanical Engineering",
+      gradYear: "2029",
+      description:
+        "Hi, my name is Ashley! I am a first year mechanical engineering student and the Mechanical Intern for this year. I will be assisting the team through research and acquiring funding for our beautiful CanSat creation through company sponsorships. "
+    },
+  ],
+  electrical: [
+    {
+      name: "Timothy Yee",
+      role: "Electrical Lead",
+      profileImg: "/assets/images/team/2025-2026/timothy-yee.jpg",
+      github: "https://github.com/timyee1",
+      linkedin: "http://www.linkedin.com/in/timothy-youlin-yee",
+      major: "Electrical Engineering",
+      gradYear: "2027",
+      description:
+        "Hello! I'm Timothy, the Electrical lead on CanSat for the 25-26 year. My role involves researching sensors and power components for our electronics, designing the custom PCB for our satellite, and soldering/troubleshooting all the parts on the board. In my free time, I enjoy practicing keyboard or guitar, playing video games, and going out for runs!"
+    },
+    {
+      name: "Matthew Phan",
+      role: "Electrical Engineer",
+      profileImg: "/assets/images/team/2025-2026/matthew-phan.jpg",
+      github: "",
+      linkedin: "https://www.linkedin.com/in/matthew-t-phan/",
+      major: "Computer Engineering",
+      gradYear: "2027",
+      description:
+        "Hello! My name is Matthew and I'm third-year studying computer engineering. As part of the electrical team, I'm responsible for designing the PCB that will house all the CanSat peripherals. "
+    },
+    {
+      name: "Hoang Nguyen",
+      role: "Electrical Engineer Intern",
+      profileImg: "/assets/images/team/2025-2026/hoang-nguyen.jpg",
+      github: "",
+      linkedin: "https://www.linkedin.com/in/nhoang4655/",
+      major: "Electrical Engineering",
+      gradYear: "2028",
+      description:
+        "Hi, I'm Hoang. I'm a sophomore studying electrical engineering and the electrical intern for UCI CanSat. I'll be shadowing the team's PCB design, soldering, contributing to presentations and finding sponsorships, and will develop a mini project by the end of the year. "
+    },
+  ],
+  controls: [
+    {
+      name: "Brady Cason",
+      role: "Lead Software Engineer",
+      profileImg: "/assets/images/team/2024-2025/brady-cason.jpg",
+      github: "https://github.com/BradyCason",
+      linkedin: "https://www.linkedin.com/in/brady-cason/",
+      major: "Computer Science and Engineering",
+      gradYear: "2027",
+      description:
+        "I am the Lead Software Engineer for the project. I oversee the creation of the Ground Station and the In-Flight Software, keeping the Controls team on track to hit deadlines, and communicating progress with other sub-teams."
+    },
+    {
+      name: "Mukund Ummadisetti",
+      role: "Software Engineer",
+      profileImg: "",
+      github: "https://github.com/mukund-setti",
+      linkedin: "https://www.linkedin.com/in/mukundummadisetti/",
+      major: "Computer Science B.S. Spec. AI/ML & Computer Vision",
+      gradYear: "2025",
+      description:
+        "Hi, I'm Mukund. I'm interested in Computer Vision, Embedded Systems, and CanSat! I'm on the Controls team for the 2025-26 team! I work on developing and testing the In-Flight software for the CanSat. I also support the development of the Ground Station software in Python and collaborate with the Electrical Team to ensure proper functionality of the electrical components and Embedded Software in C."
+    },
+    {
+      name: "Jonathan Lin",
+      role: "Software Engineer",
+      profileImg: "/assets/images/team/2025-2026/jonathan-lin.jpg",
+      github: "https://github.com/jonnylin22",
+      linkedin: "https://www.linkedin.com/in/linjonathan001/",
+      major: "Computer Engineering",
+      gradYear: "2027",
+      description:
+        "Hey my name is Jonathan, and I'm a CanSat Controls Engineer. I am a third year Computer Engineering major and enjoy tinkering with wireless electronics, designing PCBs, and playing basketball and volleyball. I am working on building a custom ground station controls system by integrating commercial off the shelf components including a laptop screen, Raspberry Pi, and physical mechanical actuators.  "
+    }
+  ],
+  operations: [],
+  webDev: [
+    {
+      name: "Leo Siu",
+      role: "Website Developer Lead",
+      profileImg: "/assets/images/team/2024-2025/leo-siu.jpg",
+      github: "https://github.com/baller7215",
+      linkedin: "http://www.linkedin.com/in/leonardo-siu",
+      major: "Computer Science",
+      gradYear: "2027",
+      description:
+        "Hey, my name is Leo! As the Web Developer, I lead the design, development, and maintenance of the team's website, ensuring it aligns with the team's vision and branding. Outside of CanSat, you can find me strolling around Aldridge Park or taking photos with my camera.",
+    },
+  ],
+};
 
 // 2024 - 2025
 export const team2024_2025 = {
@@ -2569,18 +2741,18 @@ export const sponsors = [
   {
     label: "Nxbeam",
     route: "https://www.nxbeam.com/",
-    image: "/assets/images/sponsors/nxBeam.png",
+    image: "/assets/images/sponsors/nxbeam.png",
   },
   {
     label: "UROP",
     route: "https://urop.uci.edu/",
     image: "/assets/images/sponsors/urop.jpg",
   },
-  {
-    label: "",
-    route: "",
-    image: "",
-  },
+  // {
+  //   label: "",
+  //   route: "",
+  //   image: "",
+  // },
 ];
 
 export const whySponsorUs = {
@@ -3093,6 +3265,12 @@ export const faq = [
 
 // connect year with corresponding object
 export const yearTeamProject = {
+  id2025_2026: {
+    id: "2025-2026",
+    label: "2025 - 2026",
+    team: team2025_2026,
+    project: null,
+  },
   id2024_2025: {
     id: "2024-2025",
     label: "2024 - 2025",

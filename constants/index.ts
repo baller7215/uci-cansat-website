@@ -480,6 +480,17 @@ export const team2025_2026 = {
         ""
     },
     {
+      name: "Eve Huang",
+      role: "Mechanical Engineer",
+      profileImg: "/assets/images/team/2025-2026/eve-huang.PNG",
+      github: "",
+      linkedin: "http://linkedin.com/in/eve-huang-528060255",
+      major: "Mechanical Engineering",
+      gradYear: "2027",
+      description:
+        "Hi, I’m Eve and I am a third year mechanical engineering student. As part of the mechanical team, I’m responsible for designing and sizing the container parachute system, performing material trade studies, and ensuring the payload can safely land within competition descent requirements."
+    },
+    {
       name: "Ashley Huynh",
       role: "Mechanical Engineer Intern",
       profileImg: "/assets/images/team/2025-2026/ashley-huynh.jpeg",
@@ -541,7 +552,7 @@ export const team2025_2026 = {
     {
       name: "Mukund Ummadisetti",
       role: "Software Engineer",
-      profileImg: "",
+      profileImg: "/assets/images/team/2025-2026/mukund-ummadisetti.png",
       github: "https://github.com/mukund-setti",
       linkedin: "https://www.linkedin.com/in/mukundummadisetti/",
       major: "Computer Science B.S. Spec. AI/ML & Computer Vision",

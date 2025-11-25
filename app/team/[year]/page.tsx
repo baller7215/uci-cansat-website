@@ -3,17 +3,21 @@
 import CoverPage from "@/components/shared/CoverPage";
 import Footer from "@/components/shared/Footer";
 import React from "react";
-import { useParams } from "next/navigation"; // New hook for App Router
+import { useParams } from "next/navigation";
 import { yearTeamProject } from "@/constants";
+import { fetchTeamByYear } from "@/lib/queries";
 import ProfilesGrid from "@/components/shared/ProfilesGrid";
 import MobileFooter from "@/components/shared/MobileFooter";
 
-const TeamYearPage = () => {
+const TeamYearPage = async () => {
   const params = useParams();
   if (!params || typeof params.year !== "string") {
     return <p>Invalid year</p>;
   }
   const year = params.year;
+
+  const data = await fetchTeamByYear(year);
+  console.log('year:', data);
 
   const yearObject = Object.values(yearTeamProject).find(
     (obj) => obj.id === year

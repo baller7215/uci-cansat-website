@@ -480,6 +480,17 @@ export const team2025_2026 = {
         ""
     },
     {
+      name: "Eve Huang",
+      role: "Mechanical Engineer",
+      profileImg: "/assets/images/team/2025-2026/eve-huang.PNG",
+      github: "",
+      linkedin: "http://linkedin.com/in/eve-huang-528060255",
+      major: "Mechanical Engineering",
+      gradYear: "2027",
+      description:
+        "Hi, I’m Eve and I am a third year mechanical engineering student. As part of the mechanical team, I’m responsible for designing and sizing the container parachute system, performing material trade studies, and ensuring the payload can safely land within competition descent requirements."
+    },
+    {
       name: "Ashley Huynh",
       role: "Mechanical Engineer Intern",
       profileImg: "/assets/images/team/2025-2026/ashley-huynh.jpeg",
@@ -541,7 +552,7 @@ export const team2025_2026 = {
     {
       name: "Mukund Ummadisetti",
       role: "Software Engineer",
-      profileImg: "",
+      profileImg: "/assets/images/team/2025-2026/mukund-ummadisetti.png",
       github: "https://github.com/mukund-setti",
       linkedin: "https://www.linkedin.com/in/mukundummadisetti/",
       major: "Computer Science B.S. Spec. AI/ML & Computer Vision",
@@ -2834,6 +2845,14 @@ export const sponsorshipTiers = [
 /** @todo: add new card for samueli 25th year anniversary */
 export const featuredNews = [
   {
+    title: "ZotFunder 2025-2026",
+    subtitle:
+      "Help UCI CanSat reach new heights by donating to our Zotfunder to fund materials, testing, and travel.",
+    date: "Dec 1, 2025",
+    image: "/assets/images/news/zotfunder-2026.jpeg",
+    route: "https://zotfunder.give.uci.edu/project/48727",
+  },
+  {
     title: "Sponsored by Blue Origin 2025",
     subtitle:
       "We are honored to announce that our team has officially received sponsorship from Blue Origin!",
@@ -2841,15 +2860,15 @@ export const featuredNews = [
     image: "/assets/images/news/blueOrigin-sponsor.jpeg",
     route: "https://www.linkedin.com/posts/uci-cansat_we-are-honored-to-announce-that-our-team-activity-7290866404398874625-ilFE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB7oXXQBh71KXg3BdMYmBioWYF7a8bVbkTs"
   },
-  {
-    title: "UCI Samueli School of Engineering",
-    subtitle:
-      "Thank you Henry and Susan Samueli for your dedication to future engineers at the UC Irvine Samueli School of Engineering! Celebrating 25 years of impact!🤘🎉💛💙",
-    date: "Oct 28, 2024",
-    image: "/assets/images/news/25-year-anniversary.jpeg",
-    route:
-      "https://www.linkedin.com/posts/ucirvineengineering_thank-you-henry-and-susan-samueli-for-your-activity-7257088350157746177-NmpH/",
-  },
+  // {
+  //   title: "UCI Samueli School of Engineering",
+  //   subtitle:
+  //     "Thank you Henry and Susan Samueli for your dedication to future engineers at the UC Irvine Samueli School of Engineering! Celebrating 25 years of impact!🤘🎉💛💙",
+  //   date: "Oct 28, 2024",
+  //   image: "/assets/images/news/25-year-anniversary.jpeg",
+  //   route:
+  //     "https://www.linkedin.com/posts/ucirvineengineering_thank-you-henry-and-susan-samueli-for-your-activity-7257088350157746177-NmpH/",
+  // },
   // {
   //   title: "UCI Samueli School of Engineering",
   //   subtitle:
@@ -2869,6 +2888,14 @@ export const featuredNews = [
 ];
 
 export const updates = [
+  {
+    title: "ZotFunder 2025-2026",
+    subtitle:
+      "Help UCI CanSat reach new heights by donating to our Zotfunder to fund materials, testing, and travel.",
+    date: "Dec 1, 2025",
+    image: "/assets/images/news/zotfunder-2026.jpeg",
+    route: "https://zotfunder.give.uci.edu/project/48727",
+  },
   {
     title: "Sponsored by Blue Origin 2025",
     subtitle:

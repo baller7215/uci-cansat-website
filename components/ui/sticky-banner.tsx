@@ -1,6 +1,6 @@
 "use client";
 import React, { SVGProps, useState, useRef, useEffect } from "react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion"; // Import Framer Motion
 import { cn } from "@/lib/utils";
 
 export const StickyBanner = ({

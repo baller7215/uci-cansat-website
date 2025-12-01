@@ -8,7 +8,6 @@ import Link from "next/link";
 import Footer from "@/components/shared/Footer";
 import MobileFooter from "@/components/shared/MobileFooter";
 import { motion } from "framer-motion"; // Import Framer Motion
-import { StickyBanner } from "@/components/ui/sticky-banner";
 
 // Animation Variants
 const fadeInUp = {

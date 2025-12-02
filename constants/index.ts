@@ -381,14 +381,9 @@ export const management = [
     profileImg: "/assets/images/management/hassaan.jpeg",
   },
   {
-    name: "Kaylee Kim",
+    name: "Carolynn Nguyen",
     role: "Team Lead",
-    profileImg: "/assets/images/management/kaylee-kim.jpg",
-  },
-  {
-    name: "Sarah Ho",
-    role: "Student Advisor",
-    profileImg: "/assets/images/management/sarah-ho.jpg",
+    profileImg: "/assets/images/management/Carolynn-Nguyen.jpg",
   },
   {
     name: "Timothy Yee",
@@ -400,6 +395,11 @@ export const management = [
     role: "Mechanical Lead",
     profileImg: "/assets/images/management/andrei-darjuan.jpg",
   },
+  {
+    name: "Brady Cason",
+    role: "Lead Software Engineer",
+    profileImg: "/assets/images/management/brady-cason.jpg",
+  }
 ];
 
 // replace apostraphe with &apos;

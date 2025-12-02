@@ -2,27 +2,114 @@
 
 import CoverPage from "@/components/shared/CoverPage";
 import Footer from "@/components/shared/Footer";
-import React from "react";
+import React, { useMemo } from "react";
 import { useParams } from "next/navigation";
 import { yearTeamProject } from "@/constants";
 import { fetchTeamByYear } from "@/lib/queries";
 import ProfilesGrid from "@/components/shared/ProfilesGrid";
 import MobileFooter from "@/components/shared/MobileFooter";
+import { useQuery } from "@tanstack/react-query";
+import { urlFor } from "@/lib/sanity.image";
 
-const TeamYearPage = async () => {
+const TeamYearPage = () => {
   const params = useParams();
   if (!params || typeof params.year !== "string") {
     return <p>Invalid year</p>;
   }
   const year = params.year;
 
-  const data = await fetchTeamByYear(year);
-  console.log('year:', data);
+  const { data: members, isLoading, error } = useQuery({
+    queryKey: ['team', year],
+    queryFn: () => fetchTeamByYear(year),
+  });
+
+  // Transform Sanity data into the expected format and group by subteam
+  const team = useMemo(() => {
+    if (!members || !Array.isArray(members)) {
+      return null;
+    }
+
+    const grouped: {
+      advisors?: Member[];
+      management?: Member[];
+      executives?: Member[];
+      mechanical?: Member[];
+      electrical?: Member[];
+      controls?: Member[];
+      operations?: Member[];
+      webDev?: Member[];
+    } = {};
+
+    members.forEach((member: any) => {
+      const transformedMember: Member = {
+        name: member.name,
+        role: member.role,
+        github: member.github,
+        linkedin: member.linkedin,
+        major: member.major,
+        gradYear: member.gradYear,
+        description: member.description,
+        profileImg: member.profileImg
+          ? urlFor(member.profileImg).url()
+          : undefined,
+      };
+
+      const subteam = member.subteam;
+      if (subteam) {
+        if (!grouped[subteam as keyof typeof grouped]) {
+          grouped[subteam as keyof typeof grouped] = [];
+        }
+        grouped[subteam as keyof typeof grouped]!.push(transformedMember);
+      }
+    });
+
+    return grouped;
+  }, [members]);
 
   const yearObject = Object.values(yearTeamProject).find(
     (obj) => obj.id === year
   );
-  const team = yearObject?.team;
+
+  if (isLoading) {
+    return (
+      <main>
+        <CoverPage
+          page="teamYear"
+          title="The Team"
+          subtitle={yearObject?.label}
+          background="../assets/images/competiton-photos/preLaunchRocket2.jpg"
+        />
+        <section className="section-container team-background !overflow-hidden">
+          <div className="text-container my-20 md:min-h-screen !h-auto !flex-col !justify-center !items-center">
+            <p>Loading team data...</p>
+          </div>
+        </section>
+        <Footer />
+        <MobileFooter />
+      </main>
+    );
+  }
+
+  if (error) {
+    return (
+      <main>
+        <CoverPage
+          page="teamYear"
+          title="The Team"
+          subtitle={yearObject?.label}
+          background="../assets/images/competiton-photos/preLaunchRocket2.jpg"
+        />
+        <section className="section-container team-background !overflow-hidden">
+          <div className="text-container my-20 md:min-h-screen !h-auto !flex-col !justify-center !items-center">
+            <p>Error loading team data. Please try again later.</p>
+          </div>
+        </section>
+        <Footer />
+        <MobileFooter />
+      </main>
+    );
+  }
+
 
   return (
     <>
@@ -57,7 +144,7 @@ const TeamYearPage = async () => {
           )}
 
           {team?.executives && team?.executives.length > 0 && (
-            // {/* Management Section */}
+            // {/* Executives Section */}
             <div className="text-container my-20 md:min-h-screen !h-auto !flex-col !justify-center !items-center">
               <h1 className="team-title">Executives</h1>
               <ProfilesGrid members={team?.executives || []} />

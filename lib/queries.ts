@@ -17,10 +17,7 @@ export async function fetchTeamByYear(year: string) {
       description,
       order,
       personId,
-      profileImg{
-        "url": asset->url,
-        alt
-      }
+      profileImg
     }`
   return sanityClient.fetch(query, {year})
 }

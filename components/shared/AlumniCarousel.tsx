@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 const AlumniCarousel = ({ alumni }: AlumniCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -73,17 +74,20 @@ const AlumniCarousel = ({ alumni }: AlumniCarouselProps) => {
                 <div className="flex flex-col gap-6 md:gap-8 text-custom-white">
                   {/* name and linkedin */}
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-bold mb-2 underline decoration-custom-orange">
-                      {currentAlumni.name.toUpperCase()}
-                    </h3>
-                    <Link
-                      href={currentAlumni.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-custom-white/70 hover:text-custom-orange transition-colors text-sm md:text-base"
-                    >
-                      {currentAlumni.linkedin.replace("https://www.", "")}
-                    </Link>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-3xl md:text-4xl font-bold underline decoration-custom-orange">
+                        {currentAlumni.name.toUpperCase()}
+                      </h3>
+                      <Link
+                        href={currentAlumni.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-custom-white/70 hover:text-custom-orange transition-colors flex items-center"
+                        aria-label={`${currentAlumni.name}'s LinkedIn profile`}
+                      >
+                        <FaLinkedin className="text-2xl md:text-3xl" />
+                      </Link>
+                    </div>
                   </div>
 
                   {/* past positions */}

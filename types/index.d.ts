@@ -97,6 +97,26 @@ declare type TestimonialProps = {
     image?: string;
 }
 
+// alumni component props
+declare type AlumniExperience = {
+    company: string;
+    role: string;
+}
+
+declare type Alumni = {
+    name: string;
+    linkedin: string;
+    pastPositions: string[];
+    experiences: AlumniExperience[];
+    field: string;
+    testimonial: string;
+    profileImage?: string;
+}
+
+declare type AlumniCarouselProps = {
+    alumni: Alumni[];
+}
+
 // subteam info component props
 declare type Responsibilities = {
     description: string;

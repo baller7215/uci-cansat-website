@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased`}
       >
-        <StickyBanner className="bg-gradient-to-r from-[var(--color-rhino)] to-[var(--color-lightBlack)]">
+        {/* <StickyBanner className="bg-gradient-to-r from-[var(--color-rhino)] to-[var(--color-lightBlack)]">
           <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <p className="text-[var(--color-whiteIce)] text-center text-sm sm:text-base font-medium">
               Help UCI CanSat reach new heights by donating to our Zotfunder to fund materials, testing, and travel.
@@ -52,7 +52,7 @@ export default function RootLayout({
               Donate Now
             </a>
           </div>
-        </StickyBanner>
+        </StickyBanner> */}
         {/* {children} */}
         <main className='root'>
           {/* <Navbar /> */}

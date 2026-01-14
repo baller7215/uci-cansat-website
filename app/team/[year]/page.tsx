@@ -11,16 +11,39 @@ import MobileFooter from "@/components/shared/MobileFooter";
 import { useQuery } from "@tanstack/react-query";
 import { urlFor } from "@/lib/sanity.image";
 
+// Sanity member data type
+type SanityMember = {
+  _id: string;
+  name: string;
+  role: string;
+  subteam?: string;
+  isActive?: boolean;
+  isAlumni?: boolean;
+  primaryRole?: boolean;
+  github?: string;
+  linkedin?: string;
+  major?: string;
+  gradYear?: string;
+  description?: string;
+  order?: number;
+  personId?: string;
+  profileImg?: {
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+};
+
 const TeamYearPage = () => {
   const params = useParams();
-  if (!params || typeof params.year !== "string") {
-    return <p>Invalid year</p>;
-  }
-  const year = params.year;
+  const year = params && typeof params.year === "string" ? params.year : "";
 
   const { data: members, isLoading, error } = useQuery({
     queryKey: ['team', year],
     queryFn: () => fetchTeamByYear(year),
+    enabled: !!year, // only fetch if year is valid
   });
 
   // helper function to get role priority for sorting (lead -> engineer -> intern)
@@ -53,7 +76,7 @@ const TeamYearPage = () => {
       webDev?: Member[];
     } = {};
 
-    members.forEach((member: any) => {
+    members.forEach((member: SanityMember) => {
       const transformedMember: Member = {
         name: member.name,
         role: member.role,
@@ -94,6 +117,11 @@ const TeamYearPage = () => {
   const yearObject = Object.values(yearTeamProject).find(
     (obj) => obj.id === year
   );
+
+  // Handle invalid year parameter after hooks
+  if (!params || typeof params.year !== "string") {
+    return <p>Invalid year</p>;
+  }
 
   if (isLoading) {
     return (

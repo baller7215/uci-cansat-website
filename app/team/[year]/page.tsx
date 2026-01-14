@@ -23,6 +23,19 @@ const TeamYearPage = () => {
     queryFn: () => fetchTeamByYear(year),
   });
 
+  // helper function to get role priority for sorting (lead -> engineer -> intern)
+  const getRolePriority = (role: string): number => {
+    const roleLower = role.toLowerCase();
+    if (roleLower.includes('lead')) {
+      return 1; // leads first
+    } else if (roleLower.includes('engineer') && !roleLower.includes('intern')) {
+      return 2; // engineers second
+    } else if (roleLower.includes('intern')) {
+      return 3; // interns third
+    }
+    return 4; // everything else last
+  };
+
   // Transform Sanity data into the expected format and group by subteam
   const team = useMemo(() => {
     if (!members || !Array.isArray(members)) {
@@ -60,6 +73,18 @@ const TeamYearPage = () => {
           grouped[subteam as keyof typeof grouped] = [];
         }
         grouped[subteam as keyof typeof grouped]!.push(transformedMember);
+      }
+    });
+
+    // sort each subteam array by role priority (lead -> engineer -> intern)
+    Object.keys(grouped).forEach((key) => {
+      const subteamKey = key as keyof typeof grouped;
+      if (grouped[subteamKey]) {
+        grouped[subteamKey]!.sort((a, b) => {
+          const priorityA = getRolePriority(a.role);
+          const priorityB = getRolePriority(b.role);
+          return priorityA - priorityB;
+        });
       }
     });
 

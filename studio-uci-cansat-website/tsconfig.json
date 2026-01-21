@@ -7,10 +7,13 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "Preserve",
+    "moduleResolution": "bundler",
     "moduleDetection": "force",
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

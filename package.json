@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:vercel": "npm run lint && npm run build",
+    "build:check": "npm run lint && npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

@@ -4,7 +4,7 @@ import CoverPage from "@/components/shared/CoverPage";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/shared/Footer";
 import Collection from "@/components/shared/Collection";
-import { sponsors, whySponsorUs, sponsorshipTiers } from "@/constants";
+import { sponsors, whySponsorUs, sponsorshipTiers, alumni } from "@/constants";
 import React, { useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
@@ -13,6 +13,7 @@ import { FaCheck, FaXmark, FaCode, FaHeart } from "react-icons/fa6";
 import { VscRocket } from "react-icons/vsc";
 import MobileFooter from "@/components/shared/MobileFooter";
 import { motion } from "framer-motion"; // Import framer-motion
+import AlumniCarousel from "@/components/shared/AlumniCarousel";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
@@ -221,6 +222,18 @@ const Sponsors = () => {
                 </motion.div>
               ))}
             </div>
+          </motion.div>
+        </motion.section>
+
+        {/* alumni testimonials */}
+        <motion.section
+          className="section-container !min-h-fit !h-fit !bg-custom-black"
+          initial="hidden"
+          whileInView="visible"
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeIn}>
+            <AlumniCarousel alumni={alumni} />
           </motion.div>
         </motion.section>
 

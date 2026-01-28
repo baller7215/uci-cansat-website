@@ -381,14 +381,9 @@ export const management = [
     profileImg: "/assets/images/management/hassaan.jpeg",
   },
   {
-    name: "Kaylee Kim",
+    name: "Carolynn Nguyen",
     role: "Team Lead",
-    profileImg: "/assets/images/management/kaylee-kim.jpg",
-  },
-  {
-    name: "Sarah Ho",
-    role: "Student Advisor",
-    profileImg: "/assets/images/management/sarah-ho.jpg",
+    profileImg: "/assets/images/management/Carolynn-Nguyen.jpg",
   },
   {
     name: "Timothy Yee",
@@ -400,6 +395,11 @@ export const management = [
     role: "Mechanical Lead",
     profileImg: "/assets/images/management/andrei-darjuan.jpg",
   },
+  {
+    name: "Brady Cason",
+    role: "Lead Software Engineer",
+    profileImg: "/assets/images/management/brady-cason.jpg",
+  }
 ];
 
 // replace apostraphe with &apos;
@@ -2838,6 +2838,203 @@ export const sponsorshipTiers = [
       { text: "Resume List", checked: true },
       { text: "Speaker Event / Lab Visit", checked: true },
     ],
+  },
+];
+
+// alumni testimonials
+export const alumni = [
+  {
+    name: "Ryan Liu",
+    linkedin: "https://www.linkedin.com/in/ryanhaoliu/",
+    pastPositions: ["22-23 Electrical Lead", "23-24 Project Manager"],
+    experiences: [
+      {
+        company: "Google",
+        role: "Technical Program Manager for Pixel Watch",
+      },
+    ],
+    field: "Electrical Engineering",
+    testimonial:
+      "My experience with CanSat directly supports my work at Google by grounding my approach to large, complex systems in real-world engineering constraints. Leading and contributing to a competition team taught me how to manage cross-functional dependencies, debug issues under pressure, and make data-driven tradeoffs. I use these skills daily when coordinating across engineering, hardware, and operations teams. The ownership, technical depth, and systems-level thinking I developed through CanSat translate seamlessly to driving execution, mitigating risk, and delivering high-quality outcomes in my role at Google.",
+    profileImage: "/assets/images/team/2023-2024/ryan.jpeg",
+  },
+  {
+    name: "Husain Wafaie",
+    linkedin: "https://www.linkedin.com/in/husain-wafaie/",
+    pastPositions: ["23-24 Controls Lead"],
+    experiences: [
+      {
+        company: "Google",
+        role: "Software Engineer",
+      },
+    ],
+    field: "Computer Science and Engineering",
+    testimonial:
+      "CanSat was one of the most formative experiences of my time at UCI. It pushed me beyond coursework and taught me how to design, test, and iterate on software in a real-world engineering environment. Working on a multidisciplinary team strengthened my ability to communicate technical ideas clearly, take ownership, and ship reliable software. Those experiences directly shaped how I approach engineering today and played a meaningful role in preparing me for my work as a software engineer at Google.",
+    profileImage: "/assets/images/team/2023-2024/husain.jpeg",
+  },
+  {
+    name: "Jeremy Rose",
+    linkedin: "https://www.linkedin.com/in/jeremyrose777/",
+    pastPositions: ["23-24 Mechanical Lead"],
+    experiences: [
+      {
+        company: "Lockheed Martin",
+        role: "Aerospace Engineer Associate",
+      },
+      {
+        company: "Blok Buddies",
+        role: "Business Owner",
+      },
+    ],
+    field: "Mechanical Engineering",
+    testimonial:
+      "Cansat taught me that if you work really hard, encourage and trust your team, and give a project your all, you can do amazing things.",
+    profileImage: "/assets/images/team/2023-2024/jeremy.jpeg",
+  },
+  {
+    name: "AJ Smyth",
+    linkedin: "https://www.linkedin.com/in/aj-smyth",
+    pastPositions: ["23-24 Electrical Lead"],
+    experiences: [
+      {
+        company: "TP-Link",
+        role: "Embedded Systems Software Engineer",
+      },
+    ],
+    field: "Computer Engineering",
+    testimonial:
+      "CanSat gave me valuable experience working within constraints, learning to find and address points of failure, exploring different organizational methods, and improving teamwork and communication skills. These experiences developed fundamental skills I use daily at work.",
+    profileImage: "/assets/images/team/2023-2024/aj.jpeg",
+  },
+  {
+    name: "Jacqueline Lai",
+    linkedin: "https://www.linkedin.com/in/jacqueline-tt-lai/",
+    pastPositions: ["23-24 Electrical Member"],
+    experiences: [
+      {
+        company: "usCalibration",
+        role: "Field Engineer",
+      },
+      {
+        company: "Ecolab",
+        role: "R&D Intern",
+      },
+    ],
+    field: "Electrical Engineering",
+    testimonial:
+      "Cansat allowed me to learn from others who have more experience in both professional development and circuit design. My time on Cansat played a significant role in getting my first internship.",
+    profileImage: "/assets/images/team/2022-2023/jacqueline.jpg",
+  },
+  {
+    name: "Jerome Masicat",
+    linkedin: "https://www.linkedin.com/in/jerome-masicat-7813bb252/",
+    pastPositions: ["23-24 Mechanical Subteam Member"],
+    experiences: [
+      {
+        company: "ASC Process Systems",
+        role: "Mechanical Engineer / Project Manager",
+      },
+    ],
+    field: "Mechanical Engineering",
+    testimonial:
+      "As an engineer, my time at Cansat taught me the core concepts of engineering design. It taught me principles like designing for manufacturability and assembly, integrating multiple subsystems, and ensuring spec compliance. Even if the subsystems I work on now are ten times larger, I am still always using the things that I learned from Cansat on a daily basis!",
+    profileImage: "/assets/images/team/2023-2024/jerome.jpeg",
+  },
+  {
+    name: "Kaylee Kim",
+    linkedin: "https://www.linkedin.com/in/kayleesk/",
+    pastPositions: ["23-24 Controls Subteam Member", "24-25 Project Manager"],
+    experiences: [
+      {
+        company: "UROP",
+        role: "Undergraduate Research Assistant - Ultrasonic Vocalizations under Dr. Ron Frostig, Integer Partitions under Dr. Nathan Kaplan",
+      },
+    ],
+    field: "Mathematics",
+    testimonial:
+      "During my time on the CanSat team, I practiced technical skills in embedded software, and learned how to work with other engineers on a complex project. CanSat also gave me the opportunity to lead a high-performance team, which gave me valuable experience with making important decisions in high pressure situations.",
+    profileImage: "/assets/images/management/kaylee.png",
+  },
+  {
+    name: "Khushi Gupta",
+    linkedin: "https://www.linkedin.com/in/khushi-gu",
+    pastPositions: ["23-24 Electrical Subteam Member", "24-25 Electrical Team Lead"],
+    experiences: [
+      {
+        company: "Panasonic Avionics",
+        role: "MTS I Hardware Engineer",
+      },
+      {
+        company: "CMTA",
+        role: "Electrical Engineering Intern",
+      },
+    ],
+    field: "Electrical Engineering",
+    testimonial:
+      "Cansat gave me a lot of experience in engineering and PCB design that has benefited me professionally.",
+    profileImage: "/assets/images/team/2023-2024/khushi.jpeg",
+  },
+  {
+    name: "Sarah Ho",
+    linkedin: "https://www.linkedin.com/in/sarah-ho03/",
+    pastPositions: [
+      "23-24 Mechanical Subteam Member",
+      "24-25 Mechanical Team Lead",
+      "25-26 Project Advisor",
+    ],
+    experiences: [
+      {
+        company: "huMannity MedTec",
+        role: "Mechanical Engineer Intern",
+      },
+      {
+        company: "Disneyland",
+        role: "Incoming Quality Engineering Intern",
+      },
+    ],
+    field: "Mechanical Engineering",
+    testimonial:
+      "From member to lead to advisor, I grew alongside CanSat. The technical, leadership, and management skills I gained through CanSat directly prepared me for real-world engineering work and helped me secure a Disneyland internship.",
+    profileImage: "/assets/images/management/sarah-ho.jpg",
+  },
+  {
+    name: "Dayeon Yoon",
+    linkedin: "https://www.linkedin.com/in/diane611/",
+    pastPositions: ["24-25 Mechanical Subteam Member"],
+    experiences: [
+      {
+        company: "Tesla",
+        role: "Process Engineering Intern",
+      },
+      {
+        company: "Hesse Mechatronics",
+        role: "Engineering Intern",
+      },
+    ],
+    field: "Aerospace Engineering",
+    testimonial:
+      "CanSat gave me hands-on engineering experience and helped me learn how to work in a team, communicating with other subteams in a way that closely reflects real-life engineering systems.",
+    profileImage: "/assets/images/team/2024-2025/dayeon-yoon.jpg",
+  },
+  {
+    name: "Zhanhao Ruan",
+    linkedin: "https://www.linkedin.com/in/zhanhao-ruan-3294582b8/",
+    pastPositions: ["24-25 Controls Subteam Member"],
+    experiences: [
+      {
+        company: "Carnegie Mellon University",
+        role: "Master's in Electrical/Computer Engineering",
+      },
+      {
+        company: "MITRE eCTF Competition",
+        role: "11th place globally",
+      },
+    ],
+    field: "Computer Science",
+    testimonial:
+      "Cansat provided me with valuable experience in technical and teamwork skills. I learned more about embedded C and learned how to cooperate with people in different fields. I even got the chance to learn a bit about PCB, the electrical field.",
+    profileImage: "/assets/images/team/2024-2025/zhanhao-ruan.jpg",
   },
 ];
 

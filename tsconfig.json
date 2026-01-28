@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,7 +22,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
   "include": [
@@ -33,7 +39,12 @@
     "pages/**/*.tsx",
     "types/**/*.ts",
     "types/**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "./.next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "studio-uci-cansat-website", "**/studio-uci-cansat-website/**"]
+  "exclude": [
+    "node_modules",
+    "studio-uci-cansat-website",
+    "**/studio-uci-cansat-website/**"
+  ]
 }

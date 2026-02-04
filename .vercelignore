@@ -1,0 +1,2 @@
+# Ignore Sanity Studio directory during Vercel builds
+studio-uci-cansat-website/

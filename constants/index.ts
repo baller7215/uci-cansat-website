@@ -741,7 +741,7 @@ export const team2024_2025 = {
       major: "Computer Science",
       gradYear: "2025",
       description:
-        "My responsibility includes developing the ground station to communicate with the CanSat and display real-time data through Python. I am also responsible for programming the embedded systems through C and performing integration testing. ",
+        "My responsibility includes developing the ground station to communicate with the CanSat and display real-time data through Python. I am also responsible for programming the embedded systems through C and performing integration testing.",
     },
   ],
   operations: [

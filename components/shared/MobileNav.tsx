@@ -6,7 +6,7 @@ import { FaXmark } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/constants";
 import Link from "next/link";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const MobileNav = () => {
@@ -33,20 +33,80 @@ const MobileNav = () => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.2, ease: [0.4, 0, 0.2, 1] }
+    },
+    exit: {
+      opacity: 0,
+      transition: { duration: 0.15, ease: [0.4, 0, 1, 1] }
+    },
+  };
+
+  const subMenuVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.06,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.18,
+        staggerChildren: 0.04,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const subMenuItemVariants = {
+    hidden: { opacity: 0, y: 6 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.2, ease: [0.4, 0, 0.2, 1] },
+    },
+    exit: {
+      opacity: 0,
+      y: 0,
+      transition: { duration: 0.16, ease: [0.4, 0, 1, 1] },
+    },
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+    hidden: { opacity: 0, y: 15 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.2, ease: [0.4, 0, 0.2, 1] }
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
+      transition: { duration: 0.12, ease: [0.4, 0, 1, 1] }
+    },
   };
 
   return (
@@ -71,13 +131,15 @@ const MobileNav = () => {
         </button>
       </div>
 
-      {menuOpen && (
-        <motion.div
-          className="fixed inset-0 bg-[var(--color-black)] text-custom-white flex flex-col items-center justify-center z-50 pb-5"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            className="fixed inset-0 bg-[var(--color-black)] text-custom-white flex flex-col items-center justify-center z-50 pb-5"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={overlayVariants}
+          >
           <div className="mobileNav">
             <div className="w-full flex justify-between">
               <Link href="/">
@@ -94,7 +156,13 @@ const MobileNav = () => {
             </div>
           </div>
 
-          <motion.nav className="navbar-nav" variants={containerVariants}>
+          <motion.nav
+            className="navbar-nav"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
             <motion.ul
               className="flex flex-col items-center gap-4 text-2xl"
               variants={containerVariants}
@@ -103,10 +171,9 @@ const MobileNav = () => {
                 const isActive = link.route === pathname;
 
                 return (
-                  <>
+                  <React.Fragment key={link.route}>
                     {link.children.length > 0 ? (
                       <motion.li
-                        key={link.route}
                         className={`navbar-nav-element !text-custom-white group ${
                           isActive ? "navLink-bold" : "navLink"
                         }`}
@@ -121,56 +188,59 @@ const MobileNav = () => {
                           {link.label}
                           <ChevronDown size={16} className="my-auto" />
                         </button>
-                        {expandedSection === "team" &&
-                          expandedSection == link.label.toLowerCase() && (
-                            <motion.ul
-                              className="mt-2 flex flex-col items-center gap-2 mb-1 text-base text-custom-gray"
-                              initial="hidden"
-                              animate="visible"
-                              variants={containerVariants}
-                            >
-                              {link.children.map((child) => (
-                                <motion.li
-                                  key={child.route}
-                                  variants={itemVariants}
-                                >
-                                  <Link
-                                    href={child.route}
-                                    className="hover:text-custom-orange"
+                        <AnimatePresence>
+                          {expandedSection === "team" &&
+                            expandedSection === link.label.toLowerCase() && (
+                              <motion.ul
+                                className="mt-2 flex flex-col items-center gap-2 mb-1 text-base text-custom-gray"
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                                variants={subMenuVariants}
+                              >
+                                {link.children.map((child) => (
+                                  <motion.li
+                                    key={child.route}
+                                    variants={subMenuItemVariants}
                                   >
-                                    {child.label}
-                                  </Link>
-                                </motion.li>
-                              ))}
-                            </motion.ul>
-                          )}
-                        {expandedSection === "projects" &&
-                          expandedSection == link.label.toLowerCase() && (
-                            <motion.ul
-                              className="mt-2 flex flex-col items-center gap-2 mb-1 text-base text-custom-gray"
-                              initial="hidden"
-                              animate="visible"
-                              variants={containerVariants}
-                            >
-                              {link.children.map((child) => (
-                                <motion.li
-                                  key={child.route}
-                                  variants={itemVariants}
-                                >
-                                  <Link
-                                    href={child.route}
-                                    className="hover:text-custom-orange"
+                                    <Link
+                                      href={child.route}
+                                      className="hover:text-custom-orange"
+                                    >
+                                      {child.label}
+                                    </Link>
+                                  </motion.li>
+                                ))}
+                              </motion.ul>
+                            )}
+                          {expandedSection === "projects" &&
+                            expandedSection === link.label.toLowerCase() && (
+                              <motion.ul
+                                className="mt-2 flex flex-col items-center gap-2 mb-1 text-base text-custom-gray"
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                                variants={subMenuVariants}
+                              >
+                                {link.children.map((child) => (
+                                  <motion.li
+                                    key={child.route}
+                                    variants={subMenuItemVariants}
                                   >
-                                    {child.label}
-                                  </Link>
-                                </motion.li>
-                              ))}
-                            </motion.ul>
-                          )}
+                                    <Link
+                                      href={child.route}
+                                      className="hover:text-custom-orange"
+                                    >
+                                      {child.label}
+                                    </Link>
+                                  </motion.li>
+                                ))}
+                              </motion.ul>
+                            )}
+                        </AnimatePresence>
                       </motion.li>
                     ) : (
                       <motion.li
-                        key={link.route}
                         className={`navbar-nav-element !text-custom-white group ${
                           isActive ? "navLink-bold" : "navLink"
                         }`}
@@ -179,13 +249,18 @@ const MobileNav = () => {
                         <Link href={link.route}>{link.label}</Link>
                       </motion.li>
                     )}
-                  </>
+                  </React.Fragment>
                 );
               })}
             </motion.ul>
           </motion.nav>
 
-          <motion.div variants={itemVariants}>
+          <motion.div
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
             <Link href="/Learn More" onClick={toggleMenu} className="mt-10">
               {/** @todo rename join us to something like "learn more" or "application" (brainstorm stuff) */}
               <button className="rounded-full bg-[var(--color-orange)] px-10 py-3 text-[var(--color-whiteIce)] text-xl">
@@ -193,8 +268,9 @@ const MobileNav = () => {
               </button>
             </Link>
           </motion.div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

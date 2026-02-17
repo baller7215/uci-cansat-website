@@ -19,5 +19,5 @@ export async function fetchTeamByYear(year: string) {
       personId,
       profileImg
     }`
-  return sanityClient.fetch(query, {year})
+  return sanityClient.fetch(query, { year }, { cache: "no-store" });
 }

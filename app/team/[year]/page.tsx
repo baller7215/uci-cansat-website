@@ -7,6 +7,9 @@ import ProfilesGrid from "@/components/shared/ProfilesGrid";
 import MobileFooter from "@/components/shared/MobileFooter";
 import { urlFor } from "@/lib/sanity.image";
 
+// Always fetch fresh team data from Sanity (no Next.js data cache)
+export const dynamic = "force-dynamic";
+
 // Sanity member data type
 type SanityMember = {
   _id: string;

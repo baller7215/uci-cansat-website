@@ -143,7 +143,7 @@ export const teamLinks = [
   {
     label: "2025 - 2026",
     route: "/team/2025-2026",
-    image: "/assets/images/team/2024-2025/team.jpg",
+    image: "/assets/images/team/2025-2026/team.jpg",
   },
   {
     label: "2024 - 2025",

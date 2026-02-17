@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -57,21 +56,27 @@ const ImageTextLayout = ({
           <motion.div variants={fadeIn} className="leftText w-full lg:w-3/5">
             <h2 className="header leading-[60px]">{title}</h2>
             <p className="description text-custom-white whitespace-pre-wrap">
-              {description.split("\n").map((text, index) => (
-                <span key={index} className="block my-5">
-                  {text}
-                </span>
-              ))}
-              {link && (
-                <Button
-                  variant="link"
-                  className="!description !text-custom-orange !p-0 !m-0 !text-xl !lg:text-2xl"
-                >
-                  <Link className="description" href={link} target="_blank">
-                    here
-                  </Link>
-                </Button>
-              )}
+              {description.split("\n").map((text, index) => {
+                const isLast = index === description.split("\n").length - 1;
+                const hasLink = !!link && isLast;
+                return (
+                  <span key={index} className="block my-5">
+                    {text}
+                    {hasLink && (
+                      <>
+                        {" "}
+                        <Link
+                          href={link}
+                          target="_blank"
+                          className="text-custom-white underline underline-offset-2 decoration-custom-white/60 hover:text-custom-orange hover:decoration-custom-orange transition-colors"
+                        >
+                          here
+                        </Link>
+                      </>
+                    )}
+                  </span>
+                );
+              })}
             </p>
           </motion.div>
         </motion.div>

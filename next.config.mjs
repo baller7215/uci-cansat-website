@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['media.licdn.com', 'cdn.sanity.io'],
+        // remotePatterns is required for Next.js Image to allow Sanity CDN in production
+        remotePatterns: [
+            { protocol: 'https', hostname: 'cdn.sanity.io', pathname: '/**' },
+            { protocol: 'https', hostname: 'media.licdn.com', pathname: '/**' },
+        ],
     },
     // Exclude studio directory from Next.js build
     typescript: {

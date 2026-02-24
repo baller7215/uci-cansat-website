@@ -58,7 +58,7 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
             {page === 'home' && (
                 <motion.div variants={fadeInUp}>
                 <Button asChild className="cover-joinButton hover:bg-custom-lightBlack hover:text-custom-orange transition-colors">
-                    <Link href="/team/2024-2025">See Our Team</Link>
+                    <Link href="/team/2025-2026">See Our Team</Link>
                 </Button>
                 </motion.div>
             )}

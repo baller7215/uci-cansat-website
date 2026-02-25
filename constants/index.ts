@@ -2742,30 +2742,6 @@ export const project2017_2018 = {
   },
 };
 
-// sponsors
-export const sponsors = [
-  {
-    label: "Blue Origin",
-    route: "https://www.blueorigin.com/",
-    image: "/assets/images/sponsors/blueOrigin.jpg",
-  },
-  {
-    label: "Nxbeam",
-    route: "https://www.nxbeam.com/",
-    image: "/assets/images/sponsors/nxbeam.png",
-  },
-  {
-    label: "UROP",
-    route: "https://urop.uci.edu/",
-    image: "/assets/images/sponsors/urop.jpg",
-  },
-  // {
-  //   label: "",
-  //   route: "",
-  //   image: "",
-  // },
-];
-
 export const whySponsorUs = {
   description:
     "By becoming a sponsor, you will be contributing to the next generation of engineers by granting them the opportunity to attain valuable, hands-on experience and expand their critical thinking skills. As a sponsor, you will connect with the motivated and talented students on our team and increase your company’s visibility at UC Irvine.",

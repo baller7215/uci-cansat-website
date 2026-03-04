@@ -1,4 +1,4 @@
-import { sanityClient } from '@/lib/sanity.client' // adjust path if needed
+import { sanityClient } from "@/lib/sanity.client";
 
 // FETCH TEAM MEMBERS BY YEAR
 export async function fetchTeamByYear(year: string) {
@@ -19,7 +19,7 @@ export async function fetchTeamByYear(year: string) {
       order,
       personId,
       profileImg
-    }`
+    }`;
   return sanityClient.fetch(query, { year }, { cache: "no-store" });
 }
 
@@ -36,6 +36,122 @@ export async function fetchSponsorsByYear(year: string) {
       description,
       order,
       isActive,
-    }`
+    }`;
+  return sanityClient.fetch(query, { year }, { cache: "no-store" });
+}
+
+// FETCH PROJECT BY YEAR
+export async function fetchProjectByYear(year: string) {
+  const query = `*[_type == "project" && academicYear == $year][0]{
+    _id,
+    academicYear,
+    overview{
+      team,
+      description
+    },
+    projectDefinition{
+      show,
+      planning,
+      problemStatement,
+      image
+    },
+    design{
+      show,
+      majorComponents{
+        description,
+        bulletPoints[]{
+          id,
+          text
+        }
+      },
+      keyComponents[]{
+        name,
+        description
+      },
+      ourWorks{
+        show,
+        mechanical{
+          name,
+          description,
+          image,
+          model,
+          caption
+        },
+        electrical{
+          name,
+          description,
+          image,
+          model,
+          caption
+        },
+        controls{
+          show,
+          name,
+          description,
+          image
+        }
+      },
+      seniorSubsystem{
+        show,
+        description,
+        image,
+        caption
+      },
+      descentControl{
+        show,
+        items[]{
+          name,
+          bullets[],
+          image
+        }
+      },
+      mechanicalSubsystem{
+        show,
+        image,
+        description,
+        items[]{
+          name,
+          bullets[]
+        }
+      },
+      electricalPowerSubsystem{
+        show,
+        image,
+        caption,
+        bullets[]
+      },
+      flightSoftware{
+        show,
+        image,
+        items[]{
+          name,
+          bullets[]
+        }
+      },
+      groundControlSystem{
+        show,
+        leftImage,
+        rightImage
+      }
+    },
+    competitionRequirements{
+      show,
+      description,
+      bullets[]{
+        id,
+        point
+      }
+    },
+    teamGoals[]{
+      id,
+      point
+    },
+    posters{
+      fall,
+      winter,
+      spring
+    }
+  }`;
+
   return sanityClient.fetch(query, { year }, { cache: "no-store" });
 }

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Providers } from "./providers";
+import { StickyBanner } from "@/components/ui/sticky-banner";
 
 
 // TODO: RUN WHEN CACHING HAS ERRORS
@@ -37,13 +38,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased`}
       >
-        {/* <StickyBanner className="bg-gradient-to-r from-[var(--color-rhino)] to-[var(--color-lightBlack)]">
+        <StickyBanner className="bg-gradient-to-r from-[var(--color-rhino)] to-[var(--color-lightBlack)]">
           <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <p className="text-[var(--color-whiteIce)] text-center text-sm sm:text-base font-medium">
-              Help UCI CanSat reach new heights by donating to our Zotfunder to fund materials, testing, and travel.
+              Help UCI CanSat reach new heights by donating to our Giving Day to fund materials, testing, and travel.
             </p>
             <a
-              href="https://zotfunder.give.uci.edu/project/48727"
+              href="https://givingday.uci.edu/giving-day/112285/department/112440"
               target="_blank"
               rel="noopener noreferrer"
               className="whitespace-nowrap px-4 py-1.5 sm:px-6 sm:py-2 rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-semibold text-sm sm:text-base hover:bg-[var(--color-orange)]/90 transition-colors duration-300"
@@ -51,7 +52,7 @@ export default function RootLayout({
               Donate Now
             </a>
           </div>
-        </StickyBanner> */}
+        </StickyBanner>
         {/* {children} */}
         <main className='root'>
           {/* <Navbar /> */}

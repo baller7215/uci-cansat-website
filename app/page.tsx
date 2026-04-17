@@ -31,6 +31,29 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const recruitmentFlyers = [
+    {
+      src: "/assets/images/recruitment/2026-2027/overview.jpg",
+      alt: "UCI CanSat 2026-2027 recruitment overview flyer",
+    },
+    {
+      src: "/assets/images/recruitment/2026-2027/mechanical.jpg",
+      alt: "UCI CanSat mechanical subteam recruitment flyer",
+    },
+    {
+      src: "/assets/images/recruitment/2026-2027/electrical.jpg",
+      alt: "UCI CanSat electrical subteam recruitment flyer",
+    },
+    {
+      src: "/assets/images/recruitment/2026-2027/software.jpg",
+      alt: "UCI CanSat software subteam recruitment flyer",
+    },
+    {
+      src: "/assets/images/recruitment/2026-2027/webmaster.jpg",
+      alt: "UCI CanSat webmaster recruitment flyer",
+    },
+  ];
+
   return (
     <>
       <main>
@@ -260,7 +283,7 @@ export default function Home() {
           </div>
         </motion.section> */}
 
-        {/* applications are closed section */}
+        {/* applications for 2026-2027 are open section */}
         <motion.section
           className="relative bg-custom-rhino w-full h-auto text-center"
           initial="hidden"
@@ -274,30 +297,64 @@ export default function Home() {
               className="uppercase text-custom-orange text-xs md:text-sm tracking-wider font-bold"
               variants={fadeInUp}
             >
-              2025-2026 Recruitment
+              2026-2027 Recruitment
             </motion.h4>
             <motion.h2
               className="capitalize text-custom-white text-4xl md:text-6xl font-bold"
               variants={fadeInUp}
             >
-              Applications are closed
+              Applications are open
             </motion.h2>
             <motion.p
-              className="text-custom-white text-md md:text-lg font-medium"
+              className="text-custom-white text-md md:text-lg font-medium max-w-5xl mx-auto"
               variants={fadeInUp}
             >
-              Applications for the 2025-2026 school year are now closed. Thank you to all who applied! We will open applications for the 2026-2027 school year in spring 2026.
+              UCI CanSat is now recruiting for the 2026-2027 school year. We are
+              a senior design project team in MAE that designs, builds, and
+              launches a satellite payload model for the International CanSat
+              Competition.
             </motion.p>
 
-            <div className="flex flex-col md:flex-row gap-5 mx-auto">
+            <motion.div
+              className="text-custom-white flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto"
+              variants={fadeInUp}
+            >
+              {[
+                "Mechanical",
+                "Electrical",
+                "Embedded Software",
+                "Web Development",
+              ].map((role) => (
+                <span
+                  key={role}
+                  className="rounded-full bg-custom-white/10 border border-custom-white/20 px-5 py-2 text-sm md:text-base font-semibold"
+                >
+                  {role}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.p
+              className="text-custom-white text-sm md:text-base font-medium max-w-4xl mx-auto"
+              variants={fadeInUp}
+            >
+              All undergraduate class levels are encouraged to apply. Minimum
+              GPA: 3.3. Deadline: May 3rd at 11:59 PM.
+            </motion.p>
+
+            <div className="flex flex-col md:flex-row gap-5 mx-auto items-center justify-center">
               <Button
                 asChild
                 variant="default"
                 className="capitalize rounded-full bg-[var(--color-orange)] text-[var(--color-whiteIce)] font-medium text-[16px] md:text-[18px] px-10 md:px-20 py-3 md:py-5"
               >
                 <motion.div variants={fadeInUp}>
-                  <Link href="/team/2025-2026">
-                    See the 2025-2026 Team
+                  <Link
+                    href="https://bit.ly/26-27-CanSat-App"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Apply Now
                   </Link>
                 </motion.div>
               </Button>
@@ -308,10 +365,63 @@ export default function Home() {
                 className="capitalize rounded-full text-[var(--color-orange)] font-medium text-[16px] md:text-[18px] px-10 py-3 md:py-5"
               >
                 <motion.div variants={fadeInUp}>
-                  <Link href="https://cansatuci.notion.site/">Learn More</Link>
+                  <Link
+                    href="https://tinyurl.com/26-27-CanSat-Info"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Information Doc
+                  </Link>
+                </motion.div>
+              </Button>
+
+              <Button
+                asChild
+                variant="ghost"
+                className="capitalize rounded-full text-[var(--color-orange)] font-medium text-[16px] md:text-[18px] px-10 py-3 md:py-5"
+              >
+                <motion.div variants={fadeInUp}>
+                  <Link
+                    href="https://www.instagram.com/p/DXFz1pzD5fg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Instagram Post
+                  </Link>
                 </motion.div>
               </Button>
             </div>
+
+            <motion.p
+              className="text-custom-white text-sm md:text-base font-medium"
+              variants={fadeInUp}
+            >
+              Questions? Email{" "}
+              <Link
+                href="mailto:cansatuci@gmail.com"
+                className="text-custom-orange underline underline-offset-4"
+              >
+                cansatuci@gmail.com
+              </Link>
+            </motion.p>
+
+            <motion.div
+              className="w-full overflow-x-auto pb-2"
+              variants={fadeInUp}
+            >
+              <div className="mx-auto flex w-max gap-4 px-1">
+                {recruitmentFlyers.map((flyer) => (
+                  <Image
+                    key={flyer.src}
+                    src={flyer.src}
+                    alt={flyer.alt}
+                    width={300}
+                    height={388}
+                    className="rounded-xl border border-custom-white/20 shadow-md"
+                  />
+                ))}
+              </div>
+            </motion.div>
           </div>
         </motion.section>
 

@@ -283,6 +283,50 @@ export default function Home() {
           </div>
         </motion.section> */}
 
+        {/* what is cansat section */}
+        <motion.section
+          className="relative bg-[var(--color-black)] w-full h-auto text-center"
+          initial="hidden"
+          whileInView="visible"
+          variants={staggerContainer}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col p-10 md:p-10 lg:p-20 xl:p-20 2xl:p-40 w-full h-auto gap-6 md:gap-8">
+            <motion.h4
+              className="uppercase text-custom-orange text-xs md:text-sm tracking-wider font-bold"
+              variants={fadeInUp}
+            >
+              About the Competition
+            </motion.h4>
+            <motion.h2
+              className="capitalize text-custom-white text-4xl md:text-6xl font-bold"
+              variants={fadeInUp}
+            >
+              What is CanSat?
+            </motion.h2>
+            <motion.p
+              className="text-custom-white text-md md:text-lg font-medium max-w-4xl mx-auto"
+              variants={fadeInUp}
+            >
+              Watch this short overview to learn what the CanSat competition is
+              and how UCI CanSat prepares for Senior Design Networking Night.
+            </motion.p>
+            <motion.div className="w-full max-w-4xl mx-auto" variants={fadeInUp}>
+              <div className="relative w-full overflow-hidden rounded-2xl shadow-xl border border-custom-white/20">
+                <iframe
+                  className="w-full"
+                  style={{ aspectRatio: "16 / 9" }}
+                  src="https://www.youtube.com/embed/JU7gskH0vho"
+                  title="UCI CanSat - SDNN Overview"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+
         {/* applications for 2026-2027 are open section */}
         <motion.section
           className="relative bg-custom-rhino w-full h-auto text-center"

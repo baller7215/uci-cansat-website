@@ -48,9 +48,10 @@ const Updates = () => {
               {featuredNews.map((card, index) => (
                 <div
                   key={index}
-                  className={`hidden md:flex scale-110 transform transition-all ${
+                  className={`hidden md:flex scale-105 transform transition-all duration-300 ${
                     index !== 0 ? "translate-y-20" : ""
-                  } z-[${10 - index}]`}
+                  }`}
+                  style={{ zIndex: 10 - index }}
                 >
                   <CardNews
                     title={card.title}

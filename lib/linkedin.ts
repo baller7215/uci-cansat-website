@@ -1,7 +1,11 @@
 import { LinkedInPost } from "@/components/shared/LinkedInCard";
+import { mockLinkedInPosts } from "@/lib/mocks/linkedin-posts";
 
 export async function fetchLinkedInFeed(): Promise<{ posts: LinkedInPost[] }> {
-    // const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+    // Toggle with NEXT_PUBLIC_LINKEDIN_MOCK=true in .env.local
+    if (process.env.NEXT_PUBLIC_LINKEDIN_MOCK === "true") {
+        return { posts: mockLinkedInPosts };
+    }
 
     const res = await fetch(`/api/linkedin-feed`);
     if (!res.ok) throw new Error('Network response was not ok');

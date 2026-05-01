@@ -1,0 +1,18 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#0A66C2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg3)"/>
+  <circle cx="250" cy="290" r="130" fill="#93C5FD" fill-opacity="0.2"/>
+  <circle cx="560" cy="290" r="130" fill="#93C5FD" fill-opacity="0.2"/>
+  <circle cx="870" cy="290" r="130" fill="#93C5FD" fill-opacity="0.2"/>
+  <text x="90" y="510" fill="white" font-size="60" font-family="Arial, Helvetica, sans-serif" font-weight="700">Welcome New Members</text>
+  <text x="90" y="590" fill="#D9ECFF" font-size="40" font-family="Arial, Helvetica, sans-serif">Software, Propulsion, Outreach</text>
+  <rect x="90" y="680" width="1020" height="320" rx="24" fill="white" fill-opacity="0.12"/>
+  <text x="140" y="785" fill="white" font-size="38" font-family="Arial, Helvetica, sans-serif">Building flight-ready systems together.</text>
+  <text x="140" y="865" fill="white" font-size="38" font-family="Arial, Helvetica, sans-serif">Testing, learning, launching.</text>
+  <text x="90" y="1080" fill="#D9ECFF" font-size="34" font-family="Arial, Helvetica, sans-serif">Mock LinkedIn image for UI testing</text>
+</svg>

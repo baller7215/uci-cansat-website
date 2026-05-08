@@ -1,6 +1,6 @@
 # UCI CanSat Website
 
-Public website for **UCI CanSat**—student teams designing, building, and launching CanSat payloads. This repository contains the Next.js frontend, API routes for email and social content, and a bundled [Sanity](https://www.sanity.io/) Studio for editors.
+Public website for **UCI CanSat**, a student team designing, building, and launching CanSat payloads. This repository contains the Next.js frontend, API routes for email and social content, and a bundled [Sanity](https://www.sanity.io/) Studio for editors.
 
 ## Tech stack
 
@@ -118,6 +118,12 @@ Install dependencies in each directory separately (`npm install`).
 5. Optionally, in another terminal: `cd studio-uci-cansat-website && npm install && npm run dev` to edit CMS content.
 
 If you hit odd caching or build issues, clearing `.next` and rebuilding often helps (`rm -rf .next && npm run build`).
+
+## Contributing
+
+- Use `.env.example` as the template for local variables (`cp .env.example .env.local`).
+- Follow the contribution workflow in `CONTRIBUTING.md`.
+- Keep Sanity schema changes aligned with frontend queries in `lib/queries.ts`.
 
 ## Deployment
 

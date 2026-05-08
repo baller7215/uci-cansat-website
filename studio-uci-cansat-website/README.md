@@ -1,9 +1,40 @@
-# Sanity Clean Content Studio
+# Sanity Studio (`studio-uci-cansat-website`)
 
-Congratulations, you have now installed the Sanity Content Studio, an open-source real-time content editing environment connected to the Sanity backend.
+Content editing studio for the UCI CanSat website.
 
-Now you can do the following things:
+This Studio manages CMS documents used by the frontend, including:
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the Sanity community](https://www.sanity.io/community/join?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+- `member`
+- `teamYear`
+- `project`
+- `sponsor`
+
+## Prerequisites
+
+- Node.js LTS and npm
+- Access to the configured Sanity project
+
+## Local development
+
+From this directory:
+
+```bash
+npm install
+npm run dev
+```
+
+The Studio runs separately from the Next.js app. Keep both dev servers running if you are developing frontend pages and editing content at the same time.
+
+## Scripts
+
+- `npm run dev`: start Studio in development mode
+- `npm run start`: start Studio in production mode
+- `npm run build`: build static Studio output
+- `npm run deploy`: deploy Studio to Sanity hosting
+- `npm run deploy-graphql`: deploy GraphQL API schema
+
+## Schema source
+
+Schemas are defined in `schemaTypes/` and exported through `schemaTypes/index.ts`.
+
+When you modify schema fields, ensure corresponding frontend GROQ queries remain in sync in `../lib/queries.ts`.

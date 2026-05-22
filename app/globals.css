@@ -262,27 +262,27 @@ html {
 
 /* REUSABLE ELEMENTS */
 /* COVER PAGE */
-/* .coverPage {
-  @apply bg-cover bg-center relative min-h-screen h-auto
+.cover-hero {
+  @apply relative isolate min-h-screen w-full;
+}
 
+.coverPage {
+  @apply absolute inset-0 z-0 bg-cover bg-center bg-no-repeat;
 }
 
 .gradient {
-  @apply flex flex-col min-h-screen h-auto w-full absolute inset-0 bg-gradient-to-b from-white/30 to-transparent/90
-} */
+  @apply absolute inset-0 z-10 flex min-h-screen w-full flex-col;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
 
 .text-overlay {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   padding: 1rem;
   border-radius: 10px;
-}
-
-.coverPage {
-  @apply absolute inset-0 bg-cover bg-center min-h-screen;
-}
-
-.gradient {
-  @apply relative min-h-screen flex flex-col w-full bg-gradient-to-b from-white/30 to-transparent/90;
 }
 
 .cover-textContainer {

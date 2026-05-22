@@ -26,12 +26,16 @@ const fadeInUp = {
 const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
 
   return (
-    <>
+    <section className="cover-hero">
       {/* background image */}
-      <div className="coverPage absolute inset-0 w-full h-full bg-cover bg-center z-0" style={{ backgroundImage: `url(${background})` }}></div>
+      <div
+        className="coverPage"
+        style={{ backgroundImage: `url(${background})` }}
+        aria-hidden
+      />
 
-      {/* gradient */}
-      <div className="gradient relative flex flex-col w-full z-10">
+      {/* gradient overlay + content */}
+      <div className="gradient">
         <Navbar />
         <MobileNav />
         <motion.div
@@ -86,7 +90,7 @@ const CoverPage = ({ page, title, subtitle, background }: CoverPageProps) => {
             </motion.a>
         </Button> */}
       </div>
-    </>
+    </section>
   );
 };
 

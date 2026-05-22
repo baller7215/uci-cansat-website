@@ -74,6 +74,7 @@ npm run build:check
 
 - Team and sponsor content is modeled in Sanity schemas under `studio-uci-cansat-website/schemaTypes/`.
 - If you add or change schema fields, confirm frontend queries in `lib/queries.ts` still match.
+- After schema or Studio config changes, redeploy hosted Studio from `studio-uci-cansat-website/` with `npx sanity deploy` (see `studio-uci-cansat-website/README.md`).
 - When introducing new remote media domains, update `next.config.mjs` image configuration.
 
 ## API route changes

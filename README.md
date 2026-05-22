@@ -129,7 +129,7 @@ If you hit odd caching or build issues, clearing `.next` and rebuilding often he
 
 The app is a standard Next.js deployment (commonly [Vercel](https://vercel.com)): configure environment variables, run `npm run build`, and ensure remote image domains in `next.config.mjs` stay in sync with any new asset hosts.
 
-Sanity Studio can be deployed with `sanity deploy` from the studio folder when you want editors on hosted Studio.
+Hosted Sanity Studio is deployed separately from the Next.js app. From `studio-uci-cansat-website/`, run `npx sanity deploy` after schema or Studio config changes. See `studio-uci-cansat-website/README.md` for the full steps.
 
 ## License
 

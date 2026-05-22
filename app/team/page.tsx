@@ -12,7 +12,7 @@ import MobileFooter from "@/components/shared/MobileFooter";
 
 const overview = {
     title: "Meet the UCI CanSat Team",
-    description: "We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system. Every year the mission changes so this year's objective is to build a probe that can be deployed at an altitude of around 700m, transmit telemetry in real-time, and use a parachute and aerobraking heat shield to land safely at an upright orientation which is signaled by a victory flag. Interested students are advised to read the official mission guide for 2024 - 2025 ",
+    description: "We are UCI CanSat, an undergraduate project in the MAE department. Our team competes in the CanSat competition, an annual, international engineering challenge to design and build a space-type system. Every year the mission changes so this year's objective is to build a probe that can be deployed at an altitude of around 700m, transmit telemetry in real-time, and use a parachute and aerobraking heat shield to land safely at an upright orientation which is signaled by a victory flag. Interested students are advised to read the official mission guide ",
     image: "/assets/images/team/team.jpg",
     link: "https://www.cansatcompetition.com/"
 }
@@ -49,7 +49,7 @@ const Team = () => {
                             <h2 className="header !m-0 h-full my-auto">See Our Teams</h2>
                             <Button
                                 onClick={handleToggleTeams} // Toggle the teams on button click
-                                className="text-custom-white bg-custom-lightBlack rounded-full p-5 my-auto"
+                                className="btn-on-dark"
                             >
                                 {showAll ? "Collapse Teams" : "View all Teams"}
                             </Button>

@@ -35,7 +35,7 @@ const Contact = () => {
         {/* contact form */}
         <motion.section
           id="overview"
-          className="section-container !h-auto !bg-custom-lightBlack"
+          className="section-container section-accent !h-auto"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
@@ -46,7 +46,7 @@ const Contact = () => {
             variants={fadeIn}
           >
             <h2 className="header !m-0">We are excited to hear from you!</h2>
-            <p className="description text-custom-white">
+            <p className="description">
               Please don’t hesitate to leave a message with any questions,
               concerns, or feedback you have!
               <br></br>*If this message concerns sponsorship for UCI CanSat,

@@ -285,7 +285,7 @@ export default function Home() {
 
         {/* what is cansat section */}
         <motion.section
-          className="relative bg-[var(--color-black)] w-full h-auto text-center"
+          className="band-dark"
           initial="hidden"
           whileInView="visible"
           variants={staggerContainer}
@@ -329,7 +329,7 @@ export default function Home() {
 
         {/* applications for 2026-2027 are open section */}
         <motion.section
-          className="relative bg-custom-rhino w-full h-auto text-center"
+          className="band-rhino"
           initial="hidden"
           whileInView="visible"
           variants={staggerContainer}

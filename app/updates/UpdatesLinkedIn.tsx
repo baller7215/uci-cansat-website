@@ -12,7 +12,7 @@ export default function UpdatesLinkedIn() {
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className="h-[430px] animate-pulse rounded-2xl border border-custom-rhino/15 bg-custom-white/80 shadow-[0_8px_24px_rgba(43,49,83,0.08)]"
+            className="card-elevated h-[430px] animate-pulse bg-custom-white/80 shadow-[0_8px_24px_rgba(43,49,83,0.08)] hover:translate-y-0 hover:shadow-[0_8px_24px_rgba(43,49,83,0.08)]"
           />
         ))}
       </div>

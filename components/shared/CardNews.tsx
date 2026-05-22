@@ -9,7 +9,7 @@ const CardNews = ({ title, subtitle, route, date, image }: NewsCard) => {
     <article className="group w-full max-w-[300px] md:max-w-[500px]">
       {hasCoreContent ? (
         <Link
-          className="flex h-full flex-col overflow-hidden rounded-2xl border border-custom-rhino/15 bg-custom-white shadow-[0_10px_30px_rgba(43,49,83,0.10)] transition-all duration-300 hover:-translate-y-1 hover:border-custom-shakespeare/40 hover:shadow-[0_14px_36px_rgba(37,130,185,0.20)]"
+          className="card-elevated"
           href={route}
           target="_blank"
           rel="noopener noreferrer"

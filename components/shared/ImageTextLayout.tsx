@@ -28,7 +28,7 @@ const ImageTextLayout = ({
     <>
       {/* overview */}
       <motion.section
-        className="section-container !h-auto !bg-custom-black"
+        className="section-container section-dark !h-auto"
         id="overview"
         initial="hidden"
         animate="visible"
@@ -55,7 +55,7 @@ const ImageTextLayout = ({
           {/* right */}
           <motion.div variants={fadeIn} className="leftText w-full lg:w-3/5">
             <h2 className="header leading-[60px]">{title}</h2>
-            <p className="description text-custom-white whitespace-pre-wrap">
+            <p className="description !text-custom-white whitespace-pre-wrap">
               {description.split("\n").map((text, index) => {
                 const isLast = index === description.split("\n").length - 1;
                 const hasLink = !!link && isLast;

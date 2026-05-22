@@ -47,21 +47,19 @@ const About = () => {
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="relative h-auto"
-          // className="section-container !h-auto"
+          className="section-dark relative h-auto min-h-screen"
           id="overview"
         >
-          {/* desktop */}
           <motion.div
             variants={fadeIn}
-            className="hidden md:flex flex-col md:flex-row h-full md:!h-auto w-full md:!min-h-screen bg-gradient-to-b from-black/20 to-black/100 py-5 p-10 md:p-10 md:py-5 lg:p-20 lg:py-10 xl:p-20 xl:py-10 2xl:p-40 2xl:py-20 justify-center md:justify-between gap-5"
+            className="hero-dark-panel hidden md:flex"
           >
             <motion.div
               className="leftText !h-auto w-full md:w-1/2"
               variants={fadeIn}
             >
               <h2 className="header">Introduction</h2>
-              <p className="text-custom-whiteIce description">
+              <p className="description !text-custom-whiteIce">
                 We are UCI CanSat, a vibrant and enthusiastic student
                 engineering team from the University of California, Irvine
                 (UCI). Our team is composed of a diverse blend of passionate
@@ -118,13 +116,72 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          {/* mobile */}
+          {/* mobile — same content and dark theme as desktop */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={fadeIn}
-            className="md:hidden relative h-auto md:min-h-screen w-full flex home-sectionBackground"
-          ></motion.div>
+            className="hero-dark-panel md:hidden"
+          >
+            <motion.div
+              className="leftText !h-auto w-full"
+              variants={fadeIn}
+            >
+              <h2 className="header">Introduction</h2>
+              <p className="description">
+                We are UCI CanSat, a vibrant and enthusiastic student
+                engineering team from the University of California, Irvine
+                (UCI). Our team is composed of a diverse blend of passionate
+                students unified under one mission: to excel in the
+                International CanSat competition. This annual student
+                design-build-launch event, spearheaded by the American
+                Astronautical Society (AAS), provides an opportunity for us to
+                experience the entire development cycle of a complex engineering
+                project – from conceptual design through integration and
+                testing, to real-world operation and post-mission summary. Last
+                year, we placed
+                <span className="emphasis"> 9th in the World </span>, and
+                <span className="emphasis"> 3rd in the United States </span> out
+                of over 100 participating teams.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="w-full flex flex-col gap-4"
+              variants={fadeIn}
+            >
+              <div className="mainContent-container rounded-md !h-fit">
+                {management.map((profile) => (
+                  <motion.li
+                    key={profile.name}
+                    className="flex flex-row gap-3"
+                    variants={fadeIn}
+                  >
+                    {profile.profileImg ? (
+                      <Image
+                        src={profile.profileImg}
+                        alt={`${profile.name} profile image`}
+                        width={130}
+                        height={130}
+                        className="profile-image border-4 border-custom-shakespeare max-h-24 max-w-24"
+                      />
+                    ) : (
+                      <div className="profile-image"></div>
+                    )}
+                    <div className="my-auto w-3/5 flex flex-col gap-0">
+                      <h3 className="tableTitle">{profile.name}</h3>
+                      <h4 className="tableSubtitle uppercase">
+                        {profile.role}
+                      </h4>
+                    </div>
+                  </motion.li>
+                ))}
+              </div>
+              <div className="title-container rounded-md w-full !h-auto py-4">
+                <h2 className="header whitespace-nowrap">Management</h2>
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.section>
 
         {/* overview */}

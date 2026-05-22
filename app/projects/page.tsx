@@ -28,7 +28,7 @@ const Projects = () => {
         <>
             <main>
                 {/* cover page */}
-                <CoverPage page="team" title="Projects" subtitle="2024 - 2025" background="./assets/images/components/double2.jpg" />
+                <CoverPage page="team" title="Projects" background="./assets/images/components/double2.jpg" />
 
                 {/* see our projects */}
                 <section className="section-container !h-auto" id="overview">
@@ -37,7 +37,7 @@ const Projects = () => {
                             <h2 className="header">See Our Projects</h2>
                             <Button
                                 onClick={handleToggleTeams} // Toggle the teams on button click
-                                className="text-custom-white bg-custom-lightBlack rounded-full p-5 my-auto transform transition-transform duration-300 hover:scale-105"
+                                className="btn-on-dark transform transition-transform duration-300 hover:scale-105"
                             >
                                 {showAll ? "Collapse Projects" : "View all Projects"}
                             </Button>

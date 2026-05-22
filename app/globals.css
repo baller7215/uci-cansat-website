@@ -16,17 +16,9 @@
   --color-gray: #bfc0c0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Site uses intentional light/dark sections — not OS-driven theme switching */
+html {
+  color-scheme: light;
 }
 
 @layer utilities {
@@ -331,10 +323,87 @@ html {
   }
 }
 
-/* left right split containers */
-.section-container {
-  @apply relative bg-custom-white border border-x-0 border-custom-black;
+/* Section surfaces (light / dark / accent) */
+.section-container,
+.section-light {
+  @apply relative bg-custom-white border border-x-0 border-custom-black text-custom-rhino;
 }
+
+.section-dark {
+  @apply relative bg-custom-black border border-x-0 border-custom-black text-custom-whiteIce;
+}
+
+.section-accent {
+  @apply relative bg-custom-lightBlack border border-x-0 border-custom-lightBlack text-custom-white;
+}
+
+.section-dark .description,
+.section-accent .description {
+  @apply text-inherit;
+}
+
+.section-light .description,
+.section-container .description {
+  @apply text-custom-rhino;
+}
+
+.section-dark .subHeader,
+.section-accent .subHeader {
+  @apply text-custom-whiteIce;
+}
+
+.section-dark .tableTitle,
+.section-accent .tableTitle {
+  @apply text-custom-whiteIce;
+}
+
+.section-dark .tableSubtitle,
+.section-accent .tableSubtitle {
+  @apply text-custom-gray;
+}
+
+.section-dark .card-label {
+  @apply text-custom-white;
+}
+
+/* Full-width promotional bands (home, etc.) */
+.band-dark {
+  @apply relative w-full h-auto bg-custom-black text-custom-white text-center;
+}
+
+.band-rhino {
+  @apply relative w-full h-auto bg-custom-rhino text-custom-white text-center;
+}
+
+/* Hero intro with image overlay (about) */
+.hero-dark-panel {
+  @apply flex flex-col md:flex-row h-full md:!h-auto w-full md:!min-h-screen min-h-screen bg-gradient-to-b from-black/20 to-black/100 py-5 p-10 md:p-10 md:py-5 lg:p-20 lg:py-10 xl:p-20 xl:py-10 2xl:p-40 2xl:py-20 justify-center md:justify-between gap-5 text-custom-whiteIce;
+}
+
+/* Pill toggle buttons (view all / collapse) — same on light and dark sections */
+.btn-on-dark,
+.btn-toggle {
+  @apply text-custom-white bg-custom-lightBlack rounded-full p-5 my-auto hover:bg-custom-lightBlack/90 transition-colors;
+}
+
+/* Elevated content cards (news, LinkedIn, etc.) */
+.card-elevated {
+  @apply flex h-full flex-col overflow-hidden rounded-2xl border border-custom-rhino/15 bg-custom-white shadow-[0_10px_30px_rgba(43,49,83,0.10)] transition-all duration-300 hover:-translate-y-1 hover:border-custom-shakespeare/40 hover:shadow-[0_14px_36px_rgba(37,130,185,0.20)];
+}
+
+.card-elevated-header {
+  @apply flex items-center justify-between border-b border-custom-rhino/10 px-4 py-3;
+}
+
+.card-elevated-body {
+  @apply flex flex-1 flex-col p-4 md:p-5;
+}
+
+.card-elevated-footer {
+  @apply mt-auto border-t border-custom-rhino/10 pt-3.5;
+}
+
+/* left right split containers */
 
 .text-container {
   @apply flex flex-col md:flex-row h-full md:min-h-screen md:h-auto w-full p-5 md:p-10 lg:p-20 xl:p-20 2xl:p-32 justify-between gap-10;

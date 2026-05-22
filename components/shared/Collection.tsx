@@ -24,7 +24,7 @@ const Collection = ({ cards, dark }: CollectionProps) => {
                 ) : (
                   <div className="card-placeholder bg-custom-orange"></div>
                 )}
-                <h3 className={`card-label ${dark ? "card-label-dark" : ""}`}>
+                <h3 className={`card-label${dark ? " card-label-dark" : ""}`}>
                   {card.label}
                 </h3>
               </div>

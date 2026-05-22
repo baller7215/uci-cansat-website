@@ -39,7 +39,7 @@ const Updates = () => {
 
         {/* featured news */}
         <section
-          className="section-container !h-auto min-h-[100vh] md:min-h-screen !bg-custom-black"
+          className="section-container section-dark !h-auto min-h-[100vh] md:min-h-screen"
           id="overview"
         >
           <div className="text-container !my-auto !h-auto !min-h-[100vh] md:!min-h-screen !justify-start !flex-col text-center">
@@ -84,7 +84,7 @@ const Updates = () => {
               <h2 className="header capitalize">See What We are Up To</h2>
               <Button
                 onClick={handleToggleUpdates} // Toggle the updates on button click
-                className="text-custom-white bg-custom-lightBlack rounded-full p-5 my-auto"
+                className="btn-on-dark"
               >
                 {showAll ? "Collapse Updates" : "View all Updates"}
               </Button>

@@ -64,13 +64,13 @@ const SponsorsContent = ({ sponsors }: SponsorsContentProps) => {
         />
 
         <motion.section
-          className="section-container !h-auto min-h-screen !bg-custom-black"
+          className="section-container section-dark !h-auto min-h-screen"
           id="overview"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
         >
-          <div className="text-container !flex-col !h-auto min-h-screen text-custom-white">
+          <div className="text-container !flex-col !h-auto min-h-screen">
             <motion.div
               className="flex flex-row justify-between w-full"
               variants={fadeIn}
@@ -79,7 +79,7 @@ const SponsorsContent = ({ sponsors }: SponsorsContentProps) => {
               <Button
                 variant="outline"
                 onClick={handleToggleTeams}
-                className="text-custom-white bg-transparent rounded-full p-5 my-auto"
+                className="btn-on-dark"
               >
                 {showAll ? "Collapse Sponsors" : "View all Sponsors"}
               </Button>
@@ -97,7 +97,7 @@ const SponsorsContent = ({ sponsors }: SponsorsContentProps) => {
                 ))}
               </div>
             ) : (
-              <Collection cards={displaySponsors} dark={true} />
+              <Collection cards={displaySponsors} dark />
             )}
           </div>
         </motion.section>
@@ -230,7 +230,7 @@ const SponsorsContent = ({ sponsors }: SponsorsContentProps) => {
         </motion.section>
 
         <motion.section
-          className="section-container !min-h-fit !h-fit !bg-custom-black"
+          className="section-container section-dark !min-h-fit !h-fit"
           initial="hidden"
           whileInView="visible"
           variants={staggerContainer}

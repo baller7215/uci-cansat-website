@@ -29,11 +29,6 @@ export const navLinks = [
         route: "/team/2023-2024",
         image: "/assets/images/team/2023-2024/team.png",
       },
-      // {
-      //     label: "2022 - 2023",
-      //     route: "/team/2022-2023",
-      //     image: '',
-      // },
       {
         label: "2021 - 2022",
         route: "/team/2021-2022",
@@ -68,6 +63,11 @@ export const navLinks = [
       {
         label: "Our Projects",
         route: "/projects/",
+      },
+      {
+        label: "2025 - 2026",
+        route: "/projects/2025-2026",
+        image: "/assets/images/team/2025-2026/team.jpg",
       },
       {
         label: "2024 - 2025",
@@ -191,6 +191,11 @@ export const projectsLinks = [
   {
     label: "Our Projects",
     route: "/projects/",
+  },
+  {
+    label: "2025 - 2026",
+    route: "/projects/2025-2026",
+    image: "/assets/images/team/2025-2026/team.jpg",
   },
   {
     label: "2024 - 2025",
@@ -335,12 +340,12 @@ export const competitionHistory = [
 
 export const competitionTimeline = [
   {
-    date: "OCT. 20",
+    date: "AUG. 29",
     title: "PLANNING",
     description: "Trade studies, design drafts, year schedule",
   },
   {
-    date: "AUG. 29",
+    date: "OCT. 05",
     title: "PROTOTYPE",
     description: "Manufacture first prototype, personal tests",
   },

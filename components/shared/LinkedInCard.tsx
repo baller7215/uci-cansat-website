@@ -30,8 +30,8 @@ export default function LinkedInCard({ post }: Props) {
     : null;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-custom-rhino/15 bg-custom-white shadow-[0_10px_30px_rgba(43,49,83,0.10)] transition-all duration-300 hover:-translate-y-1 hover:border-custom-shakespeare/40 hover:shadow-[0_14px_36px_rgba(37,130,185,0.20)]">
-      <div className="flex items-center justify-between border-b border-custom-rhino/10 px-4 py-3">
+    <article className="group card-elevated">
+      <div className="card-elevated-header">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-full bg-custom-easternBlue text-center text-sm font-semibold leading-8 text-custom-white">
             in
@@ -73,7 +73,7 @@ export default function LinkedInCard({ post }: Props) {
         )
       )}
 
-      <div className="flex flex-1 flex-col p-4 md:p-5">
+      <div className="card-elevated-body">
         {hasText ? (
           <p className="mb-4 text-sm leading-relaxed text-custom-rhino line-clamp-4">
             {commentary}
@@ -84,7 +84,7 @@ export default function LinkedInCard({ post }: Props) {
           </p>
         )}
 
-        <div className="mt-auto border-t border-custom-rhino/10 pt-3.5">
+        <div className="card-elevated-footer">
           <Link
             href={postUrl}
             target="_blank"

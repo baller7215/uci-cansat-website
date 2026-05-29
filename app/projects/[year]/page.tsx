@@ -49,7 +49,7 @@ const ProjectYearPage = async ({ params }: ProjectYearPageProps) => {
         show: !!sanityProject.projectDefinition?.show,
         planning: sanityProject.projectDefinition?.planning ?? "",
         problemStatement:
-          sanityProject.projectDefinition?.problemStatement ?? "",
+          sanityProject.projectDefinition?.problemStatement ?? null,
         image: toUrl(sanityProject.projectDefinition?.image),
       },
       design: {

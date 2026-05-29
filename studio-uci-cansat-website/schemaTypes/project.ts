@@ -76,8 +76,9 @@ export const projectType = defineType({
         defineField({
           name: 'problemStatement',
           title: 'Problem Statement',
-          type: 'text',
-          rows: 5,
+          type: 'array',
+          of: [{ type: 'block' }],
+          // rows: 5,
         }),
         defineField({
           name: 'image',

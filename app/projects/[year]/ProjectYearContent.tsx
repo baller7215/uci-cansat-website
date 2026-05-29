@@ -8,6 +8,7 @@ import ImageTextLayout from "@/components/shared/ImageTextLayout";
 import MobileFooter from "@/components/shared/MobileFooter";
 import { motion } from "framer-motion";
 import VisualizeModel from "@/components/shared/VisualizeModel";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
 /** Deep shape matches `yearTeamProject.*.project`; avoid importing `@/constants` in this client bundle. */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,6 +26,34 @@ const staggerContainer = {
     transition: {
       staggerChildren: 0.3,
     },
+  },
+};
+
+const portableTextComponents: Partial<PortableTextReactComponents> = {
+  block: {
+    normal: ({ children }) => (
+      <p className="description xl:!text-xl text-custom-rhino mb-4">{children}</p>
+    ),
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="list-disc list-inside text-custom-rhino mb-4 ml-4 space-y-0">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal list-inside text-custom-rhino mb-4 ml-4 space-y-0">{children}</ol>
+    ),
+  },
+  listItem: {
+    bullet: ({ children }) => (
+      <li className="description xl:!text-xl">{children}</li>
+    ),
+    number: ({ children }) => (
+      <li className="description xl:!text-xl">{children}</li>
+    ),
+  },
+  marks: {
+    strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+    em: ({ children }) => <em className="italic">{children}</em>,
   },
 };
 
@@ -115,9 +144,18 @@ const ProjectYearContent = ({ yearLabel, project: projectProp }: ProjectYearCont
                   className="flex flex-col gap-3 my-5"
                 >
                   <h3 className="subHeader uppercase">Problem Statement</h3>
-                  <p className="description xl:!text-xl text-custom-rhino">
-                    {project?.projectDefinition.problemStatement}
-                  </p>
+                  <div className="description xl:!text-xl text-custom-rhino">
+                    {project?.projectDefinition.problemStatement ? (
+                      Array.isArray(project.projectDefinition.problemStatement) ? (
+                        <PortableText
+                          value={project.projectDefinition.problemStatement}
+                          components={portableTextComponents}
+                        />
+                      ) : (
+                        <p>{project.projectDefinition.problemStatement}</p>
+                      )
+                    ) : null}
+                  </div>
                 </motion.div>
               </motion.div>
 

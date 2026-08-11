@@ -60,7 +60,7 @@ export default function Home() {
         {/* cover page */}
         <CoverPage
           page="home"
-          title="Design. Build. Launch. Compete."
+          title="Design. Build. Launch. Compete. test"
           subtitle="Elevate Your Engineering Skills"
           background="./assets/images/competiton-photos/wideLaunch.jpg"
         />

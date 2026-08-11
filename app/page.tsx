@@ -97,6 +97,10 @@ export default function Home() {
                 department. Our team competes in the CanSat competition, an
                 annual, international engineering challenge to design and build
                 a space-type system.
+                We are UCI CanSat, an undergraduate project in the MAE
+                department. Our team competes in the CanSat competition, an
+                annual, international engineering challenge to design and build
+                a space-type system.
               </motion.h5>
               <div className="flex flex-row gap-5">
                 <Button
